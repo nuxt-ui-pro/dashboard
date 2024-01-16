@@ -86,7 +86,7 @@ const footerLinks = [{
   target: '_blank'
 }]
 
-const tags = [{
+const tags = ref([{
   label: 'Developer',
   chip: 'indigo'
 }, {
@@ -98,7 +98,7 @@ const tags = [{
 }, {
   label: 'Prospect',
   chip: 'red'
-}]
+}])
 
 defineShortcuts({
   'g-h': () => router.push('/'),
@@ -117,14 +117,14 @@ defineShortcuts({
         </template>
 
         <template #actions>
-          <UDashboardSearchButton />
+          <UDashboardSearchButton color="gray" variant="solid" />
         </template>
 
         <UDashboardSidebarLinks :links="links" />
 
         <UDivider />
 
-        <UDashboardSidebarLinks :links="[{ label: 'Tags', defaultOpen: true, children: tags }]" />
+        <UDashboardSidebarLinks :links="[{ label: 'Tags', draggable: true, defaultOpen: true, children: tags }]" @update:links="links => tags = links" />
 
         <div class="flex-1" />
 

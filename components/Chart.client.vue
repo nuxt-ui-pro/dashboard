@@ -36,6 +36,9 @@ const options = computed<ApexOptions>(() => ({
     axisBorder: {
       show: false
     },
+    axisTicks: {
+      show: false
+    },
     labels: {
       show: false
     },

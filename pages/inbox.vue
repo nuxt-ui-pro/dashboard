@@ -47,11 +47,19 @@ const dropdownItems = [[{
             <UButton icon="i-heroicons-archive-box" color="gray" variant="ghost" />
           </UTooltip>
 
-          <UDivider orientation="vertical" />
+          <UDivider orientation="vertical" class="mx-1.5" />
 
-          <UTooltip text="Snooze">
-            <UButton icon="i-heroicons-clock" color="gray" variant="ghost" />
-          </UTooltip>
+          <UPopover :popper="{ placement: 'bottom-start' }">
+            <template #default="{ open }">
+              <UTooltip text="Snooze" :prevent="open">
+                <UButton icon="i-heroicons-clock" color="gray" variant="ghost" :class="[open && 'bg-gray-50 dark:bg-gray-800']" />
+              </UTooltip>
+            </template>
+
+            <template #panel="{ close }">
+              <DatePicker @close="close" />
+            </template>
+          </UPopover>
         </template>
 
         <template #right>
@@ -63,7 +71,7 @@ const dropdownItems = [[{
             <UButton icon="i-heroicons-arrow-uturn-right" color="gray" variant="ghost" />
           </UTooltip>
 
-          <UDivider orientation="vertical" />
+          <UDivider orientation="vertical" class="mx-1.5" />
 
           <UDropdown :items="dropdownItems">
             <UButton icon="i-heroicons-ellipsis-vertical" color="gray" variant="ghost" />

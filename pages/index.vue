@@ -18,7 +18,7 @@ const isNotificationsOpen = ref(false)
       </UDashboardNavbar>
 
       <UDashboardPageBody>
-        <HomeChart />
+        <Chart />
       </UDashboardPageBody>
     </UDashboardPanel>
 

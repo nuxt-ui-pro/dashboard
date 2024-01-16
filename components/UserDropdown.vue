@@ -12,19 +12,16 @@ const items = [
     label: 'Shortcuts',
     icon: 'i-heroicons-command-line'
   }], [{
-    id: 'documentation',
     label: 'Documentation',
     icon: 'i-heroicons-book-open',
     to: 'https://ui.nuxt.com/pro/guide',
     target: '_blank'
   }, {
-    id: 'help',
     label: 'Help & Feedback',
     icon: 'i-heroicons-question-mark-circle',
     to: 'https://github.com/nuxt/ui-pro',
     target: '_blank'
   }, {
-    id: 'purchase',
     label: 'Buy Nuxt UI Pro',
     icon: 'i-heroicons-shopping-cart',
     to: 'https://ui.nuxt.com/pro/purchase',
