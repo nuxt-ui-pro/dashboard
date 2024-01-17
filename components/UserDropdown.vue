@@ -10,7 +10,7 @@ const items = [
     to: '/settings'
   }, {
     label: 'Shortcuts',
-    icon: 'i-heroicons-command-line'
+    icon: 'i-heroicons-key'
   }], [{
     label: 'Documentation',
     icon: 'i-heroicons-book-open',
@@ -34,14 +34,30 @@ const items = [
 </script>
 
 <template>
-  <UDropdown mode="hover" :items="items" :ui="{ width: 'w-full', item: { disabled: 'cursor-text select-text' } }" :popper="{ strategy: 'absolute', placement: 'top' }" class="w-full">
+  <UDropdown
+    :items="items"
+    :ui="{ width: 'w-full', item: { disabled: 'cursor-text select-text' } }"
+    :popper="{ strategy: 'absolute', placement: 'top' }"
+    class="w-full"
+  >
     <template #default="{ open }">
-      <UButton size="md" color="gray" variant="ghost" class="w-full py-1.5" :class="[open && 'bg-gray-50 dark:bg-gray-800']">
-        <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" size="3xs" />
+      <UButton
+        color="gray"
+        variant="ghost"
+        class="w-full"
+        label="Benjamin"
+        :class="[open && 'bg-gray-50 dark:bg-gray-800']"
+      >
+        <template #leading>
+          <UAvatar
+            src="https://avatars.githubusercontent.com/u/739984?v=4"
+            size="2xs"
+          />
+        </template>
 
-        <span class="truncate">Benjamin</span>
-
-        <UIcon name="i-heroicons-ellipsis-vertical" class="w-4 h-4 ml-auto" />
+        <template #trailing>
+          <UIcon name="i-heroicons-ellipsis-vertical" class="w-5 h-5 ml-auto" />
+        </template>
       </UButton>
     </template>
 

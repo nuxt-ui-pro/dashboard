@@ -30,8 +30,8 @@ const team = ref(teams[0])
 
 <template>
   <UDropdown v-slot="{ open }" mode="hover" :items="[teams, actions]">
-    <UButton color="gray" variant="ghost" square :class="[open && 'bg-gray-50 dark:bg-gray-800']">
-      <UAvatar :src="team.avatar.src" size="xs" />
+    <UButton color="gray" variant="ghost" :class="[open && 'bg-gray-50 dark:bg-gray-800']">
+      <UAvatar :src="team.avatar.src" size="2xs" />
 
       <span class="text-base truncate text-gray-900 dark:text-white font-semibold">{{ team.label }}</span>
     </UButton>

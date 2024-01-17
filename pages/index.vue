@@ -1,5 +1,15 @@
 <script setup lang="ts">
 const isNotificationsOpen = ref(false)
+
+const items = [[{
+  label: 'New mail',
+  icon: 'i-heroicons-paper-airplane',
+  to: '/inbox'
+}, {
+  label: 'New user',
+  icon: 'i-heroicons-user-plus',
+  to: '/users'
+}]]
 </script>
 
 <template>
@@ -13,9 +23,18 @@ const isNotificationsOpen = ref(false)
             </UChip>
           </UButton>
 
-          <UButton icon="i-heroicons-plus" size="md" class="ml-1.5 rounded-full" />
+          <UDropdown :items="items">
+            <UButton icon="i-heroicons-plus" size="md" class="ml-1.5 rounded-full" />
+          </UDropdown>
         </template>
       </UDashboardNavbar>
+
+      <UDashboardToolbar>
+        <template #left>
+          <!-- ~/components/home/HomeDateRangePicker.vue -->
+          <HomeDateRangePicker />
+        </template>
+      </UDashboardToolbar>
 
       <UDashboardPageBody>
         <Chart />

@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import type { UButton } from '#build/components'
+import type { Mail } from '~/types'
 
 const tabItems = [{
   label: 'All'
 }, {
   label: 'Unread'
 }]
+const selectedTab = ref(0)
 
 const dropdownItems = [[{
   label: 'Mark as unread',
@@ -20,6 +21,26 @@ const dropdownItems = [[{
   label: 'Mute thread',
   icon: 'i-heroicons-pause-circle'
 }]]
+
+const { data: mails } = await useFetch<Mail[]>('/api/mails', { default: () => [] })
+
+// Filter mails based on the selected tab
+const filteredMails = computed(() => {
+  if (selectedTab.value === 1) {
+    return mails.value.filter(mail => !!mail.unread)
+  }
+
+  return mails.value
+})
+
+const selectedMail = ref<Mail>(filteredMails.value[0])
+
+// Reset selected mail if it's not in the filtered mails
+watch(filteredMails, () => {
+  if (!filteredMails.value.find(mail => mail.id === selectedMail.value.id)) {
+    selectedMail.value = filteredMails.value[0]
+  }
+})
 </script>
 
 <template>
@@ -27,9 +48,12 @@ const dropdownItems = [[{
     <UDashboardPanel name="inbox" :resizable="400" :min="300" :max="500">
       <UDashboardNavbar title="Inbox">
         <template #right>
-          <UTabs :items="tabItems" :ui="{ wrapper: '', list: { height: 'h-9', tab: { height: 'h-7', size: 'text-[13px]' } } }" />
+          <UTabs v-model="selectedTab" :items="tabItems" :ui="{ wrapper: '', list: { height: 'h-9', tab: { height: 'h-7', size: 'text-[13px]' } } }" />
         </template>
       </UDashboardNavbar>
+
+      <!-- ~/components/inbox/InboxList.vue -->
+      <InboxList v-model="selectedMail" :mails="filteredMails" />
     </UDashboardPanel>
 
     <UDashboardPanel>
@@ -78,6 +102,9 @@ const dropdownItems = [[{
           </UDropdown>
         </template>
       </UDashboardNavbar>
+
+      <!-- ~/components/inbox/InboxMail.vue -->
+      <InboxMail v-if="selectedMail" :mail="selectedMail" />
     </UDashboardPanel>
   </UDashboardPage>
 </template>

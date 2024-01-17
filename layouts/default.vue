@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const toast = useToast()
 const router = useRouter()
+const appConfig = useAppConfig()
 
 onMounted(() => {
   setTimeout(() => {
@@ -15,7 +16,7 @@ onMounted(() => {
   }, 2500)
 })
 
-const links = computed(() => [{
+const links = [{
   id: 'home',
   label: 'Home',
   icon: 'i-heroicons-home',
@@ -48,7 +49,6 @@ const links = computed(() => [{
   label: 'Settings',
   to: '/settings',
   icon: 'i-heroicons-cog-8-tooth',
-  defaultOpen: true,
   children: [{
     label: 'General',
     to: '/settings',
@@ -64,7 +64,7 @@ const links = computed(() => [{
     text: 'Settings',
     shortcuts: ['G', 'S']
   }
-}])
+}]
 
 const footerLinks = [{
   id: 'documentation',
@@ -86,19 +86,8 @@ const footerLinks = [{
   target: '_blank'
 }]
 
-const tags = ref([{
-  label: 'Developer',
-  chip: 'indigo'
-}, {
-  label: 'Designer',
-  chip: 'emerald'
-}, {
-  label: 'Partner',
-  chip: 'blue'
-}, {
-  label: 'Prospect',
-  chip: 'red'
-}])
+const defaultColors = ref(['green', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet'].map(color => ({ label: color, chip: color, click: () => appConfig.ui.primary = color })))
+const colors = computed(() => defaultColors.value.map(color => ({ ...color, active: appConfig.ui.primary === color.label })))
 
 defineShortcuts({
   'g-h': () => router.push('/'),
@@ -113,6 +102,7 @@ defineShortcuts({
     <UDashboardPanel :resizable="250" :min="200" :max="300">
       <UDashboardSidebar :links="links">
         <template #header>
+          <!-- ~/components/TeamsDropdown.vue -->
           <TeamsDropdown />
         </template>
 
@@ -124,7 +114,7 @@ defineShortcuts({
 
         <UDivider />
 
-        <UDashboardSidebarLinks :links="[{ label: 'Tags', draggable: true, defaultOpen: true, children: tags }]" @update:links="links => tags = links" />
+        <UDashboardSidebarLinks :links="[{ label: 'Colors', draggable: true, children: colors }]" @update:links="colors => defaultColors = colors" />
 
         <div class="flex-1" />
 
@@ -133,6 +123,7 @@ defineShortcuts({
         <UDivider class="sticky bottom-0" />
 
         <template #footer>
+          <!-- ~/components/UserDropdown.vue -->
           <UserDropdown />
         </template>
       </UDashboardSidebar>
@@ -143,7 +134,7 @@ defineShortcuts({
     <ClientOnly>
       <LazyUDashboardSearch :groups="[{ key: 'links', label: 'Go to', commands: [...links, ...footerLinks] }]" />
 
-      <LazyUNotifications />
+      <LazyUNotifications :ui="{ strategy: 'override', position: 'top-0 right-0' }" />
     </ClientOnly>
   </UDashboardLayout>
 </template>
