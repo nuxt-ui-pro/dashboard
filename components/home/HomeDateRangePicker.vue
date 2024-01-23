@@ -38,7 +38,7 @@ function selectRange (duration: Duration) {
             color="gray"
             variant="ghost"
             class="rounded-none px-6"
-            :class="[isRangeSelected(range.duration) && 'bg-gray-50 dark:bg-gray-800']"
+            :class="[isRangeSelected(range.duration) ? 'bg-gray-100 dark:bg-gray-800' : 'hover:bg-gray-50 dark:hover:bg-gray-800/50']"
             @click="selectRange(range.duration)"
           />
         </div>

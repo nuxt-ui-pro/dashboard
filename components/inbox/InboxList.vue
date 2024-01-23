@@ -66,12 +66,12 @@ defineShortcuts({
         class="p-4 text-sm cursor-pointer border-l-2"
         :class="[
           mail.unread ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-300',
-          selectedMail && selectedMail.id === mail.id ? 'border-primary bg-primary-50 dark:bg-primary-900/25' : 'border-white dark:border-gray-900 hover:border-primary-50 dark:hover:border-primary-900/25'
+          selectedMail && selectedMail.id === mail.id ? 'border-primary-500 dark:border-primary-400 bg-primary-100 dark:bg-primary-900/25' : 'border-white dark:border-gray-900 hover:border-primary-500/25 dark:hover:border-primary-400/25 hover:bg-primary-100/50 dark:hover:bg-primary-900/10'
         ]"
         @click="selectedMail = mail"
       >
         <div class="flex items-center justify-between" :class="[mail.unread && 'font-semibold']">
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-3">
             {{ mail.from.name }}
 
             <UChip v-if="mail.unread" />

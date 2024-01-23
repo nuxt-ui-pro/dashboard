@@ -4,7 +4,10 @@ const mails = [{
   id: 1,
   from: {
     name: 'Alex Smith',
-    email: 'alex.smith@example.com'
+    email: 'alex.smith@example.com',
+    avatar: {
+      src: 'https://i.pravatar.cc/128?u=1'
+    }
   },
   subject: 'Meeting Schedule',
   body: 'Hi there, just a quick reminder about our meeting scheduled for 10 AM tomorrow. We\'ll be discussing the new marketing strategies and I would really appreciate your input on the matter. Looking forward to a productive session.',
@@ -14,7 +17,10 @@ const mails = [{
   unread: true,
   from: {
     name: 'Jordan Brown',
-    email: 'jordan.brown@example.com'
+    email: 'jordan.brown@example.com',
+    avatar: {
+      src: 'https://i.pravatar.cc/128?u=2'
+    }
   },
   subject: 'Project Update',
   body: 'I wanted to provide you with the latest update on the project. We\'ve made significant progress on the development front and I\'ve attached a detailed report for your review. Please let me know your thoughts and any areas for improvement.',
@@ -24,7 +30,10 @@ const mails = [{
   unread: true,
   from: {
     name: 'Taylor Green',
-    email: 'taylor.green@example.com'
+    email: 'taylor.green@example.com',
+    avatar: {
+      src: 'https://i.pravatar.cc/128?u=3'
+    }
   },
   subject: 'Lunch Plans',
   body: 'Hey! I was wondering if you would like to grab lunch this Friday. I know a great spot downtown that serves the best Mexican cuisine. It would be a great opportunity for us to catch up and discuss the upcoming team event.',
@@ -33,7 +42,10 @@ const mails = [{
   id: 4,
   from: {
     name: 'Morgan White',
-    email: 'morgan.white@example.com'
+    email: 'morgan.white@example.com',
+    avatar: {
+      src: 'https://i.pravatar.cc/128?u=4'
+    }
   },
   subject: 'New Proposal',
   body: 'I\'ve attached the new proposal for our next project. It outlines all the objectives, timelines, and resource allocations. I\'m particularly excited about the innovative approach we\'re taking this time. Please have a look and let me know your thoughts.',
@@ -60,7 +72,10 @@ const mails = [{
   id: 7,
   from: {
     name: 'Riley Davis',
-    email: 'riley.davis@example.com'
+    email: 'riley.davis@example.com',
+    avatar: {
+      src: 'https://i.pravatar.cc/128?u=7'
+    }
   },
   subject: 'Training Session',
   body: 'Just a reminder about the training session scheduled for next week. We\'ll be covering new software tools that are crucial for our workflow. It\'s important that everyone attends as this will greatly enhance our team\'s efficiency. Please confirm your availability.',
@@ -70,7 +85,10 @@ const mails = [{
   unread: true,
   from: {
     name: 'Kelly Wilson',
-    email: 'kelly.wilson@example.com'
+    email: 'kelly.wilson@example.com',
+    avatar: {
+      src: 'https://i.pravatar.cc/128?u=8'
+    }
   },
   subject: 'Happy Birthday!',
   body: 'Happy Birthday! Wishing you a fantastic day filled with joy and laughter. Your dedication and hard work throughout the year have been invaluable to our team. Enjoy your day to the fullest!',

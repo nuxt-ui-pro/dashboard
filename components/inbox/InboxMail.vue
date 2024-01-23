@@ -18,7 +18,7 @@ defineProps({
   <div class="p-6 flex flex-col flex-1">
     <div class="flex justify-between">
       <div class="flex items-center gap-4">
-        <UAvatar :src="`https://i.pravatar.cc/128?u=${mail.id}`" size="lg" />
+        <UAvatar v-bind="mail.from.avatar" :alt="mail.from.name" size="lg" />
 
         <div class="min-w-0">
           <p class="text-gray-900 dark:text-white font-semibold">

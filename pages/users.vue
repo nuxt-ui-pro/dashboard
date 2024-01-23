@@ -13,29 +13,41 @@ const defaultColumns = [{
   label: 'Email',
   sortable: true
 }, {
-  key: 'address',
-  label: 'Address'
+  key: 'location',
+  label: 'Location'
+}, {
+  key: 'status',
+  label: 'Status'
 }]
 
 const q = ref('')
 const selected = ref<User[]>([])
 const selectedColumns = ref(defaultColumns)
+const selectedStatuses = ref([])
+const selectedLocations = ref([])
 const sort = ref({ column: 'id', direction: 'asc' as const })
 const input = ref<{ input: HTMLInputElement }>()
 const isNewUserModalOpen = ref(false)
 
 const columns = computed(() => defaultColumns.filter((column) => selectedColumns.value.includes(column)))
 
-const { data: users, pending } = await useLazyAsyncData<User[]>('users', () => $fetch('https://jsonplaceholder.typicode.com/users', {
-  query: {
-    q: q.value,
-    _sort: sort.value.column,
-    _order: sort.value.direction
+const query = computed(() => ({ q: q.value, statuses: selectedStatuses.value, locations: selectedLocations.value, sort: sort.value.column, order: sort.value.direction }))
+
+const { data: users, pending } = await useFetch<User[]>('/api/users', { query, default: () => [] })
+
+const defaultLocations = users.value.reduce((acc, user) => {
+  if (!acc.includes(user.location)) {
+    acc.push(user.location)
   }
-}), {
-  default: () => [],
-  watch: [q, sort]
-})
+  return acc
+}, [] as string[])
+
+const defaultStatuses = users.value.reduce((acc, user) => {
+  if (!acc.includes(user.status)) {
+    acc.push(user.status)
+  }
+  return acc
+}, [] as string[])
 
 function onSelect (row: User) {
   const index = selected.value.findIndex((item) => item.id === row.id)
@@ -62,13 +74,10 @@ defineShortcuts({
         </template>
 
         <template #right>
-          <USelectMenu v-model="selectedColumns" icon="i-heroicons-view-columns" color="gray" :options="defaultColumns" multiple />
-
           <UInput
             ref="input"
             v-model="q"
             icon="i-heroicons-funnel"
-            color="gray"
             autocomplete="off"
             placeholder="Filter users..."
             @keydown.esc="$event.target.blur()"
@@ -78,11 +87,33 @@ defineShortcuts({
             </template>
           </UInput>
 
-          <UButton label="New user" trailing-icon="i-heroicons-plus" color="black" @click="isNewUserModalOpen = true" />
+          <UButton label="New user" trailing-icon="i-heroicons-plus" color="gray" @click="isNewUserModalOpen = true" />
         </template>
       </UDashboardNavbar>
 
-      <UDashboardModal v-model="isNewUserModalOpen" title="New user">
+      <UDashboardToolbar>
+        <template #left>
+          <USelectMenu
+            v-model="selectedStatuses"
+            icon="i-heroicons-check-circle"
+            placeholder="Status"
+            :options="defaultStatuses"
+            multiple
+            :ui-menu="{ option: { base: 'capitalize' } }"
+          />
+          <USelectMenu v-model="selectedLocations" icon="i-heroicons-map-pin" placeholder="Location" :options="defaultLocations" multiple />
+        </template>
+
+        <template #right>
+          <USelectMenu v-model="selectedColumns" icon="i-heroicons-adjustments-horizontal-solid" :options="defaultColumns" multiple>
+            <template #label>
+              Display
+            </template>
+          </USelectMenu>
+        </template>
+      </UDashboardToolbar>
+
+      <UDashboardModal v-model="isNewUserModalOpen" title="New user" description="Add a new user to your database">
         <UInput label="Name" placeholder="John Doe" />
         <UInput label="Email" placeholder="" />
         <UInput label="Address" placeholder="" />
@@ -101,14 +132,14 @@ defineShortcuts({
       >
         <template #name-data="{ row }">
           <div class="flex items-center gap-3">
-            <UAvatar :src="`https://i.pravatar.cc/128?img=${row.id}`" size="xs" />
+            <UAvatar v-bind="row.avatar" :alt="row.name" size="xs" />
 
             <span class="text-gray-900 dark:text-white font-medium">{{ row.name }}</span>
           </div>
         </template>
 
-        <template #address-data="{ row }">
-          {{ row.address.street }}, {{ row.address.zipcode }} {{ row.address.city }}
+        <template #status-data="{ row }">
+          <UBadge :label="row.status" :color="row.status === 'subscribed' ? 'green' : row.status === 'bounced' ? 'orange' : 'red'" variant="subtle" class="capitalize" />
         </template>
       </UTable>
     </UDashboardPanel>

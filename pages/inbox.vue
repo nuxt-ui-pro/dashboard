@@ -33,12 +33,23 @@ const filteredMails = computed(() => {
   return mails.value
 })
 
-const selectedMail = ref<Mail>(filteredMails.value[0])
+const selectedMail = ref<Mail | null>()
+
+const isMailPanelOpen = computed({
+  get () {
+    return !!selectedMail.value
+  },
+  set (value: boolean) {
+    if (!value) {
+      selectedMail.value = null
+    }
+  }
+})
 
 // Reset selected mail if it's not in the filtered mails
 watch(filteredMails, () => {
-  if (!filteredMails.value.find(mail => mail.id === selectedMail.value.id)) {
-    selectedMail.value = filteredMails.value[0]
+  if (!filteredMails.value.find(mail => mail.id === selectedMail.value?.id)) {
+    selectedMail.value = null
   }
 })
 </script>
@@ -46,7 +57,11 @@ watch(filteredMails, () => {
 <template>
   <UDashboardPage>
     <UDashboardPanel name="inbox" :resizable="400" :min="300" :max="500">
-      <UDashboardNavbar title="Inbox">
+      <UDashboardNavbar>
+        <template #title>
+          Inbox <UBadge :label="filteredMails.length" color="gray" size="xs" />
+        </template>
+
         <template #right>
           <UTabs v-model="selectedTab" :items="tabItems" :ui="{ wrapper: '', list: { height: 'h-9', tab: { height: 'h-7', size: 'text-[13px]' } } }" />
         </template>
@@ -56,55 +71,63 @@ watch(filteredMails, () => {
       <InboxList v-model="selectedMail" :mails="filteredMails" />
     </UDashboardPanel>
 
-    <UDashboardPanel>
-      <UDashboardNavbar>
-        <template #left>
-          <UTooltip text="Archive">
-            <UButton icon="i-heroicons-archive-box" color="gray" variant="ghost" />
-          </UTooltip>
+    <UDashboardPanel v-model="isMailPanelOpen" collapsible side="right">
+      <template v-if="selectedMail">
+        <UDashboardNavbar>
+          <template #toggle>
+            <UDashboardNavbarToggle icon="i-heroicons-x-mark" />
 
-          <UTooltip text="Move to junk">
-            <UButton icon="i-heroicons-archive-box-x-mark" color="gray" variant="ghost" />
-          </UTooltip>
+            <UDivider orientation="vertical" class="mx-1.5" />
+          </template>
 
-          <UTooltip text="Move to trash">
-            <UButton icon="i-heroicons-archive-box" color="gray" variant="ghost" />
-          </UTooltip>
+          <template #left>
+            <UTooltip text="Archive">
+              <UButton icon="i-heroicons-archive-box" color="gray" variant="ghost" />
+            </UTooltip>
 
-          <UDivider orientation="vertical" class="mx-1.5" />
+            <UTooltip text="Move to junk">
+              <UButton icon="i-heroicons-archive-box-x-mark" color="gray" variant="ghost" />
+            </UTooltip>
 
-          <UPopover :popper="{ placement: 'bottom-start' }">
-            <template #default="{ open }">
-              <UTooltip text="Snooze" :prevent="open">
-                <UButton icon="i-heroicons-clock" color="gray" variant="ghost" :class="[open && 'bg-gray-50 dark:bg-gray-800']" />
-              </UTooltip>
-            </template>
+            <UTooltip text="Move to trash">
+              <UButton icon="i-heroicons-archive-box" color="gray" variant="ghost" />
+            </UTooltip>
 
-            <template #panel="{ close }">
-              <DatePicker @close="close" />
-            </template>
-          </UPopover>
-        </template>
+            <UDivider orientation="vertical" class="mx-1.5" />
 
-        <template #right>
-          <UTooltip text="Reply">
-            <UButton icon="i-heroicons-arrow-uturn-left" color="gray" variant="ghost" />
-          </UTooltip>
+            <UPopover :popper="{ placement: 'bottom-start' }">
+              <template #default="{ open }">
+                <UTooltip text="Snooze" :prevent="open">
+                  <UButton icon="i-heroicons-clock" color="gray" variant="ghost" :class="[open && 'bg-gray-50 dark:bg-gray-800']" />
+                </UTooltip>
+              </template>
 
-          <UTooltip text="Forward">
-            <UButton icon="i-heroicons-arrow-uturn-right" color="gray" variant="ghost" />
-          </UTooltip>
+              <template #panel="{ close }">
+                <DatePicker @close="close" />
+              </template>
+            </UPopover>
+          </template>
 
-          <UDivider orientation="vertical" class="mx-1.5" />
+          <template #right>
+            <UTooltip text="Reply">
+              <UButton icon="i-heroicons-arrow-uturn-left" color="gray" variant="ghost" />
+            </UTooltip>
 
-          <UDropdown :items="dropdownItems">
-            <UButton icon="i-heroicons-ellipsis-vertical" color="gray" variant="ghost" />
-          </UDropdown>
-        </template>
-      </UDashboardNavbar>
+            <UTooltip text="Forward">
+              <UButton icon="i-heroicons-arrow-uturn-right" color="gray" variant="ghost" />
+            </UTooltip>
 
-      <!-- ~/components/inbox/InboxMail.vue -->
-      <InboxMail v-if="selectedMail" :mail="selectedMail" />
+            <UDivider orientation="vertical" class="mx-1.5" />
+
+            <UDropdown :items="dropdownItems">
+              <UButton icon="i-heroicons-ellipsis-vertical" color="gray" variant="ghost" />
+            </UDropdown>
+          </template>
+        </UDashboardNavbar>
+
+        <!-- ~/components/inbox/InboxMail.vue -->
+        <InboxMail :mail="selectedMail" />
+      </template>
     </UDashboardPanel>
   </UDashboardPage>
 </template>

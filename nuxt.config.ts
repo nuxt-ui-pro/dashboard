@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: [process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro'],
-  // @ts-ignore
   modules: [
     '@nuxt/ui',
     '@nuxtjs/fontaine',
@@ -10,8 +9,14 @@ export default defineNuxtConfig({
   ],
   ui: {
     icons: ['heroicons', 'simple-icons'],
-    safelistColors: ['primary', 'red', 'green']
+    safelistColors: ['primary', 'red', 'orange', 'green']
   },
+  components: [{
+    path: '~/components'
+  }, {
+    path: '~/components/common',
+    pathPrefix: false
+  }],
   // Fonts
   fontMetrics: {
     fonts: ['DM Sans']
@@ -23,5 +28,7 @@ export default defineNuxtConfig({
       'DM+Sans': [300, 400, 500, 600, 700]
     }
   },
-  devtools: { enabled: true }
+  devtools: {
+    enabled: true
+  }
 })

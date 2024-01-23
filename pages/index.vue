@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const isNotificationsOpen = ref(false)
+const { isNotificationsSlideoverOpen } = useDashboard()
 
 const items = [[{
   label: 'New mail',
@@ -17,11 +17,13 @@ const items = [[{
     <UDashboardPanel>
       <UDashboardNavbar title="Home">
         <template #right>
-          <UButton color="gray" variant="ghost" square @click="isNotificationsOpen = true">
-            <UChip color="red" inset>
-              <UIcon name="i-heroicons-bell" class="w-5 h-5" />
-            </UChip>
-          </UButton>
+          <UTooltip text="Notifications" :shortcuts="['N']">
+            <UButton color="gray" variant="ghost" square @click="isNotificationsSlideoverOpen = true">
+              <UChip color="red" inset>
+                <UIcon name="i-heroicons-bell" class="w-5 h-5" />
+              </UChip>
+            </UButton>
+          </UTooltip>
 
           <UDropdown :items="items">
             <UButton icon="i-heroicons-plus" size="md" class="ml-1.5 rounded-full" />
@@ -40,7 +42,5 @@ const items = [[{
         <Chart />
       </UDashboardPageBody>
     </UDashboardPanel>
-
-    <UDashboardSlideover v-model="isNotificationsOpen" title="Notifications" />
   </UDashboardPage>
 </template>

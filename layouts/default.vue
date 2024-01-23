@@ -1,20 +1,6 @@
 <script setup lang="ts">
-const toast = useToast()
-const router = useRouter()
 const appConfig = useAppConfig()
-
-onMounted(() => {
-  setTimeout(() => {
-    toast.add({
-      title: 'Your trial has expired!',
-      actions: [{
-        label: 'Upgrade',
-        color: 'primary'
-      }],
-      timeout: 0
-    })
-  }, 2500)
-})
+const { isHelpSlideoverOpen } = useDashboard()
 
 const links = [{
   id: 'home',
@@ -67,47 +53,30 @@ const links = [{
 }]
 
 const footerLinks = [{
-  id: 'documentation',
-  label: 'Documentation',
-  icon: 'i-heroicons-book-open',
-  to: 'https://ui.nuxt.com/pro/guide',
-  target: '_blank'
+  label: 'Invite people',
+  icon: 'i-heroicons-plus'
 }, {
-  id: 'help',
-  label: 'Help & Feedback',
+  label: 'Help & Support',
   icon: 'i-heroicons-question-mark-circle',
-  to: 'https://github.com/nuxt/ui-pro',
-  target: '_blank'
-}, {
-  id: 'purchase',
-  label: 'Buy Nuxt UI Pro',
-  icon: 'i-heroicons-shopping-cart',
-  to: 'https://ui.nuxt.com/pro/purchase',
-  target: '_blank'
+  click: () => isHelpSlideoverOpen.value = true
 }]
 
 const defaultColors = ref(['green', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet'].map(color => ({ label: color, chip: color, click: () => appConfig.ui.primary = color })))
 const colors = computed(() => defaultColors.value.map(color => ({ ...color, active: appConfig.ui.primary === color.label })))
-
-defineShortcuts({
-  'g-h': () => router.push('/'),
-  'g-i': () => router.push('/inbox'),
-  'g-u': () => router.push('/users'),
-  'g-s': () => router.push('/settings')
-})
 </script>
 
 <template>
   <UDashboardLayout>
-    <UDashboardPanel :resizable="250" :min="200" :max="300">
-      <UDashboardSidebar :links="links">
-        <template #header>
-          <!-- ~/components/TeamsDropdown.vue -->
+    <UDashboardPanel :resizable="250" :min="200" :max="300" collapsible>
+      <UDashboardNavbar class="!border-transparent">
+        <template #left>
           <TeamsDropdown />
         </template>
+      </UDashboardNavbar>
 
-        <template #actions>
-          <UDashboardSearchButton color="gray" variant="solid" />
+      <UDashboardSidebar :links="links">
+        <template #header>
+          <UDashboardSearchButton color="white" />
         </template>
 
         <UDashboardSidebarLinks :links="links" />
@@ -131,10 +100,13 @@ defineShortcuts({
 
     <slot />
 
-    <ClientOnly>
-      <LazyUDashboardSearch :groups="[{ key: 'links', label: 'Go to', commands: [...links, ...footerLinks] }]" />
+    <!-- ~/components/HelpSlideover.vue -->
+    <HelpSlideover />
+    <!-- ~/components/NotificationsSlideover.vue -->
+    <NotificationsSlideover />
 
-      <LazyUNotifications :ui="{ strategy: 'override', position: 'top-0 right-0' }" />
+    <ClientOnly>
+      <LazyUDashboardSearch :groups="[{ key: 'links', label: 'Go to', commands: links }]" />
     </ClientOnly>
   </UDashboardLayout>
 </template>
