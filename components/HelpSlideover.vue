@@ -2,14 +2,14 @@
 const { isHelpSlideoverOpen } = useDashboard()
 const { metaSymbol } = useShortcuts()
 
-const displayShortcuts = ref(false)
+const shortcuts = ref(false)
 const query = ref('')
 
 const links = [{
   label: 'Shortcuts',
   icon: 'i-heroicons-key',
   onClick: () => {
-    displayShortcuts.value = true
+    shortcuts.value = true
   }
 }, {
   label: 'Documentation',
@@ -59,18 +59,18 @@ const filteredCategories = computed(() => {
   <UDashboardSlideover v-model="isHelpSlideoverOpen">
     <template #title>
       <UButton
-        v-if="displayShortcuts"
+        v-if="shortcuts"
         color="gray"
         variant="ghost"
         size="sm"
         icon="i-heroicons-arrow-left-20-solid"
-        @click="displayShortcuts = false"
+        @click="shortcuts = false"
       />
 
-      {{ displayShortcuts ? 'Shortcuts' : 'Help & Support' }}
+      {{ shortcuts ? 'Shortcuts' : 'Help & Support' }}
     </template>
 
-    <div v-if="displayShortcuts" class="space-y-6">
+    <div v-if="shortcuts" class="space-y-6">
       <UInput v-model="query" icon="i-heroicons-magnifying-glass" placeholder="Search..." autofocus color="gray" />
 
       <div v-for="(category, index) in filteredCategories" :key="index">

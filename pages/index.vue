@@ -39,7 +39,9 @@ const items = [[{
       </UDashboardToolbar>
 
       <UDashboardPageBody>
-        <Chart />
+        <UDashboardCard>
+          <Chart />
+        </UDashboardCard>
       </UDashboardPageBody>
     </UDashboardPanel>
   </UDashboardPage>

@@ -77,7 +77,7 @@ watch(filteredMails, () => {
           <template #toggle>
             <UDashboardNavbarToggle icon="i-heroicons-x-mark" />
 
-            <UDivider orientation="vertical" class="mx-1.5" />
+            <UDivider orientation="vertical" class="mx-1.5 lg:hidden" />
           </template>
 
           <template #left>
@@ -128,6 +128,9 @@ watch(filteredMails, () => {
         <!-- ~/components/inbox/InboxMail.vue -->
         <InboxMail :mail="selectedMail" />
       </template>
+      <div v-else class="flex-1 hidden lg:flex items-center justify-center">
+        <UIcon name="i-heroicons-inbox" class="w-32 h-32   text-gray-400 dark:text-gray-500" />
+      </div>
     </UDashboardPanel>
   </UDashboardPage>
 </template>
