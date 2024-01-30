@@ -6,9 +6,12 @@ useSeoMeta({
   description: 'We are sorry but this page could not be found.'
 })
 
-defineProps<{
-  error: NuxtError
-}>()
+defineProps({
+  error: {
+    type: Object as PropType<NuxtError>,
+    required: true
+  }
+})
 
 useHead({
   htmlAttrs: {
