@@ -15,7 +15,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="p-6 flex flex-col flex-1">
+  <UDashboardPanelContent>
     <div class="flex justify-between">
       <div class="flex items-center gap-4">
         <UAvatar v-bind="mail.from.avatar" :alt="mail.from.name" size="lg" />
@@ -50,5 +50,5 @@ defineProps({
         <UButton type="submit" color="black" label="Send" icon="i-heroicons-paper-airplane" class="absolute bottom-2.5 right-3.5" />
       </UTextarea>
     </form>
-  </div>
+  </UDashboardPanelContent>
 </template>

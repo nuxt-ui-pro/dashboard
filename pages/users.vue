@@ -80,6 +80,7 @@ defineShortcuts({
             icon="i-heroicons-funnel"
             autocomplete="off"
             placeholder="Filter users..."
+            class="hidden lg:block"
             @keydown.esc="$event.target.blur()"
           >
             <template #trailing>
@@ -97,15 +98,21 @@ defineShortcuts({
             v-model="selectedStatuses"
             icon="i-heroicons-check-circle"
             placeholder="Status"
-            :options="defaultStatuses"
             multiple
+            :options="defaultStatuses"
             :ui-menu="{ option: { base: 'capitalize' } }"
           />
-          <USelectMenu v-model="selectedLocations" icon="i-heroicons-map-pin" placeholder="Location" :options="defaultLocations" multiple />
+          <USelectMenu
+            v-model="selectedLocations"
+            icon="i-heroicons-map-pin"
+            placeholder="Location"
+            :options="defaultLocations"
+            multiple
+          />
         </template>
 
         <template #right>
-          <USelectMenu v-model="selectedColumns" icon="i-heroicons-adjustments-horizontal-solid" :options="defaultColumns" multiple>
+          <USelectMenu v-model="selectedColumns" icon="i-heroicons-adjustments-horizontal-solid" :options="defaultColumns" multiple class="hidden lg:block">
             <template #label>
               Display
             </template>
@@ -113,10 +120,9 @@ defineShortcuts({
         </template>
       </UDashboardToolbar>
 
-      <UDashboardModal v-model="isNewUserModalOpen" title="New user" description="Add a new user to your database">
-        <UInput label="Name" placeholder="John Doe" />
-        <UInput label="Email" placeholder="" />
-        <UInput label="Address" placeholder="" />
+      <UDashboardModal v-model="isNewUserModalOpen" title="New user" description="Add a new user to your database" :ui="{ width: 'sm:max-w-md' }">
+        <!-- ~/components/users/UsersForm.vue -->
+        <UsersForm @cancel="isNewUserModalOpen = false" />
       </UDashboardModal>
 
       <UTable

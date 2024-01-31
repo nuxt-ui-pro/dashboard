@@ -56,7 +56,7 @@ watch(filteredMails, () => {
 
 <template>
   <UDashboardPage>
-    <UDashboardPanel name="inbox" :resizable="400" :min="300" :max="500">
+    <UDashboardPanel :resizable="400" :min="300" :max="500">
       <UDashboardNavbar>
         <template #title>
           Inbox <UBadge :label="filteredMails.length" color="gray" size="xs" />
@@ -87,10 +87,6 @@ watch(filteredMails, () => {
 
             <UTooltip text="Move to junk">
               <UButton icon="i-heroicons-archive-box-x-mark" color="gray" variant="ghost" />
-            </UTooltip>
-
-            <UTooltip text="Move to trash">
-              <UButton icon="i-heroicons-archive-box" color="gray" variant="ghost" />
             </UTooltip>
 
             <UDivider orientation="vertical" class="mx-1.5" />
@@ -129,7 +125,7 @@ watch(filteredMails, () => {
         <InboxMail :mail="selectedMail" />
       </template>
       <div v-else class="flex-1 hidden lg:flex items-center justify-center">
-        <UIcon name="i-heroicons-inbox" class="w-32 h-32   text-gray-400 dark:text-gray-500" />
+        <UIcon name="i-heroicons-inbox" class="w-32 h-32 text-gray-400 dark:text-gray-500" />
       </div>
     </UDashboardPanel>
   </UDashboardPage>

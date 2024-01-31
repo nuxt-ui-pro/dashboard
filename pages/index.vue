@@ -38,11 +38,11 @@ const items = [[{
         </template>
       </UDashboardToolbar>
 
-      <UDashboardPageBody>
+      <UDashboardPanelContent>
         <UDashboardCard>
           <Chart />
         </UDashboardCard>
-      </UDashboardPageBody>
+      </UDashboardPanelContent>
     </UDashboardPanel>
   </UDashboardPage>
 </template>

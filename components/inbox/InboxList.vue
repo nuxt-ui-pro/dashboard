@@ -60,7 +60,7 @@ defineShortcuts({
 </script>
 
 <template>
-  <div class="flex flex-col overflow-y-auto">
+  <UDashboardPanelContent class="p-0">
     <div v-for="(mail, index) in mails" :key="index" :ref="el => { mailsRefs[mail.id] = el as Element }">
       <div
         class="p-4 text-sm cursor-pointer border-l-2"
@@ -89,5 +89,5 @@ defineShortcuts({
 
       <UDivider />
     </div>
-  </div>
+  </UDashboardPanelContent>
 </template>
