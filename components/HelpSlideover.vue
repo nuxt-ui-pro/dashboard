@@ -8,6 +8,8 @@ const query = ref('')
 const links = [{
   label: 'Shortcuts',
   icon: 'i-heroicons-key',
+  trailingIcon: 'i-heroicons-arrow-right-20-solid',
+  color: 'gray',
   onClick: () => {
     shortcuts.value = true
   }
@@ -32,6 +34,7 @@ const categories = computed(() => [{
   title: 'General',
   items: [
     { shortcuts: [metaSymbol.value, 'K'], name: 'Command menu' },
+    { shortcuts: ['N'], name: 'Notifications' },
     { shortcuts: ['?'], name: 'Help & Support' },
     { shortcuts: ['/'], name: 'Search' }
   ]
@@ -42,6 +45,12 @@ const categories = computed(() => [{
     { shortcuts: ['G', 'I'], name: 'Go to Inbox' },
     { shortcuts: ['G', 'U'], name: 'Go to Users' },
     { shortcuts: ['G', 'S'], name: 'Go to Settings' }
+  ]
+}, {
+  title: 'Inbox',
+  items: [
+    { shortcuts: ['↑'], name: 'Prev notification' },
+    { shortcuts: ['↓'], name: 'Next notification' }
   ]
 }])
 
@@ -92,7 +101,7 @@ const filteredCategories = computed(() => {
       </div>
     </div>
     <div v-else class="flex flex-col gap-y-3">
-      <UButton v-for="(link, index) in links" :key="index" v-bind="link" color="gray" />
+      <UButton v-for="(link, index) in links" :key="index" color="white" v-bind="link" />
     </div>
   </UDashboardSlideover>
 </template>
