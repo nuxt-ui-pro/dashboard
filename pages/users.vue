@@ -68,11 +68,7 @@ defineShortcuts({
 <template>
   <UDashboardPage>
     <UDashboardPanel>
-      <UDashboardNavbar>
-        <template #title>
-          Users <UBadge :label="users.length" color="gray" size="xs" />
-        </template>
-
+      <UDashboardNavbar title="Users" :badge="users.length">
         <template #right>
           <UInput
             ref="input"
