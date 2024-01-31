@@ -20,7 +20,7 @@
     "@vueuse/nuxt": "^10.7.2",
     "apexcharts": "^3.45.2",
     "date-fns": "^3.3.1",
-    "nuxt": "^3.9.3",
+    "nuxt": "^3.10.0",
     "v-calendar": "^3.1.2",
     "vue3-apexcharts": "^1.4.4",
     "vue3-smooth-dnd": "^0.0.6"
