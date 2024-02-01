@@ -72,7 +72,7 @@ const colors = computed(() => defaultColors.value.map(color => ({ ...color, acti
         <TeamsDropdown />
       </UDashboardNavbar>
 
-      <UDashboardSidebar :links="links">
+      <UDashboardSidebar>
         <template #header>
           <UDashboardSearchButton color="white" />
         </template>
