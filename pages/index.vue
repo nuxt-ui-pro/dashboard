@@ -14,7 +14,7 @@ const items = [[{
 
 <template>
   <UDashboardPage>
-    <UDashboardPanel>
+    <UDashboardPanel grow>
       <UDashboardNavbar title="Home">
         <template #right>
           <UTooltip text="Notifications" :shortcuts="['N']">

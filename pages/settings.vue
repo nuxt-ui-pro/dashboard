@@ -14,7 +14,7 @@ const links = [[{
 
 <template>
   <UDashboardPage>
-    <UDashboardPanel>
+    <UDashboardPanel grow>
       <UDashboardNavbar title="Settings" />
 
       <UDashboardToolbar class="py-0">
