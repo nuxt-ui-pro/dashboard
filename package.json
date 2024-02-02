@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/heroicons": "^1.1.19",
     "@iconify-json/simple-icons": "^1.1.90",
-    "@nuxt/ui-pro": "npm:@nuxt/ui-pro-edge@latest",
+    "@nuxt/ui-pro": "npm:@nuxt/ui-pro-edge@0.7.5-28448180.4ccc693",
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "^3.1.3",
     "@vueuse/nuxt": "^10.7.2",
