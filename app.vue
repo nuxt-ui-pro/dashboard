@@ -16,6 +16,11 @@ useHead({
     lang: 'en'
   }
 })
+
+useSeoMeta({
+  title: 'Nuxt UI Pro - Dashboard template',
+  ogSiteName: 'Nuxt UI Pro - Dashboard template'
+})
 </script>
 
 <template>
@@ -27,5 +32,6 @@ useHead({
     </NuxtLayout>
 
     <UNotifications />
+    <UModals />
   </div>
 </template>
