@@ -27,3 +27,10 @@ export interface Notification {
   body: string
   date: string
 }
+
+export type Period = 'daily' | 'weekly' | 'monthly'
+
+export interface Range {
+  start: Date
+  end: Date
+}

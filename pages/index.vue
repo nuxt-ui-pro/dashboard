@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { sub } from 'date-fns'
+import type { Period, Range } from '~/types'
+
 const { isNotificationsSlideoverOpen } = useDashboard()
 
 const items = [[{
@@ -10,6 +13,9 @@ const items = [[{
   icon: 'i-heroicons-user-plus',
   to: '/users'
 }]]
+
+const range = ref<Range>({ start: sub(new Date(), { days: 14 }), end: new Date() })
+const period = ref<Period>('daily')
 </script>
 
 <template>
@@ -34,14 +40,23 @@ const items = [[{
       <UDashboardToolbar>
         <template #left>
           <!-- ~/components/home/HomeDateRangePicker.vue -->
-          <HomeDateRangePicker />
+          <HomeDateRangePicker v-model="range" />
+
+          <!-- ~/components/home/HomePeriodSelect.vue -->
+          <HomePeriodSelect v-model="period" :range="range" />
         </template>
       </UDashboardToolbar>
 
       <UDashboardPanelContent>
-        <UDashboardCard>
-          <Chart />
-        </UDashboardCard>
+        <UContainer class="w-full py-12 space-y-12">
+          <!-- ~/components/home/HomeChart.vue -->
+          <HomeChart :period="period" :range="range" />
+
+          <div class="grid lg:grid-cols-2 gap-12">
+            <UDashboardCard title="Recent sales" description="You made 128 sales this month." />
+            <UDashboardCard title="Top countries" description="You made sales in 20 countries this month." />
+          </div>
+        </UContainer>
       </UDashboardPanelContent>
     </UDashboardPanel>
   </UDashboardPage>
