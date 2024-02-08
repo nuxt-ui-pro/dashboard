@@ -47,16 +47,14 @@ const period = ref<Period>('daily')
         </template>
       </UDashboardToolbar>
 
-      <UDashboardPanelContent>
-        <UContainer class="w-full py-12 space-y-12">
-          <!-- ~/components/home/HomeChart.vue -->
-          <HomeChart :period="period" :range="range" />
+      <UDashboardPanelContent class="p-7">
+        <!-- ~/components/home/HomeChart.vue -->
+        <HomeChart :period="period" :range="range" />
 
-          <div class="grid lg:grid-cols-2 gap-12">
-            <UDashboardCard title="Recent sales" description="You made 128 sales this month." />
-            <UDashboardCard title="Top countries" description="You made sales in 20 countries this month." />
-          </div>
-        </UContainer>
+        <div class="grid lg:grid-cols-2 gap-7 mt-7">
+          <UDashboardCard title="Recent sales" description="You made 128 sales this month." />
+          <UDashboardCard title="Top countries" description="You made sales in 20 countries this month." />
+        </div>
       </UDashboardPanelContent>
     </UDashboardPanel>
   </UDashboardPage>
