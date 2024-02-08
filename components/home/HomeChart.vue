@@ -3,6 +3,8 @@ import { eachDayOfInterval, eachWeekOfInterval, eachMonthOfInterval, format } fr
 import { VisXYContainer, VisLine, VisAxis, VisArea, VisCrosshair, VisTooltip } from '@unovis/vue'
 import type { Period, Range } from '~/types'
 
+const cardRef = ref<HTMLElement | null>(null)
+
 const props = defineProps({
   period: {
     type: String as PropType<Period>,
@@ -18,6 +20,8 @@ type DataRecord = {
   date: Date
   amount: number
 }
+
+const { width } = useElementSize(cardRef)
 
 // We use `useAsyncData` here to have same random data on the client and server
 const { data } = await useAsyncData<DataRecord[]>(async () => {
@@ -63,7 +67,7 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
 </script>
 
 <template>
-  <UDashboardCard class="overflow-hidden" :ui="{ body: { base: 'pb-3', padding: '' } as any }">
+  <UDashboardCard ref="cardRef" :ui="{ body: { base: 'pb-3', padding: '' } as any }">
     <template #header>
       <div>
         <p class="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">
@@ -75,7 +79,7 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
       </div>
     </template>
 
-    <VisXYContainer :data="data" :padding="{ top: 10 }" class="h-96">
+    <VisXYContainer :data="data" :padding="{ top: 10 }" class="h-96" :width="width">
       <VisLine :x="x" :y="y" color="rgb(var(--color-primary-DEFAULT))" />
       <VisArea :x="x" :y="y" color="rgb(var(--color-primary-DEFAULT))" :opacity="0.1" />
 
