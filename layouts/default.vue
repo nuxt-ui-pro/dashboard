@@ -43,8 +43,8 @@ const links = [{
     label: 'Members',
     to: '/settings/members'
   }, {
-    label: 'Billing',
-    to: '/settings/billing'
+    label: 'Notifications',
+    to: '/settings/notifications'
   }],
   tooltip: {
     text: 'Settings',

@@ -40,18 +40,18 @@ const period = ref<Period>('daily')
       <UDashboardToolbar>
         <template #left>
           <!-- ~/components/home/HomeDateRangePicker.vue -->
-          <HomeDateRangePicker v-model="range" />
+          <HomeDateRangePicker v-model="range" class="-ml-2.5" />
 
           <!-- ~/components/home/HomePeriodSelect.vue -->
           <HomePeriodSelect v-model="period" :range="range" />
         </template>
       </UDashboardToolbar>
 
-      <UDashboardPanelContent class="p-7">
+      <UDashboardPanelContent>
         <!-- ~/components/home/HomeChart.vue -->
         <HomeChart :period="period" :range="range" />
 
-        <div class="grid lg:grid-cols-2 gap-7 mt-7">
+        <div class="grid lg:grid-cols-2 gap-8 mt-8">
           <UDashboardCard title="Recent sales" description="You made 128 sales this month." />
           <UDashboardCard title="Top countries" description="You made sales in 20 countries this month." />
         </div>
