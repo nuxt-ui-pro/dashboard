@@ -9,11 +9,11 @@ dependencies:
     specifier: ^1.1.19
     version: 1.1.19
   '@iconify-json/simple-icons':
-    specifier: ^1.1.90
-    version: 1.1.90
+    specifier: ^1.1.91
+    version: 1.1.91
   '@nuxt/ui-pro':
-    specifier: npm:@nuxt/ui-pro-edge@0.7.5-28456870.1318bb3
-    version: /@nuxt/ui-pro-edge@0.7.5-28456870.1318bb3(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
+    specifier: npm:@nuxt/ui-pro-edge@0.7.5-28462624.0f5f443
+    version: /@nuxt/ui-pro-edge@0.7.5-28462624.0f5f443(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
   '@nuxtjs/fontaine':
     specifier: ^0.4.1
     version: 0.4.1
@@ -1015,8 +1015,8 @@ packages:
       tailwindcss: 3.4.1
     dev: false
 
-  /@headlessui/vue@1.7.18(vue@3.4.15):
-    resolution: {integrity: sha512-N9EUJY0sHhuJQ81oQlk+vmB80NwUXsyJjxOaBrzUyO+VHIZz7v/ffFICAlrtM4TxZaZFMCzehe74yEPSqkEJ9g==}
+  /@headlessui/vue@1.7.19(vue@3.4.15):
+    resolution: {integrity: sha512-VFjKPybogux/5/QYGSq4zgG/x3RcxId15W8uguAJAjPBxelI23dwjOjTx/mIiMkM/Hd3rzFxcf2aIp56eEWRcA==}
     engines: {node: '>=10'}
     peerDependencies:
       vue: ^3.2.0
@@ -1048,8 +1048,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: false
 
-  /@iconify-json/simple-icons@1.1.90:
-    resolution: {integrity: sha512-IYDCQD3VJ5verAwWwMgnbJ6SvPzEqH0SG6JsI2ySuI64d7qVbcJMFycc0kGPfSsi2yAPYHk+tD6Iln17y1MuNA==}
+  /@iconify-json/simple-icons@1.1.91:
+    resolution: {integrity: sha512-hFWxeQWjCh26nObKnEm+AMB5W+bh4pXtmT3PnecS7rP2Crh0AHi5QBHPtH+6L8R6xZtBk5I2TLoA0TRzCgrF8A==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
@@ -1558,17 +1558,17 @@ packages:
       - supports-color
     dev: false
 
-  /@nuxt/ui-edge@2.13.0-28456821.e1fb8e4(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15):
-    resolution: {integrity: sha512-7hZ6zHUrEYxEofLHlBzAajSZEHqPmnngmngnFC1NRB58Vih1VYyQ00U6LE0ytu36ahGWw1/k4BaOjRfyzNDmMA==}
+  /@nuxt/ui-edge@2.13.0-28462263.09a8e2d(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15):
+    resolution: {integrity: sha512-Q0gvvqAew+zXyP08kfts5QpON9wnaFzFB5fhZZ/kCloFTg9sivSp+UW6tqtT5oR4zDbQ9FfHwiiE2hnxua6uNQ==}
     engines: {node: '>=v16.20.2'}
     dependencies:
       '@egoist/tailwindcss-icons': 1.7.4(tailwindcss@3.4.1)
       '@headlessui/tailwindcss': 0.2.0(tailwindcss@3.4.1)
-      '@headlessui/vue': 1.7.18(vue@3.4.15)
+      '@headlessui/vue': 1.7.19(vue@3.4.15)
       '@iconify-json/heroicons': 1.1.19
       '@nuxt/kit': 3.10.1
       '@nuxtjs/color-mode': 3.3.2
-      '@nuxtjs/tailwindcss': 6.11.3
+      '@nuxtjs/tailwindcss': 6.11.4
       '@popperjs/core': 2.11.8
       '@tailwindcss/aspect-ratio': 0.4.2(tailwindcss@3.4.1)
       '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.1)
@@ -1606,10 +1606,10 @@ packages:
       - vue
     dev: false
 
-  /@nuxt/ui-pro-edge@0.7.5-28456870.1318bb3(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15):
-    resolution: {integrity: sha512-tXsaM7reS4gHqx2S16f+lbOeZMtUjZTi/3rNqEDWLLJgieOR02jQT2z8Ee4yHf/7AYxvPaaIhahzqRXoQfQvfA==}
+  /@nuxt/ui-pro-edge@0.7.5-28462624.0f5f443(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15):
+    resolution: {integrity: sha512-DAs0cSk8ZyrbAb8aJxFHYx9+ZZdoHvxFb9Ec9a/Soz2zoLifA/p9EfKcEPZUfBCUcyjGAqcsVAUZoUuIP6tXaQ==}
     dependencies:
-      '@nuxt/ui': /@nuxt/ui-edge@2.13.0-28456821.e1fb8e4(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
+      '@nuxt/ui': /@nuxt/ui-edge@2.13.0-28462263.09a8e2d(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
       '@vueuse/core': 10.7.2(vue@3.4.15)
       defu: 6.1.4
       git-url-parse: 14.0.0
@@ -1740,14 +1740,13 @@ packages:
       - supports-color
     dev: false
 
-  /@nuxtjs/tailwindcss@6.11.3:
-    resolution: {integrity: sha512-l2iww/zOiHMuNERo6XB9MTJ8MEcq3NHFW/TPWmwPLGdOobV9zYUZ75otqi+mTK+/vgzQTtNXpIe2V0DLuTeb4A==}
+  /@nuxtjs/tailwindcss@6.11.4:
+    resolution: {integrity: sha512-09cksgZD4seQj054Z/BeiwFg1bzQTol8KPulLDLGnmMTkEi21vj/z+WlXQRpVbN1GS9+oU9tcSsu2ufXCM3DBg==}
     dependencies:
       '@nuxt/kit': 3.10.1
       autoprefixer: 10.4.17(postcss@8.4.33)
       chokidar: 3.5.3
       clear-module: 4.1.2
-      colorette: 2.0.20
       consola: 3.2.3
       defu: 6.1.4
       h3: 1.10.1
@@ -3715,10 +3714,6 @@ packages:
 
   /colord@2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-    dev: false
-
-  /colorette@2.0.20:
-    resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
     dev: false
 
   /commander@2.20.3:
