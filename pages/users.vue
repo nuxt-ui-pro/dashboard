@@ -118,7 +118,7 @@ defineShortcuts({
 
       <UDashboardModal v-model="isNewUserModalOpen" title="New user" description="Add a new user to your database" :ui="{ width: 'sm:max-w-md' }">
         <!-- ~/components/users/UsersForm.vue -->
-        <UsersForm @cancel="isNewUserModalOpen = false" />
+        <UsersForm @close="isNewUserModalOpen = false" />
       </UDashboardModal>
 
       <UTable
