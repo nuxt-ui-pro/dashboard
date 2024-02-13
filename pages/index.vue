@@ -52,8 +52,10 @@ const period = ref<Period>('daily')
         <HomeChart :period="period" :range="range" />
 
         <div class="grid lg:grid-cols-2 gap-8 mt-8">
-          <UDashboardCard title="Recent sales" description="You made 128 sales this month." />
-          <UDashboardCard title="Top countries" description="You made sales in 20 countries this month." />
+          <!-- ~/components/home/HomeSales.vue -->
+          <HomeSales />
+          <!-- ~/components/home/HomeCountries.vue -->
+          <HomeCountries />
         </div>
       </UDashboardPanelContent>
     </UDashboardPanel>
