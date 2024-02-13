@@ -20,6 +20,13 @@ export interface Mail {
   date: string
 }
 
+export interface Member {
+  name: string
+  username: string
+  role: 'member' | 'owner'
+  avatar: Avatar
+}
+
 export interface Notification {
   id: number
   unread?: boolean

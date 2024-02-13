@@ -36,10 +36,15 @@ const sections = [{
     description: 'Receive emails about important updates like security fixes, maintenance, etc.'
   }]
 }]
+
+async function onChange () {
+  // Do something with data
+  console.log(state)
+}
 </script>
 
 <template>
-  <UDashboardPanelContent class="p-0 divide-y divide-gray-200 dark:divide-gray-800">
+  <UDashboardPanelContent class="p-0 pb-24 divide-y divide-gray-200 dark:divide-gray-800">
     <UDashboardSection
       v-for="(section, index) in sections"
       :key="index"
@@ -55,10 +60,10 @@ const sections = [{
           :name="field.name"
           :label="field.label"
           :description="field.description"
-          class="flex items-center justify-between pt-4 first:pt-0"
+          class="flex items-center justify-between pt-4 first:pt-0 gap-2"
           :ui="{ container: 'flex' }"
         >
-          <UToggle v-model="state[field.name]" size="md" />
+          <UToggle v-model="state[field.name]" size="md" @update:model-value="onChange" />
         </UFormGroup>
       </UCard>
     </UDashboardSection>

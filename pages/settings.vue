@@ -30,8 +30,8 @@ const links = [[{
     <UDashboardPanel grow>
       <UDashboardNavbar title="Settings" />
 
-      <UDashboardToolbar class="py-0">
-        <UHorizontalNavigation :links="links" class="-mb-px -ml-2.5" />
+      <UDashboardToolbar class="py-0 px-1.5 overflow-x-auto">
+        <UHorizontalNavigation :links="links" />
       </UDashboardToolbar>
 
 
