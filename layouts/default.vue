@@ -79,7 +79,7 @@ const colors = computed(() => defaultColors.value.map(color => ({ ...color, acti
 <template>
   <UDashboardLayout>
     <UDashboardPanel :width="250" :resizable="{ min: 200, max: 300 }" collapsible>
-      <UDashboardNavbar class="!border-transparent">
+      <UDashboardNavbar class="!border-transparent" :ui="{ left: 'flex-1' }">
         <template #left>
           <TeamsDropdown />
         </template>
