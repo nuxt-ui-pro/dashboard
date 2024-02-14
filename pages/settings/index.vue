@@ -15,17 +15,6 @@ const state = reactive({
 })
 
 const toast = useToast()
-const colorMode = useColorMode()
-
-const colorModePreferences = [{ id: 'system', label: 'System', icon: 'i-heroicons-computer-desktop' }, { id: 'light', label: 'Light', icon: 'i-heroicons-sun' }, { id: 'dark', label: 'Dark', icon: 'i-heroicons-moon' }]
-const colorModePreference = computed({
-  get () {
-    return colorModePreferences.find(preference => preference.id === colorMode.preference) || colorModePreferences[0]
-  },
-  set (preference) {
-    colorMode.preference = preference.id
-  }
-})
 
 function validate (state: any): FormError[] {
   const errors = []
@@ -61,15 +50,7 @@ async function onSubmit (event: FormSubmitEvent<any>) {
   <UDashboardPanelContent class="pb-24">
     <UDashboardSection title="Theme" description="Customize the look and feel of your dashboard.">
       <template #links>
-        <ClientOnly>
-          <USelectMenu
-            v-model="colorModePreference"
-            :icon="colorModePreference.icon"
-            by="id"
-            color="gray"
-            :options="colorModePreferences"
-          />
-        </ClientOnly>
+        <UColorModeSelect color="gray" />
       </template>
     </UDashboardSection>
 
