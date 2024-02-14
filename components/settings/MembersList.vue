@@ -27,7 +27,7 @@ function onRoleChange (member: Member, role: string) {
 
 <template>
   <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-800">
-    <li v-for="(member, index) in members" :key="index" class="flex items-center justify-between gap-3 py-3 px-4">
+    <li v-for="(member, index) in members" :key="index" class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
       <div class="flex items-center gap-3">
         <UAvatar v-bind="member.avatar" size="md" />
 
