@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   '@iconify-json/heroicons':
-    specifier: ^1.1.19
-    version: 1.1.19
+    specifier: ^1.1.20
+    version: 1.1.20
   '@iconify-json/simple-icons':
     specifier: ^1.1.91
     version: 1.1.91
   '@nuxt/ui-pro':
-    specifier: npm:@nuxt/ui-pro-edge@0.7.5-28464048.91012e0
-    version: /@nuxt/ui-pro-edge@0.7.5-28464048.91012e0(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
+    specifier: npm:@nuxt/ui-pro-edge@0.7.5-28465318.3f2f2db
+    version: /@nuxt/ui-pro-edge@0.7.5-28465318.3f2f2db(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
   '@nuxtjs/fontaine':
     specifier: ^0.4.1
     version: 0.4.1
@@ -1042,8 +1042,8 @@ packages:
   /@humanwhocodes/object-schema@2.0.2:
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
 
-  /@iconify-json/heroicons@1.1.19:
-    resolution: {integrity: sha512-uW2F9vdGll59W21ocBl+wR4Ve+/1CsmzBqPTuOaR3CbKzqnJKwzGASvC4Op0uTieFVWfBaevnzcRxwNo73J29g==}
+  /@iconify-json/heroicons@1.1.20:
+    resolution: {integrity: sha512-puNt1al/rDw8Rb5x8sfk20UA8AQjMskLMh63nSUBj+8I0lQ7LtX+0Qn8wow2xTXTEsynJ9xXLD8Aat53e0qi8A==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
@@ -1565,7 +1565,7 @@ packages:
       '@egoist/tailwindcss-icons': 1.7.4(tailwindcss@3.4.1)
       '@headlessui/tailwindcss': 0.2.0(tailwindcss@3.4.1)
       '@headlessui/vue': 1.7.19(vue@3.4.15)
-      '@iconify-json/heroicons': 1.1.19
+      '@iconify-json/heroicons': 1.1.20
       '@nuxt/kit': 3.10.1
       '@nuxtjs/color-mode': 3.3.2
       '@nuxtjs/tailwindcss': 6.11.4
@@ -1606,8 +1606,8 @@ packages:
       - vue
     dev: false
 
-  /@nuxt/ui-pro-edge@0.7.5-28464048.91012e0(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15):
-    resolution: {integrity: sha512-BMmNBQPT/dETQlh0fQq2NA0jYPDSVwWyVEP3nG/d5iWQ4T/xNOxutRlnwKdzjjCCfljHaLsPrenQFL9x4Ylyjg==}
+  /@nuxt/ui-pro-edge@0.7.5-28465318.3f2f2db(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15):
+    resolution: {integrity: sha512-CHb/5dapcY5LiZ2h6Yjekl5e5ZtwRl6aOjxKTOQtK0lk0Mx7kLmXpaQo4CjIa8R/rv6KADEL9t5JOO+QNEJZLg==}
     dependencies:
       '@nuxt/ui': /@nuxt/ui-edge@2.13.0-28462263.09a8e2d(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
       '@vueuse/core': 10.7.2(vue@3.4.15)
