@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const model = defineModel<boolean>()
+const model = defineModel({
+  type: Boolean
+})
 
 const toast = useToast()
 
@@ -25,11 +27,13 @@ function onDelete () {
     prevent-close
     :close-button="null"
     :ui="{
-      icon: { base: 'text-red-500 dark:text-red-400' },
+      icon: {
+        base: 'text-red-500 dark:text-red-400'
+      } as any,
       footer: {
         base: 'ml-16'
-      }
-    } as any"
+      } as any
+    }"
   >
     <template #footer>
       <UButton color="red" label="Delete" :loading="loading" @click="onDelete" />
