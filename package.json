@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/heroicons": "^1.1.20",
     "@iconify-json/simple-icons": "^1.1.91",
-    "@nuxt/ui-pro": "npm:@nuxt/ui-pro-edge@0.7.5-28465318.3f2f2db",
+    "@nuxt/ui-pro": "npm:@nuxt/ui-pro-edge@0.7.5-28465356.6e5856d",
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "^3.1.3",
     "@unovis/ts": "^1.3.3",
@@ -22,8 +22,7 @@
     "@vueuse/nuxt": "^10.7.2",
     "date-fns": "^3.3.1",
     "nuxt": "^3.10.1",
-    "v-calendar": "^3.1.2",
-    "vue3-smooth-dnd": "^0.0.6"
+    "v-calendar": "^3.1.2"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",

@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.1.91
     version: 1.1.91
   '@nuxt/ui-pro':
-    specifier: npm:@nuxt/ui-pro-edge@0.7.5-28465318.3f2f2db
-    version: /@nuxt/ui-pro-edge@0.7.5-28465318.3f2f2db(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
+    specifier: npm:@nuxt/ui-pro-edge@0.7.5-28465356.6e5856d
+    version: /@nuxt/ui-pro-edge@0.7.5-28465356.6e5856d(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
   '@nuxtjs/fontaine':
     specifier: ^0.4.1
     version: 0.4.1
@@ -38,9 +38,6 @@ dependencies:
   v-calendar:
     specifier: ^3.1.2
     version: 3.1.2(@popperjs/core@2.11.8)(vue@3.4.15)
-  vue3-smooth-dnd:
-    specifier: ^0.0.6
-    version: 0.0.6(vue@3.4.15)
 
 devDependencies:
   '@nuxt/eslint-config':
@@ -1606,8 +1603,8 @@ packages:
       - vue
     dev: false
 
-  /@nuxt/ui-pro-edge@0.7.5-28465318.3f2f2db(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15):
-    resolution: {integrity: sha512-CHb/5dapcY5LiZ2h6Yjekl5e5ZtwRl6aOjxKTOQtK0lk0Mx7kLmXpaQo4CjIa8R/rv6KADEL9t5JOO+QNEJZLg==}
+  /@nuxt/ui-pro-edge@0.7.5-28465356.6e5856d(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15):
+    resolution: {integrity: sha512-BplMdhyhzZLt+MpBheCmACQSWkbs9syqJV7j4/Ngb0GgUswnKLXlyVWUdTMR0S/9PrXA0jiqhAuDX0SF+k7DDA==}
     dependencies:
       '@nuxt/ui': /@nuxt/ui-edge@2.13.0-28462263.09a8e2d(nuxt@3.10.1)(vite@5.0.12)(vue@3.4.15)
       '@vueuse/core': 10.7.2(vue@3.4.15)
@@ -1618,6 +1615,7 @@ packages:
       pathe: 1.1.2
       pkg-types: 1.0.3
       tailwind-merge: 2.2.1
+      vue3-smooth-dnd: 0.0.6(vue@3.4.15)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - async-validator
