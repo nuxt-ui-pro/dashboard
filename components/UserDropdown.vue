@@ -47,7 +47,7 @@ const items = computed(() => [
 </script>
 
 <template>
-  <UDropdown :items="items" :ui="{ width: 'w-full', item: { disabled: 'cursor-text select-text' } }" :popper="{ strategy: 'absolute', placement: 'top' }" class="w-full">
+  <UDropdown mode="hover" :items="items" :ui="{ width: 'w-full', item: { disabled: 'cursor-text select-text' } }" :popper="{ strategy: 'absolute', placement: 'top' }" class="w-full">
     <template #default="{ open }">
       <UButton color="gray" variant="ghost" class="w-full" label="Benjamin" :class="[open && 'bg-gray-50 dark:bg-gray-800']">
         <template #leading>
