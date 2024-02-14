@@ -1,24 +1,36 @@
 <script setup lang="ts">
 const countries = [{
   label: 'United States',
-  value: 38,
-  color: 'blue'
+  value: 31,
+  color: 'red'
 }, {
   label: 'Germany',
-  value: 26,
-  color: 'green'
+  value: 21,
+  color: 'orange'
 }, {
-  label: 'Canada',
-  value: 18,
-  color: 'red'
+  label: 'Indonesia',
+  value: 15,
+  color: 'yellow'
 }, {
   label: 'France',
   value: 10,
-  color: 'orange'
+  color: 'green'
 }, {
-  label: 'Australia',
-  value: 4,
-  color: 'amber'
+  label: 'Japan',
+  value: 6,
+  color: 'teal'
+}, {
+  label: 'India',
+  value: 1,
+  color: 'blue'
+}, {
+  label: 'Brazil',
+  value: 1,
+  color: 'indigo'
+}, {
+  label: 'China',
+  value: 1,
+  color: 'pink'
 }]
 </script>
 
