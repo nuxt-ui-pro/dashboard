@@ -34,7 +34,6 @@ const links = [[{
         <UHorizontalNavigation :links="links" />
       </UDashboardToolbar>
 
-
       <NuxtPage />
     </UDashboardPanel>
   </UDashboardPage>
