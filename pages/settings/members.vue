@@ -20,7 +20,7 @@ const filteredMembers = computed(() => {
         <UButton type="submit" label="Invite people" color="black" @click="isInviteModalOpen = true" />
       </template>
 
-      <UCard :ui="{ header: { padding: 'p-4 sm:px-6' }, body: { padding: '' } }">
+      <UCard :ui="{ header: { padding: 'p-4 sm:px-6' }, body: { padding: '' } }" class="min-w-0">
         <template #header>
           <UInput v-model="q" icon="i-heroicons-magnifying-glass" placeholder="Search members" autofocus />
         </template>
