@@ -17,7 +17,7 @@ const filteredMembers = computed(() => {
   <UDashboardPanelContent class="pb-24">
     <UDashboardSection title="Manage access" description="Invite new members by email address." orientation="horizontal" :ui="{ container: 'lg:sticky top-2' }">
       <template #links>
-        <UButton type="submit" label="Invite people" color="black" @click="isInviteModalOpen = true" />
+        <UButton label="Invite people" color="black" @click="isInviteModalOpen = true" />
       </template>
 
       <UCard :ui="{ header: { padding: 'p-4 sm:px-6' }, body: { padding: '' } }" class="min-w-0">
