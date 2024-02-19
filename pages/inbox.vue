@@ -56,7 +56,7 @@ watch(filteredMails, () => {
 
 <template>
   <UDashboardPage>
-    <UDashboardPanel :width="400" :resizable="{ min: 300, max: 500 }">
+    <UDashboardPanel id="inbox" :width="400" :resizable="{ min: 300, max: 500 }">
       <UDashboardNavbar title="Inbox" :badge="filteredMails.length">
         <template #right>
           <UTabs v-model="selectedTab" :items="tabItems" :ui="{ wrapper: '', list: { height: 'h-9', tab: { height: 'h-7', size: 'text-[13px]' } } }" />
