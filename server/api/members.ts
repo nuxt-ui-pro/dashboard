@@ -50,9 +50,9 @@ const members = [{
   avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/pi0' }
 }, {
   name: 'Sarah Moriceau',
-  username: 'sarahmoriceau',
+  username: 'SarahM19',
   role: 'member',
-  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/antfu' }
+  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19' }
 }, {
   name: 'Sylvain Marroufin',
   username: 'smarroufin',
