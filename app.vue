@@ -19,7 +19,10 @@ useHead({
 
 useSeoMeta({
   title: 'Nuxt UI Pro - Dashboard template',
-  ogSiteName: 'Nuxt UI Pro - Dashboard template'
+  ogSiteName: 'Nuxt UI Pro - Dashboard template',
+  ogImage: 'https://dashboard-template.nuxt.dev/social-card.png',
+  twitterImage: 'https://dashboard-template.nuxt.dev/social-card.png',
+  twitterCard: 'summary_large_image'
 })
 </script>
 
