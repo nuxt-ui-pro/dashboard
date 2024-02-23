@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.1.92
     version: 1.1.92
   '@nuxt/ui-pro':
-    specifier: ^1.0.0
-    version: 1.0.0(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19)
+    specifier: ^1.0.1
+    version: 1.0.1(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19)
   '@nuxtjs/fontaine':
     specifier: ^0.4.1
     version: 0.4.1
@@ -21,11 +21,11 @@ dependencies:
     specifier: ^3.1.3
     version: 3.1.3
   '@unovis/ts':
-    specifier: ^1.3.3
-    version: 1.3.3
+    specifier: ^1.3.4
+    version: 1.3.4
   '@unovis/vue':
-    specifier: ^1.3.3
-    version: 1.3.3(@unovis/ts@1.3.3)(vue@3.4.19)
+    specifier: ^1.3.4
+    version: 1.3.4(@unovis/ts@1.3.4)(vue@3.4.19)
   '@vueuse/nuxt':
     specifier: ^10.8.0
     version: 10.8.0(nuxt@3.10.3)(vue@3.4.19)
@@ -1532,10 +1532,10 @@ packages:
       - supports-color
     dev: false
 
-  /@nuxt/ui-pro@1.0.0(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19):
-    resolution: {integrity: sha512-+z9eycrrGBit4OGOKTSzALJTbuDV0W8DnXSvljtNLJNwosHCTxrHdmWl+BiwizbvoeDH5JuovbEMhP7OlFHy2Q==}
+  /@nuxt/ui-pro@1.0.1(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19):
+    resolution: {integrity: sha512-dpLo5irKc59k0twKHuQaKYkJMFH2x3HVbvVK+vBSHhBDRtAEcKEHt6ccnTvwk8bUDGTmcMoD5SJLm6X6Vf+iGA==}
     dependencies:
-      '@nuxt/ui': 2.14.0(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19)
+      '@nuxt/ui': 2.14.1(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19)
       '@vueuse/core': 10.8.0(vue@3.4.19)
       defu: 6.1.4
       git-url-parse: 14.0.0
@@ -1570,8 +1570,8 @@ packages:
     resolution: {integrity: sha512-5gc02Pu1HycOVUWJ8aYsWeeXcSTPe8iX8+KIrhyEtEoOSkY0eMBuo0ssljB8wALuEmepv31DlYe5gpiRwkjESA==}
     dev: false
 
-  /@nuxt/ui@2.14.0(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19):
-    resolution: {integrity: sha512-WLjHv1zdJCmSU//wiigMXz7C4k0sroL8tCSNXnBRJAD5UIQiZ70gN+RFV9YRv4Ofv/soeYUgXZoiYTu4u3NHbA==}
+  /@nuxt/ui@2.14.1(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19):
+    resolution: {integrity: sha512-yz6S05a37Q5PRskw1eXtRet4q8C463WMJFSu1Lw7zpKSl2yCyPJYegzwXqQV/fLo/NvM9j62XTuEy7+Xe7j0Kw==}
     engines: {node: '>=v16.20.2'}
     dependencies:
       '@egoist/tailwindcss-icons': 1.7.4(tailwindcss@3.4.1)
@@ -2790,8 +2790,8 @@ packages:
       lodash-es: 4.17.21
     dev: false
 
-  /@unovis/ts@1.3.3:
-    resolution: {integrity: sha512-eHCDsymslgxeKCwG05KjziJLVWzMunwvaZW3sAUNkK8b8epI4U5Lc+6rvR5bggNNrzAJTlerrEbJ88yDPGvzCA==}
+  /@unovis/ts@1.3.4:
+    resolution: {integrity: sha512-fLoN7JiJw/F0O/MGjwTvixyy6QZ6XQrn2nh5nAo3NHmdgn9aeogTQxItW9I4bLE7wGRhOpLxYy9NedwMfKCH2w==}
     dependencies:
       '@emotion/css': 11.11.2
       '@juggle/resize-observer': 3.4.0
@@ -2827,13 +2827,13 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@unovis/vue@1.3.3(@unovis/ts@1.3.3)(vue@3.4.19):
-    resolution: {integrity: sha512-q+F92sPY/LBYmuC36zaoMoVf2nsgydcZh3KqiQVchu839kOwjAfjzwdY73FSTkBjcyGxSAvbRGgkQIlmf/OTOw==}
+  /@unovis/vue@1.3.4(@unovis/ts@1.3.4)(vue@3.4.19):
+    resolution: {integrity: sha512-B4btWET8pvLQDngxyd0GaZ9o9sRW75XZ/pIhflVwCgQiDdt9ijVJJB39iAk1wZbOzEkNaNbY2Ov2hoxiOOZA9A==}
     peerDependencies:
-      '@unovis/ts': 1.2.1
+      '@unovis/ts': 1.3.4
       vue: ^3
     dependencies:
-      '@unovis/ts': 1.3.3
+      '@unovis/ts': 1.3.4
       vue: 3.4.19(typescript@5.3.3)
     dev: false
 
