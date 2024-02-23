@@ -32,7 +32,7 @@ const items = computed(() => [
   }, {
     label: 'GitHub repository',
     icon: 'i-simple-icons-github',
-    to: 'https://github.com/nuxt/ui-pro',
+    to: 'https://github.com/nuxt-ui-pro/dashboard',
     target: '_blank'
   }, {
     label: 'Buy Nuxt UI Pro',
