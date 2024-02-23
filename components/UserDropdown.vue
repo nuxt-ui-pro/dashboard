@@ -27,7 +27,7 @@ const items = computed(() => [
   }], [{
     label: 'Documentation',
     icon: 'i-heroicons-book-open',
-    to: 'https://ui.nuxt.com/pro/guide',
+    to: 'https://ui.nuxt.com/pro/getting-started',
     target: '_blank'
   }, {
     label: 'GitHub repository',

@@ -16,12 +16,12 @@ const links = [{
 }, {
   label: 'Documentation',
   icon: 'i-heroicons-book-open',
-  to: 'https://ui.nuxt.com/pro/guide',
+  to: 'https://ui.nuxt.com/pro/getting-started',
   target: '_blank'
 }, {
   label: 'GitHub repository',
   icon: 'i-simple-icons-github',
-  to: 'https://github.com/nuxt/ui-pro',
+  to: 'https://github.com/nuxt-ui-pro/dashboard',
   target: '_blank'
 }, {
   label: 'Buy Nuxt UI Pro',
