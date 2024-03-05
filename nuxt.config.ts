@@ -11,12 +11,6 @@ export default defineNuxtConfig({
     icons: ['heroicons', 'simple-icons'],
     safelistColors: ['primary', 'red', 'orange', 'green']
   },
-  components: [{
-    path: '~/components'
-  }, {
-    path: '~/components/common',
-    pathPrefix: false
-  }],
   // Fonts
   fontMetrics: {
     fonts: ['DM Sans']
