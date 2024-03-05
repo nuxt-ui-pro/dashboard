@@ -11,15 +11,12 @@ dependencies:
   '@iconify-json/simple-icons':
     specifier: ^1.1.92
     version: 1.1.92
+  '@nuxt/fonts':
+    specifier: ^0.0.1
+    version: 0.0.1
   '@nuxt/ui-pro':
     specifier: ^1.0.1
     version: 1.0.1(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.19)
-  '@nuxtjs/fontaine':
-    specifier: ^0.4.1
-    version: 0.4.1
-  '@nuxtjs/google-fonts':
-    specifier: ^3.1.3
-    version: 3.1.3
   '@unovis/ts':
     specifier: ^1.3.4
     version: 1.3.4
@@ -1459,6 +1456,43 @@ packages:
       - supports-color
     dev: true
 
+  /@nuxt/fonts@0.0.1:
+    resolution: {integrity: sha512-HLEcQ8bguPsqWdf/QIgQmjd2m3wzzl4RnokQ+Mk6f6qjZMnWfEyGCdfvbCUoBdk3Sl6o+0pElTWb7bS8lcyI7A==}
+    dependencies:
+      '@nuxt/kit': 3.10.3
+      chalk: 5.3.0
+      css-tree: 2.3.1
+      defu: 6.1.4
+      fontaine: 0.4.1
+      globby: 14.0.1
+      h3: 1.11.1
+      jiti: 1.21.0
+      magic-string: 0.30.7
+      ofetch: 1.3.3
+      ohash: 1.1.3
+      pathe: 1.1.2
+      ufo: 1.4.0
+      unplugin: 1.7.1
+      unstorage: 1.10.1
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@netlify/blobs'
+      - '@planetscale/database'
+      - '@upstash/redis'
+      - '@vercel/kv'
+      - encoding
+      - idb-keyval
+      - rollup
+      - supports-color
+      - uWebSockets.js
+    dev: false
+
   /@nuxt/kit@3.10.3:
     resolution: {integrity: sha512-PUjYB9Mvx0qD9H1QZBwwtY4fLlCLET+Mm9BVqUOtXCaGoXd6u6BE4e/dGFPk2UEKkIcDGrUMSbqkHYvsEuK9NQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
@@ -1684,31 +1718,6 @@ packages:
     dependencies:
       '@nuxt/kit': 3.10.3
       lodash.template: 4.5.0
-      pathe: 1.1.2
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: false
-
-  /@nuxtjs/fontaine@0.4.1:
-    resolution: {integrity: sha512-8VnrFYnilfqlQVsCufiqoWusivYVOwP/0Nzu9FV44oryQlBa3qiT7EyOkKSmOxf9yZWCZBRc2wjTSxI+WTYlpg==}
-    dependencies:
-      '@nuxt/kit': 3.10.3
-      fontaine: 0.4.1
-      magic-string: 0.30.7
-      pathe: 1.1.2
-      ufo: 1.4.0
-    transitivePeerDependencies:
-      - encoding
-      - rollup
-      - supports-color
-    dev: false
-
-  /@nuxtjs/google-fonts@3.1.3:
-    resolution: {integrity: sha512-gHwstHXQKd/r9O2WnQR4UJbi7Rfb9No1/gF4gqP+y18h1DAAZUOYPBF5EAPGjZKgDOW2XbZHP8Rw3oSDTpIT1A==}
-    dependencies:
-      '@nuxt/kit': 3.10.3
-      google-fonts-helper: 3.4.1
       pathe: 1.1.2
     transitivePeerDependencies:
       - rollup
@@ -3841,6 +3850,15 @@ packages:
     resolution: {integrity: sha512-c9c/o7bS3OjsdpSkvexpka0JNlesBF2JU9B2V1yNsYGwRbAafxhJQ7VI9b48D5bpONz/oxbPGMzBojy9sXoQIQ==}
     dev: false
 
+  /crossws@0.2.4:
+    resolution: {integrity: sha512-DAxroI2uSOgUKLz00NX6A8U/8EE3SZHmIND+10jkVSaypvyt57J5JEOxAQOL6lQxyzi/wZbTIwssU1uy69h5Vg==}
+    peerDependencies:
+      uWebSockets.js: '*'
+    peerDependenciesMeta:
+      uWebSockets.js:
+        optional: true
+    dev: false
+
   /css-declaration-sorter@7.1.1(postcss@8.4.35):
     resolution: {integrity: sha512-dZ3bVTEEc1vxr3Bek9vGwfB5Z6ESPULhcRvO472mfjVnj8jRcTnKO8/JTczlvxM10Myb+wBM++1MtdO76eWcaQ==}
     engines: {node: ^14 || ^16 || >=18}
@@ -5151,15 +5169,6 @@ packages:
       unicorn-magic: 0.1.0
     dev: false
 
-  /google-fonts-helper@3.4.1:
-    resolution: {integrity: sha512-unq9c1NF771916DrVR2MTpMJ5iHiMSjMBApErjhWT1FZIE+7x+Qik+w6cYi5jw/KtHELz+tyGAKgQetTU9wrlA==}
-    dependencies:
-      deepmerge: 4.3.1
-      hookable: 5.5.3
-      ofetch: 1.3.3
-      ufo: 1.4.0
-    dev: false
-
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: false
@@ -5186,6 +5195,23 @@ packages:
       ufo: 1.4.0
       uncrypto: 0.1.3
       unenv: 1.9.0
+    dev: false
+
+  /h3@1.11.1:
+    resolution: {integrity: sha512-AbaH6IDnZN6nmbnJOH72y3c5Wwh9P97soSVdGSBbcDACRdkC0FEWf25pzx4f/NuOCK6quHmW18yF2Wx+G4Zi1A==}
+    dependencies:
+      cookie-es: 1.0.0
+      crossws: 0.2.4
+      defu: 6.1.4
+      destr: 2.0.3
+      iron-webcrypto: 1.0.0
+      ohash: 1.1.3
+      radix3: 1.1.0
+      ufo: 1.4.0
+      uncrypto: 0.1.3
+      unenv: 1.9.0
+    transitivePeerDependencies:
+      - uWebSockets.js
     dev: false
 
   /has-flag@3.0.0:
