@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
-const fileRef = ref<{ input: HTMLInputElement }>()
+const fileRef = ref<HTMLInputElement>()
 const isDeleteAccountModalOpen = ref(false)
 
 const state = reactive({
@@ -35,7 +35,7 @@ function onFileChange (e: Event) {
 }
 
 function onFileClick () {
-  fileRef.value?.input.click()
+  fileRef.value?.click()
 }
 
 async function onSubmit (event: FormSubmitEvent<any>) {
@@ -104,7 +104,7 @@ async function onSubmit (event: FormSubmitEvent<any>) {
 
           <UButton label="Choose" color="white" size="md" @click="onFileClick" />
 
-          <UInput ref="fileRef" type="file" class="hidden" accept=".jpg, .jpeg, .png, .gif" @change="onFileChange" />
+          <input ref="fileRef" type="file" class="hidden" accept=".jpg, .jpeg, .png, .gif" @change="onFileChange">
         </UFormGroup>
 
         <UFormGroup
