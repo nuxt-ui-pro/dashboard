@@ -10,5 +10,7 @@
         </p>
       </div>
     </template>
+
+    <div class="h-96" />
   </UDashboardCard>
 </template>
