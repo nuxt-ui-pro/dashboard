@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   extends: [process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro'],
   modules: [
+    '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxt/fonts',
     '@vueuse/nuxt'
@@ -12,5 +13,16 @@ export default defineNuxtConfig({
   },
   devtools: {
     enabled: true
+  },
+  typescript: {
+    strict: false
+  },
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
   }
 })

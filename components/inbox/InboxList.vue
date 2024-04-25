@@ -39,7 +39,7 @@ watch(selectedMail, () => {
 
 defineShortcuts({
   arrowdown: () => {
-    const index = props.mails.findIndex((mail) => mail.id === selectedMail.value?.id)
+    const index = props.mails.findIndex(mail => mail.id === selectedMail.value?.id)
 
     if (index === -1) {
       selectedMail.value = props.mails[0]
@@ -48,7 +48,7 @@ defineShortcuts({
     }
   },
   arrowup: () => {
-    const index = props.mails.findIndex((mail) => mail.id === selectedMail.value?.id)
+    const index = props.mails.findIndex(mail => mail.id === selectedMail.value?.id)
 
     if (index === -1) {
       selectedMail.value = props.mails[props.mails.length - 1]
@@ -61,7 +61,11 @@ defineShortcuts({
 
 <template>
   <UDashboardPanelContent class="p-0">
-    <div v-for="(mail, index) in mails" :key="index" :ref="el => { mailsRefs[mail.id] = el as Element }">
+    <div
+      v-for="(mail, index) in mails"
+      :key="index"
+      :ref="el => { mailsRefs[mail.id] = el as Element }"
+    >
       <div
         class="p-4 text-sm cursor-pointer border-l-2"
         :class="[
@@ -70,7 +74,10 @@ defineShortcuts({
         ]"
         @click="selectedMail = mail"
       >
-        <div class="flex items-center justify-between" :class="[mail.unread && 'font-semibold']">
+        <div
+          class="flex items-center justify-between"
+          :class="[mail.unread && 'font-semibold']"
+        >
           <div class="flex items-center gap-3">
             {{ mail.from.name }}
 

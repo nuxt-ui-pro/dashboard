@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
@@ -16,7 +15,7 @@ const validate = (state: any): FormError[] => {
   return errors
 }
 
-async function onSubmit (event: FormSubmitEvent<any>) {
+async function onSubmit(event: FormSubmitEvent<any>) {
   // Do something with data
   console.log(event.data)
 
@@ -25,18 +24,48 @@ async function onSubmit (event: FormSubmitEvent<any>) {
 </script>
 
 <template>
-  <UForm :validate="validate" :validate-on="['submit']" :state="state" class="space-y-4" @submit="onSubmit">
-    <UFormGroup label="Email" name="email">
-      <UInput v-model="state.email" type="email" placeholder="john.doe@example.com" autofocus />
+  <UForm
+    :validate="validate"
+    :validate-on="['submit']"
+    :state="state"
+    class="space-y-4"
+    @submit="onSubmit"
+  >
+    <UFormGroup
+      label="Email"
+      name="email"
+    >
+      <UInput
+        v-model="state.email"
+        type="email"
+        placeholder="john.doe@example.com"
+        autofocus
+      />
     </UFormGroup>
 
-    <UFormGroup label="Role" name="role">
-      <USelectMenu v-model="state.role" :options="['member', 'owner']" :ui-menu="{ select: 'capitalize', option: { base: 'capitalize' } }" />
+    <UFormGroup
+      label="Role"
+      name="role"
+    >
+      <USelectMenu
+        v-model="state.role"
+        :options="['member', 'owner']"
+        :ui-menu="{ select: 'capitalize', option: { base: 'capitalize' } }"
+      />
     </UFormGroup>
 
     <div class="flex justify-end gap-3">
-      <UButton label="Cancel" color="gray" variant="ghost" @click="emit('close')" />
-      <UButton type="submit" label="Save" color="black" />
+      <UButton
+        label="Cancel"
+        color="gray"
+        variant="ghost"
+        @click="emit('close')"
+      />
+      <UButton
+        type="submit"
+        label="Save"
+        color="black"
+      />
     </div>
   </UForm>
 </template>

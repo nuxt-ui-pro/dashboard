@@ -34,7 +34,7 @@ const { data } = await useAsyncData<DataRecord[]>(async () => {
   const min = 1000
   const max = 10000
 
-  return dates.map((date) => ({ date, amount: Math.floor(Math.random() * (max - min + 1)) + min }))
+  return dates.map(date => ({ date, amount: Math.floor(Math.random() * (max - min + 1)) + min }))
 }, {
   watch: [() => props.period, () => props.range],
   default: () => []
@@ -67,7 +67,10 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
 </script>
 
 <template>
-  <UDashboardCard ref="cardRef" :ui="{ body: { padding: '!pb-3 !px-0' } as any }">
+  <UDashboardCard
+    ref="cardRef"
+    :ui="{ body: { padding: '!pb-3 !px-0' } as any }"
+  >
     <template #header>
       <div>
         <p class="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">
@@ -79,13 +82,34 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
       </div>
     </template>
 
-    <VisXYContainer :data="data" :padding="{ top: 10 }" class="h-96" :width="width">
-      <VisLine :x="x" :y="y" color="rgb(var(--color-primary-DEFAULT))" />
-      <VisArea :x="x" :y="y" color="rgb(var(--color-primary-DEFAULT))" :opacity="0.1" />
+    <VisXYContainer
+      :data="data"
+      :padding="{ top: 10 }"
+      class="h-96"
+      :width="width"
+    >
+      <VisLine
+        :x="x"
+        :y="y"
+        color="rgb(var(--color-primary-DEFAULT))"
+      />
+      <VisArea
+        :x="x"
+        :y="y"
+        color="rgb(var(--color-primary-DEFAULT))"
+        :opacity="0.1"
+      />
 
-      <VisAxis type="x" :x="x" :tick-format="xTicks" />
+      <VisAxis
+        type="x"
+        :x="x"
+        :tick-format="xTicks"
+      />
 
-      <VisCrosshair color="rgb(var(--color-primary-DEFAULT))" :template="template" />
+      <VisCrosshair
+        color="rgb(var(--color-primary-DEFAULT))"
+        :template="template"
+      />
 
       <VisTooltip />
     </VisXYContainer>

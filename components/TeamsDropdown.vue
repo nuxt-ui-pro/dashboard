@@ -37,8 +37,16 @@ const team = ref(teams[0])
     :ui="{ width: 'w-full' }"
     :popper="{ strategy: 'absolute' }"
   >
-    <UButton color="gray" variant="ghost" :class="[open && 'bg-gray-50 dark:bg-gray-800']" class="w-full">
-      <UAvatar :src="team.avatar.src" size="2xs" />
+    <UButton
+      color="gray"
+      variant="ghost"
+      :class="[open && 'bg-gray-50 dark:bg-gray-800']"
+      class="w-full"
+    >
+      <UAvatar
+        :src="team.avatar.src"
+        size="2xs"
+      />
 
       <span class="truncate text-gray-900 dark:text-white font-semibold">{{ team.label }}</span>
     </UButton>

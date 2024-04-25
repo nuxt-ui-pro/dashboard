@@ -41,9 +41,21 @@ const formatNumber = new Intl.NumberFormat('en', { style: 'currency', currency: 
 </script>
 
 <template>
-  <UDashboardCard title="Recent sales" description="You made 128 sales this month." icon="i-heroicons-chart-bar-20-solid">
-    <NuxtLink v-for="(sale, index) in sales" :key="index" class="px-3 py-2 -mx-2 last:-mb-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer flex items-center gap-3 relative">
-      <UAvatar v-bind="sale.user.avatar" :alt="sale.user.name" size="md" />
+  <UDashboardCard
+    title="Recent sales"
+    description="You made 128 sales this month."
+    icon="i-heroicons-chart-bar-20-solid"
+  >
+    <NuxtLink
+      v-for="(sale, index) in sales"
+      :key="index"
+      class="px-3 py-2 -mx-2 last:-mb-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer flex items-center gap-3 relative"
+    >
+      <UAvatar
+        v-bind="sale.user.avatar"
+        :alt="sale.user.name"
+        size="md"
+      />
 
       <div class="text-sm flex-1">
         <div>

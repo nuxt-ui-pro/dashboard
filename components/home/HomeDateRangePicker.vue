@@ -16,11 +16,11 @@ const selected = defineModel({
   required: true
 })
 
-function isRangeSelected (duration: Duration) {
+function isRangeSelected(duration: Duration) {
   return isSameDay(selected.value.start, sub(new Date(), duration)) && isSameDay(selected.value.end, new Date())
 }
 
-function selectRange (duration: Duration) {
+function selectRange(duration: Duration) {
   selected.value = { start: sub(new Date(), duration), end: new Date() }
 }
 </script>
@@ -28,7 +28,12 @@ function selectRange (duration: Duration) {
 <template>
   <UPopover :popper="{ placement: 'bottom-start' }">
     <template #default="{ open }">
-      <UButton color="gray" variant="ghost" :class="[open && 'bg-gray-50 dark:bg-gray-800']" trailing-icon="i-heroicons-chevron-down-20-solid">
+      <UButton
+        color="gray"
+        variant="ghost"
+        :class="[open && 'bg-gray-50 dark:bg-gray-800']"
+        trailing-icon="i-heroicons-chevron-down-20-solid"
+      >
         {{ format(selected.start, 'd MMM, yyy') }} - {{ format(selected.end, 'd MMM, yyy') }}
       </UButton>
     </template>
@@ -49,7 +54,10 @@ function selectRange (duration: Duration) {
           />
         </div>
 
-        <DatePicker v-model="selected" @close="close" />
+        <DatePicker
+          v-model="selected"
+          @close="close"
+        />
       </div>
     </template>
   </UPopover>

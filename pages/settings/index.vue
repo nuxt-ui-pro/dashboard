@@ -16,7 +16,7 @@ const state = reactive({
 
 const toast = useToast()
 
-function validate (state: any): FormError[] {
+function validate(state: any): FormError[] {
   const errors = []
   if (!state.name) errors.push({ path: 'name', message: 'Please enter your name.' })
   if (!state.email) errors.push({ path: 'email', message: 'Please enter your email.' })
@@ -24,7 +24,7 @@ function validate (state: any): FormError[] {
   return errors
 }
 
-function onFileChange (e: Event) {
+function onFileChange(e: Event) {
   const input = e.target as HTMLInputElement
 
   if (!input.files?.length) {
@@ -34,11 +34,11 @@ function onFileChange (e: Event) {
   state.avatar = URL.createObjectURL(input.files[0])
 }
 
-function onFileClick () {
+function onFileClick() {
   fileRef.value?.click()
 }
 
-async function onSubmit (event: FormSubmitEvent<any>) {
+async function onSubmit(event: FormSubmitEvent<any>) {
   // Do something with data
   console.log(event.data)
 
@@ -48,7 +48,10 @@ async function onSubmit (event: FormSubmitEvent<any>) {
 
 <template>
   <UDashboardPanelContent class="pb-24">
-    <UDashboardSection title="Theme" description="Customize the look and feel of your dashboard.">
+    <UDashboardSection
+      title="Theme"
+      description="Customize the look and feel of your dashboard."
+    >
       <template #links>
         <UColorModeSelect color="gray" />
       </template>
@@ -56,10 +59,22 @@ async function onSubmit (event: FormSubmitEvent<any>) {
 
     <UDivider class="mb-4" />
 
-    <UForm :state="state" :validate="validate" :validate-on="['submit']" @submit="onSubmit">
-      <UDashboardSection title="Profile" description="This information will be displayed publicly so be careful what you share.">
+    <UForm
+      :state="state"
+      :validate="validate"
+      :validate-on="['submit']"
+      @submit="onSubmit"
+    >
+      <UDashboardSection
+        title="Profile"
+        description="This information will be displayed publicly so be careful what you share."
+      >
         <template #links>
-          <UButton type="submit" label="Save changes" color="black" />
+          <UButton
+            type="submit"
+            label="Save changes"
+            color="black"
+          />
         </template>
 
         <UFormGroup
@@ -70,7 +85,12 @@ async function onSubmit (event: FormSubmitEvent<any>) {
           class="grid grid-cols-2 gap-2 items-center"
           :ui="{ container: '' }"
         >
-          <UInput v-model="state.name" autocomplete="off" icon="i-heroicons-user" size="md" />
+          <UInput
+            v-model="state.name"
+            autocomplete="off"
+            icon="i-heroicons-user"
+            size="md"
+          />
         </UFormGroup>
 
         <UFormGroup
@@ -81,7 +101,13 @@ async function onSubmit (event: FormSubmitEvent<any>) {
           class="grid grid-cols-2 gap-2"
           :ui="{ container: '' }"
         >
-          <UInput v-model="state.email" type="email" autocomplete="off" icon="i-heroicons-envelope" size="md" />
+          <UInput
+            v-model="state.email"
+            type="email"
+            autocomplete="off"
+            icon="i-heroicons-envelope"
+            size="md"
+          />
         </UFormGroup>
 
         <UFormGroup
@@ -92,19 +118,46 @@ async function onSubmit (event: FormSubmitEvent<any>) {
           class="grid grid-cols-2 gap-2"
           :ui="{ container: '' }"
         >
-          <UInput v-model="state.username" type="username" autocomplete="off" size="md" input-class="ps-[77px]">
+          <UInput
+            v-model="state.username"
+            type="username"
+            autocomplete="off"
+            size="md"
+            input-class="ps-[77px]"
+          >
             <template #leading>
               <span class="text-gray-500 dark:text-gray-400 text-sm">nuxt.com/</span>
             </template>
           </UInput>
         </UFormGroup>
 
-        <UFormGroup name="avatar" label="Avatar" class="grid grid-cols-2 gap-2" help="JPG, GIF or PNG. 1MB Max." :ui="{ container: 'flex flex-wrap items-center gap-3', help: 'mt-0' }">
-          <UAvatar :src="state.avatar" :alt="state.name" size="lg" />
+        <UFormGroup
+          name="avatar"
+          label="Avatar"
+          class="grid grid-cols-2 gap-2"
+          help="JPG, GIF or PNG. 1MB Max."
+          :ui="{ container: 'flex flex-wrap items-center gap-3', help: 'mt-0' }"
+        >
+          <UAvatar
+            :src="state.avatar"
+            :alt="state.name"
+            size="lg"
+          />
 
-          <UButton label="Choose" color="white" size="md" @click="onFileClick" />
+          <UButton
+            label="Choose"
+            color="white"
+            size="md"
+            @click="onFileClick"
+          />
 
-          <input ref="fileRef" type="file" class="hidden" accept=".jpg, .jpeg, .png, .gif" @change="onFileChange">
+          <input
+            ref="fileRef"
+            type="file"
+            class="hidden"
+            accept=".jpg, .jpeg, .png, .gif"
+            @change="onFileChange"
+          >
         </UFormGroup>
 
         <UFormGroup
@@ -114,7 +167,12 @@ async function onSubmit (event: FormSubmitEvent<any>) {
           class="grid grid-cols-2 gap-2"
           :ui="{ container: '' }"
         >
-          <UTextarea v-model="state.bio" :rows="5" autoresize size="md" />
+          <UTextarea
+            v-model="state.bio"
+            :rows="5"
+            autoresize
+            size="md"
+          />
         </UFormGroup>
 
         <UFormGroup
@@ -124,7 +182,13 @@ async function onSubmit (event: FormSubmitEvent<any>) {
           class="grid grid-cols-2 gap-2"
           :ui="{ container: '' }"
         >
-          <UInput id="password" v-model="state.password_current" type="password" placeholder="Current password" size="md" />
+          <UInput
+            id="password"
+            v-model="state.password_current"
+            type="password"
+            placeholder="Current password"
+            size="md"
+          />
           <UInput
             id="password_new"
             v-model="state.password_new"
@@ -139,9 +203,17 @@ async function onSubmit (event: FormSubmitEvent<any>) {
 
     <UDivider class="mb-4" />
 
-    <UDashboardSection title="Account" description="No longer want to use our service? You can delete your account here. This action is not reversible. All information related to this account will be deleted permanently.">
+    <UDashboardSection
+      title="Account"
+      description="No longer want to use our service? You can delete your account here. This action is not reversible. All information related to this account will be deleted permanently."
+    >
       <div>
-        <UButton color="red" label="Delete account" size="md" @click="isDeleteAccountModalOpen = true" />
+        <UButton
+          color="red"
+          label="Delete account"
+          size="md"
+          @click="isDeleteAccountModalOpen = true"
+        />
       </div>
     </UDashboardSection>
 

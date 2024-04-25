@@ -29,7 +29,7 @@ const sort = ref({ column: 'id', direction: 'asc' as const })
 const input = ref<{ input: HTMLInputElement }>()
 const isNewUserModalOpen = ref(false)
 
-const columns = computed(() => defaultColumns.filter((column) => selectedColumns.value.includes(column)))
+const columns = computed(() => defaultColumns.filter(column => selectedColumns.value.includes(column)))
 
 const query = computed(() => ({ q: q.value, statuses: selectedStatuses.value, locations: selectedLocations.value, sort: sort.value.column, order: sort.value.direction }))
 
@@ -49,8 +49,8 @@ const defaultStatuses = users.value.reduce((acc, user) => {
   return acc
 }, [] as string[])
 
-function onSelect (row: User) {
-  const index = selected.value.findIndex((item) => item.id === row.id)
+function onSelect(row: User) {
+  const index = selected.value.findIndex(item => item.id === row.id)
   if (index === -1) {
     selected.value.push(row)
   } else {
@@ -68,7 +68,10 @@ defineShortcuts({
 <template>
   <UDashboardPage>
     <UDashboardPanel grow>
-      <UDashboardNavbar title="Users" :badge="users.length">
+      <UDashboardNavbar
+        title="Users"
+        :badge="users.length"
+      >
         <template #right>
           <UInput
             ref="input"
@@ -84,7 +87,12 @@ defineShortcuts({
             </template>
           </UInput>
 
-          <UButton label="New user" trailing-icon="i-heroicons-plus" color="gray" @click="isNewUserModalOpen = true" />
+          <UButton
+            label="New user"
+            trailing-icon="i-heroicons-plus"
+            color="gray"
+            @click="isNewUserModalOpen = true"
+          />
         </template>
       </UDashboardNavbar>
 
@@ -108,7 +116,13 @@ defineShortcuts({
         </template>
 
         <template #right>
-          <USelectMenu v-model="selectedColumns" icon="i-heroicons-adjustments-horizontal-solid" :options="defaultColumns" multiple class="hidden lg:block">
+          <USelectMenu
+            v-model="selectedColumns"
+            icon="i-heroicons-adjustments-horizontal-solid"
+            :options="defaultColumns"
+            multiple
+            class="hidden lg:block"
+          >
             <template #label>
               Display
             </template>
@@ -116,7 +130,12 @@ defineShortcuts({
         </template>
       </UDashboardToolbar>
 
-      <UDashboardModal v-model="isNewUserModalOpen" title="New user" description="Add a new user to your database" :ui="{ width: 'sm:max-w-md' }">
+      <UDashboardModal
+        v-model="isNewUserModalOpen"
+        title="New user"
+        description="Add a new user to your database"
+        :ui="{ width: 'sm:max-w-md' }"
+      >
         <!-- ~/components/users/UsersForm.vue -->
         <UsersForm @close="isNewUserModalOpen = false" />
       </UDashboardModal>
@@ -134,14 +153,23 @@ defineShortcuts({
       >
         <template #name-data="{ row }">
           <div class="flex items-center gap-3">
-            <UAvatar v-bind="row.avatar" :alt="row.name" size="xs" />
+            <UAvatar
+              v-bind="row.avatar"
+              :alt="row.name"
+              size="xs"
+            />
 
             <span class="text-gray-900 dark:text-white font-medium">{{ row.name }}</span>
           </div>
         </template>
 
         <template #status-data="{ row }">
-          <UBadge :label="row.status" :color="row.status === 'subscribed' ? 'green' : row.status === 'bounced' ? 'orange' : 'red'" variant="subtle" class="capitalize" />
+          <UBadge
+            :label="row.status"
+            :color="row.status === 'subscribed' ? 'green' : row.status === 'bounced' ? 'orange' : 'red'"
+            variant="subtle"
+            class="capitalize"
+          />
         </template>
       </UTable>
     </UDashboardPanel>

@@ -37,7 +37,7 @@ const sections = [{
   }]
 }]
 
-async function onChange () {
+async function onChange() {
   // Do something with data
   console.log(state)
 }
@@ -63,7 +63,11 @@ async function onChange () {
           class="flex items-center justify-between pt-4 first:pt-0 gap-2"
           :ui="{ container: 'flex' }"
         >
-          <UToggle v-model="state[field.name]" size="md" @update:model-value="onChange" />
+          <UToggle
+            v-model="state[field.name]"
+            size="md"
+            @update:model-value="onChange"
+          />
         </UFormGroup>
       </UCard>
     </UDashboardSection>

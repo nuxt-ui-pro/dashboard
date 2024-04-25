@@ -35,7 +35,11 @@ const countries = [{
 </script>
 
 <template>
-  <UDashboardCard title="Top countries" description="You made sales in 20 countries this month." icon="i-heroicons-globe-alt-20-solid">
+  <UDashboardCard
+    title="Top countries"
+    description="You made sales in 20 countries this month."
+    icon="i-heroicons-globe-alt-20-solid"
+  >
     <div class="space-y-2">
       <UMeter
         v-for="(country, index) in countries"

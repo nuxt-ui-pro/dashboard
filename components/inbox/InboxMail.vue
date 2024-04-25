@@ -18,7 +18,11 @@ defineProps({
   <UDashboardPanelContent>
     <div class="flex justify-between">
       <div class="flex items-center gap-4">
-        <UAvatar v-bind="mail.from.avatar" :alt="mail.from.name" size="lg" />
+        <UAvatar
+          v-bind="mail.from.avatar"
+          :alt="mail.from.name"
+          size="lg"
+        />
 
         <div class="min-w-0">
           <p class="text-gray-900 dark:text-white font-semibold">
@@ -46,8 +50,20 @@ defineProps({
     <UDivider class="my-5" />
 
     <form @submit.prevent>
-      <UTextarea color="gray" required size="xl" :rows="5" :placeholder="`Reply to ${mail.from.name}`">
-        <UButton type="submit" color="black" label="Send" icon="i-heroicons-paper-airplane" class="absolute bottom-2.5 right-3.5" />
+      <UTextarea
+        color="gray"
+        required
+        size="xl"
+        :rows="5"
+        :placeholder="`Reply to ${mail.from.name}`"
+      >
+        <UButton
+          type="submit"
+          color="black"
+          label="Send"
+          icon="i-heroicons-paper-airplane"
+          class="absolute bottom-2.5 right-3.5"
+        />
       </UTextarea>
     </form>
   </UDashboardPanelContent>

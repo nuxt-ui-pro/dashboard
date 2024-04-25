@@ -7,7 +7,7 @@ const toast = useToast()
 
 const loading = ref(false)
 
-function onDelete () {
+function onDelete() {
   loading.value = true
 
   setTimeout(() => {
@@ -36,8 +36,17 @@ function onDelete () {
     }"
   >
     <template #footer>
-      <UButton color="red" label="Delete" :loading="loading" @click="onDelete" />
-      <UButton color="white" label="Cancel" @click="model = false" />
+      <UButton
+        color="red"
+        label="Delete"
+        :loading="loading"
+        @click="onDelete"
+      />
+      <UButton
+        color="white"
+        label="Cancel"
+        @click="model = false"
+      />
     </template>
   </UDashboardModal>
 </template>
