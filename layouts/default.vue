@@ -13,6 +13,16 @@ const links = [{
     shortcuts: ['G', 'H']
   }
 }, {
+  id: 'employees',
+  label: 'Employees',
+  icon: 'i-heroicons-inbox',
+  to: '/employees',
+  badge: '4',
+  tooltip: {
+    text: 'Employees',
+    shortcuts: ['G', 'I']
+  }
+}, {
   id: 'inbox',
   label: 'Inbox',
   icon: 'i-heroicons-inbox',
@@ -57,10 +67,6 @@ const footerLinks = [{
   label: 'Invite people',
   icon: 'i-heroicons-plus',
   to: '/settings/members'
-}, {
-  label: 'Help & Support',
-  icon: 'i-heroicons-question-mark-circle',
-  click: () => isHelpSlideoverOpen.value = true
 }]
 
 const groups = [{
@@ -80,8 +86,6 @@ const groups = [{
   }]
 }]
 
-const defaultColors = ref(['green', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet'].map(color => ({ label: color, chip: color, click: () => appConfig.ui.primary = color })))
-const colors = computed(() => defaultColors.value.map(color => ({ ...color, active: appConfig.ui.primary === color.label })))
 </script>
 
 <template>
@@ -109,10 +113,6 @@ const colors = computed(() => defaultColors.value.map(color => ({ ...color, acti
 
         <UDivider />
 
-        <UDashboardSidebarLinks
-          :links="[{ label: 'Colors', draggable: true, children: colors }]"
-          @update:links="colors => defaultColors = colors"
-        />
 
         <div class="flex-1" />
 

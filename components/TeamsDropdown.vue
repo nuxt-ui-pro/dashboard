@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const teams = [{
-  label: 'Nuxt',
+  label: 'UMS',
   avatar: {
     src: 'https://avatars.githubusercontent.com/u/23360933?s=200&v=4'
   },
@@ -8,7 +8,7 @@ const teams = [{
     team.value = teams[0]
   }
 }, {
-  label: 'NuxtLabs',
+  label: 'UTS',
   avatar: {
     src: 'https://avatars.githubusercontent.com/u/62017400?s=200&v=4'
   },

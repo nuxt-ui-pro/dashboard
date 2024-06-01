@@ -21,30 +21,8 @@ const period = ref<Period>('daily')
 <template>
   <UDashboardPage>
     <UDashboardPanel grow>
-      <UDashboardNavbar title="Home">
+      <UDashboardNavbar title="Employees">
         <template #right>
-          <UTooltip
-            text="Notifications"
-            :shortcuts="['N']"
-          >
-            <UButton
-              color="gray"
-              variant="ghost"
-              square
-              @click="isNotificationsSlideoverOpen = true"
-            >
-              <UChip
-                color="red"
-                inset
-              >
-                <UIcon
-                  name="i-heroicons-bell"
-                  class="w-5 h-5"
-                />
-              </UChip>
-            </UButton>
-          </UTooltip>
-
           <UDropdown :items="items">
             <UButton
               icon="i-heroicons-plus"
@@ -70,14 +48,7 @@ const period = ref<Period>('daily')
           />
         </template>
       </UDashboardToolbar>
-
-      <UDashboardPanelContent>
-        <!-- ~/components/home/HomeChart.vue -->
-        <HomeChart
-          :period="period"
-          :range="range"
-        />
-      </UDashboardPanelContent>
     </UDashboardPanel>
+     
   </UDashboardPage>
 </template>

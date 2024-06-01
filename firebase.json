@@ -1,0 +1,14 @@
+{
+  "functions": { "source": ".output/server" },
+  "hosting": {
+    "site": "staffstream-5473b",
+    "public": ".output/public",
+    "cleanUrls": true,
+    "rewrites": [{ "source": "**", "function": "server" }],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

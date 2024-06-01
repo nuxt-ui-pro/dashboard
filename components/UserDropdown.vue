@@ -19,27 +19,7 @@ const items = computed(() => [
     click: () => {
       isDashboardSearchModalOpen.value = true
     }
-  }, {
-    label: 'Help & Support',
-    icon: 'i-heroicons-question-mark-circle',
-    shortcuts: ['?'],
-    click: () => isHelpSlideoverOpen.value = true
-  }], [{
-    label: 'Documentation',
-    icon: 'i-heroicons-book-open',
-    to: 'https://ui.nuxt.com/pro/getting-started',
-    target: '_blank'
-  }, {
-    label: 'GitHub repository',
-    icon: 'i-simple-icons-github',
-    to: 'https://github.com/nuxt-ui-pro/dashboard',
-    target: '_blank'
-  }, {
-    label: 'Buy Nuxt UI Pro',
-    icon: 'i-heroicons-credit-card',
-    to: 'https://ui.nuxt.com/pro/purchase',
-    target: '_blank'
-  }], [{
+  }], [], [{
     label: 'Sign out',
     icon: 'i-heroicons-arrow-left-on-rectangle'
   }]
