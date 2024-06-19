@@ -14,14 +14,14 @@ export default defineNuxtConfig({
   colorMode: {
     disableTransition: true
   },
-  routeRules: {
-    '/': { prerender: true }
-  },
   devtools: {
     enabled: true
   },
   typescript: {
     strict: false
+  },
+  future: {
+    compatibilityVersion: 4
   },
   eslint: {
     config: {
