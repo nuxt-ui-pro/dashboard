@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   colorMode: {
     disableTransition: true
   },
+  routeRules: {
+    '/': { prerender: true }
+  },
   devtools: {
     enabled: true
   },
