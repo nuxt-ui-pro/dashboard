@@ -10,7 +10,6 @@ export default defineNuxtConfig({
   ],
 
   ui: {
-    icons: ['heroicons', 'simple-icons'],
     safelistColors: ['primary', 'red', 'orange', 'green']
   },
 
