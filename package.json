@@ -12,8 +12,8 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/heroicons": "^1.1.24",
-    "@iconify-json/simple-icons": "^1.1.114",
+    "@iconify-json/heroicons": "^1.2.0",
+    "@iconify-json/simple-icons": "^1.2.1",
     "@nuxt/fonts": "^0.7.2",
     "@nuxt/ui-pro": "^1.4.1",
     "@unovis/ts": "^1.4.4",
@@ -24,8 +24,8 @@
     "v-calendar": "^3.1.2"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.5.1",
-    "eslint": "^9.9.0",
-    "vue-tsc": "^2.0.29"
+    "@nuxt/eslint": "^0.5.6",
+    "eslint": "^9.10.0",
+    "vue-tsc": "^2.1.6"
   }
 }
