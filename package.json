@@ -13,18 +13,18 @@
   },
   "dependencies": {
     "@iconify-json/heroicons": "^1.2.0",
-    "@iconify-json/simple-icons": "^1.2.1",
-    "@nuxt/fonts": "^0.7.2",
-    "@nuxt/ui-pro": "^1.4.1",
+    "@iconify-json/simple-icons": "^1.2.3",
+    "@nuxt/fonts": "^0.8.0",
+    "@nuxt/ui-pro": "^1.4.2",
     "@unovis/ts": "^1.4.4",
     "@unovis/vue": "^1.4.4",
-    "@vueuse/nuxt": "^11.0.3",
+    "@vueuse/nuxt": "^11.1.0",
     "date-fns": "^3.6.0",
     "nuxt": "^3.13.1",
     "v-calendar": "^3.1.2"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.5.6",
+    "@nuxt/eslint": "^0.5.7",
     "eslint": "^9.10.0",
     "vue-tsc": "^2.1.6"
   }
