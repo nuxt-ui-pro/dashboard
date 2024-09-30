@@ -27,5 +27,6 @@
     "@nuxt/eslint": "^0.5.7",
     "eslint": "^9.11.1",
     "vue-tsc": "^2.1.6"
-  }
+  },
+  "packageManager": "pnpm@9.11.0"
 }
