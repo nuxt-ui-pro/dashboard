@@ -8,6 +8,8 @@
 - [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/dashboard)
 - [Documentation](https://ui.nuxt.com/pro/getting-started)
 
+[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/dashboard)
+
 ## Quick Start
 
 ```bash [Terminal]
