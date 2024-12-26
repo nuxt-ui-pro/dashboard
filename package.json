@@ -28,5 +28,8 @@
     "eslint": "^9.17.0",
     "vue-tsc": "^2.2.0"
   },
+  "resolutions": {
+    "nuxt": "3.14.1592"
+  },
   "packageManager": "pnpm@9.15.1"
 }
