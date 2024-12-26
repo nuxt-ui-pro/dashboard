@@ -4,5 +4,9 @@
   ],
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "packageRules": [{
+    "matchDepTypes": ["resolutions"],
+    "enabled": false
+  }]
 }
