@@ -31,5 +31,5 @@
   "resolutions": {
     "nuxt": "3.14.1592"
   },
-  "packageManager": "pnpm@9.15.1"
+  "packageManager": "pnpm@9.15.2"
 }
