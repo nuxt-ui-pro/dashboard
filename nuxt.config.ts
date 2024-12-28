@@ -9,12 +9,16 @@ export default defineNuxtConfig({
     '@vueuse/nuxt'
   ],
 
-  ui: {
-    safelistColors: ['primary', 'red', 'orange', 'green']
+  devtools: {
+    enabled: true
   },
 
   colorMode: {
     disableTransition: true
+  },
+
+  ui: {
+    safelistColors: ['primary', 'red', 'orange', 'green']
   },
 
   routeRules: {
@@ -22,16 +26,14 @@ export default defineNuxtConfig({
     '/': { prerender: true }
   },
 
-  devtools: {
-    enabled: true
+  future: {
+    compatibilityVersion: 4
   },
+
+  compatibilityDate: '2024-07-11',
 
   typescript: {
     strict: false
-  },
-
-  future: {
-    compatibilityVersion: 4
   },
 
   eslint: {
@@ -41,7 +43,5 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
-  },
-
-  compatibilityDate: '2024-07-11'
+  }
 })
