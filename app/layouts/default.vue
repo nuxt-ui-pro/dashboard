@@ -75,7 +75,7 @@ const groups = [{
     label: 'View page source',
     icon: 'i-simple-icons-github',
     click: () => {
-      window.open(`https://github.com/nuxt-ui-pro/dashboard/blob/main/pages${route.path === '/' ? '/index' : route.path}.vue`, '_blank')
+      window.open(`https://github.com/nuxt-ui-pro/dashboard/blob/v1/pages${route.path === '/' ? '/index' : route.path}.vue`, '_blank')
     }
   }]
 }]
