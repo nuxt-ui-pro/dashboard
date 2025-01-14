@@ -13,23 +13,23 @@
   },
   "dependencies": {
     "@iconify-json/heroicons": "^1.2.2",
-    "@iconify-json/simple-icons": "^1.2.17",
+    "@iconify-json/simple-icons": "^1.2.20",
     "@nuxt/fonts": "^0.10.3",
-    "@nuxt/ui-pro": "^1.6.0",
+    "@nuxt/ui-pro": "^1.7.0",
     "@unovis/ts": "^1.5.0",
     "@unovis/vue": "^1.5.0",
-    "@vueuse/nuxt": "^12.2.0",
+    "@vueuse/nuxt": "^12.4.0",
     "date-fns": "^4.1.0",
-    "nuxt": "^3.15.0",
+    "nuxt": "^3.15.1",
     "v-calendar": "^3.1.2"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.7.4",
-    "eslint": "^9.17.0",
-    "vue-tsc": "^2.2.0"
+    "@nuxt/eslint": "^0.7.5",
+    "eslint": "^9.18.0",
+    "vue-tsc": "^2.1.10"
   },
   "resolutions": {
-    "nuxt": "3.14.1592"
+    "vue-tsc": "2.1.10"
   },
-  "packageManager": "pnpm@9.15.1"
+  "packageManager": "pnpm@9.15.4"
 }
