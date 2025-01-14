@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonColor } from '#ui/types'
+
 const { isHelpSlideoverOpen } = useDashboard()
 const { metaSymbol } = useShortcuts()
 
@@ -9,7 +11,7 @@ const links = [{
   label: 'Shortcuts',
   icon: 'i-heroicons-key',
   trailingIcon: 'i-heroicons-arrow-right-20-solid',
-  color: 'gray',
+  color: 'gray' as ButtonColor,
   onClick: () => {
     shortcuts.value = true
   }
@@ -17,17 +19,20 @@ const links = [{
   label: 'Documentation',
   icon: 'i-heroicons-book-open',
   to: 'https://ui.nuxt.com/pro/getting-started',
-  target: '_blank'
+  target: '_blank',
+  color: 'white' as ButtonColor
 }, {
   label: 'GitHub repository',
   icon: 'i-simple-icons-github',
   to: 'https://github.com/nuxt-ui-pro/dashboard',
-  target: '_blank'
+  target: '_blank',
+  color: 'white' as ButtonColor
 }, {
   label: 'Buy Nuxt UI Pro',
   icon: 'i-heroicons-credit-card',
   to: 'https://ui.nuxt.com/pro/purchase',
-  target: '_blank'
+  target: '_blank',
+  color: 'white' as ButtonColor
 }]
 
 const categories = computed(() => [{
@@ -126,7 +131,6 @@ const filteredCategories = computed(() => {
       <UButton
         v-for="(link, index) in links"
         :key="index"
-        color="white"
         v-bind="link"
       />
     </div>

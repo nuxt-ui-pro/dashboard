@@ -1,36 +1,38 @@
 <script setup lang="ts">
+import type { MeterColor } from '#ui/types'
+
 const countries = [{
   label: 'United States',
   value: 31,
-  color: 'red'
+  color: 'red' as MeterColor
 }, {
   label: 'Germany',
   value: 21,
-  color: 'orange'
+  color: 'orange' as MeterColor
 }, {
   label: 'Indonesia',
   value: 15,
-  color: 'yellow'
+  color: 'yellow' as MeterColor
 }, {
   label: 'France',
   value: 10,
-  color: 'green'
+  color: 'green' as MeterColor
 }, {
   label: 'Japan',
   value: 6,
-  color: 'teal'
+  color: 'teal' as MeterColor
 }, {
   label: 'India',
   value: 1,
-  color: 'blue'
+  color: 'blue' as MeterColor
 }, {
   label: 'Brazil',
   value: 1,
-  color: 'indigo'
+  color: 'indigo' as MeterColor
 }, {
   label: 'China',
   value: 1,
-  color: 'pink'
+  color: 'pink' as MeterColor
 }]
 </script>
 
