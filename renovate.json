@@ -12,5 +12,6 @@
   "packageRules": [{
     "matchDepTypes": ["resolutions"],
     "enabled": false
-  }]
+  }],
+  "postUpdateOptions": ["pnpmDedupe"]
 }
