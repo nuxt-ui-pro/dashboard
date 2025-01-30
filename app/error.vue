@@ -21,15 +21,7 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <UMain>
-      <UContainer>
-        <UPage>
-          <UPageError :error="error" />
-        </UPage>
-      </UContainer>
-    </UMain>
-
-    <UNotifications />
-  </div>
+  <UApp>
+    <UError :error="error" />
+  </UApp>
 </template>

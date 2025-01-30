@@ -1,92 +1,130 @@
 <script setup lang="ts">
-const { isHelpSlideoverOpen } = useDashboard()
-const { isDashboardSearchModalOpen } = useUIState()
-const { metaSymbol } = useShortcuts()
+import type { DropdownMenuItem } from '@nuxt/ui'
 
-const items = computed(() => [
-  [{
-    slot: 'account',
-    label: '',
-    disabled: true
-  }], [{
-    label: 'Settings',
-    icon: 'i-heroicons-cog-8-tooth',
-    to: '/settings'
-  }, {
-    label: 'Command menu',
-    icon: 'i-heroicons-command-line',
-    shortcuts: [metaSymbol.value, 'K'],
-    click: () => {
-      isDashboardSearchModalOpen.value = true
+defineProps<{
+  collapsed?: boolean
+}>()
+
+const colorMode = useColorMode()
+const appConfig = useAppConfig()
+
+const colors = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose']
+
+const user = ref({
+  name: 'Benjamin Canac',
+  avatar: {
+    src: 'https://github.com/benjamincanac.png',
+    alt: 'Benjamin Canac'
+  }
+})
+
+const items = computed<DropdownMenuItem[][]>(() => ([[{
+  type: 'label',
+  label: user.value.name,
+  avatar: user.value.avatar
+}], [{
+  label: 'Profile',
+  icon: 'i-lucide-user'
+}, {
+  label: 'Billing',
+  icon: 'i-lucide-credit-card'
+}, {
+  label: 'Settings',
+  icon: 'i-lucide-settings',
+  to: '/settings'
+}], [{
+  label: 'Theme',
+  icon: 'i-lucide-palette',
+  content: {
+    align: 'center',
+    collisionPadding: 16
+  },
+  children: colors.map(color => ({
+    label: color,
+    chip: color,
+    slot: 'chip',
+    color: appConfig.ui.colors.primary === color ? 'primary' : 'neutral',
+    checked: appConfig.ui.colors.primary === color,
+    type: 'checkbox',
+    onSelect: (e) => {
+      e.preventDefault()
+
+      appConfig.ui.colors.primary = color
+    }
+  }))
+}, {
+  label: 'Appearance',
+  icon: 'i-lucide-sun-moon',
+  children: [{
+    label: 'Light',
+    icon: 'i-lucide-sun',
+    type: 'checkbox',
+    color: colorMode.value === 'light' ? 'primary' : 'neutral',
+    checked: colorMode.value === 'light',
+    onSelect(e: Event) {
+      e.preventDefault()
+
+      colorMode.preference = 'light'
     }
   }, {
-    label: 'Help & Support',
-    icon: 'i-heroicons-question-mark-circle',
-    shortcuts: ['?'],
-    click: () => isHelpSlideoverOpen.value = true
-  }], [{
-    label: 'Documentation',
-    icon: 'i-heroicons-book-open',
-    to: 'https://ui.nuxt.com/pro/getting-started',
-    target: '_blank'
-  }, {
-    label: 'GitHub repository',
-    icon: 'i-simple-icons-github',
-    to: 'https://github.com/nuxt-ui-pro/dashboard',
-    target: '_blank'
-  }, {
-    label: 'Buy Nuxt UI Pro',
-    icon: 'i-heroicons-credit-card',
-    to: 'https://ui.nuxt.com/pro/purchase',
-    target: '_blank'
-  }], [{
-    label: 'Sign out',
-    icon: 'i-heroicons-arrow-left-on-rectangle'
+    label: 'Dark',
+    icon: 'i-lucide-moon',
+    type: 'checkbox',
+    color: colorMode.value === 'dark' ? 'primary' : 'neutral',
+    checked: colorMode.value === 'dark',
+    onUpdateChecked(checked: boolean) {
+      if (checked) {
+        colorMode.preference = 'dark'
+      }
+    },
+    onSelect(e: Event) {
+      e.preventDefault()
+    }
   }]
-])
+}], [{
+  label: 'Documentation',
+  icon: 'i-lucide-book-open',
+  to: 'https://ui3.nuxt.dev/getting-started/installation/pro/nuxt',
+  target: '_blank'
+}, {
+  label: 'GitHub repository',
+  icon: 'i-simple-icons-github',
+  to: 'https://github.com/nuxt-ui-pro/dashboard/tree/v3',
+  target: '_blank'
+}, {
+  label: 'Upgrade to Pro',
+  icon: 'i-lucide-rocket',
+  to: 'https://ui.nuxt.com/pro/purchase',
+  target: '_blank'
+}], [{
+  label: 'Log out',
+  icon: 'i-lucide-log-out'
+}]]))
 </script>
 
 <template>
-  <UDropdown
-    mode="hover"
+  <UDropdownMenu
     :items="items"
-    :ui="{ width: 'w-full', item: { disabled: 'cursor-text select-text' } }"
-    :popper="{ strategy: 'absolute', placement: 'top' }"
-    class="w-full"
+    :ui="{ content: collapsed ? 'w-40' : 'w-(--reka-dropdown-menu-trigger-width)' }"
   >
-    <template #default="{ open }">
-      <UButton
-        color="gray"
-        variant="ghost"
-        class="w-full"
-        label="Benjamin"
-        :class="[open && 'bg-gray-50 dark:bg-gray-800']"
-      >
-        <template #leading>
-          <UAvatar
-            src="https://avatars.githubusercontent.com/u/739984?v=4"
-            size="2xs"
-          />
-        </template>
+    <UButton
+      v-bind="{
+        ...user,
+        label: collapsed ? undefined : user?.name,
+        trailingIcon: collapsed ? undefined : 'i-lucide-chevrons-up-down'
+      }"
+      color="neutral"
+      variant="ghost"
+      block
+      :square="collapsed"
+      class="data-[state=open]:bg-(--ui-bg-elevated)"
+    />
 
-        <template #trailing>
-          <UIcon
-            name="i-heroicons-ellipsis-vertical"
-            class="w-5 h-5 ml-auto"
-          />
-        </template>
-      </UButton>
+    <template #chip-leading="{ item }">
+      <span
+        class="ms-0.5 size-2 rounded-full bg-(--chip)"
+        :style="{ '--chip': `var(--color-${item.chip}-400)` }"
+      />
     </template>
-
-    <template #account>
-      <div class="text-left">
-        <p>
-          Signed in as
-        </p>
-        <p class="truncate font-medium text-gray-900 dark:text-white">
-          ben@nuxtlabs.com
-        </p>
-      </div>
-    </template>
-  </UDropdown>
+  </UDropdownMenu>
 </template>

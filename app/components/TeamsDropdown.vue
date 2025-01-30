@@ -1,54 +1,59 @@
 <script setup lang="ts">
-const teams = [{
+defineProps<{
+  collapsed?: boolean
+}>()
+
+const teams = ref([{
   label: 'Nuxt',
   avatar: {
-    src: 'https://avatars.githubusercontent.com/u/23360933?s=200&v=4'
-  },
-  click: () => {
-    team.value = teams[0]
+    src: 'https://github.com/nuxt.png',
+    alt: 'Nuxt'
+  }
+}, {
+  label: 'NuxtHub',
+  avatar: {
+    src: 'https://github.com/nuxt-hub.png',
+    alt: 'NuxtHub'
   }
 }, {
   label: 'NuxtLabs',
   avatar: {
-    src: 'https://avatars.githubusercontent.com/u/62017400?s=200&v=4'
-  },
-  click: () => {
-    team.value = teams[1]
+    src: 'https://github.com/nuxtlabs.png',
+    alt: 'NuxtLabs'
   }
-}]
+}])
+const selectedTeam = ref(teams.value[0])
 
-const actions = [{
-  label: 'Create team',
-  icon: 'i-heroicons-plus-circle'
-}, {
-  label: 'Manage teams',
-  icon: 'i-heroicons-cog-8-tooth'
-}]
-
-const team = ref(teams[0])
+const items = computed(() => {
+  return [teams.value.map(team => ({
+    ...team,
+    onSelect() {
+      selectedTeam.value = team
+    }
+  })), [{
+    label: 'Create team',
+    icon: 'i-lucide-circle-plus'
+  }]]
+})
 </script>
 
 <template>
-  <UDropdown
-    v-slot="{ open }"
-    mode="hover"
-    :items="[teams, actions]"
-    class="w-full"
-    :ui="{ width: 'w-full' }"
-    :popper="{ strategy: 'absolute' }"
+  <UDropdownMenu
+    :items="items"
+    :content="{ align: 'center' }"
+    :ui="{ content: collapsed ? 'w-40' : 'w-(--reka-dropdown-menu-trigger-width)' }"
   >
     <UButton
-      color="gray"
+      v-bind="{
+        ...selectedTeam,
+        label: collapsed ? undefined : selectedTeam?.label,
+        trailingIcon: collapsed ? undefined : 'i-lucide-chevrons-up-down'
+      }"
+      color="neutral"
       variant="ghost"
-      :class="[open && 'bg-gray-50 dark:bg-gray-800']"
-      class="w-full"
-    >
-      <UAvatar
-        :src="team.avatar.src"
-        size="2xs"
-      />
-
-      <span class="truncate text-gray-900 dark:text-white font-semibold">{{ team.label }}</span>
-    </UButton>
-  </UDropdown>
+      block
+      :square="collapsed"
+      class="data-[state=open]:bg-(--ui-bg-elevated)"
+    />
+  </UDropdownMenu>
 </template>

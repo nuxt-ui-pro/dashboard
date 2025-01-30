@@ -1,44 +1,40 @@
 <script setup lang="ts">
 const links = [[{
   label: 'General',
-  icon: 'i-lucide-user',
+  icon: 'i-heroicons-user-circle',
   to: '/settings',
   exact: true
 }, {
   label: 'Members',
-  icon: 'i-lucide-users',
+  icon: 'i-heroicons-user-group',
   to: '/settings/members'
 }, {
   label: 'Notifications',
-  icon: 'i-lucide-bell',
+  icon: 'i-heroicons-bell',
   to: '/settings/notifications'
 }], [{
   label: 'Documentation',
-  icon: 'i-lucide-book-open',
-  to: 'https://ui3.nuxt.dev/getting-started/installation/pro/nuxt',
+  icon: 'i-heroicons-book-open',
+  to: 'https://ui.nuxt.com/pro',
   target: '_blank'
 }, {
   label: 'Buy now',
-  icon: 'i-lucide-shopping-cart',
+  icon: 'i-heroicons-credit-card',
   to: 'https://ui.nuxt.com/pro/purchase',
   target: '_blank'
 }]]
 </script>
 
 <template>
-  <UDashboardPanel>
-    <template #header>
+  <UDashboardPage>
+    <UDashboardPanel grow>
       <UDashboardNavbar title="Settings" />
 
-      <UDashboardToolbar>
-        <UNavigationMenu
-          :items="links"
-          highlight
-          class="-mx-2.5 flex-1"
-        />
+      <UDashboardToolbar class="py-0 px-1.5 overflow-x-auto">
+        <UHorizontalNavigation :links="links" />
       </UDashboardToolbar>
-    </template>
 
-    <NuxtPage />
-  </UDashboardPanel>
+      <NuxtPage />
+    </UDashboardPanel>
+  </UDashboardPage>
 </template>
