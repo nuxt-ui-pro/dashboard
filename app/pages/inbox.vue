@@ -57,9 +57,17 @@ watch(filteredMails, () => {
 </script>
 
 <template>
-  <UDashboardPanel :default-size="25">
+  <UDashboardPanel
+    id="inbox-1"
+    :default-size="25"
+    resizable
+  >
     <template #header>
       <UDashboardNavbar title="Inbox">
+        <template #leading>
+          <UDashboardSidebarCollapse />
+        </template>
+
         <template #trailing>
           <UBadge
             :label="filteredMails.length"
@@ -85,10 +93,5 @@ watch(filteredMails, () => {
     />
   </UDashboardPanel>
 
-  <!-- <UDashboardResizeHandle /> -->
-
-  <UDashboardPanel
-    :default-size="60"
-    :order="2"
-  />
+  <UDashboardPanel id="inbox-2" />
 </template>

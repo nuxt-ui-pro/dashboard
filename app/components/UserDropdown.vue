@@ -41,7 +41,6 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
   },
   children: colors.map(color => ({
     label: color,
-    chip: color,
     slot: 'chip',
     color: appConfig.ui.colors.primary === color ? 'primary' : 'neutral',
     checked: appConfig.ui.colors.primary === color,
@@ -123,7 +122,7 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     <template #chip-leading="{ item }">
       <span
         class="ms-0.5 size-2 rounded-full bg-(--chip)"
-        :style="{ '--chip': `var(--color-${item.chip}-400)` }"
+        :style="{ '--chip': `var(--color-${item.label}-400)` }"
       />
     </template>
   </UDropdownMenu>

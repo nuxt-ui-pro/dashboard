@@ -26,9 +26,13 @@ const links = [[{
 </script>
 
 <template>
-  <UDashboardPanel>
+  <UDashboardPanel id="settings">
     <template #header>
-      <UDashboardNavbar title="Settings" />
+      <UDashboardNavbar title="Settings">
+        <template #leading>
+          <UDashboardSidebarCollapse />
+        </template>
+      </UDashboardNavbar>
 
       <UDashboardToolbar>
         <UNavigationMenu

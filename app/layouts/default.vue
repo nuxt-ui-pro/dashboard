@@ -85,6 +85,7 @@ const links = [[{
   <UDashboardGroup>
     <UDashboardSidebar
       collapsible
+      resizable
       :ui="{ footer: 'border-t border-(--ui-border)' }"
     >
       <template #header="{ collapsed }">
@@ -100,7 +101,10 @@ const links = [[{
           block
           :square="collapsed"
         >
-          <template #trailing>
+          <template
+            v-if="!collapsed"
+            #trailing
+          >
             <div class="flex items-center gap-0.5 ms-auto">
               <UKbd
                 value="meta"
@@ -132,8 +136,6 @@ const links = [[{
         <UserDropdown :collapsed="collapsed" />
       </template>
     </UDashboardSidebar>
-
-    <!-- <UDashboardResizeHandle /> -->
 
     <slot />
 

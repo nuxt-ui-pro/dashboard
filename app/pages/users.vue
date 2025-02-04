@@ -1,7 +1,11 @@
 <template>
-  <UDashboardPanel>
+  <UDashboardPanel id="users">
     <template #header>
-      <UDashboardNavbar title="Users" />
+      <UDashboardNavbar title="Users">
+        <template #leading>
+          <UDashboardSidebarCollapse />
+        </template>
+      </UDashboardNavbar>
     </template>
   </UDashboardPanel>
 </template>
