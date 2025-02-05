@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // const route = useRoute()
 // const appConfig = useAppConfig()
+const toast = useToast()
 const { isHelpSlideoverOpen } = useDashboard()
 
 const links = [[{
@@ -79,14 +80,39 @@ const links = [[{
 //     }
 //   }]
 // }]
+
+onMounted(async () => {
+  const cookie = useCookie('cookie-consent')
+  if (cookie.value === 'accepted') {
+    return
+  }
+
+  toast.add({
+    title: 'We use first-party cookies to enhance your experience on our website.',
+    duration: 0,
+    close: false,
+    actions: [{
+      label: 'Accept',
+      color: 'neutral',
+      variant: 'outline',
+      onClick: () => {
+        cookie.value = 'accepted'
+      }
+    }, {
+      label: 'Opt out',
+      color: 'neutral',
+      variant: 'ghost'
+    }]
+  })
+})
 </script>
 
 <template>
   <UDashboardGroup>
     <UDashboardSidebar
-      collapsible
       resizable
-      :ui="{ footer: 'border-t border-(--ui-border)' }"
+      collapsible
+      :ui="{ footer: 'lg:border-t lg:border-(--ui-border)' }"
     >
       <template #header="{ collapsed }">
         <TeamsDropdown :collapsed="collapsed" />
@@ -139,7 +165,7 @@ const links = [[{
 
     <slot />
 
-    <!-- <HelpSlideover />
-    <NotificationsSlideover /> -->
+    <!-- <HelpSlideover /> -->
+    <NotificationsSlideover />
   </UDashboardGroup>
 </template>

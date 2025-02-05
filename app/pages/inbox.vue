@@ -10,19 +10,19 @@ const tabItems = [{
 }]
 const selectedTab = ref('all')
 
-const dropdownItems = [[{
-  label: 'Mark as unread',
-  icon: 'i-heroicons-check-circle'
-}, {
-  label: 'Mark as important',
-  icon: 'i-heroicons-exclamation-circle'
-}], [{
-  label: 'Star thread',
-  icon: 'i-heroicons-star'
-}, {
-  label: 'Mute thread',
-  icon: 'i-heroicons-pause-circle'
-}]]
+// const dropdownItems = [[{
+//   label: 'Mark as unread',
+//   icon: 'i-heroicons-check-circle'
+// }, {
+//   label: 'Mark as important',
+//   icon: 'i-heroicons-exclamation-circle'
+// }], [{
+//   label: 'Star thread',
+//   icon: 'i-heroicons-star'
+// }, {
+//   label: 'Mute thread',
+//   icon: 'i-heroicons-pause-circle'
+// }]]
 
 const { data: mails } = await useFetch<Mail[]>('/api/mails', { default: () => [] })
 
@@ -37,16 +37,16 @@ const filteredMails = computed(() => {
 
 const selectedMail = ref<Mail | null>()
 
-const isMailPanelOpen = computed({
-  get() {
-    return !!selectedMail.value
-  },
-  set(value: boolean) {
-    if (!value) {
-      selectedMail.value = null
-    }
-  }
-})
+// const isMailPanelOpen = computed({
+//   get() {
+//     return !!selectedMail.value
+//   },
+//   set(value: boolean) {
+//     if (!value) {
+//       selectedMail.value = null
+//     }
+//   }
+// })
 
 // Reset selected mail if it's not in the filtered mails
 watch(filteredMails, () => {

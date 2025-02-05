@@ -11,8 +11,8 @@ const _useDashboard = () => {
     'g-i': () => router.push('/inbox'),
     'g-u': () => router.push('/users'),
     'g-s': () => router.push('/settings'),
-    '?': () => isHelpSlideoverOpen.value = true,
-    'n': () => isNotificationsSlideoverOpen.value = true
+    '?': () => isHelpSlideoverOpen.value = !isHelpSlideoverOpen.value,
+    'n': () => isNotificationsSlideoverOpen.value = !isNotificationsSlideoverOpen.value
   })
 
   watch(() => route.fullPath, () => {

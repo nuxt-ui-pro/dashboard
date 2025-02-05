@@ -1,5 +1,3 @@
 <template>
-  <div>
-    {{ $route.params.slug }}
-  </div>
+  <div />
 </template>
