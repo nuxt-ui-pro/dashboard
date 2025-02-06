@@ -8,30 +8,18 @@ const links = [[{
   id: 'home',
   label: 'Home',
   icon: 'i-lucide-home',
-  to: '/',
-  tooltip: {
-    text: 'Home',
-    shortcuts: ['G', 'H']
-  }
+  to: '/'
 }, {
   id: 'inbox',
   label: 'Inbox',
   icon: 'i-lucide-inbox',
   to: '/inbox',
-  badge: '4',
-  tooltip: {
-    text: 'Inbox',
-    shortcuts: ['G', 'I']
-  }
+  badge: '4'
 }, {
   id: 'users',
-  label: 'Users',
+  label: 'Contacts',
   icon: 'i-lucide-users',
-  to: '/users',
-  tooltip: {
-    text: 'Users',
-    shortcuts: ['G', 'U']
-  }
+  to: '/contacts'
 }, {
   id: 'settings',
   label: 'Settings',
@@ -110,12 +98,13 @@ onMounted(async () => {
 <template>
   <UDashboardGroup>
     <UDashboardSidebar
-      resizable
       collapsible
+      resizable
+      class="bg-(--ui-bg-elevated)/50"
       :ui="{ footer: 'lg:border-t lg:border-(--ui-border)' }"
     >
       <template #header="{ collapsed }">
-        <TeamsDropdown :collapsed="collapsed" />
+        <TeamsMenu :collapsed="collapsed" />
       </template>
 
       <template #default="{ collapsed }">
@@ -123,9 +112,10 @@ onMounted(async () => {
           :label="collapsed ? undefined : 'Search...'"
           icon="i-lucide-search"
           color="neutral"
-          variant="subtle"
+          variant="outline"
           block
           :square="collapsed"
+          class="bg-(--ui-bg-elevated)/50"
         >
           <template
             v-if="!collapsed"
@@ -159,7 +149,7 @@ onMounted(async () => {
       </template>
 
       <template #footer="{ collapsed }">
-        <UserDropdown :collapsed="collapsed" />
+        <UserMenu :collapsed="collapsed" />
       </template>
     </UDashboardSidebar>
 

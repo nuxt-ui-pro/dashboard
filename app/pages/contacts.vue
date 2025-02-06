@@ -1,7 +1,7 @@
 <template>
-  <UDashboardPanel id="users">
+  <UDashboardPanel id="contacts">
     <template #header>
-      <UDashboardNavbar title="Users">
+      <UDashboardNavbar title="Contacts">
         <template #leading>
           <UDashboardSidebarCollapse />
         </template>

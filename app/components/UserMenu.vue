@@ -9,6 +9,7 @@ const colorMode = useColorMode()
 const appConfig = useAppConfig()
 
 const colors = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose']
+const neutrals = ['slate', 'gray', 'zinc', 'neutral', 'stone']
 
 const user = ref({
   name: 'Benjamin Canac',
@@ -35,22 +36,47 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 }], [{
   label: 'Theme',
   icon: 'i-lucide-palette',
-  content: {
-    align: 'center',
-    collisionPadding: 16
-  },
-  children: colors.map(color => ({
-    label: color,
+  children: [{
+    label: 'Primary',
     slot: 'chip',
-    color: appConfig.ui.colors.primary === color ? 'primary' : 'neutral',
-    checked: appConfig.ui.colors.primary === color,
-    type: 'checkbox',
-    onSelect: (e) => {
-      e.preventDefault()
+    chip: appConfig.ui.colors.primary,
+    content: {
+      align: 'center',
+      collisionPadding: 16
+    },
+    children: colors.map(color => ({
+      label: color,
+      chip: color,
+      slot: 'chip',
+      checked: appConfig.ui.colors.primary === color,
+      type: 'checkbox',
+      onSelect: (e) => {
+        e.preventDefault()
 
-      appConfig.ui.colors.primary = color
-    }
-  }))
+        appConfig.ui.colors.primary = color
+      }
+    }))
+  }, {
+    label: 'Neutral',
+    slot: 'chip',
+    chip: appConfig.ui.colors.neutral,
+    content: {
+      align: 'end',
+      collisionPadding: 16
+    },
+    children: neutrals.map(color => ({
+      label: color,
+      chip: color,
+      slot: 'chip',
+      type: 'checkbox',
+      checked: appConfig.ui.colors.neutral === color,
+      onSelect: (e) => {
+        e.preventDefault()
+
+        appConfig.ui.colors.neutral = color
+      }
+    }))
+  }]
 }, {
   label: 'Appearance',
   icon: 'i-lucide-sun-moon',
@@ -58,7 +84,6 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     label: 'Light',
     icon: 'i-lucide-sun',
     type: 'checkbox',
-    color: colorMode.value === 'light' ? 'primary' : 'neutral',
     checked: colorMode.value === 'light',
     onSelect(e: Event) {
       e.preventDefault()
@@ -69,7 +94,6 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     label: 'Dark',
     icon: 'i-lucide-moon',
     type: 'checkbox',
-    color: colorMode.value === 'dark' ? 'primary' : 'neutral',
     checked: colorMode.value === 'dark',
     onUpdateChecked(checked: boolean) {
       if (checked) {
@@ -121,8 +145,8 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 
     <template #chip-leading="{ item }">
       <span
+        :style="{ '--chip': `var(--color-${item.chip}-400)` }"
         class="ms-0.5 size-2 rounded-full bg-(--chip)"
-        :style="{ '--chip': `var(--color-${item.label}-400)` }"
       />
     </template>
   </UDropdownMenu>

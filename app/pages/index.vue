@@ -2,7 +2,7 @@
 // import { sub } from 'date-fns'
 // import type { Period, Range } from '~/types'
 
-const { isNotificationsSlideoverOpen } = useDashboard()
+// const { isNotificationsSlideoverOpen } = useDashboard()
 
 // const items = [[{
 //   label: 'New mail',
@@ -20,7 +20,7 @@ const { isNotificationsSlideoverOpen } = useDashboard()
 
 <template>
   <UDashboardPanel id="home">
-    <template #header>
+    <!-- <template #header>
       <UDashboardNavbar title="Home">
         <template #leading>
           <UDashboardSidebarCollapse />
@@ -50,13 +50,18 @@ const { isNotificationsSlideoverOpen } = useDashboard()
           </UTooltip>
         </template>
       </UDashboardNavbar>
-    </template>
+    </template> -->
 
-    <template #body>
-      <!-- <HomeChart
-        :period="period"
-        :range="range"
-      /> -->
-    </template>
+    <UContainer class="w-full">
+      <UPage class="w-full">
+        <UPageHeader
+          title="Home"
+          description="Welcome to the home page"
+        />
+        <UPageBody>
+          <UPageCard title="Home" />
+        </UPageBody>
+      </UPage>
+    </UContainer>
   </UDashboardPanel>
 </template>
