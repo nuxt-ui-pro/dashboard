@@ -64,10 +64,10 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
   <UCard ref="cardRef">
     <template #header>
       <div>
-        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">
+        <p class="text-sm text-(--ui-text-muted) font-medium mb-1">
           Revenue
         </p>
-        <p class="text-3xl text-gray-900 dark:text-white font-semibold">
+        <p class="text-3xl text-(--ui-text-highlighted) font-semibold">
           {{ formatNumber(total) }}
         </p>
       </div>
@@ -82,12 +82,12 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
       <VisLine
         :x="x"
         :y="y"
-        color="rgb(var(--color-primary-DEFAULT))"
+        color="var(--ui-primary)"
       />
       <VisArea
         :x="x"
         :y="y"
-        color="rgb(var(--color-primary-DEFAULT))"
+        color="var(--ui-primary)"
         :opacity="0.1"
       />
 
@@ -98,7 +98,7 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
       />
 
       <VisCrosshair
-        color="rgb(var(--color-primary-DEFAULT))"
+        color="var(--ui-primary)"
         :template="template"
       />
 
@@ -109,30 +109,15 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
 
 <style scoped>
 .unovis-xy-container {
-  --vis-crosshair-line-stroke-color: rgb(var(--color-primary-500));
-  --vis-crosshair-circle-stroke-color: #fff;
+  --vis-crosshair-line-stroke-color: var(--ui-primary);
+  --vis-crosshair-circle-stroke-color: var(--ui-bg);
 
-  --vis-axis-grid-color: rgb(var(--color-gray-200));
-  --vis-axis-tick-color: rgb(var(--color-gray-200));
-  --vis-axis-tick-label-color: rgb(var(--color-gray-400));
+  --vis-axis-grid-color: var(--ui-border);
+  --vis-axis-tick-color: var(--ui-border);
+  --vis-axis-tick-label-color: var(--ui-text-dimmed);
 
-  --vis-tooltip-background-color: #fff;
-  --vis-tooltip-border-color: rgb(var(--color-gray-200));
-  --vis-tooltip-text-color: rgb(var(--color-gray-900));
-}
-
-.dark {
-  .unovis-xy-container {
-    --vis-crosshair-line-stroke-color: rgb(var(--color-primary-400));
-    --vis-crosshair-circle-stroke-color: rgb(var(--color-gray-900));
-
-    --vis-axis-grid-color: rgb(var(--color-gray-800));
-    --vis-axis-tick-color: rgb(var(--color-gray-800));
-    --vis-axis-tick-label-color: rgb(var(--color-gray-500));
-
-    --vis-tooltip-background-color: rgb(var(--color-gray-900));
-    --vis-tooltip-border-color: rgb(var(--color-gray-800));
-    --vis-tooltip-text-color: #fff;
-  }
+  --vis-tooltip-background-color: var(--ui-bg);
+  --vis-tooltip-border-color: var(--ui-border);
+  --vis-tooltip-text-color: var(--ui-text-highlighted);
 }
 </style>

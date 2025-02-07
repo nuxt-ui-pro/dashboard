@@ -89,7 +89,7 @@ defineShortcuts({
         <p :class="[mail.unread && 'font-semibold']">
           {{ mail.subject }}
         </p>
-        <p class="text-gray-400 dark:text-gray-500 line-clamp-1">
+        <p class="text-(--ui-text-dimmed) line-clamp-1">
           {{ mail.body }}
         </p>
       </div>

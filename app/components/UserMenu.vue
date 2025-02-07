@@ -120,6 +120,27 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
   to: 'https://ui.nuxt.com/pro/purchase',
   target: '_blank'
 }], [{
+  label: 'Templates',
+  icon: 'i-lucide-layout-template',
+  children: [{
+    label: 'Starter',
+    to: 'https://ui-pro-starter.nuxt.dev/'
+  }, {
+    label: 'Landing',
+    to: 'https://landing-template.nuxt.dev/'
+  }, {
+    label: 'Docs',
+    to: 'https://docs-template.nuxt.dev/'
+  }, {
+    label: 'SaaS',
+    to: 'https://saas-template.nuxt.dev/'
+  }, {
+    label: 'Dashboard',
+    to: 'https://dashboard-template.nuxt.dev/',
+    checked: true,
+    type: 'checkbox'
+  }]
+}], [{
   label: 'Log out',
   icon: 'i-lucide-log-out'
 }]]))
@@ -145,7 +166,7 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 
     <template #chip-leading="{ item }">
       <span
-        :style="{ '--chip': `var(--color-${item.chip}-400)` }"
+        :style="{ '--chip': `var(--color-${(item as any).chip}-400)` }"
         class="ms-0.5 size-2 rounded-full bg-(--chip)"
       />
     </template>

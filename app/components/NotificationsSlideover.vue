@@ -11,14 +11,13 @@ const { data: notifications } = await useFetch<Notification[]>('/api/notificatio
   <USlideover
     v-model:open="isNotificationsSlideoverOpen"
     title="Notifications"
-    :ui="{ header: 'h-[var(--ui-header-height)]' }"
   >
     <template #body>
       <NuxtLink
         v-for="notification in notifications"
         :key="notification.id"
         :to="`/inbox?id=${notification.id}`"
-        class="p-3 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer flex items-center gap-3 relative"
+        class="p-3 rounded-md hover:bg-(--ui-bg-elevated)/50 flex items-center gap-3 relative"
       >
         <UChip
           color="error"
@@ -34,15 +33,15 @@ const { data: notifications } = await useFetch<Notification[]>('/api/notificatio
 
         <div class="text-sm flex-1">
           <p class="flex items-center justify-between">
-            <span class="text-gray-900 dark:text-white font-medium">{{ notification.sender.name }}</span>
+            <span class="text-(--ui-text-highlighted) font-medium">{{ notification.sender.name }}</span>
 
             <time
               :datetime="notification.date"
-              class="text-gray-500 dark:text-gray-400 text-xs"
+              class="text-(--ui-text-muted) text-xs"
               v-text="formatTimeAgo(new Date(notification.date))"
             />
           </p>
-          <p class="text-gray-500 dark:text-gray-400">
+          <p class="text-(--ui-text-dimmed)">
             {{ notification.body }}
           </p>
         </div>

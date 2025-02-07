@@ -100,7 +100,7 @@ onMounted(async () => {
     <UDashboardSidebar
       collapsible
       resizable
-      class="bg-(--ui-bg-elevated)/50"
+      class="bg-neutral-100 dark:bg-neutral-800/25"
       :ui="{ footer: 'lg:border-t lg:border-(--ui-border)' }"
     >
       <template #header="{ collapsed }">

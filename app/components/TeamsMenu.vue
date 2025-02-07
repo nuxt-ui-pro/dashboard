@@ -4,35 +4,38 @@ defineProps<{
 }>()
 
 const teams = ref([{
-  label: 'Starter',
-  to: 'https://ui-pro-starter.nuxt.dev/',
-  icon: 'i-logos-nuxt-icon'
+  label: 'Nuxt',
+  avatar: {
+    src: 'https://github.com/nuxt.png',
+    alt: 'Nuxt'
+  }
 }, {
-  label: 'Landing',
-  to: 'https://landing-template.nuxt.dev/',
-  icon: 'i-logos-nuxt-icon'
+  label: 'NuxtHub',
+  avatar: {
+    src: 'https://github.com/nuxt-hub.png',
+    alt: 'NuxtHub'
+  }
 }, {
-  label: 'Docs',
-  to: 'https://docs-template.nuxt.dev/',
-  icon: 'i-logos-nuxt-icon'
-}, {
-  label: 'SaaS',
-  to: 'https://saas-template.nuxt.dev/',
-  icon: 'i-logos-nuxt-icon'
-}, {
-  label: 'Dashboard',
-  to: 'https://dashboard-template.nuxt.dev/',
-  icon: 'i-logos-nuxt-icon',
-  color: 'primary',
-  checked: true,
-  type: 'checkbox'
+  label: 'NuxtLabs',
+  avatar: {
+    src: 'https://github.com/nuxtlabs.png',
+    alt: 'NuxtLabs'
+  }
 }])
-const selectedTeam = ref(teams.value[teams.value.length - 1])
+const selectedTeam = ref(teams.value[0])
 
 const items = computed(() => {
-  return [teams.value, [{
+  return [teams.value.map(team => ({
+    ...team,
+    onSelect() {
+      selectedTeam.value = team
+    }
+  })), [{
     label: 'Create team',
     icon: 'i-lucide-circle-plus'
+  }, {
+    label: 'Manage teams',
+    icon: 'i-lucide-cog'
   }]]
 })
 </script>
@@ -55,7 +58,7 @@ const items = computed(() => {
       :square="collapsed"
       class="data-[state=open]:bg-(--ui-bg-elevated)"
       :ui="{
-        trailingIcon: 'text-[var(--ui-text-muted)]'
+        trailingIcon: 'text-(--ui-text-muted)'
       }"
     />
   </UDropdownMenu>
