@@ -56,9 +56,9 @@ const items = computed(() => {
       variant="ghost"
       block
       :square="collapsed"
-      class="data-[state=open]:bg-(--ui-bg-elevated)"
+      class="data-[state=open]:bg-(--ui-bg-elevated) py-2"
       :ui="{
-        trailingIcon: 'text-(--ui-text-muted)'
+        trailingIcon: 'text-(--ui-text-dimmed)'
       }"
     />
   </UDropdownMenu>

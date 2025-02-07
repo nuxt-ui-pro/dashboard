@@ -162,6 +162,9 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
       block
       :square="collapsed"
       class="data-[state=open]:bg-(--ui-bg-elevated)"
+      :ui="{
+        trailingIcon: 'text-(--ui-text-dimmed)'
+      }"
     />
 
     <template #chip-leading="{ item }">

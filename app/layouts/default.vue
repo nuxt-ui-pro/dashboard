@@ -2,7 +2,6 @@
 // const route = useRoute()
 // const appConfig = useAppConfig()
 const toast = useToast()
-const { isHelpSlideoverOpen } = useDashboard()
 
 const links = [[{
   id: 'home',
@@ -44,12 +43,13 @@ const links = [[{
 }], [{
   label: 'Feedback',
   icon: 'i-lucide-message-circle',
-  to: 'https://github.com/nuxt-ui-pro/dashboard/issues',
+  to: 'https://github.com/nuxt-ui-pro/dashboard',
   target: '_blank'
 }, {
   label: 'Help & Support',
   icon: 'i-lucide-info',
-  click: () => isHelpSlideoverOpen.value = true
+  to: 'https://github.com/nuxt/ui-pro',
+  target: '_blank'
 }]]
 
 // const groups = [{
@@ -100,7 +100,7 @@ onMounted(async () => {
     <UDashboardSidebar
       collapsible
       resizable
-      class="bg-neutral-100 dark:bg-neutral-800/25"
+      class="bg-(--ui-bg-elevated)/25"
       :ui="{ footer: 'lg:border-t lg:border-(--ui-border)' }"
     >
       <template #header="{ collapsed }">
@@ -115,7 +115,7 @@ onMounted(async () => {
           variant="outline"
           block
           :square="collapsed"
-          class="bg-(--ui-bg-elevated)/50"
+          class="bg-(--ui-bg-elevated)/25 ring-(--ui-border-accented)/50"
         >
           <template
             v-if="!collapsed"
