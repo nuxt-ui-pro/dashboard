@@ -43,7 +43,7 @@ const items = computed(() => {
 <template>
   <UDropdownMenu
     :items="items"
-    :content="{ align: 'center' }"
+    :content="{ align: 'center', collisionPadding: 12 }"
     :ui="{ content: collapsed ? 'w-40' : 'w-(--reka-dropdown-menu-trigger-width)' }"
   >
     <UButton
@@ -56,7 +56,8 @@ const items = computed(() => {
       variant="ghost"
       block
       :square="collapsed"
-      class="data-[state=open]:bg-(--ui-bg-elevated) py-2"
+      class="data-[state=open]:bg-(--ui-bg-elevated)"
+      :class="[!collapsed && 'py-2']"
       :ui="{
         trailingIcon: 'text-(--ui-text-dimmed)'
       }"

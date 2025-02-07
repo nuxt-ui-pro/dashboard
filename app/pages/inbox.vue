@@ -60,6 +60,8 @@ watch(filteredMails, () => {
   <UDashboardPanel
     id="inbox-1"
     :default-size="25"
+    :min-size="20"
+    :max-size="30"
     resizable
   >
     <template #header>
@@ -79,9 +81,9 @@ watch(filteredMails, () => {
           <UTabs
             v-model="selectedTab"
             :items="tabItems"
-            class="w-36"
+            class="w-32"
             :content="false"
-            size="sm"
+            size="xs"
           />
         </template>
       </UDashboardNavbar>
@@ -93,5 +95,8 @@ watch(filteredMails, () => {
     />
   </UDashboardPanel>
 
-  <UDashboardPanel id="inbox-2" />
+  <UDashboardPanel
+    id="inbox-2"
+    class="hidden lg:flex"
+  />
 </template>

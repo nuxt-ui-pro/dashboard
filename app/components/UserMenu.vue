@@ -105,21 +105,6 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     }
   }]
 }], [{
-  label: 'Documentation',
-  icon: 'i-lucide-book-open',
-  to: 'https://ui3.nuxt.dev/getting-started/installation/pro/nuxt',
-  target: '_blank'
-}, {
-  label: 'GitHub repository',
-  icon: 'i-simple-icons-github',
-  to: 'https://github.com/nuxt-ui-pro/dashboard/tree/v3',
-  target: '_blank'
-}, {
-  label: 'Upgrade to Pro',
-  icon: 'i-lucide-rocket',
-  to: 'https://ui.nuxt.com/pro/purchase',
-  target: '_blank'
-}], [{
   label: 'Templates',
   icon: 'i-lucide-layout-template',
   children: [{
@@ -141,6 +126,21 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     type: 'checkbox'
   }]
 }], [{
+  label: 'Documentation',
+  icon: 'i-lucide-book-open',
+  to: 'https://ui3.nuxt.dev/getting-started/installation/pro/nuxt',
+  target: '_blank'
+}, {
+  label: 'GitHub repository',
+  icon: 'i-simple-icons-github',
+  to: 'https://github.com/nuxt-ui-pro/dashboard/tree/v3',
+  target: '_blank'
+}, {
+  label: 'Upgrade to Pro',
+  icon: 'i-lucide-rocket',
+  to: 'https://ui.nuxt.com/pro/purchase',
+  target: '_blank'
+}], [{
   label: 'Log out',
   icon: 'i-lucide-log-out'
 }]]))
@@ -149,7 +149,8 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 <template>
   <UDropdownMenu
     :items="items"
-    :ui="{ content: collapsed ? 'w-40' : 'w-(--reka-dropdown-menu-trigger-width)' }"
+    :content="{ align: 'center', collisionPadding: 12 }"
+    :ui="{ content: collapsed ? 'w-48' : 'w-(--reka-dropdown-menu-trigger-width)' }"
   >
     <UButton
       v-bind="{
