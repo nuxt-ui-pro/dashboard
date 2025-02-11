@@ -1,19 +1,16 @@
 <template>
-  <UDashboardCard
-    ref="cardRef"
-    :ui="{ body: { padding: '!pb-3 !px-0' } }"
-  >
+  <UCard>
     <template #header>
       <div>
-        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">
+        <p class="text-sm text-(--ui-text-muted) font-medium mb-1">
           Revenue
         </p>
-        <p class="text-3xl text-gray-900 dark:text-white font-semibold">
+        <p class="text-3xl text-(--ui-text-highlighted) font-semibold">
           ---
         </p>
       </div>
     </template>
 
     <div class="h-96" />
-  </UDashboardCard>
+  </UCard>
 </template>

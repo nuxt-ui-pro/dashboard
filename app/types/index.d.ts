@@ -1,4 +1,4 @@
-import type { Avatar } from '#ui/types'
+import type { AvatarProps } from '@nuxt/ui'
 
 export type UserStatus = 'subscribed' | 'unsubscribed' | 'bounced'
 
@@ -6,7 +6,7 @@ export interface User {
   id: number
   name: string
   email: string
-  avatar?: Avatar
+  avatar?: AvatarProps
   status: UserStatus
   location: string
 }

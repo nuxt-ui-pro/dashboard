@@ -1,11 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
-
   modules: [
     '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/ui',
+    '@nuxt/ui-pro',
     '@vueuse/nuxt'
   ],
 
@@ -13,13 +10,7 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  colorMode: {
-    disableTransition: true
-  },
-
-  ui: {
-    safelistColors: ['primary', 'red', 'orange', 'green']
-  },
+  css: ['~/assets/css/main.css'],
 
   routeRules: {
     // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490

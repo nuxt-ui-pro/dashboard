@@ -5,10 +5,16 @@ import type { Period, Range } from '~/types'
 
 const cardRef = ref<HTMLElement | null>(null)
 
-const props = defineProps<{
-  period: Period
-  range: Range
-}>()
+const props = defineProps({
+  period: {
+    type: String as PropType<Period>,
+    required: true
+  },
+  range: {
+    type: Object as PropType<Range>,
+    required: true
+  }
+})
 
 type DataRecord = {
   date: Date
@@ -23,7 +29,7 @@ const { data } = await useAsyncData<DataRecord[]>(async () => {
     daily: eachDayOfInterval,
     weekly: eachWeekOfInterval,
     monthly: eachMonthOfInterval
-  })[props.period as keyof Period](props.range)
+  })[props.period](props.range)
 
   const min = 1000
   const max = 10000
@@ -61,13 +67,16 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
 </script>
 
 <template>
-  <UCard ref="cardRef">
+  <UDashboardCard
+    ref="cardRef"
+    :ui="{ body: { padding: '!pb-3 !px-0' } as any }"
+  >
     <template #header>
       <div>
-        <p class="text-sm text-(--ui-text-muted) font-medium mb-1">
+        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">
           Revenue
         </p>
-        <p class="text-3xl text-(--ui-text-highlighted) font-semibold">
+        <p class="text-3xl text-gray-900 dark:text-white font-semibold">
           {{ formatNumber(total) }}
         </p>
       </div>
@@ -82,12 +91,12 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
       <VisLine
         :x="x"
         :y="y"
-        color="var(--ui-primary)"
+        color="rgb(var(--color-primary-DEFAULT))"
       />
       <VisArea
         :x="x"
         :y="y"
-        color="var(--ui-primary)"
+        color="rgb(var(--color-primary-DEFAULT))"
         :opacity="0.1"
       />
 
@@ -98,26 +107,41 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
       />
 
       <VisCrosshair
-        color="var(--ui-primary)"
+        color="rgb(var(--color-primary-DEFAULT))"
         :template="template"
       />
 
       <VisTooltip />
     </VisXYContainer>
-  </UCard>
+  </UDashboardCard>
 </template>
 
 <style scoped>
 .unovis-xy-container {
-  --vis-crosshair-line-stroke-color: var(--ui-primary);
-  --vis-crosshair-circle-stroke-color: var(--ui-bg);
+  --vis-crosshair-line-stroke-color: rgb(var(--color-primary-500));
+  --vis-crosshair-circle-stroke-color: #fff;
 
-  --vis-axis-grid-color: var(--ui-border);
-  --vis-axis-tick-color: var(--ui-border);
-  --vis-axis-tick-label-color: var(--ui-text-dimmed);
+  --vis-axis-grid-color: rgb(var(--color-gray-200));
+  --vis-axis-tick-color: rgb(var(--color-gray-200));
+  --vis-axis-tick-label-color: rgb(var(--color-gray-400));
 
-  --vis-tooltip-background-color: var(--ui-bg);
-  --vis-tooltip-border-color: var(--ui-border);
-  --vis-tooltip-text-color: var(--ui-text-highlighted);
+  --vis-tooltip-background-color: #fff;
+  --vis-tooltip-border-color: rgb(var(--color-gray-200));
+  --vis-tooltip-text-color: rgb(var(--color-gray-900));
+}
+
+.dark {
+  .unovis-xy-container {
+    --vis-crosshair-line-stroke-color: rgb(var(--color-primary-400));
+    --vis-crosshair-circle-stroke-color: rgb(var(--color-gray-900));
+
+    --vis-axis-grid-color: rgb(var(--color-gray-800));
+    --vis-axis-tick-color: rgb(var(--color-gray-800));
+    --vis-axis-tick-label-color: rgb(var(--color-gray-500));
+
+    --vis-tooltip-background-color: rgb(var(--color-gray-900));
+    --vis-tooltip-border-color: rgb(var(--color-gray-800));
+    --vis-tooltip-text-color: #fff;
+  }
 }
 </style>

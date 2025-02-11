@@ -8,42 +8,47 @@ const { data: notifications } = await useFetch<Notification[]>('/api/notificatio
 </script>
 
 <template>
-  <UDashboardSlideover
-    v-model="isNotificationsSlideoverOpen"
+  <USlideover
+    v-model:open="isNotificationsSlideoverOpen"
     title="Notifications"
+    :ui="{
+      header: 'h-(--ui-header-height)'
+    }"
   >
-    <NuxtLink
-      v-for="notification in notifications"
-      :key="notification.id"
-      :to="`/inbox?id=${notification.id}`"
-      class="p-3 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer flex items-center gap-3 relative"
-    >
-      <UChip
-        color="red"
-        :show="!!notification.unread"
-        inset
+    <template #body>
+      <NuxtLink
+        v-for="notification in notifications"
+        :key="notification.id"
+        :to="`/inbox?id=${notification.id}`"
+        class="px-3 py-2.5 rounded-md hover:bg-(--ui-bg-elevated)/50 flex items-center gap-3 relative -mx-3 first:-mt-3 last:-mb-3"
       >
-        <UAvatar
-          v-bind="notification.sender.avatar"
-          :alt="notification.sender.name"
-          size="md"
-        />
-      </UChip>
-
-      <div class="text-sm flex-1">
-        <p class="flex items-center justify-between">
-          <span class="text-gray-900 dark:text-white font-medium">{{ notification.sender.name }}</span>
-
-          <time
-            :datetime="notification.date"
-            class="text-gray-500 dark:text-gray-400 text-xs"
-            v-text="formatTimeAgo(new Date(notification.date))"
+        <UChip
+          color="error"
+          :show="!!notification.unread"
+          inset
+        >
+          <UAvatar
+            v-bind="notification.sender.avatar"
+            :alt="notification.sender.name"
+            size="md"
           />
-        </p>
-        <p class="text-gray-500 dark:text-gray-400">
-          {{ notification.body }}
-        </p>
-      </div>
-    </NuxtLink>
-  </UDashboardSlideover>
+        </UChip>
+
+        <div class="text-sm flex-1">
+          <p class="flex items-center justify-between">
+            <span class="text-(--ui-text-highlighted) font-medium">{{ notification.sender.name }}</span>
+
+            <time
+              :datetime="notification.date"
+              class="text-(--ui-text-muted) text-xs"
+              v-text="formatTimeAgo(new Date(notification.date))"
+            />
+          </p>
+          <p class="text-(--ui-text-dimmed)">
+            {{ notification.body }}
+          </p>
+        </div>
+      </NuxtLink>
+    </template>
+  </USlideover>
 </template>

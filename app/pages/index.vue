@@ -1,40 +1,44 @@
 <script setup lang="ts">
-import { sub } from 'date-fns'
-import type { Period, Range } from '~/types'
+// import { sub } from 'date-fns'
+// import type { Period, Range } from '~/types'
 
-const { isNotificationsSlideoverOpen } = useDashboard()
+// const { isNotificationsSlideoverOpen } = useDashboard()
 
-const items = [[{
-  label: 'New mail',
-  icon: 'i-heroicons-paper-airplane',
-  to: '/inbox'
-}, {
-  label: 'New user',
-  icon: 'i-heroicons-user-plus',
-  to: '/users'
-}]]
+// const items = [[{
+//   label: 'New mail',
+//   icon: 'i-heroicons-paper-airplane',
+//   to: '/inbox'
+// }, {
+//   label: 'New user',
+//   icon: 'i-heroicons-user-plus',
+//   to: '/users'
+// }]]
 
-const range = ref<Range>({ start: sub(new Date(), { days: 14 }), end: new Date() })
-const period = ref<Period>('daily')
+// const range = ref<Range>({ start: sub(new Date(), { days: 14 }), end: new Date() })
+// const period = ref<Period>('daily')
 </script>
 
 <template>
-  <UDashboardPage>
-    <UDashboardPanel grow>
+  <UDashboardPanel id="home">
+    <!-- <template #header>
       <UDashboardNavbar title="Home">
+        <template #leading>
+          <UDashboardSidebarCollapse />
+        </template>
+
         <template #right>
           <UTooltip
             text="Notifications"
             :shortcuts="['N']"
           >
             <UButton
-              color="gray"
+              color="neutral"
               variant="ghost"
               square
               @click="isNotificationsSlideoverOpen = true"
             >
               <UChip
-                color="red"
+                color="error"
                 inset
               >
                 <UIcon
@@ -44,47 +48,20 @@ const period = ref<Period>('daily')
               </UChip>
             </UButton>
           </UTooltip>
-
-          <UDropdown :items="items">
-            <UButton
-              icon="i-heroicons-plus"
-              size="md"
-              class="ml-1.5 rounded-full"
-            />
-          </UDropdown>
         </template>
       </UDashboardNavbar>
+    </template> -->
 
-      <UDashboardToolbar>
-        <template #left>
-          <!-- ~/components/home/HomeDateRangePicker.vue -->
-          <HomeDateRangePicker
-            v-model="range"
-            class="-ml-2.5"
-          />
-
-          <!-- ~/components/home/HomePeriodSelect.vue -->
-          <HomePeriodSelect
-            v-model="period"
-            :range="range"
-          />
-        </template>
-      </UDashboardToolbar>
-
-      <UDashboardPanelContent>
-        <!-- ~/components/home/HomeChart.vue -->
-        <HomeChart
-          :period="period"
-          :range="range"
+    <UContainer class="w-full">
+      <UPage class="w-full">
+        <UPageHeader
+          title="Home"
+          description="Welcome to the home page"
         />
-
-        <div class="grid lg:grid-cols-2 lg:items-start gap-8 mt-8">
-          <!-- ~/components/home/HomeSales.vue -->
-          <HomeSales />
-          <!-- ~/components/home/HomeCountries.vue -->
-          <HomeCountries />
-        </div>
-      </UDashboardPanelContent>
-    </UDashboardPanel>
-  </UDashboardPage>
+        <UPageBody>
+          <UPageCard title="Home" />
+        </UPageBody>
+      </UPage>
+    </UContainer>
+  </UDashboardPanel>
 </template>
