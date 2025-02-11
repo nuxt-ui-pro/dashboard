@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { sub } from 'date-fns'
+import { today, CalendarDate, DateFormatter } from '@internationalized/date'
 import type { Period, Range } from '~/types'
 
 const { isNotificationsSlideoverOpen } = useDashboard()
@@ -14,7 +15,10 @@ const items = [[{
   to: '/contacts'
 }]]
 
-const range = ref<Range>({ start: sub(new Date(), { days: 14 }), end: new Date() })
+const range = shallowRef<Range>({
+  start: sub(new Date(), { days: 14 }),
+  end: new Date()
+})
 const period = ref<Period>('daily')
 </script>
 
@@ -58,6 +62,18 @@ const period = ref<Period>('daily')
         </template>
       </UDashboardNavbar>
     </template>
+
+    <UDashboardToolbar class="py-2">
+      <template #left>
+        <!--        <HomeDateRangePicker
+          v-model="range"
+        /> -->
+        <HomePeriodSelect
+          v-model="period"
+          :range="range"
+        />
+      </template>
+    </UDashboardToolbar>
 
     <UPage class="w-full p-4">
       <HomeChart
