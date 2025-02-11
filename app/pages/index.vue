@@ -74,7 +74,8 @@ const period = ref<Period>('daily')
       </template>
     </UDashboardToolbar>
 
-    <UPage class="w-full p-4">
+    <UPage class="p-4 overflow-y-auto">
+      <HomeStats />
       <HomeChart
         :period="period"
         :range="range"
