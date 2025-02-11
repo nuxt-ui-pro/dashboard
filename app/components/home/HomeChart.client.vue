@@ -3,7 +3,7 @@ import { eachDayOfInterval, eachWeekOfInterval, eachMonthOfInterval, format } fr
 import { VisXYContainer, VisLine, VisAxis, VisArea, VisCrosshair, VisTooltip } from '@unovis/vue'
 import type { Period, Range } from '~/types'
 
-const cardRef = ref<HTMLElement | null>(null)
+const cardRef = useTemplateRef<HTMLElement | null>(null)
 
 const props = defineProps<{
   period: Period
