@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { sub } from 'date-fns'
-import { today, CalendarDate, DateFormatter } from '@internationalized/date'
 import type { Period, Range } from '~/types'
 
 const { isNotificationsSlideoverOpen } = useDashboard()
@@ -65,9 +64,9 @@ const period = ref<Period>('daily')
 
     <UDashboardToolbar class="py-2">
       <template #left>
-        <!--        <HomeDateRangePicker
+        <HomeDateRangePicker
           v-model="range"
-        /> -->
+        />
         <HomePeriodSelect
           v-model="period"
           :range="range"
