@@ -80,6 +80,7 @@ const period = ref<Period>('daily')
         :period="period"
         :range="range"
       />
+      <HomeSales />
     </UPage>
   </UDashboardPanel>
 </template>
