@@ -64,26 +64,31 @@ const { data: stats } = await useAsyncData<Stat[]>('stats', async () => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+  <UPageGrid class="lg:grid-cols-4 gap-4">
     <UPageCard
       v-for="(stat, index) in stats"
       :key="index"
       :icon="stat.icon"
       :title="stat.title"
+      :ui="{
+        container: 'gap-y-1.5',
+        leading: 'p-2.5 rounded-full bg-(--ui-primary)/10 ring ring-inset ring-(--ui-primary)/25',
+        title: 'font-light text-(--ui-text-muted) text-sm uppercase'
+      }"
     >
       <div class="flex items-center gap-2">
-        <span class="text-2xl font-semibold">
+        <span class="text-2xl font-semibold text-(--ui-text-highlighted)">
           {{ stat.value }}
         </span>
+
         <UBadge
           :color="stat.variation > 0 ? 'success' : 'error'"
           variant="subtle"
-          size="xs"
           class="text-xs"
         >
           {{ stat.variation > 0 ? '+' : '' }}{{ stat.variation }}%
         </UBadge>
       </div>
     </UPageCard>
-  </div>
+  </UPageGrid>
 </template>

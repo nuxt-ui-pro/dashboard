@@ -30,63 +30,38 @@ const period = ref<Period>('daily')
         </template>
 
         <template #right>
-          <UTooltip
-            text="Notifications"
-            :shortcuts="['N']"
-          >
+          <UTooltip text="Notifications" :shortcuts="['N']">
             <UButton
               color="neutral"
               variant="ghost"
               square
               @click="isNotificationsSlideoverOpen = true"
             >
-              <UChip
-                color="error"
-                inset
-              >
-                <UIcon
-                  name="i-heroicons-bell"
-                  class="w-5 h-5"
-                />
+              <UChip color="error" inset>
+                <UIcon name="i-heroicons-bell" class="w-5 h-5" />
               </UChip>
             </UButton>
           </UTooltip>
+
           <UDropdownMenu :items="items">
-            <UButton
-              icon="i-heroicons-plus"
-              size="md"
-              class="ml-1.5 rounded-full"
-            />
+            <UButton icon="i-heroicons-plus" size="md" class="ml-1.5 rounded-full" />
           </UDropdownMenu>
         </template>
       </UDashboardNavbar>
+
+      <UDashboardToolbar>
+        <template #left>
+          <HomeDateRangePicker v-model="range" />
+
+          <HomePeriodSelect v-model="period" :range="range" />
+        </template>
+      </UDashboardToolbar>
     </template>
 
-    <UDashboardToolbar class="py-2">
-      <template #left>
-        <HomeDateRangePicker
-          v-model="range"
-        />
-        <HomePeriodSelect
-          v-model="period"
-          :range="range"
-        />
-      </template>
-    </UDashboardToolbar>
-
-    <UPage class="p-4 overflow-y-auto">
-      <HomeStats
-        :period="period"
-        :range="range"
-      />
-      <HomeChart
-        :period="period"
-        :range="range"
-      />
-      <HomeSales
-        :period="period"
-        :range="range"
-      />
-    </UPage>
+    <template #body>
+      <HomeStats :period="period" :range="range" />
+      <HomeChart :period="period" :range="range" />
+      <HomeSales :period="period" :range="range" />
+    </template>
   </UDashboardPanel>
 </template>

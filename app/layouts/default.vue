@@ -117,19 +117,10 @@ onMounted(async () => {
           :square="collapsed"
           class="bg-(--ui-bg-elevated)/25 ring-(--ui-border-accented)/50"
         >
-          <template
-            v-if="!collapsed"
-            #trailing
-          >
+          <template v-if="!collapsed" #trailing>
             <div class="flex items-center gap-0.5 ms-auto">
-              <UKbd
-                value="meta"
-                variant="subtle"
-              />
-              <UKbd
-                value="K"
-                variant="subtle"
-              />
+              <UKbd value="meta" variant="subtle" />
+              <UKbd value="K" variant="subtle" />
             </div>
           </template>
         </UButton>

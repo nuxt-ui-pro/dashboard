@@ -44,7 +44,7 @@ const { data } = await useAsyncData('sales', async () => {
 const columns: TableColumn<Sale>[] = [
   {
     accessorKey: 'id',
-    header: '#',
+    header: 'ID',
     cell: ({ row }) => `#${row.getValue('id')}`
   },
   {
@@ -97,11 +97,13 @@ const columns: TableColumn<Sale>[] = [
 </script>
 
 <template>
-  <UPageCard class="mt-4">
-    <UTable
-      :data="data"
-      :columns="columns"
-      class="flex-1"
-    />
-  </UPageCard>
+  <UTable
+    :data="data"
+    :columns="columns"
+    class="overflow-visible"
+    :ui="{
+      thead: '[&>tr]:bg-(--ui-bg-elevated)/50 [&>tr]:after:content-none',
+      th: 'first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)]'
+    }"
+  />
 </template>

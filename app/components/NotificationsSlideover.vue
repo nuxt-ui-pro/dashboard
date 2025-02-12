@@ -44,6 +44,7 @@ const { data: notifications } = await useFetch<Notification[]>('/api/notificatio
               v-text="formatTimeAgo(new Date(notification.date))"
             />
           </p>
+
           <p class="text-(--ui-text-dimmed)">
             {{ notification.body }}
           </p>
