@@ -45,20 +45,11 @@ watch(periods, () => {
 </script>
 
 <template>
-  <USelectMenu
-    v-slot="{ open }"
+  <USelect
     v-model="model"
-    :options="periods"
-    :ui-menu="{ width: 'w-32', option: { base: 'capitalize' } }"
-    :popper="{ placement: 'bottom-start' }"
-  >
-    <UButton
-      :label="model"
-      color="gray"
-      variant="ghost"
-      class="capitalize"
-      :class="[open && 'bg-gray-50 dark:bg-gray-800']"
-      trailing-icon="i-heroicons-chevron-down-20-solid"
-    />
-  </USelectMenu>
+    :items="periods"
+    variant="ghost"
+    class="data-[state=open]:bg-(--ui-bg-elevated)"
+    :ui="{ value: 'capitalize', itemLabel: 'capitalize', trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
+  />
 </template>

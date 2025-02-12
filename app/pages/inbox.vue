@@ -71,10 +71,7 @@ watch(filteredMails, () => {
         </template>
 
         <template #trailing>
-          <UBadge
-            :label="filteredMails.length"
-            variant="subtle"
-          />
+          <UBadge :label="filteredMails.length" variant="subtle" />
         </template>
 
         <template #right>
@@ -89,14 +86,8 @@ watch(filteredMails, () => {
       </UDashboardNavbar>
     </template>
 
-    <InboxList
-      v-model="selectedMail"
-      :mails="filteredMails"
-    />
+    <InboxList v-model="selectedMail" :mails="filteredMails" />
   </UDashboardPanel>
 
-  <UDashboardPanel
-    id="inbox-2"
-    class="hidden lg:flex"
-  />
+  <UDashboardPanel id="inbox-2" class="hidden lg:flex" />
 </template>
