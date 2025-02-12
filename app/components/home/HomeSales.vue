@@ -1,56 +1,47 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
 import type { TableColumn } from '@nuxt/ui'
+import type { Period, Range, Sale } from '~/types'
+
+const props = defineProps<{
+  period: Period
+  range: Range
+}>()
 
 const UBadge = resolveComponent('UBadge')
 
-type Payment = {
-  id: string
-  date: string
-  status: 'paid' | 'failed' | 'refunded'
-  email: string
-  amount: number
-}
+const sampleEmails = [
+  'james.anderson@example.com',
+  'mia.white@example.com',
+  'william.brown@example.com',
+  'emma.davis@example.com',
+  'ethan.harris@example.com'
+]
 
-const data = ref<Payment[]>([
-  {
-    id: '4600',
-    date: '2024-03-11T15:30:00',
-    status: 'paid',
-    email: 'james.anderson@example.com',
-    amount: 594
-  },
-  {
-    id: '4599',
-    date: '2024-03-11T10:10:00',
-    status: 'failed',
-    email: 'mia.white@example.com',
-    amount: 276
-  },
-  {
-    id: '4598',
-    date: '2024-03-11T08:50:00',
-    status: 'refunded',
-    email: 'william.brown@example.com',
-    amount: 315
-  },
-  {
-    id: '4597',
-    date: '2024-03-10T19:45:00',
-    status: 'paid',
-    email: 'emma.davis@example.com',
-    amount: 529
-  },
-  {
-    id: '4596',
-    date: '2024-03-10T15:55:00',
-    status: 'paid',
-    email: 'ethan.harris@example.com',
-    amount: 639
+const { data } = await useAsyncData('sales', async () => {
+  const sales: Sale[] = []
+  const currentDate = new Date()
+
+  for (let i = 0; i < 5; i++) {
+    const hoursAgo = randomInt(0, 48)
+    const date = new Date(currentDate.getTime() - hoursAgo * 3600000)
+
+    sales.push({
+      id: (4600 - i).toString(),
+      date: date.toISOString(),
+      status: randomFrom(['paid', 'failed', 'refunded']),
+      email: randomFrom(sampleEmails),
+      amount: randomInt(100, 1000)
+    })
   }
-])
 
-const columns: TableColumn<Payment>[] = [
+  return sales.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+}, {
+  watch: [() => props.period, () => props.range],
+  default: () => []
+})
+
+const columns: TableColumn<Sale>[] = [
   {
     accessorKey: 'id',
     header: '#',
