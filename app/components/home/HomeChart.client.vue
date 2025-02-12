@@ -75,7 +75,7 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
 
     <VisXYContainer
       :data="data"
-      :padding="{ top: 10 }"
+      :padding="{ top: 40 }"
       class="h-96"
       :width="width"
     >

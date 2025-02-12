@@ -100,7 +100,7 @@ const columns: TableColumn<Sale>[] = [
   <UTable
     :data="data"
     :columns="columns"
-    class="overflow-visible"
+    class="shrink-0"
     :ui="{
       base: 'table-fixed border-separate border-spacing-0',
       thead: '[&>tr]:bg-(--ui-bg-elevated)/50 [&>tr]:after:content-none',
