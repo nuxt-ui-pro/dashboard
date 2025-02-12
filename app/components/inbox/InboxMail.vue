@@ -35,6 +35,7 @@ const dropdownItems = [[{
             icon="i-lucide-x"
             color="neutral"
             variant="ghost"
+            class="-ms-1.5"
             @click="selected = null"
           />
           <span class="text-neutral-900 dark:text-white font-semibold">
@@ -51,11 +52,9 @@ const dropdownItems = [[{
           </UTooltip>
 
           <div>
-            <UButton
-              icon="i-lucide-reply"
-              color="neutral"
-              variant="ghost"
-            />
+            <UTooltip text="Reply">
+              <UButton icon="i-lucide-reply" color="neutral" variant="ghost" />
+            </UTooltip>
             <UDropdownMenu :items="dropdownItems">
               <UButton
                 icon="i-lucide-ellipsis-vertical"
@@ -115,7 +114,7 @@ const dropdownItems = [[{
         <form @submit.prevent>
           <UTextarea
             color="neutral"
-            variant="ghost"
+            variant="none"
             required
             autoresize
             size="xl"

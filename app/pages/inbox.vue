@@ -23,17 +23,6 @@ const filteredMails = computed(() => {
 
 const selectedMail = ref<Mail | null>()
 
-const isMailPanelOpen = computed({
-  get() {
-    return !!selectedMail.value
-  },
-  set(value: boolean) {
-    if (!value) {
-      selectedMail.value = null
-    }
-  }
-})
-
 // Reset selected mail if it's not in the filtered mails
 watch(filteredMails, () => {
   if (!filteredMails.value.find(mail => mail.id === selectedMail.value?.id)) {
