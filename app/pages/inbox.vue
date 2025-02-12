@@ -10,20 +10,6 @@ const tabItems = [{
 }]
 const selectedTab = ref('all')
 
-// const dropdownItems = [[{
-//   label: 'Mark as unread',
-//   icon: 'i-heroicons-check-circle'
-// }, {
-//   label: 'Mark as important',
-//   icon: 'i-heroicons-exclamation-circle'
-// }], [{
-//   label: 'Star thread',
-//   icon: 'i-heroicons-star'
-// }, {
-//   label: 'Mute thread',
-//   icon: 'i-heroicons-pause-circle'
-// }]]
-
 const { data: mails } = await useFetch<Mail[]>('/api/mails', { default: () => [] })
 
 // Filter mails based on the selected tab
@@ -37,16 +23,16 @@ const filteredMails = computed(() => {
 
 const selectedMail = ref<Mail | null>()
 
-// const isMailPanelOpen = computed({
-//   get() {
-//     return !!selectedMail.value
-//   },
-//   set(value: boolean) {
-//     if (!value) {
-//       selectedMail.value = null
-//     }
-//   }
-// })
+const isMailPanelOpen = computed({
+  get() {
+    return !!selectedMail.value
+  },
+  set(value: boolean) {
+    if (!value) {
+      selectedMail.value = null
+    }
+  }
+})
 
 // Reset selected mail if it's not in the filtered mails
 watch(filteredMails, () => {
@@ -89,5 +75,8 @@ watch(filteredMails, () => {
     <InboxList v-model="selectedMail" :mails="filteredMails" />
   </UDashboardPanel>
 
-  <UDashboardPanel id="inbox-2" class="hidden lg:flex" />
+  <InboxMail v-if="selectedMail" v-model="selectedMail" :mail="selectedMail" />
+  <div v-else class="flex-1 hidden lg:flex items-center justify-center">
+    <UIcon name="i-lucide-inbox" class="size-32 text-neutral-400 dark:text-neutral-500" />
+  </div>
 </template>
