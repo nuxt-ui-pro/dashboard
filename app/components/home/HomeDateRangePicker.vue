@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DateFormatter, getLocalTimeZone, CalendarDate } from '@internationalized/date'
+import { DateFormatter, getLocalTimeZone, CalendarDate, today } from '@internationalized/date'
 import type { Range } from '~/types'
 
 const df = new DateFormatter('en-US', {
@@ -7,6 +7,15 @@ const df = new DateFormatter('en-US', {
 })
 
 const selected = defineModel<Range>({ required: true })
+
+const ranges = [
+  { label: 'Last 7 days', days: 7 },
+  { label: 'Last 14 days', days: 14 },
+  { label: 'Last 30 days', days: 30 },
+  { label: 'Last 3 months', months: 3 },
+  { label: 'Last 6 months', months: 6 },
+  { label: 'Last year', years: 1 }
+]
 
 const toCalendarDate = (date: Date) => {
   return new CalendarDate(
@@ -28,6 +37,44 @@ const calendarRange = computed({
     }
   }
 })
+
+const isRangeSelected = (range: { days?: number, months?: number, years?: number }) => {
+  if (!selected.value.start || !selected.value.end) return false
+
+  const currentDate = today(getLocalTimeZone())
+  let startDate = currentDate.copy()
+
+  if (range.days) {
+    startDate = startDate.subtract({ days: range.days })
+  } else if (range.months) {
+    startDate = startDate.subtract({ months: range.months })
+  } else if (range.years) {
+    startDate = startDate.subtract({ years: range.years })
+  }
+
+  const selectedStart = toCalendarDate(selected.value.start)
+  const selectedEnd = toCalendarDate(selected.value.end)
+
+  return selectedStart.compare(startDate) === 0 && selectedEnd.compare(currentDate) === 0
+}
+
+const selectRange = (range: { days?: number, months?: number, years?: number }) => {
+  const endDate = today(getLocalTimeZone())
+  let startDate = endDate.copy()
+
+  if (range.days) {
+    startDate = startDate.subtract({ days: range.days })
+  } else if (range.months) {
+    startDate = startDate.subtract({ months: range.months })
+  } else if (range.years) {
+    startDate = startDate.subtract({ years: range.years })
+  }
+
+  selected.value = {
+    start: startDate.toDate(getLocalTimeZone()),
+    end: endDate.toDate(getLocalTimeZone())
+  }
+}
 </script>
 
 <template>
@@ -51,12 +98,28 @@ const calendarRange = computed({
     </UButton>
 
     <template #content>
-      <UCalendar
-        v-model="calendarRange"
-        class="p-2"
-        :number-of-months="2"
-        range
-      />
+      <div class="flex items-center sm:divide-x divide-neutral-200 dark:divide-neutral-800">
+        <div class="hidden sm:flex flex-col py-4">
+          <UButton
+            v-for="(range, index) in ranges"
+            :key="index"
+            :label="range.label"
+            color="neutral"
+            variant="ghost"
+            class="rounded-none px-6"
+            :class="[isRangeSelected(range) ? 'bg-neutral-100 dark:bg-neutral-800' : 'hover:bg-neutral-50 dark:hover:bg-neutral-800/50']"
+            truncate
+            @click="selectRange(range)"
+          />
+        </div>
+
+        <UCalendar
+          v-model="calendarRange"
+          class="p-2"
+          :number-of-months="2"
+          range
+        />
+      </div>
     </template>
   </UPopover>
 </template>
