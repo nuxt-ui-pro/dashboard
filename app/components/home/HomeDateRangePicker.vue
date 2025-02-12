@@ -78,7 +78,7 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
 </script>
 
 <template>
-  <UPopover>
+  <UPopover :content="{ align: 'start' }">
     <UButton
       color="neutral"
       variant="ghost"

@@ -49,7 +49,6 @@ watch(periods, () => {
     v-model="model"
     :items="periods"
     variant="ghost"
-    class="w-32"
-    :ui="{ value: 'capitalize', itemLabel: 'capitalize' }"
+    :ui="{ value: 'capitalize', itemLabel: 'capitalize', container: 'w-32' }"
   />
 </template>
