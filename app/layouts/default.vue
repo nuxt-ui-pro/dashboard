@@ -4,23 +4,19 @@
 const toast = useToast()
 
 const links = [[{
-  id: 'home',
   label: 'Home',
-  icon: 'i-lucide-home',
+  icon: 'i-lucide-house',
   to: '/'
 }, {
-  id: 'inbox',
   label: 'Inbox',
   icon: 'i-lucide-inbox',
   to: '/inbox',
   badge: '4'
 }, {
-  id: 'users',
   label: 'Contacts',
   icon: 'i-lucide-users',
   to: '/contacts'
 }, {
-  id: 'settings',
   label: 'Settings',
   to: '/settings',
   icon: 'i-lucide-settings',
@@ -35,11 +31,7 @@ const links = [[{
   }, {
     label: 'Notifications',
     to: '/settings/notifications'
-  }],
-  tooltip: {
-    text: 'Settings',
-    shortcuts: ['G', 'S']
-  }
+  }]
 }], [{
   label: 'Feedback',
   icon: 'i-lucide-message-circle',
