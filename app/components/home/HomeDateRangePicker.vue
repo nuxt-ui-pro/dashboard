@@ -78,11 +78,12 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
 </script>
 
 <template>
-  <UPopover :content="{ align: 'start' }">
+  <UPopover :content="{ align: 'start' }" :modal="true">
     <UButton
       color="neutral"
       variant="ghost"
       icon="i-lucide-calendar"
+      class="data-[state=open]:bg-(--ui-bg-elevated) group"
     >
       <template v-if="selected.start">
         <template v-if="selected.end">
@@ -95,19 +96,23 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
       <template v-else>
         Pick a date
       </template>
+
+      <template #trailing>
+        <UIcon name="i-lucide-chevron-down" class="shrink-0 text-(--ui-text-dimmed) size-5 group-data-[state=open]:rotate-180 transition-transform duration-200" />
+      </template>
     </UButton>
 
     <template #content>
-      <div class="flex items-center sm:divide-x divide-neutral-200 dark:divide-neutral-800">
-        <div class="hidden sm:flex flex-col py-4">
+      <div class="flex items-stretch sm:divide-x divide-(--ui-border)">
+        <div class="hidden sm:flex flex-col justify-center">
           <UButton
             v-for="(range, index) in ranges"
             :key="index"
             :label="range.label"
             color="neutral"
             variant="ghost"
-            class="rounded-none px-6"
-            :class="[isRangeSelected(range) ? 'bg-neutral-100 dark:bg-neutral-800' : 'hover:bg-neutral-50 dark:hover:bg-neutral-800/50']"
+            class="rounded-none px-4"
+            :class="[isRangeSelected(range) ? 'bg-(--ui-bg-elevated)' : 'hover:bg-(--ui-bg-elevated)/50']"
             truncate
             @click="selectRange(range)"
           />

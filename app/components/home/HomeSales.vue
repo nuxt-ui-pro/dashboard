@@ -103,7 +103,7 @@ const columns: TableColumn<Sale>[] = [
     class="overflow-visible"
     :ui="{
       thead: '[&>tr]:bg-(--ui-bg-elevated)/50 [&>tr]:after:content-none',
-      th: 'first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)]'
+      th: 'first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)] '
     }"
   />
 </template>
