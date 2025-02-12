@@ -102,8 +102,11 @@ const columns: TableColumn<Sale>[] = [
     :columns="columns"
     class="overflow-visible"
     :ui="{
+      base: 'table-fixed border-separate border-spacing-0',
       thead: '[&>tr]:bg-(--ui-bg-elevated)/50 [&>tr]:after:content-none',
-      th: 'first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)] '
+      tbody: '[&>tr]:last:[&>td]:border-b-0',
+      th: 'first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)] border-y border-(--ui-border) first:border-l last:border-r',
+      td: 'border-b border-(--ui-border)'
     }"
   />
 </template>
