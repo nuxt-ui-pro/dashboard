@@ -51,7 +51,8 @@ const period = ref<Period>('daily')
 
       <UDashboardToolbar>
         <template #left>
-          <HomeDateRangePicker v-model="range" class="-ml-2.5" />
+          <!-- NOTE: The `-ml-1` class is used to align with the `DashboardSidebarCollpase` button here. -->
+          <HomeDateRangePicker v-model="range" class="-ml-1" />
 
           <HomePeriodSelect v-model="period" :range="range" />
         </template>

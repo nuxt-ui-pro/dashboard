@@ -85,17 +85,19 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
       icon="i-lucide-calendar"
       class="data-[state=open]:bg-(--ui-bg-elevated) group"
     >
-      <template v-if="selected.start">
-        <template v-if="selected.end">
-          {{ df.format(selected.start) }} - {{ df.format(selected.end) }}
+      <span class="truncate">
+        <template v-if="selected.start">
+          <template v-if="selected.end">
+            {{ df.format(selected.start) }} - {{ df.format(selected.end) }}
+          </template>
+          <template v-else>
+            {{ df.format(selected.start) }}
+          </template>
         </template>
         <template v-else>
-          {{ df.format(selected.start) }}
+          Pick a date
         </template>
-      </template>
-      <template v-else>
-        Pick a date
-      </template>
+      </span>
 
       <template #trailing>
         <UIcon name="i-lucide-chevron-down" class="shrink-0 text-(--ui-text-dimmed) size-5 group-data-[state=open]:rotate-180 transition-transform duration-200" />
