@@ -39,28 +39,25 @@ watch(filteredMails, () => {
     :max-size="30"
     resizable
   >
-    <template #header>
-      <UDashboardNavbar title="Inbox">
-        <template #leading>
-          <UDashboardSidebarCollapse />
-        </template>
+    <UDashboardNavbar title="Inbox">
+      <template #leading>
+        <UDashboardSidebarCollapse />
+      </template>
 
-        <template #trailing>
-          <UBadge :label="filteredMails.length" variant="subtle" />
-        </template>
+      <template #trailing>
+        <UBadge :label="filteredMails.length" variant="subtle" />
+      </template>
 
-        <template #right>
-          <UTabs
-            v-model="selectedTab"
-            :items="tabItems"
-            class="w-32"
-            :content="false"
-            size="xs"
-          />
-        </template>
-      </UDashboardNavbar>
-    </template>
-
+      <template #right>
+        <UTabs
+          v-model="selectedTab"
+          :items="tabItems"
+          class="w-32"
+          :content="false"
+          size="xs"
+        />
+      </template>
+    </UDashboardNavbar>
     <InboxList v-model="selectedMail" :mails="filteredMails" />
   </UDashboardPanel>
 

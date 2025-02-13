@@ -89,13 +89,11 @@ const dropdownItems = [[{
                 month: 'short',
                 day: 'numeric'
               }) }}
+
+              {{ isToday(new Date(mail.date)) ? format(new Date(mail.date), 'HH:mm') : format(new Date(mail.date), 'dd MMM') }}
             </p>
           </div>
         </div>
-
-        <p class="font-medium text-neutral-900 dark:text-white">
-          {{ isToday(new Date(mail.date)) ? format(new Date(mail.date), 'HH:mm') : format(new Date(mail.date), 'dd MMM') }}
-        </p>
       </div>
 
       <div class="flex-1 p-4">
