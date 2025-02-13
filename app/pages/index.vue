@@ -9,9 +9,9 @@ const items = [[{
   icon: 'i-heroicons-paper-airplane',
   to: '/inbox'
 }, {
-  label: 'New user',
+  label: 'New customer',
   icon: 'i-heroicons-user-plus',
-  to: '/contacts'
+  to: '/customers'
 }]]
 
 const range = shallowRef<Range>({
