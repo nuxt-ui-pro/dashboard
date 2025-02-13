@@ -13,9 +13,9 @@ const links = [[{
   to: '/inbox',
   badge: '4'
 }, {
-  label: 'Contacts',
+  label: 'Customers',
   icon: 'i-lucide-users',
-  to: '/contacts'
+  to: '/customers'
 }, {
   label: 'Settings',
   to: '/settings',
