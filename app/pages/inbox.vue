@@ -62,7 +62,7 @@ watch(filteredMails, () => {
   </UDashboardPanel>
 
   <InboxMail v-if="selectedMail" v-model="selectedMail" :mail="selectedMail" />
-  <div v-else class="flex-1 hidden lg:flex items-center justify-center">
+  <div v-else class="flex flex-1 items-center justify-center">
     <UIcon name="i-lucide-inbox" class="size-32 text-neutral-400 dark:text-neutral-500" />
   </div>
 </template>

@@ -38,7 +38,7 @@ const dropdownItems = [[{
             class="-ms-1.5"
             @click="selected = null"
           />
-          <span class="text-neutral-900 dark:text-white font-semibold">
+          <span class="font-semibold">
             {{ mail.subject }}
           </span>
         </template>
@@ -77,13 +77,13 @@ const dropdownItems = [[{
           />
 
           <div class="min-w-0">
-            <p class="text-neutral-900 dark:text-white font-semibold">
+            <p class="font-semibold">
               {{ mail.from.name }}
             </p>
-            <p class="text-neutral-500 dark:text-neutral-400 mt-1">
+            <p class="text-(--ui-text-dimmed) mt-1">
               {{ mail.from.email }}
             </p>
-            <p class="text-neutral-500 dark:text-neutral-400 font-medium text-xs">
+            <p class="text-(--ui-text-dimmed) font-medium text-xs">
               {{ new Date(mail.date).toLocaleString('en-US', {
                 year: 'numeric',
                 month: 'short',
@@ -103,7 +103,7 @@ const dropdownItems = [[{
       </div>
 
       <UPageCard class="m-4" variant="subtle" :ui="{ container: 'sm:p-4' }">
-        <div class="flex items-center gap-1 text-neutral-500">
+        <div class="flex items-center gap-1 text-(--ui-text-dimmed)">
           <UIcon name="i-lucide-reply" class="size-4" />
           <span class="text-xs">
             Reply to {{ mail.from.name }} ({{ mail.from.email }})
@@ -116,7 +116,7 @@ const dropdownItems = [[{
             required
             autoresize
             size="xl"
-            :rows="5"
+            :rows="2"
             placeholder="Write your reply..."
             class="w-full"
           />
