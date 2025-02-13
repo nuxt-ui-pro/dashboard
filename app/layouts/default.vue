@@ -1,6 +1,5 @@
 <script setup lang="ts">
-// const route = useRoute()
-// const appConfig = useAppConfig()
+const route = useRoute()
 const toast = useToast()
 
 const links = [[{
@@ -44,22 +43,21 @@ const links = [[{
   target: '_blank'
 }]]
 
-// const groups = [{
-//   key: 'links',
-//   label: 'Go to',
-//   commands: links.map(link => ({ ...link, shortcuts: link.tooltip?.shortcuts }))
-// }, {
-//   key: 'code',
-//   label: 'Code',
-//   commands: [{
-//     id: 'source',
-//     label: 'View page source',
-//     icon: 'i-simple-icons-github',
-//     click: () => {
-//       window.open(`https://github.com/nuxt-ui-pro/dashboard/blob/v1/pages${route.path === '/' ? '/index' : route.path}.vue`, '_blank')
-//     }
-//   }]
-// }]
+const groups = computed(() => [{
+  id: 'links',
+  label: 'Go to',
+  items: links.flat()
+}, {
+  id: 'code',
+  label: 'Code',
+  items: [{
+    id: 'source',
+    label: 'View page source',
+    icon: 'i-simple-icons-github',
+    to: `https://github.com/nuxt-ui-pro/dashboard/blob/v3/app/pages${route.path === '/' ? '/index' : route.path}.vue`,
+    target: '_blank'
+  }]
+}])
 
 onMounted(async () => {
   const cookie = useCookie('cookie-consent')
@@ -89,6 +87,8 @@ onMounted(async () => {
 
 <template>
   <UDashboardGroup>
+    <UDashboardSearch :groups="groups" />
+
     <UDashboardSidebar
       collapsible
       resizable
@@ -100,22 +100,7 @@ onMounted(async () => {
       </template>
 
       <template #default="{ collapsed }">
-        <UButton
-          :label="collapsed ? undefined : 'Search...'"
-          icon="i-lucide-search"
-          color="neutral"
-          variant="outline"
-          block
-          :square="collapsed"
-          class="bg-(--ui-bg-elevated)/25 ring-(--ui-border-accented)/50"
-        >
-          <template v-if="!collapsed" #trailing>
-            <div class="flex items-center gap-0.5 ms-auto">
-              <UKbd value="meta" variant="subtle" />
-              <UKbd value="K" variant="subtle" />
-            </div>
-          </template>
-        </UButton>
+        <UDashboardSearchButton :square="collapsed" class="bg-transparent ring-(--ui-border)" />
 
         <UNavigationMenu
           :collapsed="collapsed"
