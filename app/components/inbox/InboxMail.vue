@@ -3,13 +3,17 @@ import { format, isToday } from 'date-fns'
 import type { Mail } from '~/types'
 
 defineProps({
+  selected: {
+    type: Boolean,
+    default: false
+  },
   mail: {
     type: Object as PropType<Mail>,
     required: true
   }
 })
 
-const selected = defineModel<Mail | null>()
+const emits = defineEmits(['close'])
 
 const dropdownItems = [[{
   label: 'Mark as unread',
@@ -27,7 +31,7 @@ const dropdownItems = [[{
 </script>
 
 <template>
-  <UDashboardPanel :ui="{ body: 'sm:p-0 sm:gap-0' }">
+  <UDashboardPanel id="inbox-2" :ui="{ body: 'sm:p-0 sm:gap-0' }">
     <template #header>
       <UDashboardNavbar>
         <template #left>
@@ -36,7 +40,7 @@ const dropdownItems = [[{
             color="neutral"
             variant="ghost"
             class="-ms-1.5"
-            @click="selected = null"
+            @click="emits('close')"
           />
           <span class="font-semibold">
             {{ mail.subject }}
