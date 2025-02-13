@@ -43,46 +43,44 @@ watch(filteredMails, () => {
 </script>
 
 <template>
-  <div>
-    <UDashboardPanel
-      id="inbox-1"
-      :default-size="25"
-      :min-size="20"
-      :max-size="30"
-      resizable
-    >
-      <UDashboardNavbar title="Inbox">
-        <template #leading>
-          <UDashboardSidebarCollapse />
-        </template>
+  <UDashboardPanel
+    id="inbox-1"
+    :default-size="25"
+    :min-size="20"
+    :max-size="30"
+    resizable
+  >
+    <UDashboardNavbar title="Inbox">
+      <template #leading>
+        <UDashboardSidebarCollapse />
+      </template>
 
-        <template #trailing>
-          <UBadge :label="filteredMails.length" variant="subtle" />
-        </template>
+      <template #trailing>
+        <UBadge :label="filteredMails.length" variant="subtle" />
+      </template>
 
-        <template #right>
-          <UTabs
-            v-model="selectedTab"
-            :items="tabItems"
-            class="w-32"
-            :content="false"
-            size="xs"
-          />
-        </template>
-      </UDashboardNavbar>
-      <InboxList v-model="selectedMail" :mails="filteredMails" />
-    </UDashboardPanel>
+      <template #right>
+        <UTabs
+          v-model="selectedTab"
+          :items="tabItems"
+          class="w-32"
+          :content="false"
+          size="xs"
+        />
+      </template>
+    </UDashboardNavbar>
+    <InboxList v-model="selectedMail" :mails="filteredMails" />
+  </UDashboardPanel>
 
-    <div v-if="selectedMail">
-      <InboxMail :mail="selectedMail" @close="selectedMail = null" />
-      <USlideover v-model:open="isMailPanelOpen">
-        <template #content>
-          <InboxMail :mail="selectedMail" @close="selectedMail = null" />
-        </template>
-      </USlideover>
-    </div>
-    <div v-else class="flex flex-1 items-center justify-center">
-      <UIcon name="i-lucide-inbox" class="size-32 text-(--ui-text-dimmed)" />
-    </div>
+  <div v-if="selectedMail">
+    <InboxMail :mail="selectedMail" @close="selectedMail = null" />
+    <USlideover v-model:open="isMailPanelOpen">
+      <template #content>
+        <InboxMail :mail="selectedMail" @close="selectedMail = null" />
+      </template>
+    </USlideover>
+  </div>
+  <div v-else class="flex flex-1 items-center justify-center">
+    <UIcon name="i-lucide-inbox" class="size-32 text-(--ui-text-dimmed)" />
   </div>
 </template>
