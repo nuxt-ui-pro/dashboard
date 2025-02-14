@@ -31,5 +31,5 @@
   "resolutions": {
     "vue-tsc": "2.1.10"
   },
-  "packageManager": "pnpm@9.15.5"
+  "packageManager": "pnpm@10.4.0"
 }
