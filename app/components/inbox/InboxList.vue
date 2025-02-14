@@ -2,40 +2,11 @@
 import { format, isToday } from 'date-fns'
 import type { Mail } from '~/types'
 
-const props = defineProps({
-  modelValue: {
-    type: Object as PropType<Mail | null>,
-    default: null
-  },
-  mails: {
-    type: Array as PropType<Mail[]>,
-    default: () => []
-  }
-})
+const props = defineProps<{
+  mails: Mail[]
+}>()
 
-const emit = defineEmits(['update:modelValue'])
-
-const mailsRefs = ref<Element[]>([])
-
-const selectedMail = computed({
-  get() {
-    return props.modelValue
-  },
-  set(value: Mail | null) {
-    emit('update:modelValue', value)
-  }
-})
-
-watch(selectedMail, () => {
-  if (!selectedMail.value) {
-    return
-  }
-
-  const ref = mailsRefs.value[selectedMail.value.id]
-  if (ref) {
-    ref.scrollIntoView({ block: 'nearest' })
-  }
-})
+const selectedMail = defineModel<Mail | null>()
 
 defineShortcuts({
   arrowdown: () => {
@@ -64,7 +35,6 @@ defineShortcuts({
     <div
       v-for="(mail, index) in mails"
       :key="index"
-      :ref="el => { mailsRefs[mail.id] = el as Element }"
     >
       <div
         class="p-4 sm:px-6 text-sm cursor-pointer border-l-2 transition-colors"
