@@ -6,11 +6,11 @@ const { isNotificationsSlideoverOpen } = useDashboard()
 
 const items = [[{
   label: 'New mail',
-  icon: 'i-heroicons-paper-airplane',
+  icon: 'i-lucide-send',
   to: '/inbox'
 }, {
   label: 'New customer',
-  icon: 'i-heroicons-user-plus',
+  icon: 'i-lucide-user-plus',
   to: '/customers'
 }]]
 
@@ -24,7 +24,7 @@ const period = ref<Period>('daily')
 <template>
   <UDashboardPanel id="home">
     <template #header>
-      <UDashboardNavbar title="Home">
+      <UDashboardNavbar title="Home" :ui="{ right: 'gap-3' }">
         <template #leading>
           <UDashboardSidebarCollapse />
         </template>
@@ -38,21 +38,21 @@ const period = ref<Period>('daily')
               @click="isNotificationsSlideoverOpen = true"
             >
               <UChip color="error" inset>
-                <UIcon name="i-heroicons-bell" class="w-5 h-5" />
+                <UIcon name="i-lucide-bell" class="size-5 shrink-0" />
               </UChip>
             </UButton>
           </UTooltip>
 
           <UDropdownMenu :items="items">
-            <UButton icon="i-heroicons-plus" size="md" class="ml-1.5 rounded-full" />
+            <UButton icon="i-lucide-plus" size="md" class="rounded-full" />
           </UDropdownMenu>
         </template>
       </UDashboardNavbar>
 
       <UDashboardToolbar>
         <template #left>
-          <!-- NOTE: The `-ml-1` class is used to align with the `DashboardSidebarCollpase` button here. -->
-          <HomeDateRangePicker v-model="range" class="-ml-1" />
+          <!-- NOTE: The `-ms-1` class is used to align with the `DashboardSidebarCollpase` button here. -->
+          <HomeDateRangePicker v-model="range" class="-ms-1" />
 
           <HomePeriodSelect v-model="period" :range="range" />
         </template>
