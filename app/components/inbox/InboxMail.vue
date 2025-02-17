@@ -41,14 +41,14 @@ function onSubmit() {
     })
 
     loading.value = false
-  }, 2000)
+  }, 1000)
 }
 </script>
 
 <template>
   <UDashboardPanel id="inbox-2">
-    <UDashboardNavbar :toggle="false">
-      <template #left>
+    <UDashboardNavbar :title="mail.subject" :toggle="false">
+      <template #leading>
         <UButton
           icon="i-lucide-x"
           color="neutral"
@@ -56,10 +56,8 @@ function onSubmit() {
           class="-ms-1.5"
           @click="emits('close')"
         />
-        <span class="font-semibold">
-          {{ mail.subject }}
-        </span>
       </template>
+
       <template #right>
         <UTooltip text="Archive">
           <UButton
@@ -83,8 +81,8 @@ function onSubmit() {
       </template>
     </UDashboardNavbar>
 
-    <div class="flex justify-between p-4 sm:px-6 border-b border-(--ui-border)">
-      <div class="flex items-start gap-4 py-1.5">
+    <div class="flex flex-col sm:flex-row justify-between gap-1 p-4 sm:px-6 border-b border-(--ui-border)">
+      <div class="flex items-start gap-4 sm:my-1.5">
         <UAvatar
           v-bind="mail.from.avatar"
           :alt="mail.from.name"
@@ -95,13 +93,13 @@ function onSubmit() {
           <p class="font-semibold text-(--ui-text-highlighted)">
             {{ mail.from.name }}
           </p>
-          <p class="text-(--ui-text)">
+          <p class="text-(--ui-text-muted)">
             {{ mail.from.email }}
           </p>
         </div>
       </div>
 
-      <p class="text-(--ui-text-muted) font-medium text-sm mt-2">
+      <p class="max-sm:pl-16 text-(--ui-text-muted) text-sm sm:mt-2">
         {{ format(new Date(mail.date), 'dd MMM HH:mm') }}
       </p>
     </div>
@@ -117,7 +115,7 @@ function onSubmit() {
         <template #header>
           <UIcon name="i-lucide-reply" class="size-5" />
 
-          <span class="text-sm">
+          <span class="text-sm truncate">
             Reply to {{ mail.from.name }} ({{ mail.from.email }})
           </span>
         </template>
