@@ -1,6 +1,6 @@
 import type { User, UserStatus } from '~/types'
 
-const users: User[] = [{
+const customers: User[] = [{
   id: 1,
   name: 'Alex Smith',
   email: 'alex.smith@example.com',
@@ -183,9 +183,11 @@ const users: User[] = [{
 }]
 
 export default eventHandler(async (event) => {
-  const { q, statuses, locations, sort, order } = getQuery(event) as { q?: string, statuses?: UserStatus[], locations?: string[], sort?: 'name' | 'email', order?: 'asc' | 'desc' }
+  // const { q, statuses, locations, sort, order } = getQuery(event) as { q?: string, statuses?: UserStatus[], locations?: string[], sort?: 'name' | 'email', order?: 'asc' | 'desc' }
 
-  return users.filter((user) => {
+  return customers
+
+  /* return customers.filter((user) => {
     if (!q) return true
 
     return user.name.search(new RegExp(q, 'i')) !== -1 || user.email.search(new RegExp(q, 'i')) !== -1
@@ -206,5 +208,5 @@ export default eventHandler(async (event) => {
     if (aValue < bValue) return order === 'asc' ? -1 : 1
     if (aValue > bValue) return order === 'asc' ? 1 : -1
     return 0
-  })
+  }) */
 })
