@@ -72,7 +72,7 @@ const dropdownItems = [[{
     </template>
 
     <template #body>
-      <div class="flex justify-between p-4 border-b border-(--ui-border)">
+      <div class="flex justify-between max-sm:pb-4 sm:p-4 border-b border-(--ui-border)">
         <div class="flex items-start gap-4">
           <UAvatar
             v-bind="mail.from.avatar"
@@ -100,13 +100,13 @@ const dropdownItems = [[{
         </div>
       </div>
 
-      <div class="flex-1 p-4">
+      <div class="flex-1 sm:p-4">
         <p>
           {{ mail.body }}
         </p>
       </div>
 
-      <UPageCard class="m-4" variant="subtle" :ui="{ container: 'sm:p-4' }">
+      <UPageCard class="sm:m-4" variant="subtle" :ui="{ container: 'sm:p-4' }">
         <div class="flex items-center gap-1 text-(--ui-text-dimmed)">
           <UIcon name="i-lucide-reply" class="size-4" />
           <span class="text-xs">
