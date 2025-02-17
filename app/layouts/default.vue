@@ -100,7 +100,7 @@ onMounted(async () => {
       </template>
 
       <template #default="{ collapsed }">
-        <UDashboardSearchButton :square="collapsed" class="bg-transparent ring-(--ui-border)" />
+        <UDashboardSearchButton :collapsed="collapsed" class="bg-transparent ring-(--ui-border)" />
 
         <UNavigationMenu
           :collapsed="collapsed"

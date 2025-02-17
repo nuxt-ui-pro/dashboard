@@ -2,17 +2,11 @@
 import { eachDayOfInterval } from 'date-fns'
 import type { Period, Range } from '~/types'
 
-const model = defineModel({
-  type: String as PropType<Period>,
-  required: true
-})
+const model = defineModel<Period>()
 
-const props = defineProps({
-  range: {
-    type: Object as PropType<Range>,
-    required: true
-  }
-})
+const props = defineProps<{
+  range: Range
+}>()
 
 const days = computed(() => eachDayOfInterval(props.range))
 

@@ -40,6 +40,8 @@ const links = [[{
       </UDashboardToolbar>
     </template>
 
-    <NuxtPage />
+    <template #body>
+      <NuxtPage />
+    </template>
   </UDashboardPanel>
 </template>

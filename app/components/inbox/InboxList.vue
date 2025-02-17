@@ -2,35 +2,18 @@
 import { format, isToday } from 'date-fns'
 import type { Mail } from '~/types'
 
-const props = defineProps({
-  modelValue: {
-    type: Object as PropType<Mail | null>,
-    default: null
-  },
-  mails: {
-    type: Array as PropType<Mail[]>,
-    default: () => []
-  }
-})
-
-const emit = defineEmits(['update:modelValue'])
+const props = defineProps<{
+  mails: Mail[]
+}>()
 
 const mailsRefs = ref<Element[]>([])
 
-const selectedMail = computed({
-  get() {
-    return props.modelValue
-  },
-  set(value: Mail | null) {
-    emit('update:modelValue', value)
-  }
-})
+const selectedMail = defineModel<Mail | null>()
 
 watch(selectedMail, () => {
   if (!selectedMail.value) {
     return
   }
-
   const ref = mailsRefs.value[selectedMail.value.id]
   if (ref) {
     ref.scrollIntoView({ block: 'nearest' })
@@ -74,10 +57,7 @@ defineShortcuts({
         ]"
         @click="selectedMail = mail"
       >
-        <div
-          class="flex items-center justify-between"
-          :class="[mail.unread && 'font-semibold']"
-        >
+        <div class="flex items-center justify-between" :class="[mail.unread && 'font-semibold']">
           <div class="flex items-center gap-3">
             {{ mail.from.name }}
 
@@ -86,7 +66,7 @@ defineShortcuts({
 
           <span>{{ isToday(new Date(mail.date)) ? format(new Date(mail.date), 'HH:mm') : format(new Date(mail.date), 'dd MMM') }}</span>
         </div>
-        <p :class="[mail.unread && 'font-semibold']">
+        <p class="truncate" :class="[mail.unread && 'font-semibold']">
           {{ mail.subject }}
         </p>
         <p class="text-(--ui-text-dimmed) line-clamp-1">
