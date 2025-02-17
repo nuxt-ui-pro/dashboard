@@ -1,14 +1,48 @@
 <script setup lang="ts">
 import type { TableColumn } from '@nuxt/ui'
 import { upperFirst } from 'scule'
+import type { Row } from '@tanstack/table-core'
 import type { User } from '~/types'
 
 const UAvatar = resolveComponent('UAvatar')
 const UButton = resolveComponent('UButton')
+const UBadge = resolveComponent('UBadge')
+const UDropdownMenu = resolveComponent('UDropdownMenu')
 
 const { data, status } = await useFetch<User[]>('/api/customers', {
   lazy: true
 })
+
+const toast = useToast()
+function getRowItems(row: Row<User>) {
+  return [
+    {
+      type: 'label',
+      label: 'Actions'
+    },
+    {
+      label: 'Copy customer ID',
+      onSelect() {
+        useClipboard({ source: row.original.id.toString() })
+        toast.add({
+          title: 'Copied to clipboard',
+          description: 'Customer ID copied to clipboard'
+        })
+      }
+    },
+    {
+      type: 'separator'
+    },
+    {
+      label: 'View customer details',
+      icon: 'i-lucide-list'
+    },
+    {
+      label: 'View customer payments',
+      icon: 'i-lucide-wallet'
+    }
+  ]
+}
 
 const columns: TableColumn<User>[] = [
   {
@@ -51,9 +85,49 @@ const columns: TableColumn<User>[] = [
     }
   },
   {
+    accessorKey: 'status',
+    header: 'Status',
+    cell: ({ row }) => {
+      const color = {
+        subscribed: 'success' as const,
+        unsubscribed: 'error' as const,
+        bounced: 'warning' as const
+      }[row.original.status]
+
+      return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () =>
+        row.original.status
+      )
+    }
+  },
+  {
     accessorKey: 'location',
     header: 'Location',
     cell: ({ row }) => row.original.location
+  },
+  {
+    id: 'actions',
+    cell: ({ row }) => {
+      return h(
+        'div',
+        { class: 'text-right' },
+        h(
+          UDropdownMenu,
+          {
+            content: {
+              align: 'end'
+            },
+            items: getRowItems(row)
+          },
+          () =>
+            h(UButton, {
+              icon: 'i-lucide-ellipsis-vertical',
+              color: 'neutral',
+              variant: 'ghost',
+              class: 'ml-auto'
+            })
+        )
+      )
+    }
   }
 ]
 
