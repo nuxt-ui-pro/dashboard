@@ -33,7 +33,7 @@ const dropdownItems = [[{
 <template>
   <UDashboardPanel id="inbox-2" :ui="{ body: 'sm:p-0 sm:gap-0' }">
     <template #header>
-      <UDashboardNavbar>
+      <UDashboardNavbar :toggle="false">
         <template #left>
           <UButton
             icon="i-lucide-x"

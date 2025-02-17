@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed, ref, watch } from 'vue'
+import { breakpointsTailwind } from '@vueuse/core'
 import type { Mail } from '~/types'
 
 const tabItems = [{
@@ -40,6 +42,9 @@ watch(filteredMails, () => {
     selectedMail.value = null
   }
 })
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const isMobile = breakpoints.smaller('lg')
 </script>
 
 <template>
@@ -54,7 +59,6 @@ watch(filteredMails, () => {
       <template #leading>
         <UDashboardSidebarCollapse />
       </template>
-
       <template #trailing>
         <UBadge :label="filteredMails.length" variant="subtle" />
       </template>
@@ -73,12 +77,16 @@ watch(filteredMails, () => {
   </UDashboardPanel>
 
   <div v-if="selectedMail">
-    <InboxMail :mail="selectedMail" @close="selectedMail = null" />
-    <USlideover v-model:open="isMailPanelOpen">
-      <template #content>
-        <InboxMail :mail="selectedMail" @close="selectedMail = null" />
-      </template>
-    </USlideover>
+    <template v-if="!isMobile">
+      <InboxMail :mail="selectedMail" @close="selectedMail = null" />
+    </template>
+    <template v-else>
+      <USlideover v-model:open="isMailPanelOpen">
+        <template #content>
+          <InboxMail :mail="selectedMail" @close="selectedMail = null" />
+        </template>
+      </USlideover>
+    </template>
   </div>
   <div v-else class="flex flex-1 items-center justify-center">
     <UIcon name="i-lucide-inbox" class="size-32 text-(--ui-text-dimmed)" />
