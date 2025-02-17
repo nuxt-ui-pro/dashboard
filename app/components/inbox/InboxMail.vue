@@ -2,16 +2,9 @@
 import { format, isToday } from 'date-fns'
 import type { Mail } from '~/types'
 
-defineProps({
-  selected: {
-    type: Boolean,
-    default: false
-  },
-  mail: {
-    type: Object as PropType<Mail>,
-    required: true
-  }
-})
+defineProps<{
+  mail: Mail
+}>()
 
 const emits = defineEmits(['close'])
 
