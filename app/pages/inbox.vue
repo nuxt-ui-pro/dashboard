@@ -76,7 +76,7 @@ const isMobile = breakpoints.smaller('lg')
     <InboxList v-model="selectedMail" :mails="filteredMails" />
   </UDashboardPanel>
 
-  <div v-if="selectedMail">
+  <template v-if="selectedMail">
     <template v-if="!isMobile">
       <InboxMail :mail="selectedMail" @close="selectedMail = null" />
     </template>
@@ -87,7 +87,7 @@ const isMobile = breakpoints.smaller('lg')
         </template>
       </USlideover>
     </template>
-  </div>
+  </template>
   <div v-else class="flex flex-1 items-center justify-center">
     <UIcon name="i-lucide-inbox" class="size-32 text-(--ui-text-dimmed)" />
   </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { format, isToday } from 'date-fns'
+import { format } from 'date-fns'
 import type { Mail } from '~/types'
 
 defineProps<{
@@ -21,126 +21,147 @@ const dropdownItems = [[{
   label: 'Mute thread',
   icon: 'i-lucide-circle-pause'
 }]]
+
+const toast = useToast()
+
+const reply = ref('')
+const loading = ref(false)
+
+function onSubmit() {
+  loading.value = true
+
+  setTimeout(() => {
+    reply.value = ''
+
+    toast.add({
+      title: 'Email sent',
+      description: 'Your email has been sent successfully',
+      icon: 'i-lucide-check-circle',
+      color: 'success'
+    })
+
+    loading.value = false
+  }, 2000)
+}
 </script>
 
 <template>
-  <UDashboardPanel id="inbox-2" :ui="{ body: 'sm:p-0 sm:gap-0' }">
-    <template #header>
-      <UDashboardNavbar :toggle="false">
-        <template #left>
+  <UDashboardPanel id="inbox-2">
+    <UDashboardNavbar :toggle="false">
+      <template #left>
+        <UButton
+          icon="i-lucide-x"
+          color="neutral"
+          variant="ghost"
+          class="-ms-1.5"
+          @click="emits('close')"
+        />
+        <span class="font-semibold">
+          {{ mail.subject }}
+        </span>
+      </template>
+      <template #right>
+        <UTooltip text="Archive">
           <UButton
-            icon="i-lucide-x"
+            icon="i-lucide-inbox"
             color="neutral"
             variant="ghost"
-            class="-ms-1.5"
-            @click="emits('close')"
           />
-          <span class="font-semibold">
-            {{ mail.subject }}
-          </span>
-        </template>
-        <template #right>
-          <UTooltip text="Archive">
-            <UButton
-              icon="i-lucide-inbox"
-              color="neutral"
-              variant="ghost"
-            />
-          </UTooltip>
+        </UTooltip>
 
-          <div>
-            <UTooltip text="Reply">
-              <UButton icon="i-lucide-reply" color="neutral" variant="ghost" />
-            </UTooltip>
-            <UDropdownMenu :items="dropdownItems">
-              <UButton
-                icon="i-lucide-ellipsis-vertical"
-                color="neutral"
-                variant="ghost"
-              />
-            </UDropdownMenu>
-          </div>
-        </template>
-      </UDashboardNavbar>
-    </template>
+        <UTooltip text="Reply">
+          <UButton icon="i-lucide-reply" color="neutral" variant="ghost" />
+        </UTooltip>
 
-    <template #body>
-      <div class="flex justify-between max-sm:pb-4 sm:p-4 border-b border-(--ui-border)">
-        <div class="flex items-start gap-4">
-          <UAvatar
-            v-bind="mail.from.avatar"
-            :alt="mail.from.name"
-            size="lg"
+        <UDropdownMenu :items="dropdownItems">
+          <UButton
+            icon="i-lucide-ellipsis-vertical"
+            color="neutral"
+            variant="ghost"
           />
+        </UDropdownMenu>
+      </template>
+    </UDashboardNavbar>
 
-          <div class="min-w-0">
-            <p class="font-semibold">
-              {{ mail.from.name }}
-            </p>
-            <p class="text-(--ui-text-dimmed) mt-1">
-              {{ mail.from.email }}
-            </p>
-            <p class="text-(--ui-text-dimmed) font-medium text-xs">
-              {{ new Date(mail.date).toLocaleString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric'
-              }) }}
+    <div class="flex justify-between p-4 sm:px-6 border-b border-(--ui-border)">
+      <div class="flex items-start gap-4 py-1.5">
+        <UAvatar
+          v-bind="mail.from.avatar"
+          :alt="mail.from.name"
+          size="3xl"
+        />
 
-              {{ isToday(new Date(mail.date)) ? format(new Date(mail.date), 'HH:mm') : format(new Date(mail.date), 'dd MMM') }}
-            </p>
-          </div>
+        <div class="min-w-0">
+          <p class="font-semibold text-(--ui-text-highlighted)">
+            {{ mail.from.name }}
+          </p>
+          <p class="text-(--ui-text)">
+            {{ mail.from.email }}
+          </p>
         </div>
       </div>
 
-      <div class="flex-1 sm:p-4">
-        <p>
-          {{ mail.body }}
-        </p>
-      </div>
+      <p class="text-(--ui-text-muted) font-medium text-sm mt-2">
+        {{ format(new Date(mail.date), 'dd MMM HH:mm') }}
+      </p>
+    </div>
 
-      <UPageCard class="sm:m-4" variant="subtle" :ui="{ container: 'sm:p-4' }">
-        <div class="flex items-center gap-1 text-(--ui-text-dimmed)">
-          <UIcon name="i-lucide-reply" class="size-4" />
-          <span class="text-xs">
+    <div class="flex-1 p-4 sm:p-6 overflow-y-auto">
+      <p class="whitespace-pre-wrap">
+        {{ mail.body }}
+      </p>
+    </div>
+
+    <div class="pb-4 px-4 sm:px-6 shrink-0">
+      <UCard variant="subtle" class="mt-auto" :ui="{ header: 'flex items-center gap-1.5 text-(--ui-text-dimmed)' }">
+        <template #header>
+          <UIcon name="i-lucide-reply" class="size-5" />
+
+          <span class="text-sm">
             Reply to {{ mail.from.name }} ({{ mail.from.email }})
           </span>
-        </div>
-        <form @submit.prevent>
+        </template>
+
+        <form @submit.prevent="onSubmit">
           <UTextarea
+            v-model="reply"
             color="neutral"
             variant="none"
             required
             autoresize
-            size="xl"
-            :rows="2"
             placeholder="Write your reply..."
+            :rows="4"
+            :disabled="loading"
             class="w-full"
+            :ui="{ base: 'p-0 resize-none' }"
           />
-        </form>
-        <div class="flex items-center justify-between">
-          <UTooltip text="Attach file">
-            <UButton
-              color="neutral"
-              variant="ghost"
-              icon="i-lucide-paperclip"
-            />
-          </UTooltip>
-          <div class="flex items-center justify-end gap-2">
-            <UButton
-              color="neutral"
-              variant="ghost"
-              label="Save draft"
-            />
-            <UButton
-              type="submit"
-              color="neutral"
-              label="Send"
-              icon="i-lucide-send"
-            />
+
+          <div class="flex items-center justify-between">
+            <UTooltip text="Attach file">
+              <UButton
+                color="neutral"
+                variant="ghost"
+                icon="i-lucide-paperclip"
+              />
+            </UTooltip>
+
+            <div class="flex items-center justify-end gap-2">
+              <UButton
+                color="neutral"
+                variant="ghost"
+                label="Save draft"
+              />
+              <UButton
+                type="submit"
+                color="neutral"
+                :loading="loading"
+                label="Send"
+                icon="i-lucide-send"
+              />
+            </div>
           </div>
-        </div>
-      </UPageCard>
-    </template>
+        </form>
+      </UCard>
+    </div>
   </UDashboardPanel>
 </template>
