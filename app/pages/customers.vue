@@ -9,6 +9,12 @@ const UButton = resolveComponent('UButton')
 const UBadge = resolveComponent('UBadge')
 const UDropdownMenu = resolveComponent('UDropdownMenu')
 
+const table = useTemplateRef('table')
+
+const columnFilters = ref([])
+
+const columnVisibility = ref()
+
 const { data, status } = await useFetch<User[]>('/api/customers', {
   lazy: true
 })
@@ -22,6 +28,7 @@ function getRowItems(row: Row<User>) {
     },
     {
       label: 'Copy customer ID',
+      icon: 'i-lucide-copy',
       onSelect() {
         useClipboard({ source: row.original.id.toString() })
         toast.add({
@@ -40,6 +47,20 @@ function getRowItems(row: Row<User>) {
     {
       label: 'View customer payments',
       icon: 'i-lucide-wallet'
+    },
+    {
+      type: 'separator'
+    },
+    {
+      label: 'Delete customer',
+      icon: 'i-lucide-trash',
+      color: 'error',
+      onSelect() {
+        toast.add({
+          title: 'Customer deleted',
+          description: 'The customer has been deleted.'
+        })
+      }
     }
   ]
 }
@@ -130,12 +151,6 @@ const columns: TableColumn<User>[] = [
     }
   }
 ]
-
-const table = useTemplateRef('table')
-
-const columnFilters = ref([])
-
-const columnVisibility = ref()
 </script>
 
 <template>
