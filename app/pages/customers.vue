@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { TableColumn } from '@nuxt/ui'
 import { upperFirst } from 'scule'
-import type { Row } from '@tanstack/table-core'
+import { getPaginationRowModel, type Row } from '@tanstack/table-core'
 import type { User } from '~/types'
 
 const UAvatar = resolveComponent('UAvatar')
@@ -106,6 +106,11 @@ const columns: TableColumn<User>[] = [
     }
   },
   {
+    accessorKey: 'location',
+    header: 'Location',
+    cell: ({ row }) => row.original.location
+  },
+  {
     accessorKey: 'status',
     header: 'Status',
     filterFn: 'equals',
@@ -120,11 +125,6 @@ const columns: TableColumn<User>[] = [
         row.original.status
       )
     }
-  },
-  {
-    accessorKey: 'location',
-    header: 'Location',
-    cell: ({ row }) => row.original.location
   },
   {
     id: 'actions',
@@ -166,10 +166,15 @@ watch(() => statusFilter.value, (newVal) => {
     statusColumn.setFilterValue(newVal)
   }
 })
+
+const pagination = ref({
+  pageIndex: 0,
+  pageSize: 10
+})
 </script>
 
 <template>
-  <UDashboardPanel id="customers" :ui="{ body: 'sm:p-4' }">
+  <UDashboardPanel id="customers" :ui="{ body: 'sm:p-4 sm:gap-4' }">
     <template #header>
       <UDashboardNavbar title="Customers">
         <template #leading>
@@ -199,6 +204,7 @@ watch(() => statusFilter.value, (newVal) => {
               { label: 'Unsubscribed', value: 'unsubscribed' },
               { label: 'Bounced', value: 'bounced' }
             ]"
+            :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
             placeholder="Filter status"
           />
           <UDropdownMenu
@@ -234,6 +240,10 @@ watch(() => statusFilter.value, (newVal) => {
         ref="table"
         v-model:column-filters="columnFilters"
         v-model:column-visibility="columnVisibility"
+        v-model:pagination="pagination"
+        :pagination-options="{
+          getPaginationRowModel: getPaginationRowModel()
+        }"
         class="shrink-0"
         :data="data"
         :columns="columns"
@@ -246,6 +256,14 @@ watch(() => statusFilter.value, (newVal) => {
           td: 'border-b border-(--ui-border)'
         }"
       />
+      <div class="flex justify-center border-t border-(--ui-border) pt-4">
+        <UPagination
+          :default-page="(table?.tableApi?.getState().pagination.pageIndex || 0) + 1"
+          :items-per-page="table?.tableApi?.getState().pagination.pageSize"
+          :total="table?.tableApi?.getFilteredRowModel().rows.length"
+          @update:page="(p) => table?.tableApi?.setPageIndex(p - 1)"
+        />
+      </div>
     </template>
   </UDashboardPanel>
 </template>

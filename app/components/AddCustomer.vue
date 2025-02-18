@@ -18,6 +18,7 @@ const state = reactive<Partial<Schema>>({
 const toast = useToast()
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   toast.add({ title: 'Success', description: `New customer ${event.data.name} added`, color: 'success' })
+  open.value = false
 }
 </script>
 
