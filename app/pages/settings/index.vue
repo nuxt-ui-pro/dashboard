@@ -27,7 +27,7 @@ const state = reactive<Partial<Schema>>({
   password_new: undefined
 })
 
-const validate = (state: any): FormError[] => {
+const validate = (state: Schema): FormError[] => {
   const errors = []
   if (state.password_current === state.password_new)
     errors.push({ name: 'password_new', message: 'Passwords must be different' })
