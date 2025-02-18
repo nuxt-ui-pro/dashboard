@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import type { Member } from '~/types'
 
-defineProps({
-  members: {
-    type: Array as PropType<Member[]>,
-    default: () => []
-  }
-})
+defineProps<{
+  members: Member[]
+}>()
 
 function getItems(member: Member) {
   return [[{
@@ -55,21 +52,21 @@ function onRoleChange(member: Member, role: string) {
         <USelectMenu
           :model-value="member.role"
           :options="['member', 'owner']"
-          color="white"
+          color="neutral"
           :ui-menu="{ select: 'capitalize', option: { base: 'capitalize' } }"
           @update:model-value="onRoleChange(member, $event)"
         />
 
-        <UDropdown
+        <UDropdownMenu
           :items="getItems(member)"
           position="bottom-end"
         >
           <UButton
             icon="i-heroicons-ellipsis-vertical"
-            color="gray"
+            color="neutral"
             variant="ghost"
           />
-        </UDropdown>
+        </UDropdownMenu>
       </div>
     </li>
   </ul>

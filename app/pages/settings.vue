@@ -35,7 +35,7 @@ const links = [[{
       </UDashboardNavbar>
 
       <UDashboardToolbar>
-        <!-- NOTE: The `-mx-1` class is used to align with the `DashboardSidebarCollpase` button here. -->
+        <!-- NOTE: The `-mx-1` class is used to align with the `DashboardSidebarCollapse` button here. -->
         <UNavigationMenu :items="links" highlight class="-mx-1 flex-1" />
       </UDashboardToolbar>
     </template>
