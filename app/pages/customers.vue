@@ -108,6 +108,7 @@ const columns: TableColumn<User>[] = [
   {
     accessorKey: 'status',
     header: 'Status',
+    filterFn: 'equals',
     cell: ({ row }) => {
       const color = {
         subscribed: 'success' as const,
@@ -151,6 +152,20 @@ const columns: TableColumn<User>[] = [
     }
   }
 ]
+
+const statusFilter = ref('all')
+
+watch(() => statusFilter.value, (newVal) => {
+  if (!table?.value.tableApi) return
+  const statusColumn = table.value.tableApi.getColumn('status')
+  if (!statusColumn) return
+
+  if (newVal === 'all') {
+    statusColumn.setFilterValue(undefined)
+  } else {
+    statusColumn.setFilterValue(newVal)
+  }
+})
 </script>
 
 <template>
@@ -171,35 +186,48 @@ const columns: TableColumn<User>[] = [
         <UInput
           :model-value="table?.tableApi?.getColumn('email')?.getFilterValue() as string"
           class="max-w-sm"
+          icon="i-lucide-search"
           placeholder="Filter emails..."
           @update:model-value="table?.tableApi?.getColumn('email')?.setFilterValue($event)"
         />
-        <UDropdownMenu
-          :items="
-            table?.tableApi
-              ?.getAllColumns()
-              .filter((column) => column.getCanHide())
-              .map((column) => ({
-                label: upperFirst(column.id),
-                type: 'checkbox' as const,
-                checked: column.getIsVisible(),
-                onUpdateChecked(checked: boolean) {
-                  table?.tableApi?.getColumn(column.id)?.toggleVisibility(!!checked)
-                },
-                onSelect(e?: Event) {
-                  e?.preventDefault()
-                }
-              }))
-          "
-          :content="{ align: 'end' }"
-        >
-          <UButton
-            label="Display"
-            color="neutral"
-            variant="outline"
-            trailing-icon="i-lucide-settings-2"
+        <div class="flex items-center gap-2">
+          <USelect
+            v-model="statusFilter"
+            :items="[
+              { label: 'All', value: 'all' },
+              { label: 'Subscribed', value: 'subscribed' },
+              { label: 'Unsubscribed', value: 'unsubscribed' },
+              { label: 'Bounced', value: 'bounced' }
+            ]"
+            placeholder="Filter status"
           />
-        </UDropdownMenu>
+          <UDropdownMenu
+            :items="
+              table?.tableApi
+                ?.getAllColumns()
+                .filter((column) => column.getCanHide())
+                .map((column) => ({
+                  label: upperFirst(column.id),
+                  type: 'checkbox' as const,
+                  checked: column.getIsVisible(),
+                  onUpdateChecked(checked: boolean) {
+                    table?.tableApi?.getColumn(column.id)?.toggleVisibility(!!checked)
+                  },
+                  onSelect(e?: Event) {
+                    e?.preventDefault()
+                  }
+                }))
+            "
+            :content="{ align: 'end' }"
+          >
+            <UButton
+              label="Display"
+              color="neutral"
+              variant="outline"
+              trailing-icon="i-lucide-settings-2"
+            />
+          </UDropdownMenu>
+        </div>
       </div>
 
       <UTable
@@ -214,7 +242,7 @@ const columns: TableColumn<User>[] = [
           base: 'table-fixed border-separate border-spacing-0',
           thead: '[&>tr]:bg-(--ui-bg-elevated)/50 [&>tr]:after:content-none',
           tbody: '[&>tr]:last:[&>td]:border-b-0',
-          th: 'first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)] border-y border-(--ui-border) first:border-l last:border-r',
+          th: 'py-1 first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)] border-y border-(--ui-border) first:border-l last:border-r',
           td: 'border-b border-(--ui-border)'
         }"
       />
