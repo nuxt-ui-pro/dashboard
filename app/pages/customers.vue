@@ -8,12 +8,13 @@ const UAvatar = resolveComponent('UAvatar')
 const UButton = resolveComponent('UButton')
 const UBadge = resolveComponent('UBadge')
 const UDropdownMenu = resolveComponent('UDropdownMenu')
+const UCheckbox = resolveComponent('UCheckbox')
 
 const table = useTemplateRef('table')
 
 const columnFilters = ref([])
-
 const columnVisibility = ref()
+const rowSelection = ref({ 1: true })
 
 const { data, status } = await useFetch<User[]>('/api/customers', {
   lazy: true
@@ -66,6 +67,24 @@ function getRowItems(row: Row<User>) {
 }
 
 const columns: TableColumn<User>[] = [
+  {
+    id: 'select',
+    header: ({ table }) =>
+      h(UCheckbox, {
+        'modelValue': table.getIsSomePageRowsSelected()
+          ? 'indeterminate'
+          : table.getIsAllPageRowsSelected(),
+        'onUpdate:modelValue': (value: boolean | 'indeterminate') =>
+          table.toggleAllPageRowsSelected(!!value),
+        'ariaLabel': 'Select all'
+      }),
+    cell: ({ row }) =>
+      h(UCheckbox, {
+        'modelValue': row.getIsSelected(),
+        'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
+        'ariaLabel': 'Select row'
+      })
+  },
   {
     accessorKey: 'id',
     header: 'ID'
@@ -181,7 +200,7 @@ const pagination = ref({
           <UDashboardSidebarCollapse />
         </template>
         <template #right>
-          <AddCustomer />
+          <CustomersAddModal />
         </template>
       </UDashboardNavbar>
     </template>
@@ -196,6 +215,19 @@ const pagination = ref({
           @update:model-value="table?.tableApi?.getColumn('email')?.setFilterValue($event)"
         />
         <div class="flex items-center gap-2">
+          <CustomersDeleteModal :nb-customers="table?.tableApi?.getFilteredSelectedRowModel().rows.length">
+            <UButton
+              v-if="table?.tableApi?.getFilteredSelectedRowModel().rows.length"
+              color="error"
+              variant="subtle"
+              icon="i-lucide-trash"
+            >
+              Delete
+              <UKbd>
+                {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length }}
+              </UKbd>
+            </UButton>
+          </CustomersDeleteModal>
           <USelect
             v-model="statusFilter"
             :items="[
@@ -235,11 +267,11 @@ const pagination = ref({
           </UDropdownMenu>
         </div>
       </div>
-
       <UTable
         ref="table"
         v-model:column-filters="columnFilters"
         v-model:column-visibility="columnVisibility"
+        v-model:row-selection="rowSelection"
         v-model:pagination="pagination"
         :pagination-options="{
           getPaginationRowModel: getPaginationRowModel()

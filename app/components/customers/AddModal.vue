@@ -57,7 +57,3 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     </template>
   </UModal>
 </template>
-
-<style scoped>
-
-</style>
