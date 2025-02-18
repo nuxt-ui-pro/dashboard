@@ -31,7 +31,7 @@ function getRowItems(row: Row<User>) {
       label: 'Copy customer ID',
       icon: 'i-lucide-copy',
       onSelect() {
-        navigator.clipboard.writeText(row.original.id)
+        navigator.clipboard.writeText(row.original.id.toString())
         toast.add({
           title: 'Copied to clipboard',
           description: 'Customer ID copied to clipboard'
