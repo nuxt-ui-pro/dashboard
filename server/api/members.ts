@@ -58,6 +58,11 @@ const members = [{
   username: 'smarroufin',
   role: 'member',
   avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/smarroufin' }
+}, {
+  name: 'Hugo Richard',
+  username: 'hugorcd',
+  role: 'owner',
+  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/hugorcd' }
 }]
 
 export default eventHandler(async () => {

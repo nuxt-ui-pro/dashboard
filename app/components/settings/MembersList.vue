@@ -43,7 +43,7 @@ const items = [{
           :model-value="member.role"
           :items="['member', 'owner']"
           color="neutral"
-          :ui-menu="{ select: 'capitalize', option: { base: 'capitalize' } }"
+          :ui="{ value: 'capitalize', item: 'capitalize' }"
         />
 
         <UDropdownMenu :items="items" :content="{ align: 'end' }">

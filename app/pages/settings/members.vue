@@ -15,7 +15,7 @@ const filteredMembers = computed(() => {
 
 <template>
   <div class="flex gap-4 max-sm:flex-col items-start gap-4 justify-between">
-    <div class="sm:sticky sm:top-2 flex sm:flex-col max-sm:items-center gap-4 max-sm:w-full justify-between">
+    <div class="sm:sticky sm:top-0 flex sm:flex-col max-sm:items-center gap-4 max-sm:w-full justify-between">
       <div class="flex flex-col gap-1">
         <span class="text-lg font-semibold">Manage access</span>
         <span class="text-sm text-neutral-500">Invite new members by email address.</span>
@@ -35,7 +35,7 @@ const filteredMembers = computed(() => {
       <template #header>
         <UInput
           v-model="q"
-          icon="i-heroicons-magnifying-glass"
+          icon="i-lucide-search"
           placeholder="Search members"
           autofocus
         />
