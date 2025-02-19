@@ -56,7 +56,7 @@ function onFileClick() {
       </div>
     </UPageCard>
     <UPageCard>
-      <div class="flex justify-between items-center">
+      <div class="flex justify-between items-center gap-4">
         <UFormField label="Profile" description="This information will be displayed publicly so be careful what you share." />
         <UButton
           form="settings"
@@ -78,7 +78,7 @@ function onFileClick() {
           label="Name"
           description="Will appear on receipts, invoices, and other communication."
           required
-          class="flex justify-between items-start gap-4"
+          class="flex max-sm:flex-col justify-between items-start gap-4"
         >
           <UInput
             v-model="profile.name"
@@ -91,7 +91,7 @@ function onFileClick() {
           label="Email"
           description="Used to sign in, for email receipts and product updates."
           required
-          class="flex justify-between items-start gap-4"
+          class="flex max-sm:flex-col justify-between items-start gap-4"
         >
           <UInput
             v-model="profile.email"
@@ -105,7 +105,7 @@ function onFileClick() {
           label="Username"
           description="Your unique username for logging in and your profile URL."
           required
-          class="flex justify-between items-start gap-4"
+          class="flex max-sm:flex-col justify-between items-start gap-4"
         >
           <UInput
             v-model="profile.username"
@@ -118,7 +118,7 @@ function onFileClick() {
           name="avatar"
           label="Avatar"
           description="JPG, GIF or PNG. 1MB Max."
-          class="flex justify-between items-center gap-4"
+          class="flex max-sm:flex-col justify-between sm:items-center gap-4"
         >
           <div class="flex flex-wrap items-center gap-3">
             <UAvatar
@@ -145,7 +145,7 @@ function onFileClick() {
           name="bio"
           label="Bio"
           description="Brief description for your profile. URLs are hyperlinked."
-          class="flex justify-between items-start gap-4"
+          class="flex max-sm:flex-col justify-between items-start gap-4"
           :ui="{ container: 'w-full' }"
         >
           <UTextarea

@@ -14,7 +14,7 @@ const filteredMembers = computed(() => {
 </script>
 
 <template>
-  <div class="flex gap-4 max-sm:flex-col items-start gap-4 justify-between">
+  <div class="flex max-sm:flex-col items-start gap-4 justify-between">
     <div class="sm:sticky sm:top-0 flex sm:flex-col max-sm:items-center gap-4 max-sm:w-full justify-between">
       <div class="flex flex-col gap-1">
         <span class="text-lg font-semibold">Manage access</span>
@@ -28,7 +28,7 @@ const filteredMembers = computed(() => {
         />
       </div>
     </div>
-    <UPageCard class="w-full">
+    <UPageCard class="w-full" :ui="{ container: 'p-0 sm:p-0', header: 'p-4 mb-0' }">
       <template #header>
         <UInput
           v-model="q"

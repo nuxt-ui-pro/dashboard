@@ -29,10 +29,10 @@ const items = [{
         />
 
         <div class="text-sm min-w-0">
-          <p class="text-gray-900 dark:text-white font-medium truncate">
+          <p class="text-(--ui-text-highlighted) font-medium truncate">
             {{ member.name }}
           </p>
-          <p class="text-gray-500 dark:text-gray-400 truncate">
+          <p class="text-(--ui-text-muted) truncate">
             {{ member.username }}
           </p>
         </div>
