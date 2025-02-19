@@ -4,14 +4,14 @@ const members = [{
   role: 'member',
   avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/antfu' }
 }, {
-  name: 'Sébastien Chopin',
-  username: 'Atinux',
-  role: 'owner',
-  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux' }
+  name: 'Baptiste Leproux',
+  username: 'larbish',
+  role: 'member',
+  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/larbish' }
 }, {
   name: 'Benjamin Canac',
   username: 'benjamincanac',
-  role: 'member',
+  role: 'owner',
   avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac' }
 }, {
   name: 'Céline Dumerc',
@@ -34,15 +34,10 @@ const members = [{
   role: 'member',
   avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/FerdinandCoumau' }
 }, {
-  name: 'Florent Delerue',
-  username: 'Flosciante',
-  role: 'member',
-  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/Flosciante' }
-}, {
-  name: 'Baptiste Leproux',
-  username: 'larbish',
-  role: 'member',
-  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/larbish' }
+  name: 'Hugo Richard',
+  username: 'hugorcd',
+  role: 'owner',
+  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/hugorcd' }
 }, {
   name: 'Pooya Parsa',
   username: 'pi0',
@@ -54,10 +49,10 @@ const members = [{
   role: 'member',
   avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19' }
 }, {
-  name: 'Sylvain Marroufin',
-  username: 'smarroufin',
-  role: 'member',
-  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/smarroufin' }
+  name: 'Sébastien Chopin',
+  username: 'Atinux',
+  role: 'owner',
+  avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux' }
 }]
 
 export default eventHandler(async () => {

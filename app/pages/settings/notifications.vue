@@ -44,32 +44,28 @@ async function onChange() {
 </script>
 
 <template>
-  <UDashboardPanelContent class="p-0 pb-24 divide-y divide-gray-200 dark:divide-gray-800">
-    <UDashboardSection
-      v-for="(section, index) in sections"
-      :key="index"
+  <div v-for="(section, index) in sections" :key="index">
+    <UPageCard
       :title="section.title"
       :description="section.description"
-      orientation="horizontal"
-      class="px-4 py-6"
-    >
-      <UCard :ui="{ body: { base: 'divide-y divide-gray-200 dark:divide-gray-800 gap-4 flex flex-col' } }">
-        <UFormGroup
-          v-for="field in section.fields"
-          :key="field.name"
-          :name="field.name"
-          :label="field.label"
-          :description="field.description"
-          class="flex items-center justify-between pt-4 first:pt-0 gap-2"
-          :ui="{ container: 'flex' }"
-        >
-          <UToggle
-            v-model="state[field.name]"
-            size="md"
-            @update:model-value="onChange"
-          />
-        </UFormGroup>
-      </UCard>
-    </UDashboardSection>
-  </udashboardpanelcontent>
+      variant="naked"
+      class="mb-4"
+    />
+
+    <UPageCard variant="subtle" :ui="{ container: 'divide-y divide-(--ui-border)' }">
+      <UFormField
+        v-for="field in section.fields"
+        :key="field.name"
+        :name="field.name"
+        :label="field.label"
+        :description="field.description"
+        class="flex items-center justify-between not-last:pb-4 gap-2"
+      >
+        <USwitch
+          v-model="state[field.name]"
+          @update:model-value="onChange"
+        />
+      </UFormField>
+    </UPageCard>
+  </div>
 </template>
