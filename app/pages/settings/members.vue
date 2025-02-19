@@ -28,21 +28,18 @@ const filteredMembers = computed(() => {
         />
       </div>
     </div>
-    <UCard
-      :ui="{ header: 'p-4 sm:px-6', body: 'p-0' }"
-      class="w-full sm:max-w-xl"
-    >
+    <UPageCard class="w-full">
       <template #header>
         <UInput
           v-model="q"
           icon="i-lucide-search"
           placeholder="Search members"
           autofocus
+          class="w-full"
         />
       </template>
-
       <!-- ~/components/settings/MembersList.vue -->
       <SettingsMembersList :members="filteredMembers" />
-    </UCard>
+    </UPageCard>
   </div>
 </template>

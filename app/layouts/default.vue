@@ -30,6 +30,9 @@ const links = [[{
   }, {
     label: 'Notifications',
     to: '/settings/notifications'
+  }, {
+    label: 'Security',
+    to: '/settings/security'
   }]
 }], [{
   label: 'Feedback',

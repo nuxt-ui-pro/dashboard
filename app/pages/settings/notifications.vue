@@ -57,7 +57,7 @@ async function onChange() {
           {{ section.description }}
         </span>
       </div>
-      <UCard :ui="{ body: 'divide-y divide-(--ui-border)' }">
+      <UPageCard :ui="{ container: 'divide-y divide-(--ui-border)' }">
         <UFormField
           v-for="field in section.fields"
           :key="field.name"
@@ -72,7 +72,7 @@ async function onChange() {
             @update:model-value="onChange"
           />
         </UFormField>
-      </UCard>
+      </UPageCard>
     </div>
   </div>
 </template>

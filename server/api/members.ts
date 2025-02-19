@@ -11,7 +11,7 @@ const members = [{
 }, {
   name: 'Benjamin Canac',
   username: 'benjamincanac',
-  role: 'member',
+  role: 'owner',
   avatar: { src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac' }
 }, {
   name: 'Céline Dumerc',

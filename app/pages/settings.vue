@@ -12,6 +12,10 @@ const links = [[{
   label: 'Notifications',
   icon: 'i-lucide-bell',
   to: '/settings/notifications'
+}, {
+  label: 'Security',
+  icon: 'i-lucide-shield',
+  to: '/settings/security'
 }], [{
   label: 'Documentation',
   icon: 'i-lucide-book-open',
