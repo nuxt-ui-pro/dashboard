@@ -11,9 +11,6 @@ const { data: notifications } = await useFetch<Notification[]>('/api/notificatio
   <USlideover
     v-model:open="isNotificationsSlideoverOpen"
     title="Notifications"
-    :ui="{
-      header: 'h-(--ui-header-height)'
-    }"
   >
     <template #body>
       <NuxtLink
