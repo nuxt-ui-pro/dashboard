@@ -10,9 +10,13 @@ const UBadge = resolveComponent('UBadge')
 const UDropdownMenu = resolveComponent('UDropdownMenu')
 const UCheckbox = resolveComponent('UCheckbox')
 
+const toast = useToast()
 const table = useTemplateRef('table')
 
-const columnFilters = ref([])
+const columnFilters = ref([{
+  id: 'email',
+  value: ''
+}])
 const columnVisibility = ref()
 const rowSelection = ref({ 1: true })
 
@@ -20,7 +24,6 @@ const { data, status } = await useFetch<User[]>('/api/customers', {
   lazy: true
 })
 
-const toast = useToast()
 function getRowItems(row: Row<User>) {
   return [
     {
@@ -193,12 +196,13 @@ const pagination = ref({
 </script>
 
 <template>
-  <UDashboardPanel id="customers" :ui="{ body: 'sm:p-4 sm:gap-4' }">
+  <UDashboardPanel id="customers">
     <template #header>
       <UDashboardNavbar title="Customers">
         <template #leading>
           <UDashboardSidebarCollapse />
         </template>
+
         <template #right>
           <CustomersAddModal />
         </template>
@@ -206,28 +210,32 @@ const pagination = ref({
     </template>
 
     <template #body>
-      <div class="flex justify-between">
+      <div class="flex flex-wrap items-center justify-between gap-1.5">
         <UInput
-          :model-value="table?.tableApi?.getColumn('email')?.getFilterValue() as string"
+          :model-value="(table?.tableApi?.getColumn('email')?.getFilterValue() as string)"
           class="max-w-sm"
           icon="i-lucide-search"
           placeholder="Filter emails..."
           @update:model-value="table?.tableApi?.getColumn('email')?.setFilterValue($event)"
         />
-        <div class="flex items-center gap-2">
+
+        <div class="flex flex-wrap items-center gap-1.5">
           <CustomersDeleteModal :nb-customers="table?.tableApi?.getFilteredSelectedRowModel().rows.length">
             <UButton
               v-if="table?.tableApi?.getFilteredSelectedRowModel().rows.length"
+              label="Delete"
               color="error"
               variant="subtle"
               icon="i-lucide-trash"
             >
-              Delete
-              <UKbd>
-                {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length }}
-              </UKbd>
+              <template #trailing>
+                <UKbd>
+                  {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length }}
+                </UKbd>
+              </template>
             </UButton>
           </CustomersDeleteModal>
+
           <USelect
             v-model="statusFilter"
             :items="[
@@ -238,6 +246,7 @@ const pagination = ref({
             ]"
             :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
             placeholder="Filter status"
+            class="min-w-28"
           />
           <UDropdownMenu
             :items="
@@ -267,6 +276,7 @@ const pagination = ref({
           </UDropdownMenu>
         </div>
       </div>
+
       <UTable
         ref="table"
         v-model:column-filters="columnFilters"
@@ -288,13 +298,21 @@ const pagination = ref({
           td: 'border-b border-(--ui-border)'
         }"
       />
-      <div class="flex justify-center border-t border-(--ui-border) pt-4">
-        <UPagination
-          :default-page="(table?.tableApi?.getState().pagination.pageIndex || 0) + 1"
-          :items-per-page="table?.tableApi?.getState().pagination.pageSize"
-          :total="table?.tableApi?.getFilteredRowModel().rows.length"
-          @update:page="(p) => table?.tableApi?.setPageIndex(p - 1)"
-        />
+
+      <div class="flex items-center justify-between gap-3 border-t border-(--ui-border) pt-4 mt-auto">
+        <div class="text-sm text-(--ui-text-muted)">
+          {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
+          {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
+        </div>
+
+        <div class="flex items-center gap-1.5">
+          <UPagination
+            :default-page="(table?.tableApi?.getState().pagination.pageIndex || 0) + 1"
+            :items-per-page="table?.tableApi?.getState().pagination.pageSize"
+            :total="table?.tableApi?.getFilteredRowModel().rows.length"
+            @update:page="(p) => table?.tableApi?.setPageIndex(p - 1)"
+          />
+        </div>
       </div>
     </template>
   </UDashboardPanel>
