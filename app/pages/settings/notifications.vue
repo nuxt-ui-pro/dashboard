@@ -44,35 +44,28 @@ async function onChange() {
 </script>
 
 <template>
-  <div class="flex flex-col gap-4">
-    <div
-      v-for="(section, index) in sections"
-      :key="index"
-    >
-      <div class="flex flex-col mb-4">
-        <span class="text-lg font-semibold">
-          {{ section.title }}
-        </span>
-        <span class="text-sm text-(--ui-text-muted)">
-          {{ section.description }}
-        </span>
-      </div>
-      <UPageCard :ui="{ container: 'divide-y divide-(--ui-border)' }">
-        <UFormField
-          v-for="field in section.fields"
-          :key="field.name"
-          :name="field.name"
-          :label="field.label"
-          :description="field.description"
-          class="flex items-center justify-between pt-4 first:pt-0 not-last:pb-4 gap-2"
-        >
-          <USwitch
-            v-model="state[field.name]"
-            size="md"
-            @update:model-value="onChange"
-          />
-        </UFormField>
-      </UPageCard>
-    </div>
+  <div v-for="(section, index) in sections" :key="index">
+    <UPageCard
+      :title="section.title"
+      :description="section.description"
+      variant="naked"
+      class="mb-4"
+    />
+
+    <UPageCard variant="subtle" :ui="{ container: 'divide-y divide-(--ui-border)' }">
+      <UFormField
+        v-for="field in section.fields"
+        :key="field.name"
+        :name="field.name"
+        :label="field.label"
+        :description="field.description"
+        class="flex items-center justify-between not-last:pb-4 gap-2"
+      >
+        <USwitch
+          v-model="state[field.name]"
+          @update:model-value="onChange"
+        />
+      </UFormField>
+    </UPageCard>
   </div>
 </template>
