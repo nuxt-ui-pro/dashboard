@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  nbCustomers: number
+  nbCustomers?: number
 }>()
 
 const open = ref(false)
