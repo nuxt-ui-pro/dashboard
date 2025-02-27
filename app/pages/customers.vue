@@ -178,7 +178,8 @@ const columns: TableColumn<User>[] = [
 const statusFilter = ref('all')
 
 watch(() => statusFilter.value, (newVal) => {
-  if (!table?.value.tableApi) return
+  if (!table?.value?.tableApi) return
+
   const statusColumn = table.value.tableApi.getColumn('status')
   if (!statusColumn) return
 

@@ -2,7 +2,7 @@
 import { eachDayOfInterval } from 'date-fns'
 import type { Period, Range } from '~/types'
 
-const model = defineModel<Period>()
+const model = defineModel<Period>({ required: true })
 
 const props = defineProps<{
   range: Range
@@ -33,7 +33,7 @@ const periods = computed<Period[]>(() => {
 // Ensure the model value is always a valid period
 watch(periods, () => {
   if (!periods.value.includes(model.value)) {
-    model.value = periods.value[0]
+    model.value = periods.value[0]!
   }
 })
 </script>

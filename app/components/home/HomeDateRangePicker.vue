@@ -27,8 +27,8 @@ const toCalendarDate = (date: Date) => {
 
 const calendarRange = computed({
   get: () => ({
-    start: selected.value.start ? toCalendarDate(selected.value.start) : null,
-    end: selected.value.end ? toCalendarDate(selected.value.end) : null
+    start: selected.value.start ? toCalendarDate(selected.value.start) : undefined,
+    end: selected.value.end ? toCalendarDate(selected.value.end) : undefined
   }),
   set: (newValue: { start: CalendarDate | null, end: CalendarDate | null }) => {
     selected.value = {

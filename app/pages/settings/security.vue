@@ -14,10 +14,11 @@ const password = reactive<Partial<PasswordSchema>>({
   new: undefined
 })
 
-const validate = (state: PasswordSchema): FormError[] => {
-  const errors = []
-  if (state.current === state.new)
+const validate = (state: Partial<PasswordSchema>): FormError[] => {
+  const errors: FormError[] = []
+  if (state.current && state.new && state.current === state.new) {
     errors.push({ name: 'new', message: 'Passwords must be different' })
+  }
   return errors
 }
 </script>

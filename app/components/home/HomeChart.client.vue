@@ -23,7 +23,7 @@ const { data } = await useAsyncData<DataRecord[]>(async () => {
     daily: eachDayOfInterval,
     weekly: eachWeekOfInterval,
     monthly: eachMonthOfInterval
-  })[props.period as keyof Period](props.range)
+  } as Record<Period, typeof eachDayOfInterval>)[props.period](props.range)
 
   const min = 1000
   const max = 10000

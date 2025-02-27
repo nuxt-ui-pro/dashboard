@@ -39,7 +39,7 @@ function onFileChange(e: Event) {
     return
   }
 
-  profile.avatar = URL.createObjectURL(input.files[0])
+  profile.avatar = URL.createObjectURL(input.files[0]!)
 }
 
 function onFileClick() {
