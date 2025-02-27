@@ -1,7 +1,9 @@
 <script setup lang="ts">
-defineProps<{
-  nbCustomers: number
-}>()
+withDefaults(defineProps<{
+  count?: number
+}>(), {
+  count: 0
+})
 
 const open = ref(false)
 
@@ -14,7 +16,7 @@ async function onSubmit() {
 <template>
   <UModal
     v-model:open="open"
-    :title="`Delete ${nbCustomers} customer${nbCustomers > 1 ? 's' : ''}`"
+    :title="`Delete ${count} customer${count > 1 ? 's' : ''}`"
     :description="`Are you sure, this action cannot be undone.`"
   >
     <slot />
