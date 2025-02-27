@@ -133,7 +133,7 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 }, {
   label: 'GitHub repository',
   icon: 'i-simple-icons-github',
-  to: 'https://github.com/nuxt-ui-pro/dashboard/tree/v3',
+  to: 'https://github.com/nuxt-ui-pro/dashboard',
   target: '_blank'
 }, {
   label: 'Upgrade to Pro',
