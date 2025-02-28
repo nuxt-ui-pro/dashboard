@@ -1,19 +1,25 @@
-![nuxt-ui-dashboard-social-card](https://github.com/nuxt-ui-pro/dashboard/assets/739984/f785284b-7db2-4732-af0e-2cb3c0bd7ca2)
+# Nuxt Dashboard Template with Nuxt UI Pro
 
-# Nuxt UI Pro - Dashboard template
+Get started with the Nuxt 3 dashboard template with multiple pages, collapsible sidebar, keyboard shortcuts, light & dark more, command palette and more, powered by the [Nuxt UI Pro](https://ui3.nuxt.dev/getting-started/installation/pro/nuxt) UI Library.
 
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
+[Live Demo](https://dashboard-template.nuxt.dev)
 
-- [Live demo](https://dashboard-template.nuxt.dev/)
-- [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/dashboard)
-- [Documentation](https://ui.nuxt.com/pro/getting-started)
+<a href="https://dashboard-template.nuxt.dev" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/57f6d964-a76c-4662-96b2-17622fb18d40">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/c4c87f77-d10a-4731-9b7c-0cd0ff4821d7">
+    <img alt="Vue Dashboard with Nuxt UI Pro" src="https://github.com/user-attachments/assets/c4c87f77-d10a-4731-9b7c-0cd0ff4821d7">
+  </picture>
+</a>
 
-[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/dashboard)
+## Vue Dashboard Template
+
+The dashboard template for Vue is on https://github.com/nuxt-ui-pro/dashboard-vue
 
 ## Quick Start
 
 ```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/dashboard
+npx nuxi@latest init -t github:nuxt-ui-pro/dashboard
 ```
 
 ## Setup
