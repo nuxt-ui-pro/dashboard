@@ -19,7 +19,7 @@
     "@unovis/vue": "^1.5.1",
     "@vueuse/nuxt": "^12.8.2",
     "date-fns": "^4.1.0",
-    "nuxt": "^3.15.4",
+    "nuxt": "^3.16.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
