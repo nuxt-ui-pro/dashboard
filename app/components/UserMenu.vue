@@ -128,7 +128,7 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 }], [{
   label: 'Documentation',
   icon: 'i-lucide-book-open',
-  to: 'https://ui3.nuxt.dev/getting-started/installation/pro/nuxt',
+  to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
   target: '_blank'
 }, {
   label: 'GitHub repository',
