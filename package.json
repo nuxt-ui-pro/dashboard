@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.2.0",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "vue-tsc": "^2.1.10"
   },
   "resolutions": {
