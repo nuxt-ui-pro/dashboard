@@ -112,10 +112,9 @@ onMounted(async () => {
 </script>
 
 <template>
-  <UDashboardGroup>
-    <UDashboardSearch :groups="groups" />
-
+  <UDashboardGroup unit="rem">
     <UDashboardSidebar
+      id="default"
       v-model:open="open"
       collapsible
       resizable
@@ -147,6 +146,8 @@ onMounted(async () => {
         <UserMenu :collapsed="collapsed" />
       </template>
     </UDashboardSidebar>
+
+    <UDashboardSearch :groups="groups" />
 
     <slot />
 
