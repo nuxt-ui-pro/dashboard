@@ -1,0 +1,66 @@
+{
+  "dataType": 0,
+  "title": "スーパーマーケット経営動向(DI) 単位:100.0％",
+  "searchPrefixDataIndex": 4,
+  "searchPrefix": "スーパーマーケット",
+  "dataReference": "<ul><li><a target='_blank' href='http://www.j-sosm.jp/dl/index.html'>スーパーマーケット 経営動向・景況感 調査結果@一般社団法人全国スーパーマーケット協会</a></li></ul>",
+  "detailType": "name",
+  "isMakeAutocompleteData": true,
+  "chartMap": {
+    "isShow": false
+  },
+  "chartName": {
+    "isShow": true,
+    "imagePath": "@tube",
+    "imageTooltip": "all"
+  },
+  "chartCity": {
+    "isShow": false
+  },
+  "chartDate": {
+    "isShow": true,
+    "elasticY": true,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSex": {
+    "isShow": true,
+    "unit": null,
+    "chartType": "bar",
+    "isLegend": false
+  },
+  "chartAge": {
+    "isShow": true,
+    "unit": null
+  },
+  "chartCond": {
+    "isShow": true
+  },
+  "chartJob": {
+    "isShow": false,
+    "isPanGmap": "0",
+    "isPanGmapMarker": "0"
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1kt3TyZR2gsVUSyIAkl-6Yy6-L7ZOzYhpgXyIUiDztfI/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

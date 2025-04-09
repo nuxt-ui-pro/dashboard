@@ -1,0 +1,54 @@
+{
+  "dataType": 0,
+  "title": "🍜全国有名ラーメン店一覧",
+  "searchPrefixDataIndex": 4,
+  "searchPrefix": "ラーメン",
+  "dataReference": "<ul><li><a target='_blank' href='http://ramenjiyuku.web.fc2.com/'>有名ラーメン店の創業年表｜年代別@らーめん自由区</a></li></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "@tube",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true,
+    "isPanGmapMarker": "1"
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartSex": {
+    "chartType": "bar",
+    "isLegend": false,
+    "unit": null
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "chartJob": {
+    "isPanGmap": "1"
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/186UHvNBXlavGoJ19eBIPhbFRvqPnO6y9SWUAzMsvoL8/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

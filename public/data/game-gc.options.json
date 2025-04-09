@@ -1,0 +1,2320 @@
+{
+  "dataType": 0,
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/ps1",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartSex": {
+    "unit": null,
+    "chartType": "bar"
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {
+    "isHidden": true
+  },
+  "chartEx": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "chartDetail": {},
+  "assets": {
+    "jobcates": [
+      "3771",
+      "3772",
+      "3779",
+      "3781",
+      "3773",
+      "3782",
+      "3777",
+      "3778",
+      "3783",
+      "3784",
+      "3785",
+      "3786",
+      "3787",
+      "3876",
+      "3812",
+      "3879",
+      "3877",
+      "3878",
+      "3831",
+      "3894",
+      "3895",
+      "3896",
+      "3897",
+      "3788",
+      "3898",
+      "3899",
+      "3900",
+      "3901",
+      "3902",
+      "3903",
+      "3904",
+      "3828",
+      "3905",
+      "3789",
+      "3906",
+      "3907",
+      "3844",
+      "3829",
+      "3908",
+      "3909",
+      "3915",
+      "3910",
+      "3911",
+      "3790",
+      "3813",
+      "3912",
+      "3913",
+      "3845",
+      "3846",
+      "3914",
+      "3847",
+      "4047",
+      "3916",
+      "3917",
+      "3848",
+      "3918",
+      "3919",
+      "3920",
+      "3921",
+      "3922",
+      "3923",
+      "3814",
+      "3849",
+      "3924",
+      "3925",
+      "3926",
+      "3927",
+      "3928",
+      "3929",
+      "3930",
+      "3931",
+      "3880",
+      "3850",
+      "3932",
+      "3851",
+      "3852",
+      "3791",
+      "4048",
+      "3832",
+      "3833",
+      "3933",
+      "3934",
+      "3935",
+      "3792",
+      "3853",
+      "3936",
+      "3793",
+      "3854",
+      "3937",
+      "3938",
+      "3834",
+      "3835",
+      "3939",
+      "3855",
+      "3940",
+      "3941",
+      "3942",
+      "3943",
+      "3815",
+      "3944",
+      "3945",
+      "3816",
+      "3794",
+      "3856",
+      "3795",
+      "3946",
+      "3857",
+      "3947",
+      "3948",
+      "3949",
+      "3950",
+      "3881",
+      "3951",
+      "3952",
+      "3817",
+      "3882",
+      "3883",
+      "3953",
+      "3836",
+      "3954",
+      "3955",
+      "3956",
+      "3884",
+      "3957",
+      "3818",
+      "3885",
+      "3830",
+      "3858",
+      "3958",
+      "3959",
+      "3960",
+      "3774",
+      "3837",
+      "3796",
+      "3961",
+      "3962",
+      "3963",
+      "3819",
+      "3797",
+      "3821",
+      "3964",
+      "3859",
+      "3775",
+      "3886",
+      "3966",
+      "3967",
+      "3838",
+      "3798",
+      "3968",
+      "3799",
+      "3860",
+      "3887",
+      "3969",
+      "3970",
+      "3861",
+      "3839",
+      "3862",
+      "3971",
+      "3972",
+      "3973",
+      "3800",
+      "3974",
+      "3975",
+      "3822",
+      "3863",
+      "3976",
+      "3864",
+      "3977",
+      "3978",
+      "3979",
+      "3865",
+      "3980",
+      "3981",
+      "3888",
+      "3982",
+      "3801",
+      "3983",
+      "3823",
+      "3984",
+      "3803",
+      "3985",
+      "3986",
+      "3987",
+      "3988",
+      "3989",
+      "3990",
+      "3991",
+      "3776",
+      "3992",
+      "3993",
+      "3994",
+      "3995",
+      "3996",
+      "3866",
+      "3997",
+      "3998",
+      "3820",
+      "3999",
+      "3804",
+      "3805",
+      "3890",
+      "4000",
+      "4001",
+      "4002",
+      "4003",
+      "4004",
+      "4005",
+      "3867",
+      "4006",
+      "4007",
+      "4008",
+      "4009",
+      "4010",
+      "4011",
+      "3806",
+      "3889",
+      "3802",
+      "4013",
+      "3807",
+      "4014",
+      "3824",
+      "4015",
+      "4016",
+      "4017",
+      "3840",
+      "3841",
+      "4018",
+      "3869",
+      "4019",
+      "3808",
+      "4020",
+      "3809",
+      "3810",
+      "4021",
+      "4022",
+      "4023",
+      "4024",
+      "4025",
+      "3870",
+      "4026",
+      "4027",
+      "3871",
+      "3842",
+      "3872",
+      "4028",
+      "4029",
+      "3873",
+      "4030",
+      "4031",
+      "3868",
+      "3826",
+      "4032",
+      "3874",
+      "4033",
+      "4034",
+      "3827",
+      "4035",
+      "4036",
+      "3875",
+      "4037",
+      "4038",
+      "4039",
+      "4040",
+      "3891",
+      "4041",
+      "4042",
+      "3892",
+      "3811",
+      "4043",
+      "4044",
+      "3843",
+      "4045",
+      "3893",
+      "4046",
+      "3780"
+    ],
+    "ac_data": [
+      [
+        "メーカー",
+        "D3パブリッシャー",
+        "D3paburisshaa",
+        2
+      ],
+      [
+        "メーカー",
+        "ESP",
+        "esp",
+        1
+      ],
+      [
+        "メーカー",
+        "MTO",
+        "mto",
+        2
+      ],
+      [
+        "メーカー",
+        "THQジャパン",
+        "THQjapan",
+        1
+      ],
+      [
+        "メーカー",
+        "アイディアファクトリー",
+        "aideiafuakutorii",
+        2
+      ],
+      [
+        "メーカー",
+        "アイドスインタラクティブ",
+        "aidosuintarakuteibu",
+        1
+      ],
+      [
+        "メーカー",
+        "アクレイムジャパン",
+        "akureimujapan",
+        3
+      ],
+      [
+        "メーカー",
+        "アスミック・エース",
+        "asumikku/eesu",
+        2
+      ],
+      [
+        "メーカー",
+        "アタリ",
+        "atari",
+        4
+      ],
+      [
+        "メーカー",
+        "アテナ",
+        "atena",
+        1
+      ],
+      [
+        "メーカー",
+        "インフォグラムジャパン",
+        "infuoguramujapan",
+        1
+      ],
+      [
+        "メーカー",
+        "エポック社",
+        "epokku社",
+        1
+      ],
+      [
+        "メーカー",
+        "エレクトロニック・アーツ",
+        "erekutoronikku/aatsu",
+        26
+      ],
+      [
+        "メーカー",
+        "エレクトロニック･アーツ",
+        "erekutoronikku･aatsu",
+        3
+      ],
+      [
+        "メーカー",
+        "カプコン",
+        "kapukon",
+        22
+      ],
+      [
+        "メーカー",
+        "キッズステーション",
+        "kizzusuteeshon",
+        1
+      ],
+      [
+        "メーカー",
+        "グローバル・A・エンタテインメント",
+        "guroobaru/A/entateinmento",
+        1
+      ],
+      [
+        "メーカー",
+        "ケムコ",
+        "kemuko",
+        1
+      ],
+      [
+        "メーカー",
+        "コトブキシステム",
+        "kotobukishisutemu",
+        3
+      ],
+      [
+        "メーカー",
+        "コナミ",
+        "konami",
+        30
+      ],
+      [
+        "メーカー",
+        "コーエー",
+        "kooee",
+        1
+      ],
+      [
+        "メーカー",
+        "サクセス",
+        "sakusesu",
+        2
+      ],
+      [
+        "メーカー",
+        "サンライズ",
+        "sanraizu",
+        1
+      ],
+      [
+        "メーカー",
+        "スクウェア・エニックス",
+        "sukuuea/enikkusu",
+        1
+      ],
+      [
+        "メーカー",
+        "セガ",
+        "sega",
+        26
+      ],
+      [
+        "メーカー",
+        "セタ",
+        "seta",
+        1
+      ],
+      [
+        "メーカー",
+        "タイタスジャパン",
+        "taitasujapan",
+        2
+      ],
+      [
+        "メーカー",
+        "タイトー",
+        "taitoo",
+        6
+      ],
+      [
+        "メーカー",
+        "タカラ",
+        "takara",
+        4
+      ],
+      [
+        "メーカー",
+        "チュンソフト",
+        "chunsofuto",
+        1
+      ],
+      [
+        "メーカー",
+        "トミー",
+        "tomii",
+        10
+      ],
+      [
+        "メーカー",
+        "ナツメ",
+        "natsume",
+        1
+      ],
+      [
+        "メーカー",
+        "ナムコ",
+        "namuko",
+        6
+      ],
+      [
+        "メーカー",
+        "ハドソン",
+        "hadoson",
+        14
+      ],
+      [
+        "メーカー",
+        "バンダイ",
+        "bandai",
+        19
+      ],
+      [
+        "メーカー",
+        "バンダイナムコ",
+        "bandainamuko",
+        1
+      ],
+      [
+        "メーカー",
+        "バンプレスト",
+        "banpuresuto",
+        2
+      ],
+      [
+        "メーカー",
+        "ビベンディ・ユニバーサル・ゲームズ",
+        "bibendei/yunibaasaru/geemuzu",
+        2
+      ],
+      [
+        "メーカー",
+        "ピンチェンジ",
+        "pinchenji",
+        1
+      ],
+      [
+        "メーカー",
+        "フロム・ソフトウェア",
+        "furomu/sofutouea",
+        2
+      ],
+      [
+        "メーカー",
+        "ポケモン",
+        "pokemon",
+        4
+      ],
+      [
+        "メーカー",
+        "マイルストーン",
+        "mairusutoon",
+        2
+      ],
+      [
+        "メーカー",
+        "マーベラスインタラクティブ",
+        "maaberasuintarakuteibu",
+        4
+      ],
+      [
+        "メーカー",
+        "メディアカイト",
+        "medeiakaito",
+        1
+      ],
+      [
+        "メーカー",
+        "ユークス",
+        "yuukusu",
+        4
+      ],
+      [
+        "メーカー",
+        "任天堂",
+        "任天堂",
+        50
+      ],
+      [
+        "D3パブリッシャー",
+        "Mr.インクレディブル",
+        "Mr.inkuredeiburu",
+        0
+      ],
+      [
+        "D3パブリッシャー",
+        "チキン・リトル",
+        "chikin/ritoru",
+        0
+      ],
+      [
+        "ESP",
+        "神機世界エヴォルシア",
+        "神機世界evuorushia",
+        0
+      ],
+      [
+        "MTO",
+        "魔法のパンプキン アンとグレッグの大冒険",
+        "魔法nopanpukin antoguregguno大冒険",
+        0
+      ],
+      [
+        "MTO",
+        "GT CUBE",
+        "GT CUBE",
+        0
+      ],
+      [
+        "THQジャパン",
+        "カーズ",
+        "kaazu",
+        0
+      ],
+      [
+        "アイディアファクトリー",
+        "ジェネレーション・オブ・カオス イクシード 闇の皇女ロゼ",
+        "jenereeshon/obu/kaosu ikushiido 闇no皇女roze",
+        0
+      ],
+      [
+        "アイディアファクトリー",
+        "学園都市ヴァラノワール ローゼス",
+        "学園都市vuaranowaaru roozesu",
+        0
+      ],
+      [
+        "アイドスインタラクティブ",
+        "わいわいゴルフ",
+        "waiwaigorufu",
+        0
+      ],
+      [
+        "アクレイムジャパン",
+        "エクストリームG3",
+        "ekusutoriimuG3",
+        0
+      ],
+      [
+        "アクレイムジャパン",
+        "オールスターベースボール2003",
+        "oorusutaabeesubooru2003",
+        0
+      ],
+      [
+        "アクレイムジャパン",
+        "ズーキューブ",
+        "zuukyuubu",
+        0
+      ],
+      [
+        "アスミック・エース",
+        "ドカポンDX わたる世界はオニだらけ",
+        "dokaponDX wataru世界haonidarake",
+        0
+      ],
+      [
+        "アスミック・エース",
+        "ルパン三世 海に消えた秘宝",
+        "rupan三世 海ni消eta秘宝",
+        0
+      ],
+      [
+        "アタリ",
+        "ゴジラ 怪獣大乱闘",
+        "gojira 怪獣大乱闘",
+        0
+      ],
+      [
+        "アタリ",
+        "斑鳩 IKARUGA",
+        "斑鳩 IKARUGA",
+        0
+      ],
+      [
+        "アタリ",
+        "ミッションインポッシブル オペレーション・サルマ",
+        "misshon'inposshiburu opereeshon/saruma",
+        0
+      ],
+      [
+        "アタリ",
+        "ターミネーター3 ザ・レデンプション",
+        "taamineetaa3 za/redenpushon",
+        0
+      ],
+      [
+        "アテナ",
+        "極・麻雀DX2 The 4th MONDO21Cup Competition",
+        "極/麻雀DX2 The 4th MONDO21Cup Competition",
+        0
+      ],
+      [
+        "インフォグラムジャパン",
+        "Vラリー3",
+        "Vrarii3",
+        0
+      ],
+      [
+        "エポック社",
+        "ドラえもん みんなで遊ぼう!ミニドランド",
+        "doraemon minnade遊bou!minidorando",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "FIFA2002 ロード トゥ FIFA ワールドカップ",
+        "FIFA2002 roodo tou FIFA waarudokappu",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "2002 FIFAワールドカップ",
+        "2002 FIFAwaarudokappu",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ハリー・ポッターと秘密の部屋",
+        "harii/pottaato秘密no部屋",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "FIFA2003 ヨーロッパサッカー",
+        "FIFA2003 yooroppasakkaa",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ロード・オブ・ザ・リング 二つの塔",
+        "roodo/obu/za/ringu 二tsuno塔",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "スター・ウォーズ クローン戦争",
+        "sutaa/uoozu kuroon戦争",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ハリー・ポッター クイディッチ・ワールドカップ",
+        "harii/pottaa kuideitchi/waarudokappu",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "スター・ウォーズ ローグ スコードロン3",
+        "sutaa/uoozu roogu sukoodoron3",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "メダル・オブ・オナー ライジングサン",
+        "medaru/obu/onaa raijingusan",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ハリー・ポッターと賢者の石",
+        "harii/pottaato賢者no石",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "SSX3",
+        "SSX3",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ニード・フォー・スピード アンダーグラウンド",
+        "niido/fuoo/supiido andaaguraundo",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ロード・オブ・ザ・リング 王の帰還",
+        "roodo/obu/za/ringu 王no帰還",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ザ・シムズ",
+        "za/shimuzu",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "007 エブリシング オア ナッシング",
+        "007 eburishingu oa nasshingu",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ハリー・ポッターとアズカバンの囚人",
+        "harii/pottaatoazukabanno囚人",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ニード・フォー・スピード アンダーグラウンド2",
+        "niido/fuoo/supiido andaaguraundo2",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ロード・オブ・ザ・リング 中つ国第三紀",
+        "roodo/obu/za/ringu 中tsu国第三紀",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ゴールデンアイ ダークエージェント",
+        "gooruden'ai daakueejento",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ザ・アーブズ シムズ・イン・ザ・シティ",
+        "za/aabuzu shimuzu/in/za/shitei",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "NBAストリートV3 マリオでダンク",
+        "NBAsutoriitoV3 mariodedanku",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "メダル・オブ・オナー ヨーロッパ強襲",
+        "medaru/obu/onaa yooroppa強襲",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ファイトナイト  ラウンド2",
+        "fuaitonaito  raundo2",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "SSX オンツアー with マリオ",
+        "SSX ontsuaa with mario",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ハリー・ポッターと炎のゴブレット",
+        "harii/pottaato炎nogoburetto",
+        0
+      ],
+      [
+        "エレクトロニック・アーツ",
+        "ニード・フォー・スピード モスト・ウォンテッド",
+        "niido/fuoo/supiido mosuto/uonteddo",
+        0
+      ],
+      [
+        "エレクトロニック･アーツ",
+        "SSXトリッキー",
+        "SSXtorikkii",
+        0
+      ],
+      [
+        "エレクトロニック･アーツ",
+        "NBAストリート",
+        "NBAsutoriito",
+        0
+      ],
+      [
+        "エレクトロニック･アーツ",
+        "スター・ウォーズ ローグ スコードロン2",
+        "sutaa/uoozu roogu sukoodoron2",
+        0
+      ],
+      [
+        "カプコン",
+        "バイオハザード",
+        "baiohazaado",
+        0
+      ],
+      [
+        "カプコン",
+        "カプコン VS SNK 2 EO ミリオネアファイティング2001",
+        "kapukon VS SNK 2 EO mirioneafuaiteingu2001",
+        0
+      ],
+      [
+        "カプコン",
+        "アルティメット ファイティング チャンピオンシップ2 タップアウト ファイナルスペック",
+        "aruteimetto fuaiteingu chanpionshippu2 tappuauto fuainarusupekku",
+        0
+      ],
+      [
+        "カプコン",
+        "バイオハザード0",
+        "baiohazaado0",
+        0
+      ],
+      [
+        "カプコン",
+        "バイオハザード2",
+        "baiohazaado2",
+        0
+      ],
+      [
+        "カプコン",
+        "バイオハザード3 ラストエスケープ",
+        "baiohazaado3 rasutoesukeepu",
+        0
+      ],
+      [
+        "カプコン",
+        "スパイダーマン",
+        "supaidaaman",
+        0
+      ],
+      [
+        "カプコン",
+        "ロックマンエグゼ トランスミッション",
+        "rokkuman'eguze toransumisshon",
+        0
+      ],
+      [
+        "カプコン",
+        "P.N.03",
+        "P.N.03",
+        0
+      ],
+      [
+        "カプコン",
+        "ビューティフル ジョー",
+        "byuuteifuru joo",
+        0
+      ],
+      [
+        "カプコン",
+        "アウトモデリスタ U.S.-tuned",
+        "automoderisuta U.S.-tuned",
+        0
+      ],
+      [
+        "カプコン",
+        "バイオハザード コード：ベロニカ 完全版",
+        "baiohazaado koodo:beronika 完全版",
+        0
+      ],
+      [
+        "カプコン",
+        "バイオハザード コレクターズボックス",
+        "baiohazaado korekutaazubokkusu",
+        0
+      ],
+      [
+        "カプコン",
+        "ガチャフォース",
+        "gachafuoosu",
+        0
+      ],
+      [
+        "カプコン",
+        "ミッキー＆ミニー トリック＆チェイス",
+        "mikkii＆minii torikku＆cheisu",
+        0
+      ],
+      [
+        "カプコン",
+        "ビューティフルジョー リバイバル",
+        "byuuteifurujoo ribaibaru",
+        0
+      ],
+      [
+        "カプコン",
+        "ロックマンX コマンドミッション",
+        "rokkumanX komandomisshon",
+        0
+      ],
+      [
+        "カプコン",
+        "ビューティフルジョー2 ブラックフィルムの謎",
+        "byuuteifurujoo2 burakkufyirumuno謎",
+        0
+      ],
+      [
+        "カプコン",
+        "バイオハザード ダブル フィーチャー",
+        "baiohazaado daburu fyiichaa",
+        0
+      ],
+      [
+        "カプコン",
+        "バイオハザード4",
+        "baiohazaado4",
+        0
+      ],
+      [
+        "カプコン",
+        "キラー7",
+        "kiraa7",
+        0
+      ],
+      [
+        "カプコン",
+        "ビューティフルジョー バトルカーニバル",
+        "byuuteifurujoo batorukaanibaru",
+        0
+      ],
+      [
+        "キッズステーション",
+        "式神の城2",
+        "式神no城2",
+        0
+      ],
+      [
+        "グローバル・A・エンタテインメント",
+        "零ファイター 撃墜戦記",
+        "零fuaitaa 撃墜戦記",
+        0
+      ],
+      [
+        "ケムコ",
+        "ユニバーサル・スタジオ・ジャパン・アドベンチャー",
+        "yunibaasaru/sutajio/japan/adobenchaa",
+        0
+      ],
+      [
+        "コトブキシステム",
+        "エッグマニア つかんで!まわして!どっすんぱずる!",
+        "eggumania tsukande!mawashite!dossunpazuru!",
+        0
+      ],
+      [
+        "コトブキシステム",
+        "バットマン ダークトゥモロー",
+        "battoman daakutoumoroo",
+        0
+      ],
+      [
+        "コトブキシステム",
+        "ローグオプス",
+        "rooguopusu",
+        0
+      ],
+      [
+        "コナミ",
+        "ハイパースポーツ2002 ウインター",
+        "haipaasupootsu2002 uintaa",
+        0
+      ],
+      [
+        "コナミ",
+        "実況ワールドサッカー2002",
+        "実況waarudosakkaa2002",
+        0
+      ],
+      [
+        "コナミ",
+        "グルーヴアドベンチャーレイヴ ファイティングライブ",
+        "guruuvuadobenchaareivu fuaiteinguraibu",
+        0
+      ],
+      [
+        "コナミ",
+        "ディズニースポーツ：サッカー",
+        "deizuniisupootsu:sakkaa",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルプロ野球9",
+        "実況pawafurupuro野球9",
+        0
+      ],
+      [
+        "コナミ",
+        "WTA ツアーテニス プロエボリューション",
+        "WTA tsuaatenisu puroeboryuushon",
+        0
+      ],
+      [
+        "コナミ",
+        "キャプテン翼 黄金世代の挑戦",
+        "kyaputen翼 黄金世代no挑戦",
+        0
+      ],
+      [
+        "コナミ",
+        "ディズニースポーツ：スケートボーディング",
+        "deizuniisupootsu:sukeetoboodeingu",
+        0
+      ],
+      [
+        "コナミ",
+        "永世名人6",
+        "永世名人6",
+        0
+      ],
+      [
+        "コナミ",
+        "マッスルちゃんぴよん 筋肉島の決戦",
+        "massuruchanpiyon 筋肉島no決戦",
+        0
+      ],
+      [
+        "コナミ",
+        "遊戯王 フォルスバウンドキングダム 虚構に閉ざされた王国",
+        "遊戯王 fuorusubaundokingudamu 虚構ni閉zasareta王国",
+        0
+      ],
+      [
+        "コナミ",
+        "エボリューション スケートボーディング",
+        "eboryuushon sukeetoboodeingu",
+        0
+      ],
+      [
+        "コナミ",
+        "ディズニースポーツ：アメリカンフットボール",
+        "deizuniisupootsu:amerikanfuttobooru",
+        0
+      ],
+      [
+        "コナミ",
+        "ディズニースポーツ：バスケットボール",
+        "deizuniisupootsu:basukettobooru",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルプロ野球9 決定版",
+        "実況pawafurupuro野球9 決定版",
+        0
+      ],
+      [
+        "コナミ",
+        "ワールドサッカー ウイニングイレブン6 ファイナルエヴォリューション",
+        "waarudosakkaa uininguirebun6 fuainaruevuoryuushon",
+        0
+      ],
+      [
+        "コナミ",
+        "ザ・ベースボール2003 バトルボールパーク宣言 パーフェクトプレープロ野球",
+        "za/beesubooru2003 batoruboorupaaku宣言 paafyekutopureepuro野球",
+        0
+      ],
+      [
+        "コナミ",
+        "ヒカルの碁3",
+        "hikaruno碁3",
+        0
+      ],
+      [
+        "コナミ",
+        "フロッガー",
+        "furoggaa",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルプロ野球10",
+        "実況pawafurupuro野球10",
+        0
+      ],
+      [
+        "コナミ",
+        "クラッシュ・バンディクー4 さくれつ!魔神パワー",
+        "kurasshu/bandeikuu4 sakuretsu!魔神pawaa",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルプロ野球10 超決定版 2003メモリアル",
+        "実況pawafurupuro野球10 超決定版 2003memoriaru",
+        0
+      ],
+      [
+        "コナミ",
+        "メタルギアソリッド ザ・ツインスネークス",
+        "metarugiasoriddo za/tsuinsuneekusu",
+        0
+      ],
+      [
+        "コナミ",
+        "クラッシュ・バンディクー 爆走!ニトロカート",
+        "kurasshu/bandeikuu 爆走!nitorokaato",
+        0
+      ],
+      [
+        "コナミ",
+        "コロッケ! バン王の危機を救え",
+        "korokke! ban王no危機wo救e",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルプロ野球11",
+        "実況pawafurupuro野球11",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルプロ野球11 超決定版",
+        "実況pawafurupuro野球11 超決定版",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルプロ野球12",
+        "実況pawafurupuro野球12",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルプロ野球12 決定版",
+        "実況pawafurupuro野球12 決定版",
+        0
+      ],
+      [
+        "コナミ",
+        "実況パワフルメジャーリーグ",
+        "実況pawafurumejaariigu",
+        0
+      ],
+      [
+        "コーエー",
+        "バトル封神",
+        "batoru封神",
+        0
+      ],
+      [
+        "サクセス",
+        "テトリスワールド",
+        "tetorisuwaarudo",
+        0
+      ],
+      [
+        "サクセス",
+        "トニー・ホーク プロスケーター3",
+        "tonii/hooku purosukeetaa3",
+        0
+      ],
+      [
+        "サンライズ",
+        "新世紀GPXサイバーフォーミュラ Road To The Evolution",
+        "新世紀GPXsaibaafuoomyura Road To The Evolution",
+        0
+      ],
+      [
+        "スクウェア・エニックス",
+        "ファイナルファンタジー クリスタルクロニクル",
+        "fuainarufuantajii kurisutarukuronikuru",
+        0
+      ],
+      [
+        "セガ",
+        "スーパーモンキーボール",
+        "suupaamonkiibooru",
+        0
+      ],
+      [
+        "セガ",
+        "ソニックアドベンチャー2 バトル",
+        "sonikkuadobenchaa2 batoru",
+        0
+      ],
+      [
+        "セガ",
+        "バーチャストライカー3 Ver.2002",
+        "baachasutoraikaa3 Ver.2002",
+        0
+      ],
+      [
+        "セガ",
+        "クレイジータクシー",
+        "kureijiitakushii",
+        0
+      ],
+      [
+        "セガ",
+        "ビーチスパイカーズ",
+        "biichisupaikaazu",
+        0
+      ],
+      [
+        "セガ",
+        "エイティーン・ホイーラー",
+        "eiteiin/hoiiraa",
+        0
+      ],
+      [
+        "セガ",
+        "ファンタシースターオンライン エピソード1＆2",
+        "fuantashiisutaaonrain episoodo1＆2",
+        0
+      ],
+      [
+        "セガ",
+        "セガ サッカースラム",
+        "sega sakkaasuramu",
+        0
+      ],
+      [
+        "セガ",
+        "スーパーモンキーボール2",
+        "suupaamonkiibooru2",
+        0
+      ],
+      [
+        "セガ",
+        "ソニック メガコレクション",
+        "sonikku megakorekushon",
+        0
+      ],
+      [
+        "セガ",
+        "エターナルアルカディア レジェンド",
+        "etaanaruarukadeia rejendo",
+        0
+      ],
+      [
+        "セガ",
+        "ソニックアドベンチャー デラックス",
+        "sonikkuadobenchaa derakkusu",
+        0
+      ],
+      [
+        "セガ",
+        "激闘プロ野球 水島新司オールスターズ VS プロ野球",
+        "激闘puro野球 水島新司oorusutaazu VS puro野球",
+        0
+      ],
+      [
+        "セガ",
+        "ジャイアントエッグ ビリー・ハッチャーの大冒険",
+        "jaiantoeggu birii/hatchaano大冒険",
+        0
+      ],
+      [
+        "セガ",
+        "ファンタシースターオンライン エピソード1＆2plus",
+        "fuantashiisutaaonrain episoodo1＆2plus",
+        0
+      ],
+      [
+        "セガ",
+        "ファンタシースターオンライン エピソード3 カードレボリューション",
+        "fuantashiisutaaonrain episoodo3 kaadoreboryuushon",
+        0
+      ],
+      [
+        "セガ",
+        "ダビつく3 ダービー馬をつくろう!",
+        "dabitsuku3 daabii馬wotsukurou!",
+        0
+      ],
+      [
+        "セガ",
+        "ソニックヒーローズ",
+        "sonikkuhiiroozu",
+        0
+      ],
+      [
+        "セガ",
+        "カイジュウの島 アメージングアイランド",
+        "kaijuuno島 ameejinguairando",
+        0
+      ],
+      [
+        "セガ",
+        "ぷよぷよフィーバー",
+        "puyopuyofyiibaa",
+        0
+      ],
+      [
+        "セガ",
+        "バーチャファイター サイバージェネレーション ジャッジメントシックスの野望",
+        "baachafuaitaa saibaajenereeshon jajjimentoshikkusuno野望",
+        0
+      ],
+      [
+        "セガ",
+        "ソニック ジェムズ コレクション",
+        "sonikku jemuzu korekushon",
+        0
+      ],
+      [
+        "セガ",
+        "ブリーチGC 黄昏にまみえる死神",
+        "buriichiGC 黄昏nimamieru死神",
+        0
+      ],
+      [
+        "セガ",
+        "シャドウ・ザ・ヘッジホッグ",
+        "shadou/za/hejjihoggu",
+        0
+      ],
+      [
+        "セガ",
+        "Mr.インクレディブル 強敵アンダーマイナー登場",
+        "Mr.inkuredeiburu 強敵andaamainaa登場",
+        0
+      ],
+      [
+        "セガ",
+        "ソニックライダーズ",
+        "sonikkuraidaazu",
+        0
+      ],
+      [
+        "セタ",
+        "レジェンド オブ ゴルファー",
+        "rejendo obu gorufuaa",
+        0
+      ],
+      [
+        "タイタスジャパン",
+        "トップガン エース オブ ザ スカイ",
+        "toppugan eesu obu za sukai",
+        0
+      ],
+      [
+        "タイタスジャパン",
+        "ロボコップ 新たなる危機",
+        "robokoppu 新tanaru危機",
+        0
+      ],
+      [
+        "タイトー",
+        "スペースレイダース",
+        "supeesureidaasu",
+        0
+      ],
+      [
+        "タイトー",
+        "スーパーパズルボブル オールスターズ",
+        "suupaapazuruboburu oorusutaazu",
+        0
+      ],
+      [
+        "タイトー",
+        "ウォーリアーブレイド ラスタン vs バーバリアン編",
+        "uooriaabureido rasutan vs baabarian編",
+        0
+      ],
+      [
+        "タイトー",
+        "天才ビットくん グラモンバトル",
+        "天才bittokun guramonbatoru",
+        0
+      ],
+      [
+        "タイトー",
+        "シャーク・テイル",
+        "shaaku/teiru",
+        0
+      ],
+      [
+        "タイトー",
+        "アルティメット スパイダーマン",
+        "aruteimetto supaidaaman",
+        0
+      ],
+      [
+        "タカラ",
+        "チョロQ!",
+        "choroQ!",
+        0
+      ],
+      [
+        "タカラ",
+        "爆転シュート ベイブレード2002 熱闘!マグネタッグバトル!",
+        "爆転shuuto beibureedo2002 熱闘!magunetaggubatoru!",
+        0
+      ],
+      [
+        "タカラ",
+        "スペシャル人生ゲーム",
+        "supesharu人生geemu",
+        0
+      ],
+      [
+        "タカラ",
+        "デュエル・マスターズ 熱闘!バトルアリーナ",
+        "deyueru/masutaazu 熱闘!batoruariina",
+        0
+      ],
+      [
+        "チュンソフト",
+        "ホームランド",
+        "hoomurando",
+        0
+      ],
+      [
+        "トミー",
+        "ムツとのほほん",
+        "mutsutonohohon",
+        0
+      ],
+      [
+        "トミー",
+        "ゾイドバーサス",
+        "zoidobaasasu",
+        0
+      ],
+      [
+        "トミー",
+        "ナルト 激闘忍者大戦!",
+        "naruto 激闘忍者大戦!",
+        0
+      ],
+      [
+        "トミー",
+        "モノポリー めざせっ!!大富豪人生!",
+        "monoporii mezase!!大富豪人生!",
+        0
+      ],
+      [
+        "トミー",
+        "ゾイドバーサス2",
+        "zoidobaasasu2",
+        0
+      ],
+      [
+        "トミー",
+        "ナルト 激闘忍者大戦!2",
+        "naruto 激闘忍者大戦!2",
+        0
+      ],
+      [
+        "トミー",
+        "ゾイドバーサス3",
+        "zoidobaasasu3",
+        0
+      ],
+      [
+        "トミー",
+        "ナルト 激闘忍者大戦!3",
+        "naruto 激闘忍者大戦!3",
+        0
+      ],
+      [
+        "トミー",
+        "ゾイド フルメタルクラッシュ",
+        "zoido furumetarukurasshu",
+        0
+      ],
+      [
+        "トミー",
+        "ナルト 激闘忍者大戦!4",
+        "naruto 激闘忍者大戦!4",
+        0
+      ],
+      [
+        "ナツメ",
+        "メダロット BRAVE",
+        "medarotto BRAVE",
+        0
+      ],
+      [
+        "ナムコ",
+        "ミスタードリラー ドリルランド",
+        "misutaadoriraa dorirurando",
+        0
+      ],
+      [
+        "ナムコ",
+        "ソウルキャリバー2",
+        "sourukyaribaa2",
+        0
+      ],
+      [
+        "ナムコ",
+        "ファミリースタジアム2003",
+        "fuamiriisutajiamu2003",
+        0
+      ],
+      [
+        "ナムコ",
+        "テイルズ オブ シンフォニア",
+        "teiruzu obu shinfuonia",
+        0
+      ],
+      [
+        "ナムコ",
+        "R レーシングレボリューション",
+        "R reeshingureboryuushon",
+        0
+      ],
+      [
+        "ナムコ",
+        "バテン・カイトス 終わらない翼と失われた海",
+        "baten/kaitosu 終waranai翼to失wareta海",
+        0
+      ],
+      [
+        "ハドソン",
+        "ブラッディロア エクストリーム",
+        "buraddeiroa ekusutoriimu",
+        0
+      ],
+      [
+        "ハドソン",
+        "ボンバーマン ジェネレーション",
+        "bonbaaman jenereeshon",
+        0
+      ],
+      [
+        "ハドソン",
+        "ディズニーのマジカルパーク",
+        "deizuniinomajikarupaaku",
+        0
+      ],
+      [
+        "ハドソン",
+        "桃太郎電鉄11 ブラックボンビー出現!の巻",
+        "桃太郎電鉄11 burakkubonbii出現!no巻",
+        0
+      ],
+      [
+        "ハドソン",
+        "ボンバーマンジェッターズ",
+        "bonbaamanjettaazu",
+        0
+      ],
+      [
+        "ハドソン",
+        "ハドソンセレクション Vol.1 キュービックロードランナー",
+        "hadosonserekushon Vol.1 kyuubikkuroodorannaa",
+        0
+      ],
+      [
+        "ハドソン",
+        "ハドソンセレクション Vol.2 スターソルジャー",
+        "hadosonserekushon Vol.2 sutaasorujaa",
+        0
+      ],
+      [
+        "ハドソン",
+        "ボンバーマンランド2 ゲーム史上最大のテーマパーク",
+        "bonbaamanrando2 geemu史上最大noteemapaaku",
+        0
+      ],
+      [
+        "ハドソン",
+        "天外魔境2 MANJIMARU",
+        "天外魔境2 MANJIMARU",
+        0
+      ],
+      [
+        "ハドソン",
+        "ハドソンセレクション Vol.3 PC原人",
+        "hadosonserekushon Vol.3 PC原人",
+        0
+      ],
+      [
+        "ハドソン",
+        "桃太郎電鉄12 西日本編もありまっせー!",
+        "桃太郎電鉄12 西日本編moarimasse-!",
+        0
+      ],
+      [
+        "ハドソン",
+        "ドリームミックスTV ワールドファイターズ",
+        "doriimumikkusuTV waarudofuaitaazu",
+        0
+      ],
+      [
+        "ハドソン",
+        "ハドソンセレクション Vol.4 高橋名人の冒険島",
+        "hadosonserekushon Vol.4 高橋名人no冒険島",
+        0
+      ],
+      [
+        "ハドソン",
+        "ボボボーボ・ボーボボ 脱出!!ハジケ・ロワイアル",
+        "boboboobo/boobobo 脱出!!hajike/rowaiaru",
+        0
+      ],
+      [
+        "バンダイ",
+        "テレビアニメ ワンピース トレジャーバトル!",
+        "terebianime wanpiisu torejaabatoru!",
+        0
+      ],
+      [
+        "バンダイ",
+        "キン肉マン2世 新世代超人 vs 伝説超人",
+        "kin肉man2世 新世代超人 vs 伝説超人",
+        0
+      ],
+      [
+        "バンダイ",
+        "シャーマンキング ソウルファイト",
+        "shaamankingu sourufuaito",
+        0
+      ],
+      [
+        "バンダイ",
+        "エンター ザ マトリックス",
+        "entaa za matorikkusu",
+        0
+      ],
+      [
+        "バンダイ",
+        "ケロケロキングDX",
+        "kerokerokinguDX",
+        0
+      ],
+      [
+        "バンダイ",
+        "ドラゴンドライブ ディマスターズショット",
+        "doragondoraibu deimasutaazushotto",
+        0
+      ],
+      [
+        "バンダイ",
+        "ドラゴンボールZ",
+        "doragonbooruZ",
+        0
+      ],
+      [
+        "バンダイ",
+        "ワンピース グランドバトル!3",
+        "wanpiisu gurandobatoru!3",
+        0
+      ],
+      [
+        "バンダイ",
+        "機動戦士ガンダム 戦士達の軌跡",
+        "機動戦士gandamu 戦士達no軌跡",
+        0
+      ],
+      [
+        "バンダイ",
+        "デジモンバトルクロニクル",
+        "dejimonbatorukuronikuru",
+        0
+      ],
+      [
+        "バンダイ",
+        "金色のガッシュベル!! 友情タッグバトルフルパワー",
+        "金色nogasshuberu!! 友情taggubatorufurupawaa",
+        0
+      ],
+      [
+        "バンダイ",
+        "機動戦士ガンダム ガンダム vs. Zガンダム",
+        "機動戦士gandamu gandamu vs. Zgandamu",
+        0
+      ],
+      [
+        "バンダイ",
+        "デジモンワールドX",
+        "dejimonwaarudoX",
+        0
+      ],
+      [
+        "バンダイ",
+        "ワンピース グラバト!ラッシュ",
+        "wanpiisu gurabato!rasshu",
+        0
+      ],
+      [
+        "バンダイ",
+        "金色のガッシュベル!! 友情タッグバトル2",
+        "金色nogasshuberu!! 友情taggubatoru2",
+        0
+      ],
+      [
+        "バンダイ",
+        "マダガスカル",
+        "madagasukaru",
+        0
+      ],
+      [
+        "バンダイ",
+        "ワンピース パイレーツカーニバル",
+        "wanpiisu paireetsukaanibaru",
+        0
+      ],
+      [
+        "バンダイ",
+        "SDガンダム ガシャポンウォーズ",
+        "SDgandamu gashapon'uoozu",
+        0
+      ],
+      [
+        "バンダイ",
+        "金色のガッシュベル!! ゴー!ゴー!魔物ファイト!!",
+        "金色nogasshuberu!! goo!goo!魔物fuaito!!",
+        0
+      ],
+      [
+        "バンダイナムコ",
+        "バトルスタジアム D.O.N",
+        "batorusutajiamu D.O.N",
+        0
+      ],
+      [
+        "バンプレスト",
+        "チャリンコヒーロー",
+        "charinkohiiroo",
+        0
+      ],
+      [
+        "バンプレスト",
+        "スーパーロボット大戦GC",
+        "suupaarobotto大戦GC",
+        0
+      ],
+      [
+        "ビベンディ・ユニバーサル・ゲームズ",
+        "ロボッツ",
+        "robottsu",
+        0
+      ],
+      [
+        "ビベンディ・ユニバーサル・ゲームズ",
+        "クラッシュ・バンディクー がっちゃんこワールド",
+        "kurasshu/bandeikuu gatchankowaarudo",
+        0
+      ],
+      [
+        "ピンチェンジ",
+        "四国巡礼体験ゲーム お遍路さん 発心の道場阿波国編",
+        "四国巡礼体験geemu o遍路san 発心no道場阿波国編",
+        0
+      ],
+      [
+        "フロム・ソフトウェア",
+        "ルーン",
+        "ruun",
+        0
+      ],
+      [
+        "フロム・ソフトウェア",
+        "ルーン2 コルテンの鍵の秘密",
+        "ruun2 korutenno鍵no秘密",
+        0
+      ],
+      [
+        "ポケモン",
+        "ポケモンボックス ルビー＆サファイア",
+        "pokemonbokkusu rubii＆safuaia",
+        0
+      ],
+      [
+        "ポケモン",
+        "ポケモンチャンネル ピカチュウといっしょ!",
+        "pokemonchanneru pikachuutoissho!",
+        0
+      ],
+      [
+        "ポケモン",
+        "ポケモンコロシアム",
+        "pokemonkoroshiamu",
+        0
+      ],
+      [
+        "ポケモン",
+        "ポケモンXD 闇の旋風ダーク・ルギア",
+        "pokemonXD 闇no旋風daaku/rugia",
+        0
+      ],
+      [
+        "マイルストーン",
+        "カオスフィールド エクスパンデッド",
+        "kaosufyiirudo ekusupandeddo",
+        0
+      ],
+      [
+        "マイルストーン",
+        "ラジルギ ジェネリック",
+        "rajirugi jenerikku",
+        0
+      ],
+      [
+        "マーベラスインタラクティブ",
+        "牧場物語 ワンダフルライフ",
+        "牧場物語 wandafururaifu",
+        0
+      ],
+      [
+        "マーベラスインタラクティブ",
+        "牧場物語 ワンダフルライフ for ガール",
+        "牧場物語 wandafururaifu for gaaru",
+        0
+      ],
+      [
+        "マーベラスインタラクティブ",
+        "牧場物語 しあわせの詩",
+        "牧場物語 shiawaseno詩",
+        0
+      ],
+      [
+        "マーベラスインタラクティブ",
+        "牧場物語 しあわせの詩 for ワールド",
+        "牧場物語 shiawaseno詩 for waarudo",
+        0
+      ],
+      [
+        "メディアカイト",
+        "プールエッジ",
+        "puuruejji",
+        0
+      ],
+      [
+        "ユークス",
+        "レッスルマニアX8",
+        "ressurumaniaX8",
+        0
+      ],
+      [
+        "ユークス",
+        "レッスルマニア19",
+        "ressurumania19",
+        0
+      ],
+      [
+        "ユークス",
+        "ファインディング・ニモ",
+        "fuaindeingu/nimo",
+        0
+      ],
+      [
+        "ユークス",
+        "WWE デイ・オブ・レコニング",
+        "WWE dei/obu/rekoningu",
+        0
+      ],
+      [
+        "任天堂",
+        "ウェーブレース ブルーストーム",
+        "ueebureesu buruusutoomu",
+        0
+      ],
+      [
+        "任天堂",
+        "ルイージマンション",
+        "ruiijimanshon",
+        0
+      ],
+      [
+        "任天堂",
+        "ピクミン",
+        "pikumin",
+        0
+      ],
+      [
+        "任天堂",
+        "大乱闘スマッシュブラザーズDX",
+        "大乱闘sumasshuburazaazuDX",
+        0
+      ],
+      [
+        "任天堂",
+        "どうぶつの森+",
+        "doubutsuno森+",
+        0
+      ],
+      [
+        "任天堂",
+        "動物番長",
+        "動物番長",
+        0
+      ],
+      [
+        "任天堂",
+        "巨人のドシン",
+        "巨人nodoshin",
+        0
+      ],
+      [
+        "任天堂",
+        "NBAコートサイド2002",
+        "NBAkootosaido2002",
+        0
+      ],
+      [
+        "任天堂",
+        "スーパーマリオサンシャイン",
+        "suupaamariosanshain",
+        0
+      ],
+      [
+        "任天堂",
+        "ミッキーマウスの不思議な鏡",
+        "mikkiimausuno不思議na鏡",
+        0
+      ],
+      [
+        "任天堂",
+        "スターフォックス アドベンチャー",
+        "sutaafuokkusu adobenchaa",
+        0
+      ],
+      [
+        "任天堂",
+        "エターナルダークネス 招かれた13人",
+        "etaanarudaakunesu 招kareta13人",
+        0
+      ],
+      [
+        "任天堂",
+        "マリオパーティ4",
+        "mariopaatei4",
+        0
+      ],
+      [
+        "任天堂",
+        "ゼルダの伝説 風のタクト",
+        "zerudano伝説 風notakuto",
+        0
+      ],
+      [
+        "任天堂",
+        "ニンテンドーパズルコレクション",
+        "nintendoopazurukorekushon",
+        0
+      ],
+      [
+        "任天堂",
+        "メトロイドプライム",
+        "metoroidopuraimu",
+        0
+      ],
+      [
+        "任天堂",
+        "ギフトピア",
+        "gifutopia",
+        0
+      ],
+      [
+        "任天堂",
+        "どうぶつの森e+",
+        "doubutsuno森e+",
+        0
+      ],
+      [
+        "任天堂",
+        "カービィのエアライド",
+        "kaabyinoearaido",
+        0
+      ],
+      [
+        "任天堂",
+        "F-ZERO GX",
+        "F-ZERO GX",
+        0
+      ],
+      [
+        "任天堂",
+        "マリオゴルフ ファミリーツアー",
+        "mariogorufu fuamiriitsuaa",
+        0
+      ],
+      [
+        "任天堂",
+        "あつまれ!! メイドインワリオ",
+        "atsumare!! meidoinwario",
+        0
+      ],
+      [
+        "任天堂",
+        "マリオカート ダブルダッシュ!!",
+        "mariokaato daburudasshu!!",
+        0
+      ],
+      [
+        "任天堂",
+        "マリオパーティ5",
+        "mariopaatei5",
+        0
+      ],
+      [
+        "任天堂",
+        "ドンキーコンガ",
+        "donkiikonga",
+        0
+      ],
+      [
+        "任天堂",
+        "1080° シルバーストーム",
+        "1080° shirubaasutoomu",
+        0
+      ],
+      [
+        "任天堂",
+        "カスタムロボ バトルレボリューション",
+        "kasutamurobo batorureboryuushon",
+        0
+      ],
+      [
+        "任天堂",
+        "ゼルダの伝説 4つの剣+",
+        "zerudano伝説 4tsuno剣+",
+        0
+      ],
+      [
+        "任天堂",
+        "ピクミン2",
+        "pikumin2",
+        0
+      ],
+      [
+        "任天堂",
+        "ワリオワールド",
+        "wariowaarudo",
+        0
+      ],
+      [
+        "任天堂",
+        "ドンキーコンガ2 ヒットソングパレード",
+        "donkiikonga2 hittosongupareedo",
+        0
+      ],
+      [
+        "任天堂",
+        "ペーパーマリオRPG",
+        "peepaamarioRPG",
+        0
+      ],
+      [
+        "任天堂",
+        "くるりんスカッシュ!",
+        "kururinsukasshu!",
+        0
+      ],
+      [
+        "任天堂",
+        "マリオテニスGC",
+        "mariotenisuGC",
+        0
+      ],
+      [
+        "任天堂",
+        "マリオパーティ6",
+        "mariopaatei6",
+        0
+      ],
+      [
+        "任天堂",
+        "ドンキーコングジャングルビート",
+        "donkiikongujangurubiito",
+        0
+      ],
+      [
+        "任天堂",
+        "スターフォックス アサルト",
+        "sutaafuokkusu asaruto",
+        0
+      ],
+      [
+        "任天堂",
+        "ドンキーコンガ3 食べ放題!春もぎたて50曲♪",
+        "donkiikonga3 食be放題!春mogitate50曲♪",
+        0
+      ],
+      [
+        "任天堂",
+        "ファイアーエムブレム 蒼炎の軌跡",
+        "fuaiaaemuburemu 蒼炎no軌跡",
+        0
+      ],
+      [
+        "任天堂",
+        "メトロイドプライム2 ダークエコーズ",
+        "metoroidopuraimu2 daakuekoozu",
+        0
+      ],
+      [
+        "任天堂",
+        "ちびロボ!",
+        "chibirobo!",
+        0
+      ],
+      [
+        "任天堂",
+        "ダンスダンスレボリューション with マリオ",
+        "dansudansureboryuushon with mario",
+        0
+      ],
+      [
+        "任天堂",
+        "スーパーマリオスタジアム ミラクルベースボール",
+        "suupaamariosutajiamu mirakurubeesubooru",
+        0
+      ],
+      [
+        "任天堂",
+        "突撃!!ファミコンウォーズ",
+        "突撃!!fuamikon'uoozu",
+        0
+      ],
+      [
+        "任天堂",
+        "マリオパーティ7",
+        "mariopaatei7",
+        0
+      ],
+      [
+        "任天堂",
+        "伝説のクイズ王決定戦",
+        "伝説nokuizu王決定戦",
+        0
+      ],
+      [
+        "任天堂",
+        "スーパーマリオストライカーズ",
+        "suupaamariosutoraikaazu",
+        0
+      ],
+      [
+        "任天堂",
+        "バテン・カイトス2 始まりの翼と神々の嗣子",
+        "baten/kaitosu2 始marino翼to神々no嗣子",
+        0
+      ],
+      [
+        "任天堂",
+        "大玉",
+        "大玉",
+        0
+      ],
+      [
+        "任天堂",
+        "ゼルダの伝説 トワイライトプリンセス",
+        "zerudano伝説 towairaitopurinsesu",
+        0
+      ],
+      [
+        "ジャンル",
+        "ACT",
+        "act",
+        9
+      ],
+      [
+        "ジャンル",
+        "FTG",
+        "ftg",
+        1
+      ],
+      [
+        "ジャンル",
+        "RCG",
+        "rcg",
+        1
+      ],
+      [
+        "ジャンル",
+        "RPG",
+        "rpg",
+        1
+      ],
+      [
+        "ジャンル",
+        "SLG",
+        "slg",
+        1
+      ],
+      [
+        "ジャンル",
+        "SPT",
+        "spt",
+        5
+      ],
+      [
+        "シリーズ",
+        "サッカー",
+        "sakkaa",
+        2
+      ],
+      [
+        "シリーズ",
+        "野球",
+        "野球",
+        1
+      ]
+    ]
+  },
+  "title": "「ゲームキューブ」ソフト一覧",
+  "searchPrefix": "ゲームキューブ",
+  "dataReference": "<ul><li><a target='_blank' href='https://www.gavas.jp/user_data/gamecube_game_title.php'>ゲームキューブのゲームタイトル一覧@ピコピコ大百科</a></li><li><a target='_blank' href='https://www.gavas.jp/user_data/playstation_game_ranking.php'>ゲームキューブ歴代ソフト売上ランキングTOP50@ピコピコ大百科</a></li><li><a target='_blank' href='https://www.ne.jp/asahi/dq/dq/meisaku/2002.html'>ファミ通の「新作ゲームクロスレビュー」@Game mein</a><li><a target='_blank' href='https://ja.wikipedia.org/wiki/ニンテンドーゲームキューブのゲームタイトル一覧'>ゲームキューブのゲームタイトル一覧@wikipedia</a></li></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "editUrl": "https://docs.google.com/spreadsheets/d/1Gu6lL_FiAtiw0yTpEHwwj-7-kxoafOsrwpAT7NZEPyc/edit?gid",
+  "chartDate2": {
+    "chartType": "lines"
+  }
+}

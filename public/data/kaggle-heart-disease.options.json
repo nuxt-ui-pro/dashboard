@@ -1,0 +1,89 @@
+{
+  "dataType": 0,
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "@tube",
+    "imageTooltip": "all",
+    "orderYmd": false
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartSex": {
+    "unit": [
+      "不明",
+      "♀女",
+      "♂男"
+    ]
+  },
+  "chartAge": {
+    "unit": null,
+    "scale": 10
+  },
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": 10,
+      "isLegend": 1
+    },
+    {
+      "scale": 10,
+      "isLegend": 1
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": 10,
+      "isLegend": 1
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "isLegend": 1,
+      "scale": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {},
+  "assets": {
+    "jobcates": [
+      "0"
+    ]
+  },
+  "title": "心臓病予測",
+  "searchPrefix": "HeartDisease",
+  "dataReference": "<ul><li><a target='_blank' href='https://www.kaggle.com/datasets/mfarhaannazirkhan/heart-dataset/data'>Heart Disease Prediction Dataset@kaggle</a></li></ul>",
+  "editURL": "https://docs.google.com/spreadsheets/d/167QtjdMsXKraXdVokVFvhCfUVjgM4jAexp1RAsTrODU/edit?gid=821196376#gid=821196376",
+  "detailType": "city",
+  "isMakeAutocompleteData": false,
+  "chartDate2": {
+    "chartType": "lines"
+  }
+}

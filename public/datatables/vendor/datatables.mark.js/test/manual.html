@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<!--
+/*!***************************************************
+ * datatables.mark.js
+ * https://github.com/julmot/datatables.mark.js
+ * Copyright (c) 2016–2018, Julian Kühnel
+ * Released under the MIT license https://git.io/voRZ7
+ *****************************************************/
+-->
+<head>
+    <meta charset="utf-8">
+    <title>datatables.mark.js test (dev purposes)</title>
+    <link rel="stylesheet" type="text/css" href="../vendor/datatables/media/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/datatables.mark.css">
+</head>
+<body>
+    <div></div>
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/mark.js/dist/jquery.mark.min.js"></script>
+    <script src="../src/datatables.mark.js"></script>
+    <script>
+        $(function() {
+            $("div").load("fixtures/basic.html", function(){
+                $(this).find("table").DataTable({
+                    mark: true
+                });
+            });
+        });
+    </script>
+</body>
+</html>

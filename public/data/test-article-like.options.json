@@ -1,0 +1,87 @@
+{
+  "dataType": 0,
+  "chartDate2": {
+    "chartType": "lines"
+  },
+  "title": "記事のいいねの数",
+  "isMakeAutocompleteData": true,
+  "chartAge_unit": "null",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {
+    "isShow": true,
+    "colors": [
+      [
+        "1万人以上",
+        "#8c0a00",
+        9999
+      ],
+      [
+        "5000人以上",
+        "#ea5432",
+        4999
+      ],
+      [
+        "1000人以上",
+        "#ff781d",
+        999
+      ],
+      [
+        "500人以上",
+        "#ff9d57",
+        499
+      ],
+      [
+        "100人以上",
+        "#ffceab",
+        99
+      ],
+      [
+        "10人以上",
+        "#f5deb3",
+        9
+      ],
+      [
+        "0円",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ]
+  },
+  "chartName": {},
+  "chartCity": {},
+  "chartDate": {
+    "format": "YYYY/MM/DD"
+  },
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {
+    "isShow": true
+  },
+  "chartSex": {
+    "unit": [
+      "不明",
+      "♂男",
+      "♀女"
+    ]
+  },
+  "chartAge": {
+    "scale": 10,
+    "unit": null
+  },
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [],
+  "chartDetail": {},
+  "editUrl": "https://docs.google.com/spreadsheets/d/1mx7FOTfVavh9sw_XUHWxuzdQa-uNTiwwS5mgeAbsg4A/edit?gid=433668396#gid=433668396",
+  "dataReference": "<ul><li>※性別・年齢・職業・都道府県は、「記事作成者」の情報</li></ul>"
+}

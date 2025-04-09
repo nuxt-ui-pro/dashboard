@@ -1,0 +1,95 @@
+{
+  "dataType": 0,
+  "title": "「ファミコン」ソフト一覧",
+  "dataReference": "<ul><li><a target='_blank' href='http://pasofami.game.coocan.jp/game/game.htm'>各種ゲーム機 カセット・ソフトタイトルリスト@pasofami</a></li><li><a target='_blank' href='https://www.gavas.jp/user_data/famicom_game_ranking.php'>ファミコン＆ディスクシステム歴代ソフト売上ランキング＠ピコピコ大百科</a></li><li>wikipedia</li></ul>",
+  "editUrl": "https://docs.google.com/spreadsheets/d/1PBGUk6X-phs_ApA_IYRN-49GPyZt7FxjKMAw5GBSEPo/edit?gid=1229582080#gid=1229582080",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/fc",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartDate2": {
+    "chartType": "series_or_stack"
+  },
+  "chartSex": {
+    "unit": [
+      "不明",
+      "ファミコン",
+      "💾ディスクシステム"
+    ]
+  },
+  "chartAge": {
+    "unit": [
+      "不明",
+      "128K",
+      "256K",
+      "512K",
+      "1M",
+      "2M",
+      "4M",
+      "💾512K",
+      "💾1M",
+      "💾2M"
+    ]
+  },
+  "chartEx": {
+    "0": {
+      "scale": false,
+      "isLegend": false
+    },
+    "1": {
+      "isLegend": 1,
+      "scale": false
+    },
+    "2": {
+      "scale": false,
+      "isLegend": 1
+    },
+    "3": {
+      "scale": false,
+      "isLegend": true,
+      "unit": [
+        "不明",
+        "@ファミコン",
+        "@💾ディスクシステム",
+        "@AAA",
+        "@BBB",
+        "@CCC"
+      ]
+    },
+    "5": {
+      "scale": 100,
+      "isLegend": true
+    },    
+    "7": {
+      "scale": false,
+      "isLegend": true
+    }
+  },
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartDetail": {}
+}

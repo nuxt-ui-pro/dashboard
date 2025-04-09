@@ -1,0 +1,31 @@
+{
+  "name": "jquery-ui-iconfont",
+  "version": "2.3.2",
+  "description": "Icon Font for jQuery UI",
+  "main": "jquery-ui.icon-font.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkkeck/jquery-ui-iconfont.git"
+  },
+  "keywords": [
+    "icon",
+    "icons",
+    "font",
+    "iconfont",
+    "jquery",
+    "ui",
+    "interface",
+    "button",
+    "buttons",
+    "graphic"
+  ],
+  "author": "Michael Keck",
+  "license": "CC BY-SA 3.0",
+  "bugs": {
+    "url": "https://github.com/mkkeck/jquery-ui-iconfont/issues"
+  },
+  "homepage": "http://mkkeck.github.io/jquery-ui-iconfont/"
+}

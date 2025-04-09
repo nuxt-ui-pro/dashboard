@@ -1,0 +1,57 @@
+{
+  "dataType": 0,
+  "title": "「セガ サターン」ソフト一覧",
+  "searchPrefix": "セガサターン",
+  "dataReference": "<ul><li><a target='_blank' href='https://www.gavas.jp/user_data/segasaturn_game_title.php'>セガサターンのゲームタイトル一覧@ピコピコ大百科</a></li><li><a target='_blank' href='https://www.gavas.jp/user_data/segasaturn_game_ranking.php'>セガサターンソフト売上ランキングTOP50@ピコピコ大百科</a></li><li><a target='_blank' href='https://ja.wikipedia.org/wiki/セガサターンのゲームタイトル一覧'>セガサターンのゲームタイトル一覧@wikipedia</a></li></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/ss",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "chartSex": {
+    "unit": null,
+    "chartType": "bar"
+  },
+  "chartJobCat": {
+    "isHidden": true
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1kr79M3Ms3ZBhC94DifqvYd5RF078F8o8Y7DPEGbLq0g/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

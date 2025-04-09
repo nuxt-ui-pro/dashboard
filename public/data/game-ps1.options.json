@@ -1,0 +1,57 @@
+{
+  "dataType": 0,
+  "title": "「プレイステーション」ソフト一覧",
+  "searchPrefix": "プレイステーション",
+  "dataReference": "<ul><li><a target='_blank' href='https://www.gavas.jp/user_data/playstation_game_title.php'>初代プレイステーションのゲームタイトル一覧@ピコピコ大百科</a></li><li><a target='_blank' href='https://www.gavas.jp/user_data/playstation_game_ranking.php'>初代プレイステーション歴代ソフト売上ランキングTOP50@ピコピコ大百科</a></li><li><a target='_blank' href='https://ja.wikipedia.org/wiki/PlayStationのゲームタイトル一覧'>PlayStationのゲームタイトル一覧@wikipedia</a></li></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/ps1",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "chartSex": {
+    "chartType": "bar",
+    "unit": null
+  },
+  "chartJobCat": {
+    "isHidden": true
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1-laGdi-zlVaPpyJm3EaVAWdtWX7KS2kGDtRX46-20eg/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

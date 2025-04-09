@@ -1,0 +1,89 @@
+{
+  "dataType": 0,
+  "title": "「製造品出荷額(製造業)」期間：2008年～2020年 / 単位：百万円",
+  "isMakeAutocompleteData": true,
+  "chartGMap": {
+    "isShow": true,
+    "colorThreshold": "1000000"
+  },
+  "chartMap": {
+    "isShow": true,
+    "colors": [
+      [
+        "10兆円以上",
+        "#8c0a00",
+        9999999
+      ],
+      [
+        "5兆円以上",
+        "#ea5432",
+        4999999
+      ],
+      [
+        "1兆円円以上",
+        "#ff781d",
+        999999
+      ],
+      [
+        "5000億円以上",
+        "#ff9d57",
+        499999
+      ],
+      [
+        "1000億円以上",
+        "#ffceab",
+        99999
+      ],
+      [
+        "100億円以上",
+        "#f5deb3",
+        9999
+      ],
+      [
+        "0円",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ]
+  },
+  "chartSex": {
+    "unit": null
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "chartJob": {
+    "isDetail": "1"
+  },
+  "chartDate": {
+    "format": "YYYY"
+  },
+  "dataReference": "<ul><li><a target='_blank' href='https://opendata.resas-portal.go.jp/docs/api/v1/municipality/manufacture/perYear.html'>製造品出荷額 @RESAS(地域経済分析システム)API</a></li><li><a target='_blank' href='https://resas.go.jp/municipality-manufacture/#/graph/13/13101/0.0/2018/E/-/0/5.333900736553437/41.42090017812787/142.29371418128918/-'>産業構造マップ > 製造業 > 製造品出荷額等 @RESAS</a></li></ul>",
+  "chartSView": {},
+  "chartTube": {},
+  "chartName": {},
+  "chartCity": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

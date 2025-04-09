@@ -1,0 +1,73 @@
+{
+  "dataType": 0,
+  "title": "「PCエンジン」ソフト一覧",
+  "dataReference": "<ul><li><a target='_blank' href=\"http://pasofami.game.coocan.jp/game/game.htm\">各種ゲーム機 カセット・ソフトタイトルリスト@pasofami</a><li><a target='_blank' href=\"https://ja.wikipedia.org/wiki/PCエンジンのゲームタイトル一覧\">PCエンジンのゲームタイトル一覧@Wikipedia</a></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/pce",
+    "imageTooltip": "all",
+    "orderYmd": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartSex": {
+    "chartType": "bar",
+    "unit": null
+  },
+  "chartAge": {
+    "unit": [
+      "不明",
+      "1M",
+      "2M",
+      "3M",
+      "4M",
+      "6M",
+      "8M",
+      "16M",
+      "18M",
+      "20M",
+      "32K",
+      "💿512MB"
+    ]
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1ArIXd3wp29bvmzHbJxomKAq5_haQDSYiquPpttZjA9s/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false,
+      "unit": [
+        "不明",
+        "64K-SRAM",
+        "💿0.5M-SRAM",
+        "💿2M-SRAM",
+        "16M-DRAM"
+      ]
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

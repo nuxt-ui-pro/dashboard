@@ -1,0 +1,53 @@
+{
+  "dataType": 0,
+  "title": "「MSX」ソフト一覧",
+  "searchPrefix": "MSX",
+  "dataReference": "<ul><li><a target='_blank' href='http://pasofami.game.coocan.jp/game/game.htm'>各種ゲーム機 カセット・ソフトタイトルリスト@pasofami</a><li><a target='_blank' href='https://ja.wikipedia.org/wiki/MSXのゲームタイトル一覧'>MSXのゲームタイトル一覧@wikipedia</a></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "@tube",
+    "imageTooltip": "all",
+    "orderYmd": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "chartSex": {
+    "unit": null
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1bY57j7jjEaGNWkZMPd0jIN00-h2WCtrifVJVp82LQzM/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

@@ -1,0 +1,56 @@
+{
+  "dataType": 0,
+  "title": "第4世代家庭用ゲーム機ソフト一覧(スーパーファミコン・PCエンジン・メガドライブ＆ファミコン)",
+  "searchPrefixDataIndex": 1,
+  "dataReference": "<ul><li><a target='_blank' href=\"http://pasofami.game.coocan.jp/game/game.htm\">各種ゲーム機 カセット・ソフトタイトルリスト@pasofami</a></li><li><a target='_blank' href='https://www.gavas.jp/user_data/superfamicom_game_ranking.php'>各ゲーム機歴代ソフト売上ランキング＠ピコピコ大百科</a></li><li>wikipedia等</li></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/smc",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartSex": {
+    "unit": null,
+    "chartType": "bar",
+    "isLegend": false
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/15HWefrVChKM9QuScO5X59qOT8Iv5vAt8sMMen3PizXY/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

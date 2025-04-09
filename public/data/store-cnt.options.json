@@ -1,0 +1,107 @@
+{
+  "dataType": 0,
+  "title": "スーパーマーケット店舗数",
+  "searchPrefixDataIndex": 4,
+  "searchPrefix": "スーパーマーケット",
+  "dataReference": "<ul><li><a target='_blank' href='http://www.j-sosm.jp/dl/index.html'>スーパーマーケット店舗数@一般社団法人全国スーパーマーケット協会</a></li></ul>",
+  "detailType": "name",
+  "isMakeAutocompleteData": true,
+  "chartMap": {
+    "colors": [
+      [
+        "10万店舗以上",
+        "#8c0a00",
+        99999
+      ],
+      [
+        "5万店舗以上",
+        "#ea5432",
+        49999
+      ],
+      [
+        "1万店舗以上",
+        "#ff781d",
+        9999
+      ],
+      [
+        "5000店舗以上",
+        "#ff9d57",
+        4999
+      ],
+      [
+        "1000店舗以上",
+        "#ffceab",
+        999
+      ],
+      [
+        "100店舗以上",
+        "#f5deb3",
+        99
+      ],
+      [
+        "0店舗",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ],
+    "isShow": true
+  },
+  "chartName": {
+    "isShow": true,
+    "imageTooltip": "all"
+  },
+  "chartCity": {
+    "isShow": false
+  },
+  "chartDate": {
+    "isShow": true,
+    "elasticY": true,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSex": {
+    "isShow": false,
+    "unit": null,
+    "chartType": "bar",
+    "isLegend": false
+  },
+  "chartAge": {
+    "isShow": false,
+    "unit": null
+  },
+  "chartCond": {
+    "isShow": true
+  },
+  "chartJob": {
+    "isShow": false,
+    "isPanGmap": "0",
+    "isPanGmapMarker": "0"
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1dg9_nG8NWGVQbt92CemQqwXzRDeT_x8Clw-OJOquNK8/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

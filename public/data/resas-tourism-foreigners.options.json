@@ -1,0 +1,106 @@
+{
+  "dataType": 0,
+  "title": "「指定地域への国籍別訪問者数」期間：1994年～2021年 / 単位：人",
+  "searchPrefix": "外国人観光客",
+  "isMakeAutocompleteData": true,
+  "chartGMap": {
+    "isShow": true
+  },
+  "chartSView": {
+    "isShow": true
+  },
+  "chartMap": {
+    "isShow": true,
+    "colors": [
+      [
+        "1000万人以上",
+        "#8c0a00",
+        9999999
+      ],
+      [
+        "500万人以上",
+        "#ea5432",
+        4999999
+      ],
+      [
+        "100万人以上",
+        "#ff781d",
+        999999
+      ],
+      [
+        "50万人以上",
+        "#ff9d57",
+        499999
+      ],
+      [
+        "10万人以上",
+        "#ffceab",
+        99999
+      ],
+      [
+        "1万人以上",
+        "#f5deb3",
+        9999
+      ],
+      [
+        "0人",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ]
+  },
+  "chartSex": {
+    "unit": [
+      "不明",
+      "すべての目的",
+      "観光・レジャー目的"
+    ]
+  },
+  "chartAge": {
+    "unit": [
+      "不明",
+      "アジア",
+      "欧州",
+      "北米",
+      "大洋州"
+    ]
+  },
+  "chartCity": {
+    "imagePath": "/img/world"
+  },
+  "chartDate": {
+    "format": "YYYY"
+  },
+  "chartJob": {
+    "isDetail": "1",
+    "isPanGmap": "1",
+    "isPanGmapMarker": "1"
+  },
+  "dataReference": "<ul><li><a target='_blank' href='https://opendata.resas-portal.go.jp/docs/api/v1/tourism/foreigners/forFrom.html'>指定地域への国籍別訪問者数 @RESAS(地域経済分析システム)API</a></li><li><a target='_blank' href='https://resas.go.jp/tourism-foreigners/#/to-transition/5.333900736553437/41.42090017812787/142.29371418128918/13/13101/100/0/0.0/2020/5/-/-/1/-/-'>観光マップ > 外国人 > 外国人訪問分析 @RESAS</a></li><li><a target='_blank' href='https://resas.go.jp/tourism-foreigners/#/map/5.333900736553437/41.42090017812787/142.29371418128918/1/01100/100/0/0.0/2023/3/-/-/1/-/-'>観光マップ > 外国人 > 外国人訪問分析 > マップ @RESAS</a></li><li><a target='_blank' href='https://www.navitime.co.jp/spotranking/2023/sightseeing'>都道府県別観光スポット @navitime</a></li></ul>",
+  "editUrl": "https://docs.google.com/spreadsheets/d/1aO1soXHdC58cX43DIwsN025MPhTsrKzbq51R1O2KLHw/edit?gid",
+  "chartTube": {},
+  "chartName": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

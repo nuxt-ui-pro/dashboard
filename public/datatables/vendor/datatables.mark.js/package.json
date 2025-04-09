@@ -1,0 +1,63 @@
+{
+  "name": "datatables.mark.js",
+  "version": "2.0.1",
+  "keywords": [
+    "datatables.mark.js",
+    "mark.js",
+    "markjs",
+    "mark",
+    "jquery.mark",
+    "datatables",
+    "DataTables",
+    "highlight",
+    "search",
+    "jquery",
+    "javascript",
+    "text",
+    "keyword"
+  ],
+  "license": "MIT",
+  "homepage": "https://markjs.io/",
+  "author": {
+    "name": "Julian Kühel",
+    "url": "https://github.com/julmot"
+  },
+  "description": "A DataTables plugin for mark.js to highlight search terms in tables",
+  "main": "dist/datatables.mark.js",
+  "repository": "julmot/datatables.mark.js",
+  "bugs": {
+    "url": "https://github.com/julmot/datatables.mark.js/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: Use Grunt tasks\" && exit 1"
+  },
+  "dependencies": {
+    "jquery": ">=1.10",
+    "datatables.net": ">=1.7",
+    "mark.js": ">=6.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint-plugin-jasmine-jquery": "^1.0.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^7.0.0",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.1.0",
+    "grunt-jsdoc": "^2.1.1",
+    "grunt-karma": "^2.0.0",
+    "jasmine-core": "^3.0.0",
+    "jit-grunt": "^0.10.0",
+    "karma": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-jquery": "^0.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "^0.0.32",
+    "phantomjs-prebuilt": "^2.1.15"
+  }
+}

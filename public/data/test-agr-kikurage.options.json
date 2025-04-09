@@ -1,0 +1,94 @@
+{
+  "dataType": 0,
+  "title": "きくらげ栽培・販売データ",
+  "isMakeAutocompleteData": true,
+  "chartGMap": {
+    "isShow": true
+  },
+  "chartMap": {
+    "isShow": true,
+    "colors": [
+      [
+        "￥1000万以上",
+        "#8c0a00",
+        9999999
+      ],
+      [
+        "￥500万以上",
+        "#ea5432",
+        4999999
+      ],
+      [
+        "￥100万以上",
+        "#ff781d",
+        999999
+      ],
+      [
+        "￥50万以上",
+        "#ff9d57",
+        499999
+      ],
+      [
+        "￥10万以上",
+        "#ffceab",
+        99999
+      ],
+      [
+        "￥1万以上",
+        "#f5deb3",
+        9999
+      ],
+      [
+        "￥1万未満",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ]
+  },
+  "chartCity": {
+    "imageTooltip": "all",
+    "orderYmd": false,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "format": "YYYY"
+  },
+  "chartSex": {
+    "unit": null
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "chartJobCat": {
+    "isHidden": true
+  },
+  "dataReference": "<ul><li><a target='_blank' href='https://docs.google.com/spreadsheets/d/1W4lWWn1LUPuacq2erSOz2awtVFptaKVq2zhbGDMScQA'>Googleスプレッドシート</a></li><li>※「その他要素」は、複数の要素(平均温度、平均湿度、タンパク質含有量、食物繊維含有量)の各項目をA～Dで表した文字列になります。</li></ul>",
+  "editUrl": "https://docs.google.com/spreadsheets/d/1jN2ytZjUNUadnJbsYDqkKQgjXI6Bed1e57qIy7CXjsA/edit?gid",
+  "chartSView": {},
+  "chartTube": {},
+  "chartName": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

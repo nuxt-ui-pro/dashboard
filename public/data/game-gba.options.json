@@ -1,0 +1,70 @@
+{
+  "dataType": 0,
+  "title": "「ゲームボーイアドバンス」ソフト一覧",
+  "dataReference": "<ul><li><a target='_blank' href='http://pasofami.game.coocan.jp/game/game.htm'>各種ゲーム機 カセット・ソフトタイトルリスト@pasofami</a></li><li><a target='_blank' href='http://www.gamegyokai.com/rank/gba.htm'>ゲームボーイアドバンスソフト販売本数@ゲーム業界.com</a></li><li>wikipedia</ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/gba",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartSex": {
+    "chartType": "bar",
+    "isLegend": false,
+    "unit": [
+      "不明",
+      "SRAM",
+      "FLASH",
+      "FLASH1",
+      "FLASH2",
+      "EEP",
+      "None"
+    ]
+  },
+  "chartAge": {
+    "unit": [
+      "不明",
+      "8M",
+      "32M",
+      "64M",
+      "128M",
+      "256M"
+    ]
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1P3J3yVB_wKhT_bLwGjvdb11rXYmwapne5RZtqNKL-ws",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

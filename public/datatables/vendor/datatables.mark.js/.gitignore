@@ -1,0 +1,19 @@
+# Eclipse
+.settings/
+.project
+.buildpath
+
+# Webstorm
+.idea/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Personal
+TODO
+
+# Build (do not ignore templates)
+build/*.js
+build/doc/
+build/coverage/

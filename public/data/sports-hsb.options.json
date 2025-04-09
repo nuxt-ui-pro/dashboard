@@ -1,0 +1,96 @@
+{
+  "dataType": 0,
+  "title": "⚾全国高等学校野球選手権大会　歴代優勝・準優勝校一覧",
+  "searchPrefix": "高校野球",
+  "isMakeAutocompleteData": true,
+  "date_format": "YYYY",
+  "chartGMap": {
+    "isShow": true
+  },
+  "chartMap": {
+    "isShow": true,
+    "colors": [
+      [
+        "15回以上",
+        "#8c0a00",
+        14
+      ],
+      [
+        "12回以上",
+        "#ea5432",
+        11
+      ],
+      [
+        "9回以上",
+        "#ff781d",
+        8
+      ],
+      [
+        "5回以上",
+        "#ff9d57",
+        4
+      ],
+      [
+        "3回以上",
+        "#ffceab",
+        2
+      ],
+      [
+        "1回以上",
+        "#f5deb3",
+        0
+      ],
+      [
+        "0回",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ]
+  },
+  "chartCity": {
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true,
+    "imagePath": "@tube"
+  },
+  "chartDate": {
+    "elasticY": false
+  },
+  "chartSex": {
+    "unit": null
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "chartJobCat": {
+    "isHidden": true
+  },
+  "dataReference": "<ul><li><a target='_blank' href='https://baseballking.jp/ns/161307'>【夏の甲子園】歴代優勝・準優勝校一覧＠baseballking</a></li><li><a target='_blank' href='https://ja.wikipedia.org/wiki/全国高等学校野球選手権大会歴代優勝校'>全国高等学校野球選手権大会歴代優勝校＠wikipedia</a></li></ul>",
+  "editUrl": "https://docs.google.com/spreadsheets/d/1W4lWWn1LUPuacq2erSOz2awtVFptaKVq2zhbGDMScQA/edit?gid",
+  "chartSView": {},
+  "chartTube": {},
+  "chartName": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

@@ -1,0 +1,103 @@
+{
+  "dataType": 0,
+  "title": "「品目別農業産出額」期間：2014年～2021年 / 単位：億円",
+  "isMakeAutocompleteData": true,
+  "chartGMap": {
+    "isShow": true
+  },
+  "chartMap": {
+    "isShow": true,
+    "colors": [
+      [
+        "1兆円以上",
+        "#8c0a00",
+        9999
+      ],
+      [
+        "5000億円以上",
+        "#ea5432",
+        4999
+      ],
+      [
+        "1000億円以上",
+        "#ff781d",
+        999
+      ],
+      [
+        "500億円以上",
+        "#ff9d57",
+        499
+      ],
+      [
+        "100億円以上",
+        "#ffceab",
+        99
+      ],
+      [
+        "10億円以上",
+        "#f5deb3",
+        9
+      ],
+      [
+        "0円",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ]
+  },
+  "chartSex": {
+    "unit": [
+      "その他",
+      "耕種農業",
+      "畜産農業"
+    ]
+  },
+  "chartAge": {
+    "unit": [
+      "●その他",
+      "●穀物",
+      "●いも類",
+      "●豆類",
+      "●野菜・果物",
+      "●工芸作物",
+      "●花き",
+      "●畜産物",
+      "●加工農産物"
+    ]
+  },
+  "chartDate": {
+    "format": "YYYY"
+  },
+  "chartDate2": {
+    "chartType": "series2"
+  },
+  "dataReference": "<ul><li><a target='_blank' href='https://opendata.resas-portal.go.jp/docs/api/v1/agriculture/all/forStackedBar.html'>品目別農業産出額 @RESAS(地域経済分析システム)API</a></li><li><a target='_blank' href='https://resas.go.jp/agriculture-all/#/rate/5.333900736553437/41.42090017812787/142.29371418128918/13/13101/0/2016/1/-/-'>産業構造マップ > 農業 > 農業の構造 @RESAS</a></li><li><a target='_blank' href='https://minorasu.basf.co.jp/80465'>参考：農業産出額とは？ 都道府県＆品目別ランキングの推移から見る日本農業の今</a></li></ul>",
+  "chartSView": {},
+  "chartTube": {},
+  "chartName": {},
+  "chartCity": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

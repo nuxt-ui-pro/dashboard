@@ -1,0 +1,64 @@
+{
+  "dataType": 0,
+  "title": "第3～6世代ゲーム機(一部)ソフト一覧",
+  "searchPrefixDataIndex": 4,
+  "dataReference": "<ul><li><a target='_blank' href=\"https://ja.wikipedia.org/wiki/%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F\">ゲーム機@Wikipedia</a></li><li><a target='_blank' href='https://ja.wikipedia.org/wiki/%E7%AC%AC%E4%B8%89%E4%B8%96%E4%BB%A3%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F'>第三世代ゲーム機@Wikipedia</a></li></ul>",
+  "isMakeAutocompleteData": false,
+  "chartName": {
+    "imagePath": "/img/game/hard"
+  },
+  "chartCity": {
+    "orderYmd": false,
+    "imagePath": "/img/game/smc",
+    "imageTooltip": "all"
+  },
+  "chartDate": {
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartAge": {
+    "unit": [
+      "不明",
+      "2M",
+      "4M",
+      "6M",
+      "8M",
+      "10M",
+      "12M",
+      "16M",
+      "20M",
+      "24M",
+      "32M",
+      "40M",
+      "48M"
+    ]
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1zl_t39t46GXZ-zR0EtzqRroD18T9jZPg-mEPAz_P1NQ/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartSex": {
+    "unit": null
+  },
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

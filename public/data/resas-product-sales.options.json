@@ -1,0 +1,92 @@
+{
+  "dataType": 0,
+  "title": "「年間商品販売額」期間：1994年～2021年 / 単位：百万円",
+  "isMakeAutocompleteData": true,
+  "chartGMap": {
+    "isShow": true,
+    "colorThreshold": "30000000"
+  },
+  "chartMap": {
+    "isShow": true,
+    "colors": [
+      [
+        "100兆円以上",
+        "#8c0a00",
+        99999999
+      ],
+      [
+        "50兆円以上",
+        "#ea5432",
+        49999999
+      ],
+      [
+        "10兆円以上",
+        "#ff781d",
+        9999999
+      ],
+      [
+        "5兆円以上",
+        "#ff9d57",
+        4999999
+      ],
+      [
+        "1兆円以上",
+        "#ffceab",
+        999999
+      ],
+      [
+        "1千億円以上",
+        "#f5deb3",
+        99999
+      ],
+      [
+        "0円",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ]
+  },
+  "chartSex": {
+    "unit": [
+      "その他",
+      "卸売業",
+      "小売業"
+    ]
+  },
+  "chartAge": {
+    "unit": [
+      "その他.",
+      "1990年代",
+      "2000年代",
+      "2010年代"
+    ]
+  },
+  "chartDate": {
+    "format": "YYYY"
+  },
+  "dataReference": "<ul><li><a target='_blank' href='https://opendata.resas-portal.go.jp/docs/api/v1/municipality/sales/perYear.html'>年間商品販売額 @RESAS(地域経済分析システム)API</a></li><li><a target='_blank' href='https://resas.go.jp/municipality-sales/#/graph/13/13101/1/2014/-/-/1/7.39231742277876/35.998703685/139.883857/-'>産業構造マップ > 小売・卸売業（消費） > 年間商品販売額 @RESAS</a></li></ul>",
+  "chartSView": {},
+  "chartTube": {},
+  "chartName": {},
+  "chartCity": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

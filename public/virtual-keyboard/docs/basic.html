@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Virtual Keyboard Basic Demo</title>
+
+	<!-- demo -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/demo.css" rel="stylesheet">
+
+	<!-- jQuery & jQuery UI + theme (required) -->
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
+	<script src="js/jquery-latest-slim.min.js"></script>
+	<script src="js/jquery-ui-custom.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- keyboard widget css & script (required) -->
+	<link href="../css/keyboard.css" rel="stylesheet">
+	<script src="../js/jquery.keyboard.js"></script>
+
+	<!-- keyboard extensions (optional) -->
+	<script src="../js/jquery.mousewheel.js"></script>
+	<!--
+	<script src="../js/jquery.keyboard.extension-typing.js"></script>
+	<script src="../js/jquery.keyboard.extension-autocomplete.js"></script>
+	-->
+
+	<!-- initialize keyboard (required) -->
+	<script>
+		$(function(){
+			$('#keyboard').keyboard();
+		});
+	</script>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" name="top">
+					<span class="fa fa-keyboard-o fa-lg"></span>
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="../index.html">Home</a></li>
+					<li class="active"><a href="basic.html">Basic <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Layouts <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="layouts.html">Standard</a></li>
+							<li><a href="layouts2.html">Greywyvern</a></li>
+							<li><a href="layouts3.html">Microsoft Keyboard</a></li>
+							<li><a href="calculator.html"><span class="fa fa-calculator fa-lg"></span> Calculator</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extensions <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="altkeys-popup.html">Alt-keys</a></li>
+							<li><a href="../index.html#autocomplete">Autocomplete</a></li>
+							<li><a href="../index.html#caret">Caret</a></li>
+							<li><a href="extender.html">Extender</a></li>
+							<li><a href="preview-keyset.html">Keyset</a></li>
+							<li><a href="mobile.html">Mobile</a></li>
+							<li><a href="jquery-mobile-1.4.html">Mobile v1.4</a></li>
+							<li><a href="navigate.html">Navigate</a></li>
+							<li><a href="scramble.html">Scramble</a></li>
+							<li><a href="../index.html#typing">Typing</a></li>
+						</ul>
+					</li>
+					<li><a href="https://jsfiddle.net/Mottie/egb3a1sk/"><span class="fa fa-flask fa-lg"></span> Playground</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="https://github.com/Mottie/Keyboard"><span class="fa fa-github fa-lg" title="GitHub"></span></a></li>
+					<li><a href="https://github.com/Mottie/Keyboard/archive/master.zip"><span class="fa fa-download fa-lg" title="Download"></span></a></li>
+					<li><a href="https://github.com/Mottie/Keyboard/wiki"><span class="fa fa-file-text-o fa-lg" title="Documentation"></span></a></li>
+					<li><a href="https://github.com/Mottie/Keyboard/issues"><span class="fa fa-bug fa-lg" title="Issues"></span></a></li>
+				</ul>
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="wrap"> <!-- wrapper only needed to center the input -->
+
+		<!-- keyboard input -->
+		<input id="keyboard" type="text">
+
+	</div> <!-- End wrapper -->
+
+</body>
+</html>

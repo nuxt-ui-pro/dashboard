@@ -1,0 +1,48 @@
+{
+  "name": "datatables.mark.js",
+  "version": "2.0.1",
+  "keywords": [
+    "datatables.mark.js",
+    "mark.js",
+    "markjs",
+    "mark",
+    "jquery.mark",
+    "datatables",
+    "DataTables",
+    "highlight",
+    "search",
+    "jquery",
+    "javascript",
+    "text",
+    "keyword"
+  ],
+  "license": "MIT",
+  "homepage": "https://markjs.io/",
+  "authors": [
+    {
+      "name": "Julian Kühnel",
+      "homepage": "https://github.com/julmot"
+    }
+  ],
+  "description": "A DataTables plugin for mark.js to highlight search terms in tables",
+  "main": "dist/datatables.mark.js",
+  "moduleType": [
+    "global", "amd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/julmot/datatables.mark.js.git"
+  },
+  "dependencies": {
+    "jquery": ">=1.10",
+    "datatables.net": ">=1.7",
+    "mark.js": ">=6.1.0"
+  },
+  "devDependencies": {},
+  "ignore": [
+    "*",
+    "!dist/*",
+    "!LICENSE",
+    "!README.md"
+  ]
+}

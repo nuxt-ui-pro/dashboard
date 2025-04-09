@@ -1,0 +1,104 @@
+{
+  "dataType": 0,
+  "title": "「企業数(市区町村・産業分類・業種別)」期間：2009年～2016年 / 単位：社",
+  "isMakeAutocompleteData": true,
+  "chartGMap": {
+    "isShow": true
+  },
+  "chartMap": {
+    "isShow": true,
+    "colors": [
+      [
+        "1000万人以上",
+        "#8c0a00",
+        9999999
+      ],
+      [
+        "500万人以上",
+        "#ea5432",
+        4999999
+      ],
+      [
+        "100万人以上",
+        "#ff781d",
+        999999
+      ],
+      [
+        "50万人以上",
+        "#ff9d57",
+        499999
+      ],
+      [
+        "10万人以上",
+        "#ffceab",
+        99999
+      ],
+      [
+        "1万人以上",
+        "#f5deb3",
+        9999
+      ],
+      [
+        "0人",
+        "#dadada",
+        0
+      ],
+      [
+        "選択中",
+        "#ffffff",
+        0
+      ]
+    ]
+  },
+  "chartSex": {
+    "unit": [
+      "不明",
+      "北海道・東北",
+      "関東",
+      "中部",
+      "近畿",
+      "中国",
+      "四国",
+      "九州・沖縄"
+    ],
+    "chartType": "bar",
+    "isLegend": false
+  },
+  "chartAge": {
+    "unit": [
+      "企業A",
+      "企業B",
+      "企業C",
+      "企業D"
+    ]
+  },
+  "chartCity": {
+    "imagePath": "/img/world"
+  },
+  "chartDate": {
+    "format": "YYYY"
+  },
+  "dataReference": "<ul><li><a target='_blank' href='https://opendata.resas-portal.go.jp/docs/api/v1/municipality/company/perYear.html'>産業構造マップ > 全産業 > 企業数 @RESAS(地域経済分析システム)API</a></li><li><a target='_blank' href='https://resas.go.jp/municipality-company/#/graph/13/13101/2014/-/-/0/5.333900736553437/41.42090017812787/142.29371418128918/-'>産業構造マップ > 全産業 > 企業数 @RESAS</a></li><li><a target='_blank' https://resas.go.jp/municipality-company/#/map/13/13101/2014/-/-/0/5.333900736553437/41.42090017812787/142.29371418128918/-/-'>産業構造マップ > 全産業 > 企業数 > マップ @RESAS</a></li></ul>",
+  "chartSView": {},
+  "chartTube": {},
+  "chartName": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

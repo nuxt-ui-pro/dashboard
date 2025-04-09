@@ -1,0 +1,72 @@
+{
+  "dataType": 0,
+  "title": "「メガドライブ」ソフト一覧",
+  "dataReference": "<ul><li><a target='_blank' href=\"http://pasofami.game.coocan.jp/game/game.htm\">各種ゲーム機 カセット・ソフトタイトルリスト@pasofami</a></li><li><a target='_blank' href='https://www.gavas.jp/user_data/megadrive_game_ranking.php'>メガドライブ歴代ソフト売上ランキング＠ピコピコ大百科</a></li><li><a target%3d'_blank' href%3d'https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%AC%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%81%AE%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E4%B8%80%E8%A6%A7'>メガドライブのゲームタイトル一覧@Wikipedia</a></li></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/smd",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartSex": {
+    "chartType": "bar",
+    "unit": null
+  },
+  "chartAge": {
+    "unit": [
+      "不明",
+      "1M",
+      "2M",
+      "4M",
+      "5M",
+      "6M",
+      "8M",
+      "10M",
+      "12M",
+      "16M",
+      "18M",
+      "20M",
+      "24M",
+      "26M",
+      "32M",
+      "40M",
+      "💿540MB"
+    ]
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/19vonUZ1oQfIaY48K_nGzozskF-O7u6Wd10SfDsOSBZ0/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

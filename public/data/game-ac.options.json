@@ -1,0 +1,55 @@
+{
+  "dataType": 0,
+  "title": "「アーケードゲーム」タイトル一覧 1974年～2024年",
+  "searchPrefix": "AC",
+  "searchPrefixDataIndex": 4,
+  "dataReference": "<ul><li><a target='_blank' href=\"https://ja.wikipedia.org/wiki/アーケードゲームのタイトル一覧\">アーケードゲームのタイトル一覧@Wikipedia</a></li></ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/ac",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartSex": {
+    "unit": null
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/1LDojW4sK_WeHPfnyghVSY3mUSTs55STtofQTRpJlfbQ/edit?gid",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

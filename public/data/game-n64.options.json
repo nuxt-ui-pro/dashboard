@@ -1,0 +1,76 @@
+{
+  "dataType": 0,
+  "title": "「NINTENDO64」ソフト一覧",
+  "dataReference": "<ul><li><a target='_blank' href='http://pasofami.game.coocan.jp/game/game.htm'>各種ゲーム機 カセット・ソフトタイトルリスト@pasofami</a></li><li><a target='_blank' href='https://www.gavas.jp/user_data/nintendo64_game_ranking.php'>ニンテンドウ64歴代ソフト売上ランキング＠ピコピコ大百科</a></li><li>wikipedia</ul>",
+  "detailType": "city",
+  "isMakeAutocompleteData": true,
+  "chartName": {
+    "imagePath": "/img/game/maker",
+    "imageTooltip": "img"
+  },
+  "chartCity": {
+    "imagePath": "/img/game/n64",
+    "imageTooltip": "all",
+    "orderYmd": true,
+    "orderUI": true
+  },
+  "chartDate": {
+    "elasticY": false,
+    "width": 1000,
+    "format": "YYYY"
+  },
+  "chartAge": {
+    "unit": [
+      "不明",
+      "64M",
+      "96M",
+      "128M",
+      "192M",
+      "196M",
+      "224M",
+      "256M",
+      "320M",
+      "512M",
+      "💾64MB"
+    ]
+  },
+  "chartSex": {
+    "unit": [
+      "不明",
+      "CP",
+      "EEP1",
+      "EEP1 CP",
+      "EEP2",
+      "EEP2 CP",
+      "FLASH",
+      "SRAM",
+      "SRAM CP",
+      "💾64DD"
+    ]
+  },
+  "editUrl": "https://docs.google.com/spreadsheets/d/17GLwimysInib7t18Bgj3OmpH9ApflEP9i_61m4IMVJI",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {},
+  "chartYear": {
+    "isShow": true,
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

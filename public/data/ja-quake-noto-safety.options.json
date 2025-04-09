@@ -1,0 +1,57 @@
+{
+  "dataType": 0,
+  "title": "能登半島地震安否不明者一覧 2024/1/1(月)",
+  "searchPrefix": "能登半島地震",
+  "isMakeAutocompleteData": true,
+  "chartGMap": {
+    "isShow": true,
+    "prefecture": "石川県",
+    "center": {
+      "lat": 37.19135688595961,
+      "lng": 136.90110071181238
+    }
+  },
+  "chartSView": {
+    "isShow": true
+  },
+  "chartMap": {
+    "isShow": false
+  },
+  "chartName": {
+    "imagePath": "/img/japan/city"
+  },
+  "chartCity": {
+    "isPanGmapMarker": "1"
+  },
+  "chartDate": {
+    "width": 1000
+  },
+  "chartAge": {
+    "unit": null
+  },
+  "dataReference": "<ul><li><a target='_blank' href='https://www.pref.ishikawa.lg.jp/saigai/202401jishin-taisakuhonbu.html#higai'>令和6年（2024年）能登半島地震に関する情報（対策本部・被災状況）@石川県</a><li>wikipedia</ul>",
+  "editUrl": "https://docs.google.com/spreadsheets/d/1vzcw2b8F3wmdC-qaofFaCI-7F948Ke_-rBSvuNfV8ic/edit?gid",
+  "chartTube": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartSex": {
+    "unit": null
+  },
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [
+    {
+      "scale": false,
+      "isLegend": false
+    },
+    {
+      "scale": false,
+      "isLegend": false
+    }
+  ],
+  "chartDetail": {}
+}

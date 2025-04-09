@@ -1,0 +1,39 @@
+{
+  "dataType": 0,
+  "chartDate2": {
+    "chartType": "lines"
+  },
+  "title": "コンビニ 清涼飲料水 販売数",
+  "isMakeAutocompleteData": true,
+  "chartAge_unit": "null",
+  "chartGMap": {},
+  "chartSView": {},
+  "chartTube": {},
+  "chartMap": {
+    "isShow": 1
+  },
+  "chartName": {},
+  "chartCity": {},
+  "chartDate": {},
+  "chartYear": {
+    "isLegend": true
+  },
+  "chartSeason": {},
+  "chartWeek": {},
+  "chartSex": {
+    "unit": [
+      "不明",
+      "♂男",
+      "♀女"
+    ]
+  },
+  "chartAge": {
+    "scale": 10,
+    "unit": null
+  },
+  "chartCond": {},
+  "chartJob": {},
+  "chartJobCat": {},
+  "chartEx": [],
+  "chartDetail": {}
+}
