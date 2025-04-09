@@ -18,8 +18,16 @@
     "@unovis/ts": "^1.5.1",
     "@unovis/vue": "^1.5.1",
     "@vueuse/nuxt": "^13.0.0",
+    "crossfilter2": "^1.5.4",
+    "d3": "^7.9.0",
     "date-fns": "^4.1.0",
+    "dc": "^4.2.7",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
     "nuxt": "^3.16.2",
+    "virtual-keyboard": "^1.30.4",
+    "wanakana": "^5.3.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {
