@@ -12,6 +12,15 @@ const links = [[{
     open.value = false
   }
 }, {
+  id: 'dashboard',
+  label: 'Dashboard',
+  icon: 'i-heroicons-chart-bar',
+  to: '/dashboard',
+  tooltip: {
+    text: 'Dashboard with Dimensional Chart',
+    shortcuts: ['G', 'D']
+  }
+}, {
   label: 'Inbox',
   icon: 'i-lucide-inbox',
   to: '/inbox',
