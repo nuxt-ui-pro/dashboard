@@ -124,6 +124,9 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     to: 'https://dashboard-template.nuxt.dev/',
     checked: true,
     type: 'checkbox'
+  }, {
+    label: 'Chat',
+    to: 'https://chat-template.nuxt.dev/'
   }]
 }], [{
   label: 'Documentation',
