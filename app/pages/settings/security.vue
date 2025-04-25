@@ -2,9 +2,11 @@
 import * as z from 'zod'
 import type { FormError } from '@nuxt/ui'
 
+const { t } = useI18n()
+
 const passwordSchema = z.object({
-  current: z.string().min(8, 'Must be at least 8 characters'),
-  new: z.string().min(8, 'Must be at least 8 characters')
+  current: z.string().min(8, t('security.password.error.min_length')),
+  new: z.string().min(8, t('security.password.error.min_length'))
 })
 
 type PasswordSchema = z.output<typeof passwordSchema>
@@ -17,7 +19,7 @@ const password = reactive<Partial<PasswordSchema>>({
 const validate = (state: Partial<PasswordSchema>): FormError[] => {
   const errors: FormError[] = []
   if (state.current && state.new && state.current === state.new) {
-    errors.push({ name: 'new', message: 'Passwords must be different' })
+    errors.push({ name: 'new', message: t('security.password.error.same_password') })
   }
   return errors
 }
@@ -25,8 +27,8 @@ const validate = (state: Partial<PasswordSchema>): FormError[] => {
 
 <template>
   <UPageCard
-    title="Password"
-    description="Confirm your current password before setting a new one."
+    :title="t('security.password.title')"
+    :description="t('security.password.description')"
     variant="subtle"
   >
     <UForm
@@ -39,7 +41,7 @@ const validate = (state: Partial<PasswordSchema>): FormError[] => {
         <UInput
           v-model="password.current"
           type="password"
-          placeholder="Current password"
+          :placeholder="t('security.password.current.placeholder')"
           class="w-full"
         />
       </UFormField>
@@ -48,22 +50,22 @@ const validate = (state: Partial<PasswordSchema>): FormError[] => {
         <UInput
           v-model="password.new"
           type="password"
-          placeholder="New password"
+          :placeholder="t('security.password.new.placeholder')"
           class="w-full"
         />
       </UFormField>
 
-      <UButton label="Update" class="w-fit" type="submit" />
+      <UButton :label="t('security.password.update')" class="w-fit" type="submit" />
     </UForm>
   </UPageCard>
 
   <UPageCard
-    title="Account"
-    description="No longer want to use our service? You can delete your account here. This action is not reversible. All information related to this account will be deleted permanently."
-    class="bg-gradient-to-tl from-(--ui-error)/10 from-5% to-(--ui-bg)"
+   :title="t('security.account.title')"
+   :description="t('security.account.description')"
+   class="bg-gradient-to-tl from-(--ui-error)/10 from-5% to-(--ui-bg)"
   >
     <template #footer>
-      <UButton label="Delete account" color="error" />
+      <UButton :label="t('security.account.delete.label')" color="error" />
     </template>
   </UPageCard>
 </template>

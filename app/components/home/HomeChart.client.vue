@@ -3,6 +3,7 @@ import { eachDayOfInterval, eachWeekOfInterval, eachMonthOfInterval, format } fr
 import { VisXYContainer, VisLine, VisAxis, VisArea, VisCrosshair, VisTooltip } from '@unovis/vue'
 import type { Period, Range } from '~/types'
 
+const { t } = useI18n()
 const cardRef = useTemplateRef<HTMLElement | null>('cardRef')
 
 const props = defineProps<{
@@ -65,7 +66,7 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
     <template #header>
       <div>
         <p class="text-xs text-(--ui-text-muted) uppercase mb-1.5">
-          Revenue
+          {{ t('home.chart.revenue.title') }}
         </p>
         <p class="text-3xl text-(--ui-text-highlighted) font-semibold">
           {{ formatNumber(total) }}

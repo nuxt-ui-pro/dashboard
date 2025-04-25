@@ -1,9 +1,13 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
   <UCard :ui="{ body: '!px-0 !pt-0 !pb-3' }">
     <template #header>
       <div>
         <p class="text-xs text-(--ui-text-muted) uppercase mb-1.5">
-          Revenue
+          {{ t('home.chart.revenue.title') }}
         </p>
         <p class="text-3xl text-(--ui-text-highlighted) font-semibold">
           ---

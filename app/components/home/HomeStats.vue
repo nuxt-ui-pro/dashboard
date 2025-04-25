@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Period, Range, Stat } from '~/types'
 
+const { t } = useI18n()
 const props = defineProps<{
   period: Period
   range: Range
@@ -15,21 +16,21 @@ function formatCurrency(value: number): string {
 }
 
 const baseStats = [{
-  title: 'Customers',
+  title: 'home.stats.customers.title',
   icon: 'i-lucide-users',
   minValue: 400,
   maxValue: 1000,
   minVariation: -15,
   maxVariation: 25
 }, {
-  title: 'Conversions',
+  title: 'home.stats.conversions.title',
   icon: 'i-lucide-chart-pie',
   minValue: 1000,
   maxValue: 2000,
   minVariation: -10,
   maxVariation: 20
 }, {
-  title: 'Revenue',
+  title: 'home.stats.revenue.title',
   icon: 'i-lucide-circle-dollar-sign',
   minValue: 200000,
   maxValue: 500000,
@@ -37,7 +38,7 @@ const baseStats = [{
   maxVariation: 30,
   formatter: formatCurrency
 }, {
-  title: 'Orders',
+  title: 'home.stats.orders.title',
   icon: 'i-lucide-shopping-cart',
   minValue: 100,
   maxValue: 300,
@@ -69,11 +70,12 @@ const { data: stats } = await useAsyncData<Stat[]>('stats', async () => {
       v-for="(stat, index) in stats"
       :key="index"
       :icon="stat.icon"
-      :title="stat.title"
+      :title="t(stat.title)"
       to="/customers"
       variant="subtle"
       :ui="{
         container: 'gap-y-1.5',
+        wrapper: '',
         leading: 'p-2.5 rounded-full bg-(--ui-primary)/10 ring ring-inset ring-(--ui-primary)/25',
         title: 'font-normal text-(--ui-text-muted) text-xs uppercase'
       }"
