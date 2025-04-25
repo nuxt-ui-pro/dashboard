@@ -16,7 +16,7 @@ const items = [{
 </script>
 
 <template>
-  <ul role="list" class="divide-y divide-(--ui-border)">
+  <ul role="list" class="divide-y divide-default">
     <li
       v-for="(member, index) in members"
       :key="index"
@@ -29,10 +29,10 @@ const items = [{
         />
 
         <div class="text-sm min-w-0">
-          <p class="text-(--ui-text-highlighted) font-medium truncate">
+          <p class="text-highlighted font-medium truncate">
             {{ member.name }}
           </p>
-          <p class="text-(--ui-text-muted) truncate">
+          <p class="text-muted truncate">
             {{ member.username }}
           </p>
         </div>

@@ -52,7 +52,7 @@ async function onChange() {
       class="mb-4"
     />
 
-    <UPageCard variant="subtle" :ui="{ container: 'divide-y divide-(--ui-border)' }">
+    <UPageCard variant="subtle" :ui="{ container: 'divide-y divide-default' }">
       <UFormField
         v-for="field in section.fields"
         :key="field.name"

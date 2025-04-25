@@ -64,10 +64,10 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
   <UCard ref="cardRef" :ui="{ body: '!px-0 !pt-0 !pb-3' }">
     <template #header>
       <div>
-        <p class="text-xs text-(--ui-text-muted) uppercase mb-1.5">
+        <p class="text-xs text-muted uppercase mb-1.5">
           Revenue
         </p>
-        <p class="text-3xl text-(--ui-text-highlighted) font-semibold">
+        <p class="text-3xl text-highlighted font-semibold">
           {{ formatNumber(total) }}
         </p>
       </div>

@@ -74,13 +74,14 @@ const { data: stats } = await useAsyncData<Stat[]>('stats', async () => {
       variant="subtle"
       :ui="{
         container: 'gap-y-1.5',
-        leading: 'p-2.5 rounded-full bg-(--ui-primary)/10 ring ring-inset ring-(--ui-primary)/25',
-        title: 'font-normal text-(--ui-text-muted) text-xs uppercase'
+        wrapper: 'items-start',
+        leading: 'p-2.5 rounded-full bg-primary/10 ring ring-inset ring-primary/25 flex-col',
+        title: 'font-normal text-muted text-xs uppercase'
       }"
-      class="lg:rounded-none first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)] hover:z-1"
+      class="lg:rounded-none first:rounded-l-lg last:rounded-r-lg hover:z-1"
     >
       <div class="flex items-center gap-2">
-        <span class="text-2xl font-semibold text-(--ui-text-highlighted)">
+        <span class="text-2xl font-semibold text-highlighted">
           {{ stat.value }}
         </span>
 

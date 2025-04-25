@@ -83,7 +83,7 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
       color="neutral"
       variant="ghost"
       icon="i-lucide-calendar"
-      class="data-[state=open]:bg-(--ui-bg-elevated) group"
+      class="data-[state=open]:bg-elevated group"
     >
       <span class="truncate">
         <template v-if="selected.start">
@@ -100,12 +100,12 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
       </span>
 
       <template #trailing>
-        <UIcon name="i-lucide-chevron-down" class="shrink-0 text-(--ui-text-dimmed) size-5 group-data-[state=open]:rotate-180 transition-transform duration-200" />
+        <UIcon name="i-lucide-chevron-down" class="shrink-0 text-dimmed size-5 group-data-[state=open]:rotate-180 transition-transform duration-200" />
       </template>
     </UButton>
 
     <template #content>
-      <div class="flex items-stretch sm:divide-x divide-(--ui-border)">
+      <div class="flex items-stretch sm:divide-x divide-default">
         <div class="hidden sm:flex flex-col justify-center">
           <UButton
             v-for="(range, index) in ranges"
@@ -114,7 +114,7 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
             color="neutral"
             variant="ghost"
             class="rounded-none px-4"
-            :class="[isRangeSelected(range) ? 'bg-(--ui-bg-elevated)' : 'hover:bg-(--ui-bg-elevated)/50']"
+            :class="[isRangeSelected(range) ? 'bg-elevated' : 'hover:bg-elevated/50']"
             truncate
             @click="selectRange(range)"
           />

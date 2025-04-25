@@ -102,7 +102,7 @@ const columns: TableColumn<User>[] = [
           size: 'lg'
         }),
         h('div', undefined, [
-          h('p', { class: 'font-medium text-(--ui-text-highlighted)' }, row.original.name),
+          h('p', { class: 'font-medium text-highlighted' }, row.original.name),
           h('p', { class: '' }, `@${row.original.name}`)
         ])
       ])
@@ -293,15 +293,15 @@ const pagination = ref({
         :loading="status === 'pending'"
         :ui="{
           base: 'table-fixed border-separate border-spacing-0',
-          thead: '[&>tr]:bg-(--ui-bg-elevated)/50 [&>tr]:after:content-none',
+          thead: '[&>tr]:bg-elevated/50 [&>tr]:after:content-none',
           tbody: '[&>tr]:last:[&>td]:border-b-0',
-          th: 'py-1 first:rounded-l-[calc(var(--ui-radius)*2)] last:rounded-r-[calc(var(--ui-radius)*2)] border-y border-(--ui-border) first:border-l last:border-r',
-          td: 'border-b border-(--ui-border)'
+          th: 'py-2 first:rounded-l-lg last:rounded-r-lg border-y border-default first:border-l last:border-r',
+          td: 'border-b border-default'
         }"
       />
 
-      <div class="flex items-center justify-between gap-3 border-t border-(--ui-border) pt-4 mt-auto">
-        <div class="text-sm text-(--ui-text-muted)">
+      <div class="flex items-center justify-between gap-3 border-t border-default pt-4 mt-auto">
+        <div class="text-sm text-muted">
           {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
           {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
         </div>
