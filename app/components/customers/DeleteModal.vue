@@ -5,6 +5,7 @@ withDefaults(defineProps<{
   count: 0
 })
 
+const { t } = useI18n()
 const open = ref(false)
 
 async function onSubmit() {
@@ -16,21 +17,21 @@ async function onSubmit() {
 <template>
   <UModal
     v-model:open="open"
-    :title="`Delete ${count} customer${count > 1 ? 's' : ''}`"
-    :description="`Are you sure, this action cannot be undone.`"
+    :title="t('customers.delete_title', { count, s: count > 1 ? 's' : '' })"
+    :description="t('customers.delete_description')"
   >
     <slot />
 
     <template #body>
       <div class="flex justify-end gap-2">
         <UButton
-          label="Cancel"
+          :label="t('common.cancel')"
           color="neutral"
           variant="subtle"
           @click="open = false"
         />
         <UButton
-          label="Delete"
+          :label="t('common.delete')"
           color="error"
           variant="solid"
           loading-auto

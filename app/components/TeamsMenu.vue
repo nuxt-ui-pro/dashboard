@@ -3,6 +3,8 @@ defineProps<{
   collapsed?: boolean
 }>()
 
+const { t } = useI18n()
+
 const teams = ref([{
   label: 'Nuxt',
   avatar: {
@@ -31,10 +33,10 @@ const items = computed(() => {
       selectedTeam.value = team
     }
   })), [{
-    label: 'Create team',
+    label: t('layout.teams.menu.create_team'),
     icon: 'i-lucide-circle-plus'
   }, {
-    label: 'Manage teams',
+    label: t('layout.teams.menu.manage_teams'),
     icon: 'i-lucide-cog'
   }]]
 })

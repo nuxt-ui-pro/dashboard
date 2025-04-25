@@ -2,17 +2,18 @@
 import { sub } from 'date-fns'
 import type { Period, Range } from '~/types'
 
+const { t } = useI18n()
 const { isNotificationsSlideoverOpen } = useDashboard()
 
-const items = [[{
-  label: 'New mail',
+const items = computed(() => [[{
+  label: t('home.actions.new_mail'),
   icon: 'i-lucide-send',
   to: '/inbox'
 }, {
-  label: 'New customer',
+  label: t('home.actions.new_customer'),
   icon: 'i-lucide-user-plus',
   to: '/customers'
-}]]
+}]])
 
 const range = shallowRef<Range>({
   start: sub(new Date(), { days: 14 }),
@@ -24,13 +25,13 @@ const period = ref<Period>('daily')
 <template>
   <UDashboardPanel id="home">
     <template #header>
-      <UDashboardNavbar title="Home" :ui="{ right: 'gap-3' }">
+      <UDashboardNavbar :title="t('home.title')" :ui="{ right: 'gap-3' }">
         <template #leading>
           <UDashboardSidebarCollapse />
         </template>
 
         <template #right>
-          <UTooltip text="Notifications" :shortcuts="['N']">
+          <UTooltip :text="t('home.notifications.tooltip')" :shortcuts="['N']">
             <UButton
               color="neutral"
               variant="ghost"
