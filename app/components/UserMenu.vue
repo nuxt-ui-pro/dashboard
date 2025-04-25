@@ -165,6 +165,9 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     to: 'https://dashboard-template.nuxt.dev/',
     checked: true,
     type: 'checkbox'
+  }, {
+    label: t('userMenu.chat'),
+    to: 'https://chat-template.nuxt.dev/'
   }]
 }], [{
   label: t('userMenu.documentation'),
@@ -203,9 +206,9 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
       variant="ghost"
       block
       :square="collapsed"
-      class="data-[state=open]:bg-(--ui-bg-elevated)"
+      class="data-[state=open]:bg-elevated"
       :ui="{
-        trailingIcon: 'text-(--ui-text-dimmed)'
+        trailingIcon: 'text-dimmed'
       }"
     />
 

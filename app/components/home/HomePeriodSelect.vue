@@ -47,7 +47,7 @@ watch(periods, () => {
       value: period
     }))"
     variant="ghost"
-    class="data-[state=open]:bg-(--ui-bg-elevated)"
+    class="data-[state=open]:bg-elevated"
     :ui="{ value: 'capitalize', itemLabel: 'capitalize', trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
   />
 </template>

@@ -38,7 +38,7 @@ const inviteMember = () => {
       />
     </UPageCard>
 
-    <UPageCard variant="subtle" :ui="{ container: 'p-0 sm:p-0 gap-y-0', header: 'p-4 mb-0 border-b border-(--ui-border)' }">
+    <UPageCard variant="subtle" :ui="{ container: 'p-0 sm:p-0 gap-y-0', header: 'p-4 mb-0 border-b border-default' }">
       <template #header>
         <UInput
           v-model="q"

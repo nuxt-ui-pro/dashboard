@@ -30,11 +30,11 @@ const roles = computed(() => [
 
 <template>
   <div v-if="!members?.length" class="text-center py-4">
-    <p class="text-(--ui-text-dimmed)">
+    <p class="text-dimmed">
       {{ t('members.empty.no_members') }}
     </p>
   </div>
-  <ul role="list" class="divide-y divide-(--ui-border)">
+  <ul role="list" class="divide-y divide-default">
     <li
       v-for="(member, index) in members"
       :key="index"
@@ -47,10 +47,10 @@ const roles = computed(() => [
         />
 
         <div class="text-sm min-w-0">
-          <p class="text-(--ui-text-highlighted) font-medium truncate">
+          <p class="text-highlighted font-medium truncate">
             {{ member.name }}
           </p>
-          <p class="text-(--ui-text-muted) truncate">
+          <p class="text-muted truncate">
             {{ member.username }}
           </p>
         </div>
