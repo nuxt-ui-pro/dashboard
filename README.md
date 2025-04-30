@@ -3,7 +3,7 @@
 [![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com/pro)
 [![Deploy to NuxtHub](https://img.shields.io/badge/Deploy%20to-NuxtHub-00DC82?logo=nuxt&labelColor=020420)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/dashboard)
 
-Get started with this Nuxt dashboard template featuring multiple pages, a collapsible sidebar, keyboard shortcuts, light & dark mode, command palette, and comprehensive data management capabilities. Built with TypeScript and powered by [Nuxt UI Pro](https://ui.nuxt.com/pro), this template provides everything you need for creating professional admin interfaces and data visualization dashboards.
+Get started with the Nuxt dashboard template with multiple pages, collapsible sidebar, keyboard shortcuts, light & dark more, command palette and more, powered by [Nuxt UI Pro](https://ui.nuxt.com/pro).
 
 - [Live demo](https://dashboard-template.nuxt.dev/)
 - [Documentation](https://ui.nuxt.com/getting-started/installation/pro/nuxt)
