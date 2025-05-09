@@ -146,7 +146,7 @@ const columns: TableColumn<User>[] = [
       }[row.original.status]
 
       return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () =>
-      t(`customers.status_${row.original.status}`)
+        t(`customers.status_${row.original.status}`)
       )
     }
   },
@@ -248,7 +248,7 @@ const pagination = ref({
               { label: t('customers.status_bounced'), value: 'bounced' }
             ]"
             :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
-             :placeholder="t('customers.filter_status')"
+            :placeholder="t('customers.filter_status')"
             class="min-w-28"
           />
           <UDropdownMenu

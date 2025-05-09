@@ -30,7 +30,7 @@ const roles = computed(() => [
 
 <template>
   <div v-if="!members?.length" class="text-center py-4">
-    <p class="text-(--ui-text-dimmed)">
+    <p class="text-dimmed">
       {{ t('members.empty.no_members') }}
     </p>
   </div>

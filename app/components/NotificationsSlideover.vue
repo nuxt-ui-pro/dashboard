@@ -16,7 +16,7 @@ const { data: notifications } = await useFetch<Notification[]>('/api/notificatio
   >
     <template #body>
       <div v-if="!notifications?.length" class="text-center py-4">
-        <p class="text-(--ui-text-dimmed)">
+        <p class="text-dimmed">
           {{ t('notifications.no_notifications') }}
         </p>
       </div>

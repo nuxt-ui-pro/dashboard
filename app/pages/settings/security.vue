@@ -60,8 +60,8 @@ const validate = (state: Partial<PasswordSchema>): FormError[] => {
   </UPageCard>
 
   <UPageCard
-   :title="t('security.account.title')"
-   :description="t('security.account.description')"
+    :title="t('security.account.title')"
+    :description="t('security.account.description')"
     class="bg-gradient-to-tl from-error/10 from-5% to-default"
   >
     <template #footer>
