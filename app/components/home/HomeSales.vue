@@ -3,6 +3,7 @@ import { h, resolveComponent } from 'vue'
 import type { TableColumn } from '@nuxt/ui'
 import type { Period, Range, Sale } from '~/types'
 
+const { t } = useI18n()
 const props = defineProps<{
   period: Period
   range: Range
@@ -44,12 +45,12 @@ const { data } = await useAsyncData('sales', async () => {
 const columns: TableColumn<Sale>[] = [
   {
     accessorKey: 'id',
-    header: 'ID',
+    header: () => t('home.sales.table.columns.id'),
     cell: ({ row }) => `#${row.getValue('id')}`
   },
   {
     accessorKey: 'date',
-    header: 'Date',
+    header: () => t('home.sales.table.columns.date'),
     cell: ({ row }) => {
       return new Date(row.getValue('date')).toLocaleString('en-US', {
         day: 'numeric',
@@ -62,8 +63,9 @@ const columns: TableColumn<Sale>[] = [
   },
   {
     accessorKey: 'status',
-    header: 'Status',
+    header: () => t('home.sales.table.columns.status'),
     cell: ({ row }) => {
+      const status = row.getValue('status') as string
       const color = {
         paid: 'success' as const,
         failed: 'error' as const,
@@ -71,17 +73,17 @@ const columns: TableColumn<Sale>[] = [
       }[row.getValue('status') as string]
 
       return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () =>
-        row.getValue('status')
+        t(`home.sales.table.status.${status}`)
       )
     }
   },
   {
     accessorKey: 'email',
-    header: 'Email'
+    header: () => t('home.sales.table.columns.email')
   },
   {
     accessorKey: 'amount',
-    header: () => h('div', { class: 'text-right' }, 'Amount'),
+    header: () => h('div', { class: 'text-right' }, t('home.sales.table.columns.amount')),
     cell: ({ row }) => {
       const amount = Number.parseFloat(row.getValue('amount'))
 

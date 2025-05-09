@@ -1,0 +1,347 @@
+{
+  "layout": {
+    "navigation": {
+      "home": "Home",
+      "inbox": "Inbox",
+      "customers": "Customers",
+      "settings": "Settings",
+      "general": "General",
+      "members": "Members",
+      "notifications": "Notifications",
+      "security": "Security",
+      "feedback": "Feedback",
+      "help": "Help & Support"
+    },
+    "search": {
+      "goTo": "Go to",
+      "code": "Code",
+      "viewSource": "View page source"
+    },
+    "cookies": {
+      "title": "We use first-party cookies to enhance your experience on our website.",
+      "accept": "Accept",
+      "optOut": "Opt out"
+    },
+    "teams": {
+      "menu": {
+        "create_team": "Create team",
+        "manage_teams": "Manage teams"
+      }
+    }
+  },
+  "userMenu": {
+    "profile": "Profile",
+    "billing": "Billing",
+    "settings": "Settings",
+    "theme": "Theme",
+    "primary": "Primary",
+    "neutral": "Neutral",
+    "appearance": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "templates": "Templates",
+    "starter": "Starter",
+    "landing": "Landing",
+    "docs": "Docs",
+    "saas": "SaaS",
+    "dashboard": "Dashboard",
+    "chat": "Chat",
+    "documentation": "Documentation",
+    "github": "GitHub repository",
+    "upgrade": "Upgrade to Pro",
+    "logout": "Log out",
+    "language": "Language",
+    "spanish": "Spanish",
+    "english": "English",
+    "french": "French"
+  },
+  "colors": {
+    "red": "Red",
+    "orange": "Orange",
+    "amber": "Amber",
+    "yellow": "Yellow",
+    "lime": "Lime",
+    "green": "Green",
+    "emerald": "Emerald",
+    "teal": "Teal",
+    "cyan": "Cyan",
+    "sky": "Sky",
+    "blue": "Blue",
+    "indigo": "Indigo",
+    "violet": "Violet",
+    "purple": "Purple",
+    "fuchsia": "Fuchsia",
+    "pink": "Pink",
+    "rose": "Rose",
+    "slate": "Slate",
+    "gray": "Gray",
+    "zinc": "Zinc",
+    "neutral": "Neutral",
+    "stone": "Stone"
+  },
+  "common": {
+    "success": "Success",
+    "cancel": "Cancel",
+    "create": "Create",
+    "delete": "Delete",
+    "copied": "Copied to clipboard",
+    "select_all": "Select all",
+    "select_row": "Select row",
+    "all": "All",
+    "unread": "Unread",
+    "display": "Display"
+  },
+  "customers": {
+    "title": "Customers",
+    "actions": "Actions",
+    "copy_id": "Copy customer ID",
+    "id_copied": "Customer ID copied to clipboard",
+    "view_details": "View customer details",
+    "view_payments": "View customer payments",
+    "delete_customer": "Delete customer",
+    "customer_deleted": "Customer deleted",
+    "customer_deleted_desc": "The customer has been deleted",
+    "name": "Name",
+    "name_placeholder": "John Doe",
+    "email": "Email",
+    "location": "Location",
+    "status": "Status",
+    "status_subscribed": "Subscribed",
+    "status_unsubscribed": "Unsubscribed",
+    "status_bounced": "Bounced",
+    "filter_emails": "Filter emails...",
+    "filter_status": "Filter status",
+    "selected_rows": "{selected} of {total} row(s) selected",
+    "new_customer": "New customer",
+    "add_new_customer": "Add a new customer to the database",
+    "new_customer_added": "New customer {name} added",
+    "delete_title": "Delete {count} customer{s}",
+    "delete_description": "Are you sure, this action cannot be undone."
+  },
+  "validation": {
+    "name_too_short": "Too short",
+    "invalid_email": "Invalid email"
+  },
+  "inbox": {
+    "mark_as_unread": "Mark as unread",
+    "mark_as_important": "Mark as important",
+    "star_thread": "Star thread",
+    "mute_thread": "Mute thread",
+    "archive": "Archive",
+    "reply": "Reply",
+    "attach_file": "Attach file",
+    "save_draft": "Save draft",
+    "send": "Send",
+    "write_reply": "Write your reply...",
+    "email_sent": "Email sent",
+    "email_sent_success": "Your email has been sent successfully",
+    "reply_to": "Reply to {name} ({email})"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "unread": "Unread",
+    "read": "Read",
+    "mark_as_read": "Mark as read",
+    "mark_all_as_read": "Mark all as read",
+    "no_notifications": "No notifications",
+    "settings": {
+      "channels": {
+        "title": "Notification channels",
+        "description": "Where can we notify you?",
+        "email": {
+          "label": "Email",
+          "description": "Receive a daily email digest."
+        },
+        "desktop": {
+          "label": "Desktop",
+          "description": "Receive desktop notifications."
+        }
+      },
+      "updates": {
+        "title": "Account updates",
+        "description": "Receive updates about Nuxt UI.",
+        "weekly_digest": {
+          "label": "Weekly digest",
+          "description": "Receive a weekly digest of news."
+        },
+        "product_updates": {
+          "label": "Product updates",
+          "description": "Receive a monthly email with all new features and updates."
+        },
+        "important_updates": {
+          "label": "Important updates",
+          "description": "Receive emails about important updates like security fixes, maintenance, etc."
+        }
+      }
+    }
+  },
+  "members": {
+    "title": "Members",
+    "description": "Invite new members by email address.",
+    "role": {
+      "member": "Member",
+      "owner": "Owner"
+    },
+    "empty": {
+      "no_members": "No members",
+      "no_results": "No members found"
+    },
+    "actions": {
+      "add": "Add member",
+      "invite": "Invite people",
+      "search_placeholder": "Search members",
+      "edit": "Edit member",
+      "remove": "Remove member"
+    },
+    "notifications": {
+      "removed": {
+        "title": "Member removed",
+        "description": "The member has been removed from the team"
+      },
+      "invite": {
+        "title": "Invitation sent",
+        "description": "The invitation has been sent successfully"
+      }
+    }
+  },
+  "security": {
+    "password": {
+      "title": "Password",
+      "description": "Confirm your current password before setting a new one.",
+      "current": {
+        "label": "Current password",
+        "placeholder": "Current password"
+      },
+      "new": {
+        "label": "New password",
+        "placeholder": "New password"
+      },
+        "error": {
+          "min_length": "Must be at least 8 characters",
+          "required": "Current password is required",
+          "same_password": "Passwords must be different"
+        },
+      "update": "Update"
+    },
+    "account": {
+      "title": "Account",
+      "description": "No longer want to use our service? You can delete your account here. This action is not reversible. All information related to this account will be deleted permanently.",
+      "delete": {
+        "label": "Delete account",
+        "confirm": "Are you sure you want to delete your account?",
+        "success": "Account deleted successfully"
+      }
+    }
+  },
+  "settings": {
+    "profile": {
+      "title": "Profile",
+      "description": "These informations will be displayed publicly.",
+      "save_changes": "Save changes",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "description": "Will appear on receipts, invoices, and other communication.",
+          "error": {
+            "too_short": "Too short"
+          }
+        },
+        "email": {
+          "label": "Email",
+          "description": "Used to sign in, for email receipts and product updates.",
+          "error": {
+            "invalid": "Invalid email"
+          }
+        },
+        "username": {
+          "label": "Username",
+          "description": "Your unique username for logging in and your profile URL.",
+          "error": {
+            "too_short": "Too short"
+          }
+        },
+        "avatar": {
+          "label": "Avatar",
+          "description": "JPG, GIF or PNG. 1MB Max.",
+          "choose": "Choose"
+        },
+        "bio": {
+          "label": "Bio",
+          "description": "Brief description for your profile. URLs are hyperlinked."
+        }
+      }
+    },
+    "success": {
+      "title": "Success",
+      "description": "Your settings have been updated."
+    }
+  },
+  "home": {
+    "title": "Home",
+    "notifications": {
+      "tooltip": "Notifications"
+    },
+    "actions": {
+      "new_mail": "New mail",
+      "new_customer": "New customer"
+    },
+    "period": {
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly"
+    },
+    "sales": {
+      "table": {
+        "columns": {
+          "id": "ID",
+          "date": "Date",
+          "status": "Status",
+          "email": "Email",
+          "amount": "Amount"
+        },
+        "status": {
+          "paid": "Paid",
+          "failed": "Failed",
+          "refunded": "Refunded"
+        }
+      }
+    },
+    "stats": {
+      "customers": {
+        "title": "Customers",
+        "description": "Total number of customers"
+      },
+      "conversions": {
+        "title": "Conversions",
+        "description": "Conversion rate"
+      },
+      "revenue": {
+        "title": "Revenue",
+        "description": "Total revenue"
+      },
+      "orders": {
+        "title": "Orders",
+        "description": "Total number of orders"
+      }
+    },
+    "chart": {
+      "revenue": {
+        "title": "Revenue"
+      }
+    }
+  },
+  "date": {
+    "picker": {
+      "placeholder": "Pick a date",
+      "ranges": {
+        "last_7_days": "Last 7 days",
+        "last_14_days": "Last 14 days",
+        "last_30_days": "Last 30 days",
+        "last_3_months": "Last 3 months",
+        "last_6_months": "Last 6 months",
+        "last_year": "Last year"
+      }
+    }
+  }
+}

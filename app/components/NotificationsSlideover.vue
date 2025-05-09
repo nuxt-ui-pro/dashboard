@@ -2,6 +2,8 @@
 import { formatTimeAgo } from '@vueuse/core'
 import type { Notification } from '~/types'
 
+const { t } = useI18n()
+
 const { isNotificationsSlideoverOpen } = useDashboard()
 
 const { data: notifications } = await useFetch<Notification[]>('/api/notifications')
@@ -10,9 +12,14 @@ const { data: notifications } = await useFetch<Notification[]>('/api/notificatio
 <template>
   <USlideover
     v-model:open="isNotificationsSlideoverOpen"
-    title="Notifications"
+    :title="t('notifications.title')"
   >
     <template #body>
+      <div v-if="!notifications?.length" class="text-center py-4">
+        <p class="text-dimmed">
+          {{ t('notifications.no_notifications') }}
+        </p>
+      </div>
       <NuxtLink
         v-for="notification in notifications"
         :key="notification.id"

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Member } from '~/types'
 
+const { t } = useI18n()
 const { data: members } = await useFetch<Member[]>('/api/members', { default: () => [] })
 
 const q = ref('')
@@ -10,21 +11,30 @@ const filteredMembers = computed(() => {
     return member.name.search(new RegExp(q.value, 'i')) !== -1 || member.username.search(new RegExp(q.value, 'i')) !== -1
   })
 })
+
+const inviteMember = () => {
+  useToast().add({
+    title: t('members.notifications.invite.title'),
+    description: t('members.notifications.invite.description'),
+    color: 'success'
+  })
+}
 </script>
 
 <template>
   <div>
     <UPageCard
-      title="Members"
-      description="Invite new members by email address."
+      :title="t('members.title')"
+      :description="t('members.description')"
       variant="naked"
       orientation="horizontal"
       class="mb-4"
     >
       <UButton
-        label="Invite people"
+        :label="t('members.actions.invite')"
         color="neutral"
         class="w-fit lg:ms-auto"
+        @click="inviteMember"
       />
     </UPageCard>
 
@@ -33,7 +43,7 @@ const filteredMembers = computed(() => {
         <UInput
           v-model="q"
           icon="i-lucide-search"
-          placeholder="Search members"
+          :placeholder="t('members.actions.search_placeholder')"
           autofocus
           class="w-full"
         />

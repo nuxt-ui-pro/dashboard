@@ -1,38 +1,40 @@
 <script setup lang="ts">
-const links = [[{
-  label: 'General',
+const { t } = useI18n()
+
+const links = computed(() => [[{
+  label: t('layout.navigation.general'),
   icon: 'i-lucide-user',
   to: '/settings',
   exact: true
 }, {
-  label: 'Members',
+  label: t('layout.navigation.members'),
   icon: 'i-lucide-users',
   to: '/settings/members'
 }, {
-  label: 'Notifications',
+  label: t('layout.navigation.notifications'),
   icon: 'i-lucide-bell',
   to: '/settings/notifications'
 }, {
-  label: 'Security',
+  label: t('layout.navigation.security'),
   icon: 'i-lucide-shield',
   to: '/settings/security'
 }], [{
-  label: 'Documentation',
+  label: t('userMenu.documentation'),
   icon: 'i-lucide-book-open',
   to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
   target: '_blank'
 }, {
-  label: 'Buy now',
+  label: t('userMenu.upgrade'),
   icon: 'i-lucide-shopping-cart',
   to: 'https://ui.nuxt.com/pro/purchase',
   target: '_blank'
-}]]
+}]])
 </script>
 
 <template>
   <UDashboardPanel id="settings" :ui="{ body: 'lg:py-12' }">
     <template #header>
-      <UDashboardNavbar title="Settings">
+      <UDashboardNavbar :title="t('layout.navigation.settings')">
         <template #leading>
           <UDashboardSidebarCollapse />
         </template>
