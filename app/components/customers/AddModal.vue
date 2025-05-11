@@ -2,9 +2,11 @@
 import * as z from 'zod'
 import type { FormSubmitEvent } from '@nuxt/ui'
 
+const { t } = useI18n()
+
 const schema = z.object({
-  name: z.string().min(2, 'Too short'),
-  email: z.string().email('Invalid email')
+  name: z.string().min(2, t('validation.name_too_short')),
+  email: z.string().email(t('validation.invalid_email'))
 })
 const open = ref(false)
 
@@ -23,8 +25,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UModal v-model:open="open" title="New customer" description="Add a new customer to the database">
-    <UButton label="New customer" icon="i-lucide-plus" />
+  <UModal 
+    v-model:open="open" 
+    :title="t('customers.new_customer')"
+    :description="t('customers.add_new_customer')"
+  >
+    <UButton :label="t('customers.new_customer')" icon="i-lucide-plus" />
 
     <template #body>
       <UForm
@@ -33,21 +39,21 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         class="space-y-4"
         @submit="onSubmit"
       >
-        <UFormField label="Name" placeholder="John Doe" name="name">
+        <UFormField :label="t('customers.name')" :placeholder="t('customers.name_placeholder')" name="name">
           <UInput v-model="state.name" class="w-full" />
         </UFormField>
-        <UFormField label="Email" placeholder="john.doe@example.com" name="email">
+        <UFormField :label="t('customers.email')" :placeholder="t('customers.email_placeholder')" name="email">
           <UInput v-model="state.email" class="w-full" />
         </UFormField>
         <div class="flex justify-end gap-2">
           <UButton
-            label="Cancel"
+            :label="t('common.cancel')"
             color="neutral"
             variant="subtle"
             @click="open = false"
           />
           <UButton
-            label="Create"
+            :label="t('common.create')"
             color="primary"
             variant="solid"
             type="submit"

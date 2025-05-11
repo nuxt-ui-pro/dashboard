@@ -2,25 +2,27 @@
 import { format } from 'date-fns'
 import type { Mail } from '~/types'
 
+const { t } = useI18n()
+
 defineProps<{
   mail: Mail
 }>()
 
 const emits = defineEmits(['close'])
 
-const dropdownItems = [[{
-  label: 'Mark as unread',
+const dropdownItems = computed(() => [[{
+  label: t('inbox.mark_as_unread'),
   icon: 'i-lucide-check-circle'
 }, {
-  label: 'Mark as important',
+  label: t('inbox.mark_as_important'),
   icon: 'i-lucide-triangle-alert'
 }], [{
-  label: 'Star thread',
+  label: t('inbox.star_thread'),
   icon: 'i-lucide-star'
 }, {
-  label: 'Mute thread',
+  label: t('inbox.mute_thread'),
   icon: 'i-lucide-circle-pause'
-}]]
+}]])
 
 const toast = useToast()
 
@@ -34,8 +36,8 @@ function onSubmit() {
     reply.value = ''
 
     toast.add({
-      title: 'Email sent',
-      description: 'Your email has been sent successfully',
+      title: t('inbox.email_sent'),
+      description: t('inbox.email_sent_success'),
       icon: 'i-lucide-check-circle',
       color: 'success'
     })
@@ -59,7 +61,7 @@ function onSubmit() {
       </template>
 
       <template #right>
-        <UTooltip text="Archive">
+        <UTooltip :text="t('inbox.archive')">
           <UButton
             icon="i-lucide-inbox"
             color="neutral"
@@ -67,7 +69,7 @@ function onSubmit() {
           />
         </UTooltip>
 
-        <UTooltip text="Reply">
+        <UTooltip :text="t('inbox.reply')">
           <UButton icon="i-lucide-reply" color="neutral" variant="ghost" />
         </UTooltip>
 
@@ -116,7 +118,7 @@ function onSubmit() {
           <UIcon name="i-lucide-reply" class="size-5" />
 
           <span class="text-sm truncate">
-            Reply to {{ mail.from.name }} ({{ mail.from.email }})
+            {{ t('inbox.reply_to', { name: mail.from.name, email: mail.from.email }) }}
           </span>
         </template>
 
@@ -127,7 +129,7 @@ function onSubmit() {
             variant="none"
             required
             autoresize
-            placeholder="Write your reply..."
+            :placeholder="t('inbox.write_reply')"
             :rows="4"
             :disabled="loading"
             class="w-full"
@@ -135,7 +137,7 @@ function onSubmit() {
           />
 
           <div class="flex items-center justify-between">
-            <UTooltip text="Attach file">
+            <UTooltip :text="t('inbox.attach_file')">
               <UButton
                 color="neutral"
                 variant="ghost"
@@ -147,13 +149,13 @@ function onSubmit() {
               <UButton
                 color="neutral"
                 variant="ghost"
-                label="Save draft"
+                :label="t('inbox.save_draft')"
               />
               <UButton
                 type="submit"
                 color="neutral"
                 :loading="loading"
-                label="Send"
+                :label="t('inbox.send')"
                 icon="i-lucide-send"
               />
             </div>

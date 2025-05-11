@@ -2,20 +2,22 @@
 import { DateFormatter, getLocalTimeZone, CalendarDate, today } from '@internationalized/date'
 import type { Range } from '~/types'
 
+const { t } = useI18n()
+
 const df = new DateFormatter('en-US', {
   dateStyle: 'medium'
 })
 
 const selected = defineModel<Range>({ required: true })
 
-const ranges = [
-  { label: 'Last 7 days', days: 7 },
-  { label: 'Last 14 days', days: 14 },
-  { label: 'Last 30 days', days: 30 },
-  { label: 'Last 3 months', months: 3 },
-  { label: 'Last 6 months', months: 6 },
-  { label: 'Last year', years: 1 }
-]
+const ranges = computed(() => [
+  { label: t('date.picker.ranges.last_7_days'), days: 7 },
+  { label: t('date.picker.ranges.last_14_days'), days: 14 },
+  { label: t('date.picker.ranges.last_30_days'), days: 30 },
+  { label: t('date.picker.ranges.last_3_months'), months: 3 },
+  { label: t('date.picker.ranges.last_6_months'), months: 6 },
+  { label: t('date.picker.ranges.last_year'), years: 1 }
+])
 
 const toCalendarDate = (date: Date) => {
   return new CalendarDate(
@@ -95,7 +97,7 @@ const selectRange = (range: { days?: number, months?: number, years?: number }) 
           </template>
         </template>
         <template v-else>
-          Pick a date
+          {{ t('date.picker.placeholder') }}
         </template>
       </span>
 

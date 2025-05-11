@@ -1,0 +1,347 @@
+{
+  "layout": {
+    "navigation": {
+      "home": "Inicio",
+      "inbox": "Bandeja de entrada",
+      "customers": "Clientes",
+      "settings": "Configuración",
+      "general": "General",
+      "members": "Miembros",
+      "notifications": "Notificaciones",
+      "security": "Seguridad",
+      "feedback": "Comentarios",
+      "help": "Ayuda y Soporte"
+    },
+    "search": {
+      "goTo": "Ir a",
+      "code": "Código",
+      "viewSource": "Ver código fuente"
+    },
+    "cookies": {
+      "title": "Usamos cookies propias para mejorar tu experiencia en nuestro sitio web.",
+      "accept": "Aceptar",
+      "optOut": "Rechazar"
+    },
+    "teams": {
+      "menu": {
+        "create_team": "Crear equipo",
+        "manage_teams": "Gestionar equipos"
+      }
+    }
+  },
+  "userMenu": {
+    "profile": "Perfil",
+    "billing": "Facturación",
+    "settings": "Configuración",
+    "theme": "Tema",
+    "primary": "Primario",
+    "neutral": "Neutral",
+    "appearance": "Apariencia",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema",
+    "templates": "Plantillas",
+    "starter": "Inicial",
+    "landing": "Landing",
+    "docs": "Documentación",
+    "saas": "SaaS",
+    "dashboard": "Panel",
+    "chat": "Chat",
+    "documentation": "Documentación",
+    "github": "Repositorio GitHub",
+    "upgrade": "Actualizar a Pro",
+    "logout": "Cerrar sesión",
+    "language": "Idioma",
+    "spanish": "Español",
+    "english": "Inglés",
+    "french": "Francés"
+  },
+  "colors": {
+    "red": "Rojo",
+    "orange": "Naranja",
+    "amber": "Ámbar",
+    "yellow": "Amarillo",
+    "lime": "Lima",
+    "green": "Verde",
+    "emerald": "Esmeralda",
+    "teal": "Verde azulado",
+    "cyan": "Cian",
+    "sky": "Cielo",
+    "blue": "Azul",
+    "indigo": "Índigo",
+    "violet": "Violeta",
+    "purple": "Púrpura",
+    "fuchsia": "Fucsia",
+    "pink": "Rosa",
+    "rose": "Rosado",
+    "slate": "Pizarra",
+    "gray": "Gris",
+    "zinc": "Zinc",
+    "neutral": "Neutral",
+    "stone": "Piedra"
+  },
+  "common": {
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "create": "Crear",
+    "delete": "Eliminar",
+    "copied": "Copiado al portapapeles",
+    "select_all": "Seleccionar todo",
+    "select_row": "Seleccionar fila",
+    "all": "Todos",
+    "unread": "No leídos",
+    "display": "Mostrar"
+  },
+  "customers": {
+    "title": "Clientes",
+    "actions": "Acciones",
+    "copy_id": "Copiar ID del cliente",
+    "id_copied": "ID del cliente copiado al portapapeles",
+    "view_details": "Ver detalles del cliente",
+    "view_payments": "Ver pagos del cliente",
+    "delete_customer": "Eliminar cliente",
+    "customer_deleted": "Cliente eliminado",
+    "customer_deleted_desc": "El cliente ha sido eliminado",
+    "name": "Nombre",
+    "name_placeholder": "Juan Pérez",
+    "email": "Correo electrónico",
+    "location": "Ubicación",
+    "status": "Estado",
+    "status_subscribed": "Suscrito",
+    "status_unsubscribed": "No suscrito",
+    "status_bounced": "Rebotado",
+    "filter_emails": "Filtrar correos...",
+    "filter_status": "Filtrar estado",
+    "selected_rows": "{selected} de {total} fila(s) seleccionada(s)",
+    "new_customer": "Nuevo cliente",
+    "add_new_customer": "Agregar un nuevo cliente a la base de datos",
+    "new_customer_added": "Nuevo cliente {name} agregado",
+    "delete_title": "Eliminar {count} cliente{s}",
+    "delete_description": "¿Estás seguro? Esta acción no se puede deshacer."
+  },
+  "validation": {
+    "name_too_short": "Nombre demasiado corto",
+    "invalid_email": "Correo electrónico inválido"
+  },
+  "inbox": {
+    "mark_as_unread": "Marcar como no leído",
+    "mark_as_important": "Marcar como importante",
+    "star_thread": "Destacar hilo",
+    "mute_thread": "Silenciar hilo",
+    "archive": "Archivar",
+    "reply": "Responder",
+    "attach_file": "Adjuntar archivo",
+    "save_draft": "Guardar borrador",
+    "send": "Enviar",
+    "write_reply": "Escribe tu respuesta...",
+    "email_sent": "Correo enviado",
+    "email_sent_success": "Tu correo ha sido enviado exitosamente",
+    "reply_to": "Responder a {name} ({email})"
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "unread": "No leído",
+    "read": "Leído",
+    "mark_as_read": "Marcar como leído",
+    "mark_all_as_read": "Marcar todo como leído",
+    "no_notifications": "No hay notificaciones",
+    "settings": {
+      "channels": {
+        "title": "Canales de notificación",
+        "description": "¿Dónde podemos notificarte?",
+        "email": {
+          "label": "Correo electrónico",
+          "description": "Recibe un resumen diario por correo."
+        },
+        "desktop": {
+          "label": "Escritorio",
+          "description": "Recibe notificaciones en el escritorio."
+        }
+      },
+      "updates": {
+        "title": "Actualizaciones de cuenta",
+        "description": "Recibe actualizaciones sobre Nuxt UI.",
+        "weekly_digest": {
+          "label": "Resumen semanal",
+          "description": "Recibe un resumen semanal de noticias."
+        },
+        "product_updates": {
+          "label": "Actualizaciones de producto",
+          "description": "Recibe un correo mensual con todas las nuevas características y actualizaciones."
+        },
+        "important_updates": {
+          "label": "Actualizaciones importantes",
+          "description": "Recibe correos sobre actualizaciones importantes como correcciones de seguridad, mantenimiento, etc."
+        }
+      }
+    }
+  },
+  "members": {
+    "title": "Miembros",
+    "description": "Invita nuevos miembros por correo electrónico.",
+    "role": {
+      "member": "Miembro",
+      "owner": "Propietario"
+    },
+    "empty": {
+      "no_members": "No hay miembros",
+      "no_results": "No se encontraron miembros"
+    },
+    "actions": {
+      "add": "Agregar miembro",
+      "invite": "Invitar personas",
+      "search_placeholder": "Buscar miembros",
+      "edit": "Editar miembro",
+      "remove": "Eliminar miembro"
+    },
+    "notifications": {
+      "removed": {
+        "title": "Miembro eliminado",
+        "description": "El miembro ha sido eliminado del equipo"
+      },
+      "invite": {
+        "title": "Invitación enviada",
+        "description": "La invitación ha sido enviada exitosamente"
+      }
+    }
+  },
+  "security": {
+    "password": {
+      "title": "Contraseña",
+      "description": "Confirma tu contraseña actual antes de establecer una nueva.",
+      "current": {
+        "label": "Contraseña actual",
+        "placeholder": "Contraseña actual"
+      },
+      "new": {
+        "label": "Nueva contraseña",
+        "placeholder": "Nueva contraseña"
+      },
+      "error": {
+        "min_length": "Debe tener al menos 8 caracteres",
+        "required": "La contraseña actual es requerida",
+        "same_password": "Las contraseñas deben ser diferentes"
+      },
+      "update": "Actualizar"
+    },
+    "account": {
+      "title": "Cuenta",
+      "description": "¿Ya no quieres usar nuestro servicio? Puedes eliminar tu cuenta aquí. Esta acción no es reversible. Toda la información relacionada con esta cuenta se eliminará permanentemente.",
+      "delete": {
+        "label": "Eliminar cuenta",
+        "confirm": "¿Estás seguro de que quieres eliminar tu cuenta?",
+        "success": "Cuenta eliminada exitosamente"
+      }
+    }
+  },
+  "settings": {
+    "profile": {
+      "title": "Perfil",
+      "description": "Esta información será mostrada públicamente.",
+      "save_changes": "Guardar cambios",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "description": "Aparecerá en recibos, facturas y otras comunicaciones.",
+          "error": {
+            "too_short": "Demasiado corto"
+          }
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "description": "Se utiliza para iniciar sesión, recibos por correo electrónico y actualizaciones de productos.",
+          "error": {
+            "invalid": "Correo electrónico inválido"
+          }
+        },
+        "username": {
+          "label": "Nombre de usuario",
+          "description": "Tu nombre de usuario único para iniciar sesión y la URL de tu perfil.",
+          "error": {
+            "too_short": "Demasiado corto"
+          }
+        },
+        "avatar": {
+          "label": "Avatar",
+          "description": "JPG, GIF o PNG. Máximo 1MB.",
+          "choose": "Elegir"
+        },
+        "bio": {
+          "label": "Biografía",
+          "description": "Breve descripción para tu perfil. Las URLs se convierten en enlaces."
+        }
+      }
+    },
+    "success": {
+      "title": "Éxito",
+      "description": "Tus configuraciones han sido actualizadas."
+    }
+  },
+  "home": {
+    "title": "Inicio",
+    "notifications": {
+      "tooltip": "Notificaciones"
+    },
+    "actions": {
+      "new_mail": "Nuevo correo",
+      "new_customer": "Nuevo cliente"
+    },
+    "period": {
+      "daily": "Diario",
+      "weekly": "Semanal",
+      "monthly": "Mensual"
+    },
+    "sales": {
+      "table": {
+        "columns": {
+          "id": "ID",
+          "date": "Fecha",
+          "status": "Estado",
+          "email": "Correo electrónico",
+          "amount": "Monto"
+        },
+        "status": {
+          "paid": "Pagado",
+          "failed": "Fallido",
+          "refunded": "Reembolsado"
+        }
+      }
+    },
+    "stats": {
+      "customers": {
+        "title": "Clientes",
+        "description": "Número total de clientes"
+      },
+      "conversions": {
+        "title": "Conversiones",
+        "description": "Tasa de conversión"
+      },
+      "revenue": {
+        "title": "Ingresos",
+        "description": "Ingresos totales"
+      },
+      "orders": {
+        "title": "Pedidos",
+        "description": "Total de pedidos"
+      }
+    },
+    "chart": {
+      "revenue": {
+        "title": "Ingresos"
+      }
+    }
+  },
+  "date": {
+    "picker": {
+      "placeholder": "Seleccionar fecha",
+      "ranges": {
+        "last_7_days": "Últimos 7 días",
+        "last_14_days": "Últimos 14 días",
+        "last_30_days": "Últimos 30 días",
+        "last_3_months": "Últimos 3 meses",
+        "last_6_months": "Últimos 6 meses",
+        "last_year": "Último año"
+      }
+    }
+  }
+}
