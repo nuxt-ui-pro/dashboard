@@ -67,7 +67,6 @@ const isMobile = breakpoints.smaller('lg')
         <UTabs
           v-model="selectedTab"
           :items="tabItems"
-          class="w-32"
           :content="false"
           size="xs"
         />
