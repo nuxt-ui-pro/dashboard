@@ -59,14 +59,14 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
   }, {
     label: 'Neutral',
     slot: 'chip',
-    chip: appConfig.ui.colors.neutral,
+    chip: appConfig.ui.colors.neutral === 'neutral' ? 'old-neutral' : appConfig.ui.colors.neutral,
     content: {
       align: 'end',
       collisionPadding: 16
     },
     children: neutrals.map(color => ({
       label: color,
-      chip: color,
+      chip: color === 'neutral' ? 'old-neutral' : color,
       slot: 'chip',
       type: 'checkbox',
       checked: appConfig.ui.colors.neutral === color,
@@ -173,8 +173,11 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 
     <template #chip-leading="{ item }">
       <span
-        :style="{ '--chip': `var(--color-${(item as any).chip}-400)` }"
-        class="ms-0.5 size-2 rounded-full bg-(--chip)"
+        :style="{
+          '--chip-light': `var(--color-${(item as any).chip}-500)`,
+          '--chip-dark': `var(--color-${(item as any).chip}-400)`
+        }"
+        class="ms-0.5 size-2 rounded-full bg-(--chip-light) dark:bg-(--chip-dark)"
       />
     </template>
   </UDropdownMenu>
