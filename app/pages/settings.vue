@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
+
 const links = [[{
   label: 'General',
   icon: 'i-lucide-user',
@@ -26,7 +28,7 @@ const links = [[{
   icon: 'i-lucide-shopping-cart',
   to: 'https://ui.nuxt.com/pro/purchase',
   target: '_blank'
-}]]
+}]] satisfies NavigationMenuItem[][]
 </script>
 
 <template>

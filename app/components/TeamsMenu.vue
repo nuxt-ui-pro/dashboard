@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { DropdownMenuItem } from '@nuxt/ui'
+
 defineProps<{
   collapsed?: boolean
 }>()
@@ -24,7 +26,7 @@ const teams = ref([{
 }])
 const selectedTeam = ref(teams.value[0])
 
-const items = computed(() => {
+const items = computed<DropdownMenuItem[][]>(() => {
   return [teams.value.map(team => ({
     ...team,
     onSelect() {

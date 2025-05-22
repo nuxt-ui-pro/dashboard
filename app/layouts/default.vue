@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
+
 const route = useRoute()
 const toast = useToast()
 
@@ -67,7 +69,7 @@ const links = [[{
   icon: 'i-lucide-info',
   to: 'https://github.com/nuxt/ui-pro',
   target: '_blank'
-}]]
+}]] satisfies NavigationMenuItem[][]
 
 const groups = computed(() => [{
   id: 'links',

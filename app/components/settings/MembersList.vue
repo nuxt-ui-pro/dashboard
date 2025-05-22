@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { DropdownMenuItem } from '@nuxt/ui'
 import type { Member } from '~/types'
 
 defineProps<{
@@ -12,7 +13,7 @@ const items = [{
   label: 'Remove member',
   color: 'error' as const,
   onSelect: () => console.log('Remove member')
-}]
+}] satisfies DropdownMenuItem[]
 </script>
 
 <template>
