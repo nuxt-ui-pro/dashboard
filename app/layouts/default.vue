@@ -33,6 +33,7 @@ const links = [[{
   to: '/settings',
   icon: 'i-lucide-settings',
   defaultOpen: true,
+  type: 'trigger',
   children: [{
     label: 'General',
     to: '/settings',
@@ -134,12 +135,15 @@ onMounted(async () => {
           :collapsed="collapsed"
           :items="links[0]"
           orientation="vertical"
+          tooltip
+          popover
         />
 
         <UNavigationMenu
           :collapsed="collapsed"
           :items="links[1]"
           orientation="vertical"
+          tooltip
           class="mt-auto"
         />
       </template>
