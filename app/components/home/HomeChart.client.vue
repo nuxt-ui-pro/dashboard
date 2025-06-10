@@ -17,8 +17,9 @@ type DataRecord = {
 
 const { width } = useElementSize(cardRef)
 
-// We use `useAsyncData` here to have same random data on the client and server
-const { data } = await useAsyncData<DataRecord[]>(async () => {
+const data = ref<DataRecord[]>([])
+
+watch([() => props.period, () => props.range], () => {
   const dates = ({
     daily: eachDayOfInterval,
     weekly: eachWeekOfInterval,
@@ -28,11 +29,8 @@ const { data } = await useAsyncData<DataRecord[]>(async () => {
   const min = 1000
   const max = 10000
 
-  return dates.map(date => ({ date, amount: Math.floor(Math.random() * (max - min + 1)) + min }))
-}, {
-  watch: [() => props.period, () => props.range],
-  default: () => []
-})
+  data.value = dates.map(date => ({ date, amount: Math.floor(Math.random() * (max - min + 1)) + min }))
+}, { immediate: true })
 
 const x = (_: DataRecord, i: number) => i
 const y = (d: DataRecord) => d.amount
