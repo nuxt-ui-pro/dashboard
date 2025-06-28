@@ -59,7 +59,7 @@ const template = (d: DataRecord) => `${formatDate(d.date)}: ${formatNumber(d.amo
 </script>
 
 <template>
-  <UCard ref="cardRef" :ui="{ body: '!px-0 !pt-0 !pb-3' }">
+  <UCard ref="cardRef" :ui="{ root: 'overflow-visible', body: '!px-0 !pt-0 !pb-3' }">
     <template #header>
       <div>
         <p class="text-xs text-muted uppercase mb-1.5">
