@@ -26,10 +26,10 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.4.1",
     "eslint": "^9.30.0",
-    "vue-tsc": "^2.2.10"
+    "vue-tsc": "^3.0.1"
   },
   "resolutions": {
-    "vue-tsc": "^2.2.10"
+    "vue-tsc": "^3.0.1"
   },
   "packageManager": "pnpm@10.12.4"
 }
