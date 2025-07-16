@@ -20,7 +20,7 @@
     "@unovis/vue": "^1.5.2",
     "@vueuse/nuxt": "^13.4.0",
     "date-fns": "^4.1.0",
-    "nuxt": "^3.17.6",
+    "nuxt": "^4.0.0",
     "v-calendar": "^3.1.2"
   },
   "devDependencies": {
