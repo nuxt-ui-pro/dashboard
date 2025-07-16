@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { sub, format, isSameDay, type Duration } from 'date-fns'
+import { sub, format, isSameDay } from 'date-fns'
+import type { Duration } from 'date-fns'
 import type { Range } from '~/types'
 
 const ranges = [
