@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@iconify-json/heroicons": "^1.2.2",
-    "@iconify-json/simple-icons": "^1.2.43",
+    "@iconify-json/simple-icons": "^1.2.44",
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/ui-pro": "^1.8.1",
     "@unovis/ts": "^1.5.2",
@@ -24,12 +24,12 @@
     "v-calendar": "^3.1.2"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.5.2",
-    "eslint": "^9.31.0",
-    "vue-tsc": "^3.0.1"
+    "@nuxt/eslint": "^1.7.1",
+    "eslint": "^9.32.0",
+    "vue-tsc": "^3.0.4"
   },
   "resolutions": {
-    "vue-tsc": "^3.0.1"
+    "vue-tsc": "^3.0.4"
   },
   "packageManager": "pnpm@10.13.1"
 }
