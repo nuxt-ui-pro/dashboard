@@ -20,7 +20,7 @@
     "@vueuse/nuxt": "^13.5.0",
     "date-fns": "^4.1.0",
     "nuxt": "^4.0.3",
-    "zod": "^3.25.76"
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.5.2",
