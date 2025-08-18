@@ -131,7 +131,7 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
 }], [{
   label: 'Documentation',
   icon: 'i-lucide-book-open',
-  to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
+  to: 'https://ui.nuxt.com/getting-started/installation',
   target: '_blank'
 }, {
   label: 'GitHub repository',
@@ -139,11 +139,6 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
   to: 'https://github.com/nuxt-ui-pro/dashboard',
   target: '_blank'
 }, {
-  label: 'Upgrade to Pro',
-  icon: 'i-lucide-rocket',
-  to: 'https://ui.nuxt.com/pro/purchase',
-  target: '_blank'
-}], [{
   label: 'Log out',
   icon: 'i-lucide-log-out'
 }]]))
