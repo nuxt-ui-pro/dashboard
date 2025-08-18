@@ -21,12 +21,7 @@ const links = [[{
 }], [{
   label: 'Documentation',
   icon: 'i-lucide-book-open',
-  to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
-  target: '_blank'
-}, {
-  label: 'Buy now',
-  icon: 'i-lucide-shopping-cart',
-  to: 'https://ui.nuxt.com/pro/purchase',
+  to: 'https://ui.nuxt.com/getting-started/installation/nuxt',
   target: '_blank'
 }]] satisfies NavigationMenuItem[][]
 </script>
